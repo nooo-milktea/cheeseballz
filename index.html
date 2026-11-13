@@ -1721,6 +1721,39 @@ body.portrait-ok .rotate-mask{display:none!important}
   .snap-shot{width:36px;height:36px}
   .snap-strip img{width:44px;height:44px}
 }
+
+/* 全屏相机 */
+.snapmodal{
+  position:fixed;inset:0;z-index:420;display:none;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;padding:16px;background:rgba(18,14,16,.92);backdrop-filter:blur(4px);
+}
+.snapmodal.on{display:flex}
+.sm-close{
+  position:absolute;right:16px;top:14px;width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:15px;
+}
+.sm-stage{
+  position:relative;width:min(86vw,720px);max-height:64vh;aspect-ratio:4/3;
+  border-radius:14px;overflow:hidden;background:#000;
+  box-shadow:0 30px 60px -26px rgba(0,0,0,.9),inset 0 0 0 1px rgba(255,255,255,.2);
+}
+.sm-stage video{width:100%;height:100%;object-fit:cover;display:block;transform:scaleX(-1)}
+.sm-controls{display:flex;align-items:center;gap:22px}
+.sm-go,.sm-off{
+  border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#f6e6ee;
+  border-radius:999px;padding:8px 18px;font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.1em;
+}
+.snap-shot{
+  width:60px;height:60px;border-radius:50%;border:3px solid rgba(255,255,255,.9);background:#f7c3d5;
+  color:#a03f63;font-size:18px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.55);
+}
+.snap-shot:active{transform:scale(.94)}
+.snapmodal .snap-strip{max-width:min(86vw,720px);width:100%;justify-content:center}
+@media (orientation: landscape) and (max-height: 520px){
+  .sm-stage{width:min(56vw,560px);max-height:56vh}
+  .snap-shot{width:48px;height:48px;font-size:15px}
+  .snap-strip img{width:44px;height:44px}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1798,6 +1831,22 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
     <div class="am-count"><span id="amnow">1</span> / <span id="amtotal">1</span></div>
   </div>
+</div>
+
+<div class="snapmodal" id="snapmodal">
+  <button class="sm-close" onclick="closeSnap()">✕</button>
+  <div class="sm-stage">
+    <video id="snapvideo" autoplay playsinline muted></video>
+    <canvas id="snapcanvas" style="display:none"></canvas>
+    <div class="snap-frame"><i></i><i></i><i></i><i></i></div>
+    <div class="snap-hint" id="snaphint">点下面的快门拍照</div>
+  </div>
+  <div class="sm-controls">
+    <button class="sm-go" onclick="startSnap()">开启</button>
+    <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+    <button class="sm-off" onclick="stopSnap()">关闭</button>
+  </div>
+  <div class="snap-strip" id="snapstrip"></div>
 </div>
 
 <div class="lockmodal" id="lockmodal" onclick="if(event.target===this)closeLock()">
@@ -1987,18 +2036,12 @@ body.portrait-ok .rotate-mask{display:none!important}
     <span class="ribbon"></span>
     <header class="ph"><b>相机</b><span class="pno"></span></header>
     <div class="pcontent">
-      <div class="snap-wrap">
-        <video id="snapvideo" autoplay playsinline muted></video>
-        <canvas id="snapcanvas" style="display:none"></canvas>
-        <div class="snap-frame"><i></i><i></i><i></i><i></i></div>
-        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
-      </div>
-      <div class="snap-actions">
-        <button class="snap-go" onclick="startSnap()">开启</button>
-        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
-        <button class="snap-off" onclick="stopSnap()">关闭</button>
-      </div>
-      <div class="snap-strip" id="snapstrip"></div>
+      <div class="alb-note">SAKUYA'S CAMERA</div>
+      <button class="alb-open cam-open" onclick="openSnap()">
+        <span class="ao-ic">◉</span>
+        <span class="ao-t">打开相机</span>
+        <span class="ao-n">用你的相机拍一张</span>
+      </button>
     </div>
   </section>
 
@@ -2153,6 +2196,14 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 
 
+
+
+  window.openSnap=function(){ document.getElementById('snapmodal').classList.add('on'); startSnap(); };
+  window.closeSnap=function(){ stopSnap(); document.getElementById('snapmodal').classList.remove('on'); };
+  document.addEventListener('keydown',function(e){
+    var m=document.getElementById('snapmodal');
+    if(m && m.classList.contains('on') && e.key==='Escape') closeSnap();
+  });
 
   /* 相机拍照 */
   var snapStream=null;
