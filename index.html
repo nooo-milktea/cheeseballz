@@ -1722,38 +1722,60 @@ body.portrait-ok .rotate-mask{display:none!important}
   .snap-strip img{width:44px;height:44px}
 }
 
-/* 全屏相机 */
-.snapmodal{
-  position:fixed;inset:0;z-index:420;display:none;flex-direction:column;align-items:center;justify-content:center;
-  gap:12px;padding:16px;background:rgba(18,14,16,.92);backdrop-filter:blur(4px);
-}
-.snapmodal.on{display:flex}
-.sm-close{
-  position:absolute;right:16px;top:14px;width:36px;height:36px;border-radius:50%;
-  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:15px;
-}
-.sm-stage{
-  position:relative;width:min(86vw,720px);max-height:64vh;aspect-ratio:4/3;
-  border-radius:14px;overflow:hidden;background:#000;
-  box-shadow:0 30px 60px -26px rgba(0,0,0,.9),inset 0 0 0 1px rgba(255,255,255,.2);
-}
-.sm-stage video{width:100%;height:100%;object-fit:cover;display:block;transform:scaleX(-1)}
-.sm-controls{display:flex;align-items:center;gap:22px}
-.sm-go,.sm-off{
-  border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#f6e6ee;
-  border-radius:999px;padding:8px 18px;font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.1em;
-}
-.snap-shot{
-  width:60px;height:60px;border-radius:50%;border:3px solid rgba(255,255,255,.9);background:#f7c3d5;
-  color:#a03f63;font-size:18px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.55);
-}
-.snap-shot:active{transform:scale(.94)}
-.snapmodal .snap-strip{max-width:min(86vw,720px);width:100%;justify-content:center}
 @media (orientation: landscape) and (max-height: 520px){
   .sm-stage{width:min(56vw,560px);max-height:56vh}
   .snap-shot{width:48px;height:48px;font-size:15px}
   .snap-strip img{width:44px;height:44px}
 }
+
+/* 相机（书内，大取景框 + 樱花包边） */
+.cam-page{z-index:8!important}
+.cam-page .pcontent{display:flex;flex-direction:column;align-items:center;gap:8px}
+.cam-stage{
+  position:relative;width:100%;max-width:520px;padding:12px;border-radius:16px;
+  background:linear-gradient(160deg,#fff7fb,#fde9f1);
+  box-shadow:0 12px 26px -20px rgba(150,90,115,.9), inset 0 0 0 1px #fff;
+}
+/* 樱花包边 */
+.cam-stage::before{
+  content:"";position:absolute;inset:4px;border-radius:13px;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 6px 6px, #ffc6dc 3px, transparent 3.6px),
+    radial-gradient(circle at 18px 18px, #ffd9e7 2.6px, transparent 3.2px);
+  background-size:24px 24px;
+  opacity:.75;
+  -webkit-mask-image:linear-gradient(#000,#000);
+  mask-image:linear-gradient(#000,#000);
+  border:2px dotted #ffc6dc;
+}
+.sakura-edge{position:absolute;inset:0;pointer-events:none}
+.sakura-edge i{
+  position:absolute;width:26px;height:26px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%23ffc2d8' stroke='%23e98cb0' stroke-width='1.6'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z'/></g></svg>") center/contain no-repeat;
+  opacity:.9;
+}
+.sakura-edge i:nth-child(1){left:6px;top:6px}
+.sakura-edge i:nth-child(2){right:6px;top:6px;transform:rotate(80deg)}
+.sakura-edge i:nth-child(3){left:6px;bottom:6px;transform:rotate(-80deg)}
+.sakura-edge i:nth-child(4){right:6px;bottom:6px;transform:rotate(180deg)}
+.cam-inner{
+  position:relative;width:100%;aspect-ratio:4/3;border-radius:9px;overflow:hidden;background:#1b1b1e;
+}
+.cam-inner video{width:100%;height:100%;object-fit:cover;display:block;transform:scaleX(-1)}
+.cam-bar{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:2px}
+.cam-mini{
+  border:1px solid #f0ccd9;border-radius:999px;background:#fff;color:#a45f78;
+  padding:5px 14px;font-family:"LXGW WenKai",serif;font-size:11px;letter-spacing:.1em;
+}
+.cam-page .snap-strip{width:100%;max-width:520px;justify-content:center}
+@media (orientation: landscape) and (max-height: 520px){
+  .cam-stage{max-width:360px;padding:9px}
+  .snap-shot{width:40px;height:40px;font-size:13px}
+  .cam-bar{gap:10px}
+  .cam-page .snap-strip img{width:42px;height:42px}
+}
+/* 相机页不再被中缝压住 */
+.page.cam-page::after{display:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1831,22 +1853,6 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
     <div class="am-count"><span id="amnow">1</span> / <span id="amtotal">1</span></div>
   </div>
-</div>
-
-<div class="snapmodal" id="snapmodal">
-  <button class="sm-close" onclick="closeSnap()">✕</button>
-  <div class="sm-stage">
-    <video id="snapvideo" autoplay playsinline muted></video>
-    <canvas id="snapcanvas" style="display:none"></canvas>
-    <div class="snap-frame"><i></i><i></i><i></i><i></i></div>
-    <div class="snap-hint" id="snaphint">点下面的快门拍照</div>
-  </div>
-  <div class="sm-controls">
-    <button class="sm-go" onclick="startSnap()">开启</button>
-    <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
-    <button class="sm-off" onclick="stopSnap()">关闭</button>
-  </div>
-  <div class="snap-strip" id="snapstrip"></div>
 </div>
 
 <div class="lockmodal" id="lockmodal" onclick="if(event.target===this)closeLock()">
@@ -2032,16 +2038,25 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
   </section>
 
-  <section class="page v" data-src="w-camera">
+  <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
     <header class="ph"><b>相机</b><span class="pno"></span></header>
     <div class="pcontent">
-      <div class="alb-note">SAKUYA'S CAMERA</div>
-      <button class="alb-open cam-open" onclick="openSnap()">
-        <span class="ao-ic">◉</span>
-        <span class="ao-t">打开相机</span>
-        <span class="ao-n">用你的相机拍一张</span>
-      </button>
+      <div class="cam-stage">
+        <span class="sakura-edge"><i></i><i></i><i></i><i></i></span>
+        <div class="cam-inner">
+          <video id="snapvideo" autoplay playsinline muted></video>
+          <canvas id="snapcanvas" style="display:none"></canvas>
+          <div class="snap-frame"><i></i><i></i><i></i><i></i></div>
+          <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
+        </div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="startSnap()">开启</button>
+        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="stopSnap()">关闭</button>
+      </div>
+      <div class="snap-strip" id="snapstrip"></div>
     </div>
   </section>
 
@@ -2198,12 +2213,6 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 
 
-  window.openSnap=function(){ document.getElementById('snapmodal').classList.add('on'); startSnap(); };
-  window.closeSnap=function(){ stopSnap(); document.getElementById('snapmodal').classList.remove('on'); };
-  document.addEventListener('keydown',function(e){
-    var m=document.getElementById('snapmodal');
-    if(m && m.classList.contains('on') && e.key==='Escape') closeSnap();
-  });
 
   /* 相机拍照 */
   var snapStream=null;
