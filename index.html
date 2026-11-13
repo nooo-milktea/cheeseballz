@@ -1526,6 +1526,14 @@ body::after{
 }
 
 .sleeve img{background:#f7eef2;min-height:60px}
+
+/* 竖屏提示：放在最后，确保覆盖基础样式 */
+@media (orientation: portrait) and (max-width: 1024px){
+  .rotate-mask{display:grid!important}
+}
+@media (orientation: landscape) and (max-height: 991px){
+  .rotate-mask{display:none!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
