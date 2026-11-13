@@ -2111,6 +2111,27 @@ body.portrait-ok .rotate-mask{display:none!important}
   .snap-strip{flex:0 0 auto!important;max-width:88vw!important;justify-content:center!important}
   .snap-strip img{width:42px!important;height:42px!important}
 }
+
+/* ===== 相机页：统一布局（相框 + 下面一排按钮，永远可见） ===== */
+.cam-page .pcontent{
+  position:relative!important;display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:flex-start!important;
+  height:calc(100% - 34px)!important;overflow:hidden!important;gap:6px!important;
+}
+.cam-stage{
+  width:min(92vw, 400px, 36vh)!important;height:auto!important;
+  aspect-ratio:710/1076!important;margin:0 auto!important;flex:0 0 auto!important;
+  overflow:hidden!important;border-radius:2px!important;
+}
+.cam-bar{
+  position:static!important;left:auto!important;top:auto!important;transform:none!important;
+  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
+  gap:14px!important;width:100%!important;flex:0 0 auto!important;padding:0!important;margin:2px 0 0!important;
+}
+.cam-mini{padding:6px 16px!important;font-size:11.5px!important}
+.snap-shot{width:44px!important;height:44px!important;font-size:15px!important}
+.snap-strip{flex:0 0 auto!important;max-width:92vw!important;max-height:46px!important;justify-content:center!important}
+.snap-strip img{width:40px!important;height:40px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
