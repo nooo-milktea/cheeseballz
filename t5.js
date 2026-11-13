@@ -1,0 +1,1869 @@
+
+var FICS = [{"src": "破塔", "cat": "漫", "ko": "チューするね", "zh": "我要亲亲了", "note": "成人向 穿浴衣oo", "id": 0, "url": "https://posty.pe/cgqupl"}, {"src": "破塔", "cat": "漫", "ko": "양육자 평가", "zh": "养育者评估", "note": "成人向 当oo频率从一年一次到一天一次", "id": 1, "url": "https://posty.pe/wdi2xr"}, {"src": "破塔", "cat": "漫", "ko": "축구를 했꼬", "zh": "踢完足球后", "note": "成人向 椅愿杯后 穿着球衣oo", "id": 2, "url": "https://posty.pe/wdi2xr"}, {"src": "破塔", "cat": "漫", "ko": "近亲oo应当被禁止", "zh": "", "note": "成人向", "id": 3, "url": "https://posty.pe/589i5v"}, {"src": "破塔", "cat": "漫", "ko": "어떻게 할까", "zh": "该怎么办呢", "note": "成人向", "id": 4, "url": "https://posty.pe/fg53hw"}, {"src": "破塔", "cat": "漫", "ko": "제목없음", "zh": "无标题", "note": "成人向 口o", "id": 5, "url": "https://posty.pe/ph4h3xwd"}, {"src": "破塔", "cat": "漫", "ko": "왜?", "zh": "为什么？", "note": "成人向", "id": 6, "url": "https://posty.pe/p7zxpq9d"}, {"src": "破塔", "cat": "漫", "ko": "데이트", "zh": "约会", "note": "成人向", "id": 7, "url": "https://posty.pe/p0nj77sd"}, {"src": "破塔", "cat": "漫", "ko": "기니치즈", "zh": "奶酪", "note": "成人向 猫猫和豚豚", "id": 8, "url": "https://posty.pe/pdasv1bd"}, {"src": "破塔", "cat": "漫", "ko": "꾸잉", "zh": "唔嘤", "note": "成人向 穿玩偶服oo", "id": 9, "url": "https://posty.pe/pz65d2nd"}, {"src": "破塔", "cat": "漫", "ko": "쌍둥이의 놀기신청", "zh": "双胞胎的玩耍申请", "note": "成人向 帮lu", "id": 10, "url": "https://posty.pe/pa5bgt3d"}, {"src": "破塔", "cat": "漫", "ko": "웅", "zh": "", "note": "成人向 颜she", "id": 11, "url": "https://posty.pe/pjl3o1yd"}, {"src": "破塔", "cat": "漫", "ko": "할리갈리", "zh": "", "note": "成人向", "id": 12, "url": "https://posty.pe/zh/pcb0mfmd"}, {"src": "破塔", "cat": "漫", "ko": "抱枕后续", "zh": "", "note": "成人向", "id": 13, "url": "https://posty.pe/zh/prn7nldd"}, {"src": "破塔", "cat": "漫", "ko": "喉结纹身贴", "zh": "", "note": "成人向", "id": 14, "url": "https://posty.pe/zh/pmrr8v5d"}, {"src": "破塔", "cat": "文", "ko": "엄친쿵 과외하기", "zh": "给妈朋儿做家教", "note": "成人向", "id": 15, "url": "https://posty.pe/ps5ok51c"}, {"src": "破塔", "cat": "文", "ko": "취객 필독 십계명", "zh": "醉汉必读十诫", "note": "成人向 很有趣很可爱的一篇", "id": 16, "url": "https://posty.pe/p94w5i2c"}, {"src": "破塔", "cat": "文", "ko": "파베 초콜릿 케이크", "zh": "帕维巧克力蛋糕", "note": "成人向 “蛋糕”&“叉子” 特殊世界观", "id": 17, "url": "https://posty.pe/p849fdfd"}, {"src": "破塔", "cat": "文", "ko": "악플러한테 뒤를 따였습니다", "zh": "被恶评者跟踪了", "note": "成人向", "id": 18, "url": "https://posty.pe/panhbc1c"}, {"src": "破塔", "cat": "文", "ko": "그 남자의 뮤즈", "zh": "那个男人的缪斯", "note": "爱上了父亲的情人", "id": 19, "url": "https://posty.pe/l4ojo8"}, {"src": "破塔", "cat": "文", "ko": "워터파크에 가야하는데...", "zh": "明明应该要去水上乐园的…", "note": "成人向 双性转gl", "id": 20, "url": "https://posty.pe/pnsqycdc"}, {"src": "破塔", "cat": "文", "ko": "형제니까", "zh": "因为是兄弟", "note": "成人向 骨科", "id": 21, "url": "https://posty.pe/pfy4w6ed"}, {"src": "破塔", "cat": "文", "ko": "도쿄보이스캔들", "zh": "东京男孩丑闻", "note": "我的初恋在结婚四年后离婚了", "id": 22, "url": "https://posty.pe/p2wklpuc"}, {"src": "破塔", "cat": "文", "ko": "No Kiss Club 禁止接吻俱乐部", "zh": "", "note": "成人向 为什么oo的时候不让接吻", "id": 23, "url": "https://posty.pe/pu9jawdd"}, {"src": "破塔", "cat": "文", "ko": "렌탈 남친", "zh": "租赁男友", "note": "萌文", "id": 24, "url": "https://posty.pe/pk8dy5dd"}, {"src": "破塔", "cat": "文", "ko": "너는 펫!", "zh": "你是宠物！", "note": "根据日剧宠物情人为灵感的一篇", "id": 25, "url": "https://posty.pe/zh/pgha31ed"}, {"src": "破塔", "cat": "文", "ko": "기다리는 사람等待的人(夏恋)", "zh": "", "note": "纯爱文 初恋情结", "id": 26, "url": "https://posty.pe/ptpjfijd"}, {"src": "破塔", "cat": "文", "ko": "그냥평범한교복데이트", "zh": "只是一次普通的校服约会", "note": "成人向 穿着校服oo 有男装有女装", "id": 27, "url": "https://posty.pe/po78wswc"}, {"src": "破塔", "cat": "文", "ko": "역전의 미성년", "zh": "逆转的未成年", "note": "", "id": 28, "url": "https://posty.pe/pceh06td"}, {"src": "破塔", "cat": "文", "ko": "내년 크리스마스에도 눈이 올까요?", "zh": "明年圣诞节还会下雪吗？", "note": "伪骨科", "id": 29, "url": "https://posty.pe/pg59w70d"}, {"src": "破塔", "cat": "文", "ko": "고양이 길들이기", "zh": "驯养小猫", "note": "成人向", "id": 30, "url": "https://posty.pe/pbff0mac"}, {"src": "破塔", "cat": "文", "ko": "환승연애", "zh": "换乘恋爱", "note": "", "id": 31, "url": "https://posty.pe/pxxb2zfc"}, {"src": "破塔", "cat": "文", "ko": "장거리 연애에서 살아남는 법", "zh": "异地恋生存指南", "note": "成人向", "id": 32, "url": "https://posty.pe/p66ia62d"}, {"src": "破塔", "cat": "文", "ko": "황금해파리", "zh": "黄金水母", "note": "（排雷：yu前期有女友但无感情）", "id": 33, "url": "https://posty.pe/pdvf1f8d"}, {"src": "破塔", "cat": "文", "ko": "청사", "zh": "青舍", "note": "高中生sa & 大学生yu", "id": 34, "url": "https://posty.pe/pvqpqcad"}, {"src": "破塔", "cat": "文", "ko": "야키토리 소스는 달게", "zh": "烤鸡肉串的酱汁要甜一点", "note": "成人向", "id": 35, "url": "https://posty.pe/puthllzd"}, {"src": "破塔", "cat": "文", "ko": "잠입 외계인 성교육", "zh": "潜入外星人的性教育", "note": "成人向", "id": 36, "url": "https://posty.pe/ppgncpmd"}, {"src": "破塔", "cat": "文", "ko": "극한의 50일", "zh": "极限的50天", "note": "成人向 禁欲挑战", "id": 37, "url": "https://posty.pe/p9tbojpd"}, {"src": "破塔", "cat": "文", "ko": "제목추천좀", "zh": "求推荐标题", "note": "前后辈", "id": 38, "url": "https://posty.pe/ph9ke76d"}, {"src": "破塔", "cat": "文", "ko": "Dot TV", "zh": "", "note": "成人向", "id": 39, "url": "https://posty.pe/p8h2hcyd"}, {"src": "破塔", "cat": "文", "ko": "미우나고우나", "zh": "无论好坏", "note": "骨科 感情线混乱", "id": 40, "url": "https://posty.pe/pxg4x8gd"}, {"src": "破塔", "cat": "文", "ko": "고양이 이갈이", "zh": "猫咪换牙期", "note": "成人向 口o（排雷：未成年）", "id": 41, "url": "https://posty.pe/pzesfebd"}, {"src": "破塔", "cat": "文", "ko": "별사탕은 깨물어 드세요", "zh": "请咬碎星星糖", "note": "喜欢上了喜欢哥哥的人", "id": 42, "url": "https://posty.pe/pk7fuexd"}, {"src": "破塔", "cat": "文", "ko": "koi！", "zh": "", "note": "ABO", "id": 43, "url": "https://posty.pe/zh/p1lgtjqd"}, {"src": "破塔", "cat": "文", "ko": "바보야", "zh": "笨蛋", "note": "婚外情", "id": 44, "url": "https://posty.pe/zh/p7s3xe4d"}, {"src": "破塔", "cat": "文", "ko": "마일드", "zh": "温和", "note": "", "id": 45, "url": "https://posty.pe/zh/pfpbw2kd"}, {"src": "亚洲网", "cat": "文", "ko": "半之半", "zh": "", "note": "", "id": 46, "url": "https://www.asianfanfics.com/story/view/1679367/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "等雨云", "zh": "", "note": "", "id": 47, "url": "https://www.asianfanfics.com/story/view/1730138/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "LOVE TRANSIT", "zh": "", "note": "很喜欢这篇换乘，但原作者在破塔删文了，只剩下搬运能看", "id": 48, "url": "https://www.asianfanfics.com/story/view/1717175/love-transit"}, {"src": "亚洲网", "cat": "文", "ko": "双藤绕枝", "zh": "", "note": "", "id": 49, "url": "https://www.asianfanfics.com/story/view/1755153/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "绝对恋爱法则", "zh": "", "note": "", "id": 50, "url": "https://www.asianfanfics.com/story/view/1747828/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "沒有什麼比你更美麗", "zh": "", "note": "", "id": 51, "url": "https://www.asianfanfics.com/story/view/1742205/2/sayu-rain-cats-and-dogs"}, {"src": "亚洲网", "cat": "文", "ko": "圣坛之外", "zh": "", "note": "", "id": 52, "url": "https://www.asianfanfics.com/story/view/1728464/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "宝宝炮友", "zh": "", "note": "", "id": 53, "url": "https://www.asianfanfics.com/story/view/1723555/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "左顧右盼", "zh": "In Cold Lies Gold", "note": "", "id": 54, "url": "https://www.asianfanfics.com/story/view/1714024/in-cold-lies-gold"}, {"src": "亚洲网", "cat": "文", "ko": "未绽之樱", "zh": "", "note": "", "id": 55, "url": "https://www.asianfanfics.com/story/view/1639127/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "不愿做欺犬那派败类", "zh": "", "note": "", "id": 56, "url": "https://www.asianfanfics.com/story/view/1736582/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "指纹", "zh": "", "note": "", "id": 57, "url": "https://www.asianfanfics.com/story/view/1717343/sayu"}, {"src": "亚洲网", "cat": "文", "ko": "面包日记", "zh": "", "note": "", "id": 58, "url": "https://www.asianfanfics.com/story/view/1723204/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "关于sayu的26个字母", "zh": "", "note": "", "id": 59, "url": "https://www.asianfanfics.com/story/view/1730613/sayu-26"}, {"src": "亚洲网", "cat": "文", "ko": "Not an inch apart 不离开一公分", "zh": "", "note": "", "id": 60, "url": "https://www.asianfanfics.com/story/view/1702064/2/sayu-not-an-inch-apart"}, {"src": "亚洲网", "cat": "文", "ko": "住進馬克杯的好日子", "zh": "", "note": "", "id": 61, "url": "https://www.asianfanfics.com/story/view/1723448/sayu"}, {"src": "亚洲网", "cat": "文", "ko": "慢 冬", "zh": "", "note": "", "id": 62, "url": "https://www.asianfanfics.com/story/view/1762799/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "于是养到了绿茶男", "zh": "", "note": "", "id": 63, "url": "https://www.asianfanfics.com/story/view/1765753/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "所以穿书成了玛丽苏女主", "zh": "", "note": "", "id": 64, "url": "https://www.asianfanfics.com/story/view/1769574/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "一片叶子提心吊胆的夏天", "zh": "", "note": "", "id": 65, "url": "https://www.asianfanfics.com/story/view/1773434/1/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "同栖", "zh": "", "note": "", "id": 66, "url": "https://www.asianfanfics.com/story/view/1774249/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "溺水香蕉鱼", "zh": "", "note": "", "id": 67, "url": "https://www.asianfanfics.com/story/view/1781466/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "勇敢的小孩", "zh": "", "note": "", "id": 68, "url": "https://www.asianfanfics.com/story/view/1783978/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "心脏无二", "zh": "", "note": "", "id": 69, "url": "https://www.asianfanfics.com/story/view/1781137/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "剩下的、你和我", "zh": "", "note": "", "id": 70, "url": "https://www.asianfanfics.com/story/view/1778971/n-a"}];
+var z=80;
+function openW(id){
+  var w=document.getElementById(id); if(!w) return;
+  w.classList.add('on'); w.style.zIndex=++z;
+  var r=w.getBoundingClientRect();
+  if(!w.dataset.p){
+    w.dataset.p=1;
+    w.style.left=Math.max(10,Math.min(innerWidth-r.width-10,(innerWidth-r.width)/2))+'px';
+    w.style.top=Math.max(70,Math.min(innerHeight-r.height-20,(innerHeight-r.height)/2))+'px';
+  }
+}
+function closeW(id){var w=document.getElementById(id); if(w) w.classList.remove('on');}
+function closeAll(){document.querySelectorAll('.win').forEach(function(w){w.classList.remove('on');});}
+document.querySelectorAll('.win').forEach(function(w){
+  w.addEventListener('mousedown',function(){w.style.zIndex=++z;});
+  var bar=w.querySelector('.bar'); if(!bar) return;
+  var drag=false,sx=0,sy=0,ox=0,oy=0;
+  function d(e){if(e.target.className==='x')return;drag=true;var p=e.touches?e.touches[0]:e;sx=p.clientX;sy=p.clientY;var r=w.getBoundingClientRect();ox=r.left;oy=r.top;w.style.left=ox+'px';w.style.top=oy+'px';}
+  function m(e){if(!drag)return;var p=e.touches?e.touches[0]:e;w.style.left=Math.max(-20,Math.min(innerWidth-60,ox+p.clientX-sx))+'px';w.style.top=Math.max(30,Math.min(innerHeight-40,oy+p.clientY-sy))+'px';}
+  function u(){drag=false;}
+  bar.addEventListener('mousedown',d); bar.addEventListener('touchstart',d,{passive:true});
+  addEventListener('mousemove',m); addEventListener('touchmove',m,{passive:true});
+  addEventListener('mouseup',u); addEventListener('touchend',u);
+});
+document.querySelectorAll('[data-win]').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();window.__c=1;openW(a.getAttribute('data-win'));});
+});
+
+/* 文库 */
+var libCat='all';
+function enterLib(){document.getElementById('gate').style.display='none';document.getElementById('main').style.display='block';render();}
+function render(){
+  var box=document.getElementById('list');
+  var arr=libCat==='all'?FICS:FICS.filter(function(f){return f.src===libCat || f.cat===libCat;});
+  if(!arr.length){box.innerHTML='<div style="font-size:12px;color:#a7929c;padding:12px 0">这个分类还没收录，把标题发我。</div>';return;}
+  box.innerHTML=arr.map(function(f){
+    return '<button class="fic" onclick="readFic('+f.id+')"><span class="fic-tag">'+f.src+' · '+(f.cat==='漫'?'同人漫':'同人文')+'</span><b>'+f.ko+(f.zh?' · '+f.zh:'')+'</b><p>'+(f.note||'—')+'</p><span class="fic-meta">'+f.src+(f.url?' · <a class="fic-link" href="'+f.url+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">打开原文 ↗</a>':'')+'</span></button>';
+  }).join('');
+}
+document.querySelectorAll('#tabs .tab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#tabs .tab').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on'); libCat=b.getAttribute('data-cat'); render();
+  });
+});
+function readFic(id){
+  var f=FICS.filter(function(x){return x.id===id;})[0]; if(!f) return;
+  document.getElementById('rt').textContent=f.zh||f.ko;
+  document.getElementById('rn').innerHTML='<p class="rd-line"><b>原题：</b>'+f.ko+'</p>'+(f.zh?'<p class="rd-line"><b>中文：</b>'+f.zh+'</p>':'')+'<p class="rd-line"><b>备注：</b>'+(f.note||'—')+'</p><p class="rd-line" style="color:#b193a1">点下面的按钮可以直接打开原文。</p><a class="gate-btn" id="rlink" href="#" target="_blank" rel="noopener" style="display:block;text-align:center;text-decoration:none">打开原文 ↗</a>';
+  var a=document.getElementById('rlink');
+  if(f.url){a.href=f.url;a.style.display='block';}else{a.href='#';a.style.display='none';}
+  closeW('w-lib'); openW('w-reader');
+}
+
+function addMemo(e){
+  e.preventDefault();
+  var i=document.getElementById('mi'), v=i.value.trim(); if(!v) return;
+  var li=document.createElement('li'); li.innerHTML='<b>我</b><span>'+v.replace(/</g,'&lt;')+'</span>';
+  document.getElementById('mlist').prepend(li); i.value='';
+}
+function openLb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on');}
+function closeLb(){document.getElementById('lb').classList.remove('on');}
+
+/* 打开页面清掉残留 #，避免自动弹出 */
+addEventListener('DOMContentLoaded',function(){
+  if(!window.__c && location.hash){ try{history.replaceState(null,'',location.pathname);}catch(e){} }
+});
+
+function shoot(){
+  var v=document.querySelector('.cam-view');
+  if(!v) return;
+  var f=document.createElement('div');
+  f.style.cssText='position:absolute;inset:0;background:#fff;opacity:0;transition:opacity .12s;pointer-events:none;z-index:5';
+  v.appendChild(f);
+  requestAnimationFrame(function(){ f.style.opacity='.85'; });
+  setTimeout(function(){ f.style.opacity='0'; },110);
+  setTimeout(function(){ f.remove(); },300);
+}
+
+/* 书：翻页 */
+(function(){
+  var pages=Array.prototype.slice.call(document.querySelectorAll('.book .page'));
+  var dots=Array.prototype.slice.call(document.querySelectorAll('.book .dots i'));
+  var cur=0;
+  function show(i){
+    cur=(i+pages.length)%pages.length;
+    pages.forEach(function(p,k){p.classList.toggle('on',k===cur);});
+    dots.forEach(function(d,k){d.classList.toggle('on',k===cur);});
+  }
+  window.turn=function(d){ show(cur+d); };
+  dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft') show(cur-1);
+    if(e.key==='ArrowRight') show(cur+1);
+  });
+  show(0);
+})();
+
+/* 书：把窗口内容搬进书页 */
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.book .page'));
+  var dots=[].slice.call(document.querySelectorAll('.book .dots i'));
+  var cur=0;
+
+  pages.forEach(function(pg){
+    var src=pg.getAttribute('data-src');
+    var win=document.getElementById(src);
+    var body=win && win.querySelector('.body');
+    if(body){
+      while(body.firstChild){ pg.querySelector('.pcontent').appendChild(body.firstChild); }
+      win.remove();
+    }
+  });
+  document.querySelectorAll('.turn, .dots, [data-win]').forEach(function(){});
+  var nav=document.querySelectorAll('.book .turn, .book .dots i');
+  nav.forEach(function(n){ n.style.pointerEvents='auto'; });
+
+  function show(i){
+    var n=pages.length;
+    cur=(i%n+n)%n;
+    pages.forEach(function(p,k){
+      var on=(k===cur);
+      if(on && !p.classList.contains('on')){
+        p.classList.add('flip');
+        setTimeout(function(){p.classList.remove('flip');},560);
+      }
+      p.classList.toggle('on',on);
+    });
+    dots.forEach(function(d,k){ d.classList.toggle('on',k===cur); });
+  }
+  window.turn=function(d){ show(cur+d); };
+  dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft') show(cur-1);
+    if(e.key==='ArrowRight') show(cur+1);
+  });
+  show(0);
+})();
+
+/* 文库：门 + 分类筛选 */
+function enterLib(){
+  var g=document.getElementById('gate'), m=document.getElementById('libmain');
+  if(g) g.style.display='none';
+  if(m) m.style.display='block';
+}
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('#tabs .tab'));
+  var list=document.getElementById('ficlist');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.toggle('on',x===t);});
+      var c=t.dataset.cat;
+      [].slice.call(list.children).forEach(function(card){
+        var ok=(c==='all')||card.dataset.src===c||card.dataset.cat===c;
+        card.style.display=ok?'':'none';
+      });
+    });
+  });
+})();
+function addMemo(e){
+  e.preventDefault();
+  var i=document.getElementById('mi'), v=(i.value||'').trim(); if(!v) return;
+  var li=document.createElement('li');
+  li.innerHTML='<b>我</b><span>'+v.replace(/</g,'&lt;')+'</span>';
+  document.getElementById('mlist').prepend(li); i.value='';
+}
+function openLb(src){var b=document.getElementById('lbimg'); if(b){b.src=src;document.getElementById('lb').classList.add('on');}}
+function closeLb(){document.getElementById('lb').classList.remove('on');}
+
+/* 打开书本 */
+function openBook(){
+  var b=document.getElementById('book');
+  if(!b || b.classList.contains('open')) return;
+  b.classList.remove('closed');
+  b.classList.add('open');
+  setTimeout(function(){ b.classList.remove('opening'); }, 1100);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var b=document.getElementById('book');
+  if(b){ b.classList.add('closed'); }
+});
+
+/* 页码重排 */
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.book .page'));
+  pages.forEach(function(pg,i){
+    var n=pg.querySelector('.pno'); if(n) n.textContent=('0'+(i+1)).slice(-2)+' / '+('0'+pages.length).slice(-2);
+  });
+})();
+
+
+/* 转盘密码锁 */
+(function(){
+  var CODE='451118', entry='', rot=0;
+  var modal=document.getElementById('lockmodal');
+  var dial=document.getElementById('dial');
+  var dots=[].slice.call(document.querySelectorAll('#lkdots i'));
+  var msg=document.getElementById('lkmsg');
+  var box=document.querySelector('.lockbox');
+
+  // 生成 0-9 数字
+  for(var i=0;i<10;i++){
+    var s=document.createElement('span');
+    s.className='num'; s.textContent=i; s.dataset.n=i;
+    var a=i*36*Math.PI/180, r=82;
+    s.style.transform='translate('+(Math.sin(a)*r)+'px,'+(-Math.cos(a)*r)+'px)';
+    s.addEventListener('click',function(e){ e.stopPropagation(); spinTo(+this.dataset.n); });
+    dial.appendChild(s);
+  }
+  function spinTo(n){
+    var base=Math.round(rot/360)*360;
+    var target=base - n*36;
+    while(target>rot-36) target-=360;
+    rot=target; dial.style.transform='rotate('+rot+'deg)';
+    // 数字本身反向旋转，保持正立
+    dial.dataset.current=n;
+  }
+  function paint(){ dots.forEach(function(d,i){ d.classList.toggle('on', i<entry.length); }); }
+  window.commitDigit=function(){
+    var n=dial.dataset.current;
+    if(n===undefined){ msg.textContent='先转到一个数字'; return; }
+    if(entry.length>=6) return;
+    entry+=n; paint();
+    msg.textContent = entry.length<6 ? ('已输入 '+entry.length+' 位') : '';
+    if(entry.length===6){
+      if(entry===CODE){ setTimeout(function(){ closeLock(); openBook(); },260); }
+      else {
+        msg.textContent='密码不对，重新来';
+        box.classList.add('shake');
+        setTimeout(function(){ box.classList.remove('shake'); entry=''; paint(); },420);
+      }
+    }
+    dial.dataset.current='';
+  };
+  window.resetDial=function(){ entry=''; paint(); msg.textContent='把数字转到上面的指针'; };
+  window.openLock=function(){
+    if(document.getElementById('book').classList.contains('open')) return;
+    modal.classList.add('on'); resetDial();
+  };
+  window.closeLock=function(){ modal.classList.remove('on'); };
+})();
+CTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAKUYA ♡ YUSHI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Fredoka:wght@500;600;700&family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:"Zen Maru Gothic","Noto Sans SC","PingFang SC",sans-serif;
+  color:#4b4048;overflow:hidden;
+  background:
+    radial-gradient(90% 60% at 12% 0%,#eaf6ff 0%,transparent 60%),
+    radial-gradient(90% 60% at 90% 4%,#fff0f7 0%,transparent 60%),
+    linear-gradient(180deg,#fbfdff 0%,#fdf7fb 55%,#f3faff 100%);
+  display:flex;flex-direction:column;align-items:center;padding:64px 16px 24px;gap:12px;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23bcd8f2' stroke-width='1' opacity='.35'><path d='M32 2v60M2 32h60M14 14l36 36M50 14L14 50'/><circle cx='32' cy='32' r='14'/></g></svg>");
+  background-size:120px 120px;
+  -webkit-mask-image:radial-gradient(circle at 50% 40%,transparent 30%,#000 85%);
+  mask-image:radial-gradient(circle at 50% 40%,transparent 30%,#000 85%);
+}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
+
+/* 装饰 */
+.deco{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.deco .cloud{position:absolute;border-radius:50%;filter:blur(1px)}
+.deco .c1{width:280px;height:110px;left:-60px;top:9%;background:#e8f4ff;opacity:.85}
+.deco .c2{width:200px;height:80px;right:-50px;top:18%;background:#ffeef6;opacity:.85}
+.deco .c3{width:340px;height:120px;left:45%;bottom:-70px;background:#eef7ff;opacity:.7}
+.deco .vt{
+  position:absolute;writing-mode:vertical-rl;font-family:"Shippori Mincho",serif;
+  letter-spacing:.34em;font-size:clamp(11px,1.4vw,14px);
+}
+.deco .v1{left:3.2%;top:22%;color:#bcd8ef}
+.deco .v2{right:3.2%;bottom:18%;color:#f3c9da}
+
+.frame{position:fixed;inset:11px;z-index:1;pointer-events:none;border-radius:18px;border:1px dashed rgba(255,170,205,.55)}
+.frame::after{content:"";position:absolute;inset:6px;border-radius:14px;border:1px dotted rgba(150,200,246,.6)}
+
+.petals{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.petals i{
+  position:absolute;top:-14vh;left:var(--x);width:var(--s);height:var(--s);opacity:var(--o);
+  background-repeat:no-repeat;background-position:center;background-size:contain;
+  animation:fall var(--d) linear infinite var(--dl);
+}
+.petals i.v1{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g fill='%23f178a6'><circle cx='32' cy='31' r='1.5'/><circle cx='29' cy='34' r='1'/><circle cx='35' cy='34' r='1'/></g><path d='M32 31v-6M32 31l-5-3M32 31l5-3' stroke='%23f178a6' stroke-width='.9' stroke-linecap='round' fill='none'/></svg>")}
+.petals i.v2{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><path d='M32 27.2l1.8 3.3 3.6.5-2.6 2.5.6 3.6-3.4-1.8-3.4 1.8.6-3.6-2.6-2.5 3.6-.5z' fill='none' stroke='%23f178a6' stroke-width='1.1' stroke-linejoin='round'/></svg>")}
+.petals i.v3{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/></g><path d='M32 34c-3-2.4-4.6-3.9-4.6-5.6 0-1.5 1.2-2.6 2.6-2.6 1 0 1.7.5 2 1.2.3-.7 1-1.2 2-1.2 1.4 0 2.6 1.1 2.6 2.6 0 1.7-1.6 3.2-4.6 5.6z' fill='%23ff8fb8'/></svg>")}
+.petals i.v4{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/><path d='M32 32C28 28 24 23 26 18.5 27.2 15.6 30 16 31 18 31.6 19 31.8 19.4 32 19.8' fill='none' stroke='%23f178a6' stroke-width='0.9' opacity='.85'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/><path d='M32 32C28 28 24 23 26 18.5 27.2 15.6 30 16 31 18 31.6 19 31.8 19.4 32 19.8' fill='none' stroke='%23f178a6' stroke-width='0.9' opacity='.85'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/><path d='M32 32C28 28 24 23 26 18.5 27.2 15.6 30 16 31 18 31.6 19 31.8 19.4 32 19.8' fill='none' stroke='%23f178a6' stroke-width='0.9' opacity='.85'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/><path d='M32 32C28 28 24 23 26 18.5 27.2 15.6 30 16 31 18 31.6 19 31.8 19.4 32 19.8' fill='none' stroke='%23f178a6' stroke-width='0.9' opacity='.85'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23fff9fc' stroke='%23f178a6' stroke-width='1.5' stroke-linejoin='round'/><path d='M32 32C28 28 24 23 26 18.5 27.2 15.6 30 16 31 18 31.6 19 31.8 19.4 32 19.8' fill='none' stroke='%23f178a6' stroke-width='0.9' opacity='.85'/></g><g fill='%23f178a6'><circle cx='32' cy='31' r='1.5'/><circle cx='29' cy='34' r='1'/><circle cx='35' cy='34' r='1'/></g><path d='M32 31v-6M32 31l-5-3M32 31l5-3' stroke='%23f178a6' stroke-width='.9' stroke-linecap='round' fill='none'/></svg>")}
+.petals i.v5{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff6fa1' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff6fa1' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff6fa1' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff6fa1' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff6fa1' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g fill='%23f178a6'><circle cx='32' cy='31' r='1.5'/><circle cx='29' cy='34' r='1'/><circle cx='35' cy='34' r='1'/></g><path d='M32 31v-6M32 31l-5-3M32 31l5-3' stroke='%23f178a6' stroke-width='.9' stroke-linecap='round' fill='none'/></svg>")}
+.petals i.v6{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(0 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(72 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(144 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(216 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g transform='rotate(288 32 32)'><path d='M32 32C27 27 22 21 24.5 15 26 11.5 29.5 12 31 14.5 31.6 15.4 31.8 15.8 32 16.2 32.2 15.8 32.4 15.4 33 14.5 34.5 12 38 11.5 39.5 15 42 21 37 27 32 32Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5' stroke-linejoin='round'/></g><g fill='%23f178a6'><circle cx='32' cy='31' r='1.5'/><circle cx='29' cy='34' r='1'/><circle cx='35' cy='34' r='1'/></g><path d='M32 31v-6M32 31l-5-3M32 31l5-3' stroke='%23f178a6' stroke-width='.9' stroke-linecap='round' fill='none'/></svg>")}
+.petals i.v7{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%23ffe3ee' stroke='%23f178a6' stroke-width='1.2'><path d='M22 28c0-4 3-6 6-6s6 2 6 6-3 6-6 6-6-2-6-6z'/><path d='M36 40c0-4 3-6 6-6s6 2 6 6-3 6-6 6-6-2-6-6z'/></g><g fill='%23f178a6'><circle cx='28' cy='28' r='1.2'/><circle cx='42' cy='40' r='1.2'/></g></svg>")}
+.petals i.v8{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(-10 32 32)'><path d='M32 56C25 48 20 39 23 30 25 23 29 17 32 14 35 17 39 23 41 30 44 39 39 48 32 56Z' fill='%23fff4f8' stroke='%23f178a6' stroke-width='1.5'/></g></svg>")}
+.petals i.v9{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g transform='rotate(-10 32 32)'><path d='M32 56C25 48 20 39 23 30 25 23 29 17 32 14 35 17 39 23 41 30 44 39 39 48 32 56Z' fill='%23ff9dc0' stroke='none' stroke-width='1.5'/></g></svg>")}
+.petals i.v10{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M14 40C20 24 32 14 48 14c2 14-8 28-24 32-8 2-11 0-10-6z' fill='%23c9e8b7' stroke='%23e58aa9' stroke-width='1.2' stroke-linejoin='round'/><path d='M18 44C28 34 38 26 46 20' stroke='%23e58aa9' stroke-width='1' fill='none' opacity='.7'/></svg>")}
+.petals i.v11{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 18c6.5 0 11 6.5 11 13.5S38.5 46 32 46s-11-7.5-11-14.5S25.5 18 32 18z' fill='%23ffd6e4' stroke='%23f178a6' stroke-width='1.4'/><path d='M32 46v10' stroke='%23f178a6' stroke-width='1.4' stroke-linecap='round'/><path d='M32 52c-5 0-8-3-8-7M32 52c5 0 8-3 8-7' stroke='%23c9e8b7' stroke-width='3' stroke-linecap='round' fill='none'/></svg>")}
+
+
+
+
+
+@keyframes fall{
+  0%{transform:translate3d(0,-12vh,0) rotate(0)}
+  50%{transform:translate3d(22px,55vh,0) rotate(180deg)}
+  100%{transform:translate3d(-16px,114vh,0) rotate(360deg)}
+}
+
+/* 顶栏 */
+.top{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;gap:10px;padding:15px 20px}
+.brand{
+  font-family:"Shippori Mincho",serif;font-size:12.5px;letter-spacing:.2em;color:#7a5f80;
+  background:rgba(255,255,255,.8);border:1px solid rgba(190,215,245,.9);border-radius:999px;
+  padding:7px 16px;box-shadow:0 8px 18px -14px rgba(150,170,210,.9)
+}
+.brand i{font-style:normal;color:#ff8ab5}
+.brand u{text-decoration:none;color:#5f93c9}
+.top .right{margin-left:auto}
+.ghost{
+  font-size:11.5px;letter-spacing:.1em;color:#8a6f80;background:rgba(255,255,255,.85);
+  border:1px solid rgba(255,190,215,.9);border-radius:999px;padding:7px 14px;
+}
+
+/* 标题 */
+.hero{position:relative;z-index:10;text-align:center;width:min(94vw,880px);flex:0 0 auto}
+.hero .k{font-family:"Shippori Mincho",serif;font-size:10.5px;letter-spacing:.5em;color:#a9a0b4}
+.hero h1{
+  font-family:"Fredoka","Baloo 2","Mochiy Pop One","Zen Maru Gothic",system-ui,sans-serif;
+  font-weight:600;font-size:clamp(44px,10.5vw,118px);line-height:1.14;margin-top:4px;
+  letter-spacing:.02em;
+  background-image:linear-gradient(100deg,#8fc9ff 0%,#bfe2ff 14%,#fff3c9 32%,#fff8dd 44%,#ffe4ec 60%,#ffc4dd 78%,#8fc9ff 100%);
+  background-size:200% 100%;background-repeat:repeat;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 24s linear infinite;
+  filter:drop-shadow(0 3px 0 rgba(255,255,255,.9));
+}
+@keyframes shine{0%{background-position:0 50%}100%{background-position:200% 50%}}
+.hero .s{font-family:"Shippori Mincho",serif;font-size:clamp(11.5px,2.2vw,14px);letter-spacing:.36em;color:#a08ba6;margin-top:10px}
+.hero .line{width:56px;height:1px;background:linear-gradient(90deg,transparent,#ffb9d2,transparent);margin:14px auto 0}
+
+/* 图标：清透卡片 */
+.desk{
+  position:fixed!important;left:50%!important;top:55%!important;right:auto!important;bottom:auto!important;
+  transform:translate(-50%,-50%)!important;margin:0!important;z-index:30;
+  display:grid;grid-template-columns:repeat(3,auto);gap:20px 24px;padding:26px 30px;
+  border-radius:26px;border:1px solid rgba(200,225,248,.95);
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,248,252,.82));
+  box-shadow:0 26px 54px -36px rgba(150,170,210,.8),inset 0 0 0 4px rgba(255,255,255,.7);
+  backdrop-filter:blur(6px);
+}
+.app{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.app .ic{
+  width:100px;height:100px;border-radius:26px;display:grid;place-items:center;position:relative;
+  border:3px solid #fff;
+  box-shadow:0 14px 26px -16px rgba(150,170,210,.9),inset 0 -8px 14px rgba(255,255,255,.4);
+  transition:.18s;
+}
+.app .ic::after{content:"";position:absolute;inset:8px;border-radius:18px;border:1px solid rgba(255,255,255,.6)}
+.app.pk .ic{background:linear-gradient(160deg,#ffe0ee,#ffb2cf)}
+.app.bl .ic{background:linear-gradient(160deg,#dcefff,#a6d0ff)}
+.app.v .ic{background:linear-gradient(160deg,#eee6ff,#c9b6ff)}
+.app.g .ic{background:linear-gradient(160deg,#e6fbee,#a8e4c0)}
+.app .ics{width:52%;height:52%;color:#fff;position:relative;z-index:2;filter:drop-shadow(0 2px 2px rgba(140,100,130,.3))}
+.app .lb{
+  font-family:"Shippori Mincho",serif;font-size:12px;letter-spacing:.14em;color:#6f5c6d;
+  background:rgba(255,255,255,.9);border-radius:999px;padding:3px 11px;
+  box-shadow:0 6px 14px -12px rgba(150,170,210,.9);
+}
+.app:hover .ic{transform:translateY(-5px)}
+.app:active .ic{transform:translateY(0) scale(.97)}
+
+/* 窗口 */
+.win{
+  position:fixed;left:150px;top:110px;z-index:70;display:none;flex-direction:column;
+  width:min(520px,92vw);max-height:66vh;border-radius:18px;overflow:hidden;
+  background:#fffdfe;border:1px solid rgba(255,190,215,.8);
+  box-shadow:0 30px 60px -38px rgba(150,160,200,.75);
+}
+.win.on{display:flex}
+.win .bar{
+  display:flex;align-items:center;gap:8px;padding:11px 14px;cursor:grab;user-select:none;
+  font-family:"Shippori Mincho",serif;font-size:12.5px;letter-spacing:.14em;color:#7a5f80;
+  background:linear-gradient(120deg,#fdeef6,#eef7ff);border-bottom:1px solid rgba(255,190,215,.5);
+}
+.win .bar .x{
+  margin-left:auto;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;
+  background:#fff;border:1px solid rgba(255,190,215,.9);color:#b9829c;font-size:12px;
+}
+.win .body{padding:15px;overflow:auto;color:#4b4048}
+.win .body::-webkit-scrollbar{width:7px}
+.win .body::-webkit-scrollbar-thumb{background:#e6d7e2;border-radius:8px}
+
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.photos img{width:100%;height:100px;object-fit:cover;border-radius:12px}
+.meta{display:flex;justify-content:space-between;font-size:10.5px;color:#a091a4;margin-top:10px;letter-spacing:.06em}
+
+.dolls{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.dolls .slot{width:86px;height:86px;flex:0 0 auto;border-radius:16px;overflow:hidden;border:2px solid #ffd6e6;background:#fff}
+.dolls .slot img{width:100%;height:100%;object-fit:cover}
+.dolls h4{font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:.1em}
+.dolls small{font-size:10px;letter-spacing:.16em;color:#b0a2b0}
+.dolls p{font-size:12px;color:#7d7280;margin-top:5px}
+
+.mlist{list-style:none;font-size:12.5px}
+.mlist li{display:flex;gap:9px;padding:9px 0;border-bottom:1px dashed rgba(255,190,215,.6);color:#6a5f6a}
+.mlist b{font-family:"Shippori Mincho",serif;color:#e2648c;flex:0 0 auto}
+.memo{display:flex;gap:8px;margin-top:12px}
+.memo input{flex:1;border:1px solid rgba(255,180,205,.8);border-radius:12px;padding:9px 12px;font:inherit;font-size:12.5px;background:#fff}
+.memo button{border:0;border-radius:12px;padding:9px 14px;background:linear-gradient(120deg,#ffb3cd,#9ecdf7);color:#fff;font-weight:700;font-size:12px}
+.memo-rose{margin-top:14px;width:100%;display:flex;align-items:center;gap:10px;padding:8px;border-radius:14px;
+  border:1px solid rgba(255,190,215,.7);background:linear-gradient(120deg,#fff7fb,#f4faff);text-align:left}
+.memo-rose img{width:84px;height:52px;object-fit:contain}
+.memo-rose span{font-size:11.5px;color:#9a8797}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.tab{border:1px solid rgba(255,180,205,.9);background:#fff;border-radius:999px;padding:5px 12px;font-size:11px;color:#a4738a}
+.tab.on{background:linear-gradient(120deg,#ffb3cd,#9ecdf7);color:#fff;border-color:transparent}
+.fic-list{display:flex;flex-direction:column;gap:8px;max-height:300px;overflow:auto}
+.fic{text-align:left;background:#fff7fb;border:1px solid rgba(255,190,215,.6);border-radius:14px;padding:10px 12px}
+.fic b{display:block;font-family:"Shippori Mincho",serif;font-size:13px;color:#5f4a5c;margin:3px 0 2px}
+.fic p{font-size:11.5px;color:#9a8797}
+.fic .fic-tag{font-size:9.5px;letter-spacing:.1em;color:#d0698f;background:#ffe6f1;border-radius:999px;padding:2px 8px}
+.fic .fic-meta{display:block;margin-top:5px;font-size:10px;color:#b8a6b3}
+.fic-link{color:#c05f8c;text-decoration:underline}
+
+.gate-box{background:#fff7fb;border:1px solid rgba(255,190,215,.7);border-radius:14px;padding:14px;margin-top:10px}
+.gate-box p{font-size:12px;color:#8a7585;line-height:1.9}
+.gate-btn{margin-top:12px;width:100%;border:0;border-radius:12px;padding:11px;background:linear-gradient(120deg,#ffb3cd,#9ecdf7);color:#fff;font-weight:700;font-size:12.5px}
+.rd-line{font-size:12.5px;color:#5f5560;line-height:1.9;margin-bottom:8px}
+.rd-note{background:#fff7fb;border:1px solid rgba(255,190,215,.7);border-radius:14px;padding:14px}
+
+.lb{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:24px;background:rgba(250,252,255,.96)}
+.lb.on{display:grid}
+.lb img{max-width:min(900px,92vw);max-height:82vh;object-fit:contain;border-radius:12px}
+.lb .x{position:absolute;top:18px;right:20px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,190,215,.9);background:#fff;color:#b9829c}
+
+@media(max-width:700px){
+  body{padding-top:60px}
+  .desk{top:57%!important;padding:16px;gap:14px 18px;border-radius:20px}
+  .app .ic{width:76px;height:76px;border-radius:20px}
+  .app .lb{font-size:10.5px;padding:2px 8px}
+  .win{width:92vw;max-height:62vh}
+  .deco .vt{display:none}
+}
+
+/* 图标正中央（inset+margin 自动居中，不受 transform 影响） */
+.desk{
+  position:fixed!important;
+  inset:0!important;
+  margin:auto!important;
+  transform:none!important;
+  width:max-content!important;
+  height:max-content!important;
+  top:0!important;left:0!important;right:0!important;bottom:0!important;
+  z-index:30;
+}
+
+/* 淡蓝雨滴：三种蓝、稀疏交错 */
+.rain{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.rain i{position:absolute;inset:-12% -6% 0 -6%;display:block}
+.rain i:nth-child(1){
+  opacity:.32;animation:rain1 1.5s linear infinite;
+  background-image:radial-gradient(circle, rgba(168,206,242,.9) 0 1.1px, transparent 1.7px);
+  background-size:46px 64px;background-position:5px 9px;
+}
+.rain i:nth-child(2){
+  opacity:.26;animation:rain2 2.4s linear infinite -.7s;
+  background-image:radial-gradient(circle, rgba(127,182,232,.9) 0 1.4px, transparent 2.1px);
+  background-size:78px 102px;background-position:31px 41px;
+}
+.rain i:nth-child(3){
+  opacity:.2;animation:rain3 3.4s linear infinite -1.6s;
+  background-image:radial-gradient(circle, rgba(93,146,204,.9) 0 1.8px, transparent 2.6px);
+  background-size:128px 168px;background-position:73px 23px;
+}
+@keyframes rain1{0%{background-position-y:-64px}100%{background-position-y:0}}
+@keyframes rain2{0%{background-position-y:-102px}100%{background-position-y:0}}
+@keyframes rain3{0%{background-position-y:-168px}100%{background-position-y:0}}100%{background-position-y:0}}100%{background-position:0 0}}100%{background-position:0 0}}
+@media (prefers-reduced-motion:reduce){.rain{display:none}}
+
+/* 底部小溪（宽缓波浪） */
+.creek{
+  position:fixed;left:0;right:0;bottom:0;height:106px;z-index:4;pointer-events:none;overflow:hidden;
+  background:linear-gradient(180deg,rgba(214,238,255,0) 0%,rgba(183,225,255,.7) 30%,rgba(146,205,247,.95) 100%);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 26%);
+}
+.creek .w{
+  position:absolute;left:0;right:0;top:12px;height:46px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 60' preserveAspectRatio='none'><path d='M0 22 C40 12 74 12 112 22 C150 32 186 32 224 22 C262 12 298 12 336 22 C366 30 394 30 420 24 L420 60 L0 60 Z' fill='%23bfe3ff'/></svg>") repeat-x;
+  background-size:420px 46px;opacity:.9;
+  animation:waveMove 16s linear infinite;
+}
+.creek .w2{
+  position:absolute;left:0;right:0;top:30px;height:54px;opacity:.55;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 60' preserveAspectRatio='none'><path d='M0 27 C46 18 82 18 126 27 C170 36 206 36 250 27 C294 18 330 18 374 27 C392 31 408 32 420 30 L420 60 L0 60 Z' fill='%23d8eeff'/></svg>") repeat-x;
+  background-size:420px 54px;
+  animation:waveMove2 24s linear infinite reverse;
+}
+.creek .shine{
+  position:absolute;left:0;right:0;bottom:0;height:60%;
+  background:
+    radial-gradient(46% 130% at 22% 100%,rgba(255,255,255,.8),transparent 62%),
+    radial-gradient(38% 120% at 68% 100%,rgba(255,255,255,.55),transparent 60%),
+    radial-gradient(30% 110% at 88% 100%,rgba(255,255,255,.45),transparent 60%);
+  animation:glint 8s ease-in-out infinite;
+}
+@keyframes waveMove{0%{background-position-x:0}100%{background-position-x:420px}}
+@keyframes waveMove2{0%{background-position-x:0}100%{background-position-x:420px}}
+@keyframes glint{0%,100%{opacity:.6}50%{opacity:.92}}
+@media(max-width:700px){.creek{height:78px}.creek .w{height:36px;background-size:420px 36px;top:8px}.creek .w2{height:42px;top:22px;background-size:420px 42px}}
+
+/* 雨滴溅起的水花 */
+.splash{position:fixed;left:0;right:0;bottom:26px;height:120px;z-index:6;pointer-events:none;overflow:hidden}
+.splash i{
+  position:absolute;left:var(--x);bottom:0;width:var(--s);height:calc(var(--s) * .42);
+  border:1.4px solid rgba(150,200,240,.75);border-radius:50%;
+  transform:translateX(-50%) scale(.2);opacity:0;
+  animation:ripple var(--d) ease-out infinite var(--dl);
+}
+.splash i::before,.splash i::after{
+  content:"";position:absolute;left:50%;bottom:60%;width:2px;height:2px;border-radius:50%;
+  background:rgba(170,215,248,.95);
+}
+.splash i::before{transform:translate(-6px,-2px);animation:dropUp var(--d) ease-out infinite var(--dl)}
+.splash i::after{transform:translate(6px,-4px);animation:dropUp var(--d) ease-out infinite calc(var(--dl) - .3s)}
+@keyframes ripple{
+  0%{transform:translateX(-50%) scale(.2);opacity:0}
+  18%{opacity:.85}
+  70%{opacity:.35}
+  100%{transform:translateX(-50%) scale(1.6);opacity:0}
+}
+@keyframes dropUp{
+  0%{opacity:0;transform:translate(-6px,0) scale(.6)}
+  30%{opacity:.9}
+  100%{opacity:0;transform:translate(-9px,-16px) scale(.2)}
+}
+@media(max-width:700px){.splash{bottom:18px;height:90px}}
+
+/* 左上角阳光 */
+.sunlight{
+  position:fixed;left:0;top:0;width:min(70vw,760px);height:min(60vh,520px);
+  z-index:3;pointer-events:none;
+  background:
+    radial-gradient(circle at 6% -6%, rgba(255,248,214,.95) 0%, rgba(255,243,205,.7) 18%, rgba(255,240,215,.35) 34%, rgba(255,245,230,0) 62%),
+    linear-gradient(118deg, rgba(255,250,225,.55) 0%, rgba(255,248,225,.18) 26%, rgba(255,255,255,0) 52%);
+  mix-blend-mode:screen;
+  filter:blur(2px);
+  animation:sunBreathe 9s ease-in-out infinite;
+}
+.sunlight::after{
+  content:"";position:absolute;left:2%;top:0;width:46%;height:120%;
+  background:linear-gradient(104deg, rgba(255,252,232,.55), rgba(255,250,230,0) 70%);
+  transform:skewX(-14deg);filter:blur(10px);
+}
+@keyframes sunBreathe{0%,100%{opacity:.85}50%{opacity:1}}
+@media(max-width:700px){.sunlight{width:86vw;height:46vh}}
+
+/* 左上角的太阳 */
+.sun{position:fixed;left:clamp(28px,6vw,96px);top:clamp(24px,5vh,70px);width:150px;height:150px;z-index:5;pointer-events:none}
+.sun .core{
+  position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%,#fffdf2 0%,#fff3c4 38%,#ffe1a8 70%,#ffcf87 100%);
+  box-shadow:0 0 26px rgba(255,226,160,.95),0 0 62px rgba(255,232,180,.75),0 0 110px rgba(255,240,205,.5);
+  animation:sunPulse 7s ease-in-out infinite;
+}
+.sun .halo{
+  position:absolute;inset:-40%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,244,205,.55) 0%,rgba(255,240,200,.25) 40%,transparent 70%);
+}
+.sun .rays{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(
+    rgba(255,236,178,.55) 0 2deg, transparent 2deg 18deg,
+    rgba(255,236,178,.4) 18deg 20deg, transparent 20deg 36deg,
+    rgba(255,236,178,.5) 36deg 38deg, transparent 38deg 54deg,
+    rgba(255,236,178,.35) 54deg 56deg, transparent 56deg 72deg);
+  -webkit-mask-image:radial-gradient(circle,transparent 30%,#000 42%,#000 60%,transparent 80%);
+  mask-image:radial-gradient(circle,transparent 30%,#000 42%,#000 60%,transparent 80%);
+  animation:sunSpin 60s linear infinite;
+  opacity:.85;
+}
+@keyframes sunSpin{to{transform:rotate(360deg)}}
+@keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media(max-width:700px){.sun{width:104px;height:104px}.sun .core{width:44px;height:44px;margin:-22px 0 0 -22px}}
+/* 左上角的太阳（半个露在角外） */
+.sun{
+  position:fixed;left:-96px;top:-96px;width:200px;height:200px;z-index:5;pointer-events:none;
+  overflow:visible;
+}
+.sun .core{
+  position:absolute;left:50%;top:50%;width:104px;height:104px;margin:-52px 0 0 -52px;border-radius:50%;
+  background:radial-gradient(circle at 40% 38%,#fffdf2 0%,#fff3c4 36%,#ffe1a8 68%,#ffcf87 100%);
+  box-shadow:0 0 30px rgba(255,226,160,.95),0 0 70px rgba(255,232,180,.8),0 0 130px rgba(255,240,205,.55);
+  animation:sunPulse 8s ease-in-out infinite;
+}
+.sun .halo{
+  position:absolute;inset:-55%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,244,205,.6) 0%,rgba(255,240,200,.28) 42%,transparent 72%);
+}
+.sun .rays{
+  position:absolute;inset:-12%;border-radius:50%;
+  background:conic-gradient(
+    rgba(255,236,178,.55) 0 2deg, transparent 2deg 18deg,
+    rgba(255,236,178,.4) 18deg 20deg, transparent 20deg 36deg,
+    rgba(255,236,178,.5) 36deg 38deg, transparent 38deg 54deg,
+    rgba(255,236,178,.35) 54deg 56deg, transparent 56deg 72deg);
+  -webkit-mask-image:radial-gradient(circle,transparent 26%,#000 40%,#000 62%,transparent 82%);
+  mask-image:radial-gradient(circle,transparent 26%,#000 40%,#000 62%,transparent 82%);
+  animation:sunSpin 70s linear infinite;opacity:.8;
+}
+@keyframes sunSpin{to{transform:rotate(360deg)}}
+@keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@media(max-width:700px){.sun{left:-64px;top:-64px;width:140px;height:140px}.sun .core{width:74px;height:74px;margin:-37px 0 0 -37px}}
+/* 相合伞标志 */
+.aiai-logo{
+  position:fixed;left:clamp(14px,3vw,34px);top:clamp(74px,13vh,132px);width:clamp(64px,7vw,92px);
+  z-index:12;pointer-events:none;opacity:.95;
+}
+.aiai-logo svg{width:100%;height:auto}
+@media(max-width:700px){.aiai-logo{width:56px;top:64px;left:10px}}
+
+.aiai-logo{left:clamp(2px,1.2vw,14px)!important;top:clamp(58px,10vh,96px)!important;width:clamp(66px,7.6vw,98px)!important}
+@media(max-width:700px){.aiai-logo{left:2px!important;top:52px!important;width:60px!important}}
+
+/* 纯色边框 */
+.frame{
+  border:2px solid #f6b3cd!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.frame::after{display:none!important}
+
+/* 窗口边框改奶蓝 */
+.win{border:2px solid #cfe7f8!important;box-shadow:0 26px 54px -38px rgba(120,160,200,.6)!important}
+.win .bar{background:linear-gradient(120deg,#eaf6ff,#f8fcff)!important;color:#5d86ad!important;border-bottom:1px solid #d8ecfa!important}
+.win .bar .x{border:1px solid #cfe7f8!important;color:#6f9bc2!important}
+.win .body{background:#fdffff!important}
+.gate-box{background:#f5fbff!important;border:1px solid #d9ecfa!important}
+.gate-btn{background:linear-gradient(120deg,#bfe2f7,#dcf0ff)!important;color:#3f6b93!important}
+.tab{border:1px solid #cfe7f8!important;color:#6f9bc2!important}
+.tab.on{background:#8fc4e8!important;color:#fff!important;border-color:#8fc4e8!important}
+.fic{background:#f6fbff!important;border:1px solid #dceefa!important}
+.fic-meta,.fic p{color:#8aa6bb!important}
+.memo-rose{background:linear-gradient(120deg,#f7fcff,#f2f9ff)!important;border:1px solid #d8ecfa!important}
+
+/* 相机 */
+.cam-view{position:relative;border-radius:14px;overflow:hidden;background:#0f1418}
+.cam-view img{width:100%;height:230px;object-fit:cover;display:block}
+.cam-grid{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;pointer-events:none}
+.cam-grid i{border:1px solid rgba(255,255,255,.28)}
+.cam-info{position:absolute;left:10px;bottom:8px;display:flex;gap:10px;font-size:10px;color:#fff;
+  letter-spacing:.08em;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.cam-bar{display:flex;align-items:center;justify-content:space-between;margin:14px 4px 10px}
+.cam-mode{font-size:11px;letter-spacing:.14em;color:#9db4c6;background:none;border:0}
+.cam-mode.on{color:#5d86ad;font-weight:700}
+.cam-shutter{width:54px;height:54px;border-radius:50%;border:3px solid #cfe7f8;background:#fff;
+  box-shadow:inset 0 0 0 3px #eaf6ff;transition:.15s}
+.cam-shutter:active{transform:scale(.92);background:#eaf6ff}
+.cam-strip{display:flex;gap:6px;overflow:auto;padding-bottom:2px}
+.cam-strip img{width:58px;height:58px;object-fit:cover;border-radius:8px;opacity:.85}
+
+/* 窗口回到樱花粉 */
+.win{border:2px solid #f8c6da!important;box-shadow:0 26px 54px -38px rgba(210,140,170,.6)!important}
+.win .bar{background:linear-gradient(120deg,#ffe9f3,#fff8fb)!important;color:#b06a8a!important;border-bottom:1px solid #ffe0ee!important}
+.win .bar .x{border:1px solid #f8c6da!important;color:#c98ba6!important}
+.win .body{background:#fffdfe!important}
+.gate-box{background:#fff7fb!important;border:1px solid #fbd6e6!important}
+.gate-btn{background:linear-gradient(120deg,#ffb0cc,#ffcfe2)!important;color:#7d3f5c!important}
+.tab{border:1px solid #f8c6da!important;color:#b06a8a!important}
+.tab.on{background:#ff9ec4!important;color:#fff!important;border-color:#ff9ec4!important}
+.fic{background:#fff7fb!important;border:1px solid #fbd6e6!important}
+.fic p,.fic-meta{color:#a58c98!important}
+.memo-rose{background:linear-gradient(120deg,#fff7fb,#fff2f7)!important;border:1px solid #fbd6e6!important}
+.cam-shutter{border-color:#ffc6dc!important;box-shadow:inset 0 0 0 3px #fff0f6!important}
+.cam-shutter:active{background:#fff0f6!important}
+.cam-mode.on{color:#c46a8e!important}
+
+.cam-empty{
+  min-height:180px;display:grid;place-items:center;text-align:center;
+  color:#c08fa6;font-size:13px;letter-spacing:.1em;border:1px dashed #f8c6da;border-radius:14px;
+  background:#fffafc;line-height:2
+}
+.cam-empty span{font-size:11px;color:#d3a7ba}
+
+/* 全局楷书手写体 */
+body, .win, .win .bar, .win .body, button, input, .app .lb, .fic, .fic b, .tab,
+.brand, .ghost, .hero .k, .hero h1, .cam-empty{
+  font-family:"LXGW WenKai","Ma Shan Zheng","Zhi Mang Xing","Kaiti SC","STKaiti","KaiTi",serif!important;
+}
+.hero h1{
+  font-family:"Ma Shan Zheng","LXGW WenKai","Kaiti SC","STKaiti",serif!important;
+  font-weight:400!important;letter-spacing:.04em!important;
+}
+.hero .k{font-family:"LXGW WenKai","Kaiti SC",serif!important;letter-spacing:.42em!important}
+.fic b,.win .bar{letter-spacing:.06em!important}
+.win .body{line-height:1.85}
+
+/* 樱花粉改柔和 */
+.frame{border-color:#fad6e3!important}
+.win{border-color:#fad6e3!important}
+.win .bar{background:linear-gradient(120deg,#fff0f6,#fffafc)!important;color:#b98aa1!important;border-bottom:1px solid #fce4ee!important}
+.win .bar .x{border-color:#fad6e3!important;color:#cf9db3!important}
+.gate-box{background:#fffaFC!important;border-color:#fbe0ea!important}
+.gate-btn{background:linear-gradient(120deg,#f8c3d6,#fbd8e6)!important;color:#8a5570!important}
+.tab{border-color:#fad6e3!important;color:#b98aa1!important}
+.tab.on{background:#f8c3d6!important;border-color:#f8c3d6!important}
+.fic{background:#fffafc!important;border-color:#fbe0ea!important}
+.fic-link{color:#c9829f!important}
+.app.pk .ic{background:linear-gradient(160deg,#ffe6f0,#ffc6db)!important}
+.hero h1{background-image:linear-gradient(100deg,#a8d6ff 0%,#cbe6ff 14%,#fff6d8 32%,#fffbe8 44%,#ffeef5 60%,#ffd9e7 78%,#a8d6ff 100%)!important}
+
+/* 去掉图标上的小装饰 */
+.app .ic::after{display:none!important}
+
+/* 去掉图标名称 */
+.app .lb{display:none!important}
+
+/* 大标题字体 */
+.hero h1{
+  font-family:"Great Vibes","LXGW WenKai","Kaiti SC",cursive!important;
+  font-weight:400!important;
+  font-size:clamp(56px,14vw,168px)!important;
+  line-height:1.25!important;letter-spacing:.01em!important;
+}
+
+/* 大标题：Pacifico 手写花体 */
+.hero h1{
+  font-family:"Pacifico","LXGW WenKai",cursive!important;
+  font-weight:400!important;
+  font-size:clamp(48px,12vw,142px)!important;
+  line-height:1.35!important;letter-spacing:.01em!important;
+  -webkit-text-stroke:1.2px rgba(255,255,255,.85)!important;
+  filter:drop-shadow(0 6px 16px rgba(150,190,235,.35))!important;
+}
+
+/* 太阳：更大更自然的光晕 */
+.sun{width:260px!important;height:260px!important}
+.sun .core{
+  width:104px!important;height:104px!important;margin:-52px 0 0 -52px!important;
+  box-shadow:0 0 26px rgba(255,238,196,.9),0 0 60px rgba(255,236,200,.7)!important;
+  filter:blur(.2px);
+}
+.sun .halo{
+  inset:-150%!important;border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,246,214,.55) 0%, rgba(255,244,208,.34) 26%, rgba(255,242,215,.18) 46%, rgba(255,246,232,.07) 66%, rgba(255,250,240,0) 82%)!important;
+  filter:blur(18px);
+  animation:sunHalo 12s ease-in-out infinite;
+}
+.sun::after{
+  content:"";position:absolute;inset:-230%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle at 50% 50%, rgba(255,248,224,.30) 0%, rgba(255,248,230,.14) 34%, rgba(255,255,245,.04) 58%, transparent 76%);
+  filter:blur(46px);
+}
+.sun .rays{
+  opacity:.42!important;
+  filter:blur(3px);
+  -webkit-mask-image:radial-gradient(circle,transparent 24%,#000 44%,rgba(0,0,0,.55) 64%,transparent 84%)!important;
+  mask-image:radial-gradient(circle,transparent 24%,#000 44%,rgba(0,0,0,.55) 64%,transparent 84%)!important;
+  animation:sunSpin 110s linear infinite!important;
+}
+@keyframes sunHalo{0%,100%{opacity:.9;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+@media(max-width:700px){.sun{width:180px!important;height:180px!important}}
+
+/* 标题完整显示 */
+.hero{width:min(96vw,1100px)!important}
+.hero h1{
+  display:block!important;width:100%!important;max-width:none!important;
+  white-space:nowrap!important;overflow:visible!important;
+  font-size:clamp(26px,8.6vw,112px)!important;
+  line-height:1.5!important;
+  padding:6px 4px 10px!important;
+  text-align:center!important;
+}
+
+/* 标题浅棕描边 */
+.hero h1{
+  -webkit-text-stroke:2.2px #cbb096!important;
+  paint-order:stroke fill;
+  filter:drop-shadow(0 4px 10px rgba(180,150,120,.35))!important;
+}
+
+/* 布艺颗粒质感 */
+body::after{
+  content:"";position:fixed;inset:0;z-index:900;pointer-events:none;
+  opacity:.5;mix-blend-mode:multiply;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='.22'/></svg>"),
+    repeating-linear-gradient(0deg, rgba(160,140,120,.07) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(160,140,120,.06) 0 1px, transparent 1px 3px);
+  background-size:180px 180px, 3px 3px, 3px 3px;
+}
+
+/* 大标题：与页面调性统一的衬线 */
+.hero h1{
+  font-family:"Cormorant Garamond","Shippori Mincho",Georgia,serif!important;
+  font-weight:600!important;
+  font-size:clamp(52px,11vw,132px)!important;
+  line-height:1.12!important;
+  letter-spacing:.06em!important;
+  text-transform:uppercase;
+  color:#8d5f6d!important;
+  background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;
+  -webkit-text-stroke:0!important;
+  animation:none!important;
+  filter:drop-shadow(0 3px 8px rgba(190,150,160,.35))!important;
+}
+.hero h1 em{color:#c0392b!important;font-style:italic}
+.hero .k{color:#b08b98!important}
+
+/* 图标外框改成一本摊开的书 */
+.desk{
+  position:fixed!important;inset:0!important;margin:auto!important;
+  width:max-content!important;height:max-content!important;
+  padding:30px 34px 30px 64px!important;
+  border-radius:6px 16px 16px 6px!important;
+  background:
+    linear-gradient(180deg,rgba(255,253,247,.96),rgba(255,247,250,.94))!important;
+  border:1px solid #e8d3c6!important;
+  border-left:16px solid #f0c9d6!important;
+  box-shadow:
+    0 26px 60px -34px rgba(150,110,120,.55),
+    inset 0 0 0 1px rgba(255,255,255,.9),
+    inset 6px 0 12px -8px rgba(180,130,150,.35)!important;
+}
+.desk::before{
+  content:"";position:absolute;left:5px;top:12px;bottom:12px;width:5px;
+  background-image:radial-gradient(circle, rgba(200,140,165,.55) 1.1px, transparent 1.6px);
+  background-size:5px 12px;background-repeat:repeat-y;
+  border-radius:3px;
+}
+.desk::after{
+  content:"SAKUYA × YUSHI";position:absolute;left:22px;top:10px;
+  font-family:"LXGW WenKai","Kaiti SC",serif;font-size:9.5px;letter-spacing:.34em;color:#c9a3ad;
+}
+@media(max-width:700px){
+  .desk{padding:22px 18px 22px 44px!important;border-left-width:12px!important}
+  .desk::after{font-size:8px;left:16px}
+}
+
+/* 从中间翻开的书 */
+.desk{
+  padding:34px 54px!important;
+  border-radius:10px!important;
+  border:1px solid #e6d0c3!important;
+  border-left:1px solid #e6d0c3!important;
+  background:
+    linear-gradient(90deg,
+      #fffdf8 0%, #fffaf4 48.6%,
+      #f3e6df 49.6%, #e8d6cd 50%, #f3e6df 50.4%,
+      #fffaf4 51.4%, #fffdf8 100%)!important;
+  box-shadow:
+    0 30px 60px -34px rgba(150,110,120,.5),
+    inset 0 0 0 1px rgba(255,255,255,.85),
+    inset 14px 0 22px -18px rgba(150,110,110,.35),
+    inset -14px 0 22px -18px rgba(150,110,110,.35)!important;
+  gap:22px 46px!important;
+}
+.desk::before{
+  content:"";position:absolute;left:50%;top:10px;bottom:10px;width:1px;margin-left:-.5px;
+  background:linear-gradient(180deg,transparent,rgba(180,140,145,.35) 18%,rgba(180,140,145,.35) 82%,transparent);
+  box-shadow:0 0 18px rgba(180,140,145,.35);
+}
+.desk::after{
+  content:"";position:absolute;inset:8px;border-radius:6px;pointer-events:none;
+  border:1px solid rgba(230,208,195,.7);
+}
+/* 书页外侧的纸边 */
+.desk > .app:nth-child(3n+1){transform:translateX(-6px)}
+.desk > .app:nth-child(3n){transform:translateX(6px)}
+@media(max-width:700px){
+  .desk{padding:24px 26px!important;gap:16px 24px!important}
+  .desk > .app:nth-child(3n+1),.desk > .app:nth-child(3n){transform:none}
+}
+
+/* ===== 书：每页一个 App ===== */
+.book{
+  position:fixed;left:50%;top:54%;transform:translate(-50%,-50%);z-index:30;
+  width:min(360px,86vw);height:400px;perspective:1200px;
+}
+.book .spread{
+  position:relative;width:100%;height:100%;
+  border-radius:8px 14px 14px 8px;
+  background:linear-gradient(90deg,#fffdf8,#fff7fa);
+  border:1px solid #e8d3c6;
+  box-shadow:0 30px 60px -32px rgba(150,110,120,.55),inset 0 0 0 1px rgba(255,255,255,.9);
+  overflow:hidden;
+}
+.book .spread::before{
+  content:"";position:absolute;left:14px;top:10px;bottom:10px;width:14px;
+  background:linear-gradient(90deg,rgba(200,150,165,.25),transparent);
+  border-radius:2px;
+}
+.page{
+  position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:44px 30px 54px;background:linear-gradient(180deg,#fffdf8,#fff8fb);
+}
+.page.on{display:flex}
+.page .ribbon{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);width:34px;height:74px;
+  background:#ffc7db;clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%);
+  box-shadow:0 6px 12px -8px rgba(180,120,145,.8);
+}
+.page.bl .ribbon{background:#b8d9f5}
+.page.v .ribbon{background:#d5c8f5}
+.page.g .ribbon{background:#bfe6c9}
+.page:not(.pk):not(.bl):not(.v):not(.g) .ribbon{background:#f4d9c9}
+.page .app{gap:16px}
+.page .ic{
+  width:132px;height:132px;border-radius:34px;display:grid;place-items:center;
+  border:3px solid #fff;box-shadow:0 18px 30px -18px rgba(150,110,120,.6)
+}
+.page.pk .ic{background:linear-gradient(160deg,#ffe0ee,#ffb2cf)}
+.page.bl .ic{background:linear-gradient(160deg,#dcefff,#a6d0ff)}
+.page.v .ic{background:linear-gradient(160deg,#eee6ff,#c9b6ff)}
+.page.g .ic{background:linear-gradient(160deg,#e6fbee,#a8e4c0)}
+.page .ics{width:54%;height:54%;color:#fff}
+.page .pname{
+  font-family:"LXGW WenKai","Kaiti SC",serif;font-size:15px;letter-spacing:.22em;color:#8d6a78;
+}
+.page .pno{
+  position:absolute;bottom:16px;right:22px;font-family:"Cormorant Garamond",serif;
+  font-size:13px;letter-spacing:.14em;color:#c3a3ad;
+}
+.book .turn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:34px;height:34px;border-radius:50%;border:1px solid #e8d3c6;background:rgba(255,255,255,.9);
+  color:#a97f8f;font-size:17px;line-height:1;display:grid;place-items:center;
+}
+.book .prev{left:-14px}
+.book .next{right:-14px}
+.book .dots{position:absolute;left:0;right:0;bottom:-26px;display:flex;justify-content:center;gap:7px}
+.book .dots i{width:6px;height:6px;border-radius:50%;background:#e6cbd4;transition:.2s}
+.book .dots i.on{background:#e07fa6;transform:scale(1.25)}
+@media(max-width:700px){
+  .book{width:82vw;height:360px;top:56%}
+  .page .ic{width:110px;height:110px;border-radius:28px}
+  .book .prev{left:-8px}.book .next{right:-8px}
+}
+
+/* ===== 摊开的大书 ===== */
+.book{position:fixed;left:50%;top:52%;transform:translate(-50%,-50%);z-index:30;
+  width:min(1080px,94vw);height:min(72vh,700px);perspective:2200px}
+.book .spread{
+  position:relative;width:100%;height:100%;display:flex;
+  border-radius:10px;overflow:hidden;
+  background:linear-gradient(90deg,#fffdf8 0%,#fff9f4 48.6%,#f1e2da 49.6%,#e6d3c9 50%,#f1e2da 50.4%,#fff9f4 51.4%,#fffdf8 100%);
+  box-shadow:0 40px 80px -40px rgba(150,105,120,.55),inset 0 0 0 1px rgba(255,255,255,.85);
+}
+.book .spread::before{content:"";position:absolute;left:50%;top:8px;bottom:8px;width:2px;margin-left:-1px;
+  background:linear-gradient(180deg,transparent,rgba(175,135,140,.4) 14%,rgba(175,135,140,.4) 86%,transparent);
+  box-shadow:0 0 22px rgba(175,135,140,.38);z-index:3}
+.book .spread::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:linear-gradient(90deg,rgba(160,120,125,.16),transparent 12%,transparent 88%,rgba(160,120,125,.16))}
+.page{position:absolute;inset:0;display:none;padding:34px 40px 30px;overflow:auto}
+.page.on{display:block}
+.page.flip{animation:pageTurn .55s cubic-bezier(.3,.8,.3,1)}
+@keyframes pageTurn{
+  0%{transform:rotateY(0);opacity:1}
+  45%{transform:rotateY(-11deg) scale(.985);opacity:.55;filter:brightness(.94)}
+  100%{transform:rotateY(0);opacity:1}
+}
+.page .ribbon{position:absolute;top:0;left:34px;width:30px;height:64px;background:#ffc7db;
+  clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%);z-index:4;box-shadow:0 6px 12px -8px rgba(180,120,145,.9)}
+.page.bl .ribbon{background:#b8d9f5}
+.page.v .ribbon{background:#d5c8f5}
+.page.g .ribbon{background:#bfe6c9}
+.page:not(.pk):not(.bl):not(.v):not(.g) .ribbon{background:#f4d9c9}
+.page .ph{display:flex;align-items:baseline;justify-content:space-between;margin:6px 0 14px;
+  padding-bottom:8px;border-bottom:1px solid #efdbe2}
+.page .ph b{font-family:"LXGW WenKai","Kaiti SC",serif;font-size:17px;letter-spacing:.2em;color:#8d6a78}
+.page .pno{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:.16em;color:#c9a8b3}
+.page .pcontent{font-size:13px;color:#4b4048}
+.page .pcontent .photos{grid-template-columns:repeat(3,1fr)}
+.book .turn{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:38px;height:38px;
+  border-radius:50%;border:1px solid #e8d3c6;background:rgba(255,255,255,.95);color:#a97f8f;font-size:19px}
+.book .prev{left:-16px}.book .next{right:-16px}
+.book .dots{position:absolute;left:0;right:0;bottom:-26px;display:flex;justify-content:center;gap:8px}
+.book .dots i{width:6px;height:6px;border-radius:50%;background:#e6cbd4}
+.book .dots i.on{background:#e07fa6;transform:scale(1.3)}
+@media(max-width:820px){
+  .book{width:94vw;height:76vh;top:55%}
+  .page{padding:26px 20px 22px}
+  .page .ribbon{left:14px;width:24px;height:52px}
+  .book .prev{left:-6px}.book .next{right:-6px}
+}
+
+/* 标题换日系圆体 */
+.hero h1{
+  font-family:"Zen Maru Gothic","Mochiy Pop One","LXGW WenKai",sans-serif!important;
+  font-weight:700!important;
+  font-size:clamp(44px,9.6vw,120px)!important;
+  letter-spacing:.14em!important;
+  line-height:1.48!important;
+  color:#8d5f6d!important;
+  -webkit-text-stroke:0!important;
+}
+.hero .k{font-family:"Zen Maru Gothic",sans-serif!important;letter-spacing:.42em!important;color:#b08b98!important}
+
+.book{width:min(900px,88vw)!important;height:min(62vh,580px)!important}
+@media(max-width:820px){.book{width:92vw!important;height:70vh!important}}
+.page{padding:26px 30px 24px!important}
+
+/* 让标题露出来，书往下放 */
+.book{top:63%!important;height:min(52vh,510px)!important}
+.hero{z-index:35!important;top:56px!important}
+@media(max-width:820px){.book{top:64%!important;height:min(56vh,520px)!important}.hero{top:48px!important}}
+
+/* 标题压在书上 + 书影 */
+.hero{z-index:45!important;top:52px!important}
+.hero h1{text-shadow:0 2px 0 rgba(255,255,255,.9),0 10px 22px rgba(150,110,130,.28)}
+.book{top:58%!important}
+.book::after{
+  content:"";position:absolute;left:4%;right:4%;bottom:-26px;height:44px;z-index:-1;
+  background:radial-gradient(ellipse at 50% 0%,rgba(160,110,125,.32),rgba(160,110,125,.12) 45%,transparent 72%);
+  filter:blur(10px);border-radius:50%;
+}
+@media(max-width:820px){
+  .hero{top:44px!important}
+  .book{top:60%!important}
+}
+
+.hero{top:26px!important}
+.book{top:53%!important}
+@media(max-width:820px){.hero{top:20px!important}.book{top:55%!important}}
+
+/* 书页：纸质 + 横线本 */
+.book .spread{
+  background-color:#fffdf6!important;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='160' height='160' filter='url(%23p)' opacity='.10'/></svg>"),
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(150,190,220,.35) 27px 28px)!important;
+  background-size:160px 160px, 100% 28px!important;
+}
+.book .page{
+  background:transparent!important;
+}
+/* 每页左侧的装订红线 */
+.book .page::before{
+  content:"";position:absolute;left:22px;top:0;bottom:0;width:1px;background:rgba(230,150,170,.55);
+}
+/* 页面内容左侧留白 */
+.book .page{padding-left:38px!important}
+.book .page .pcontent{position:relative}
+@media(max-width:820px){
+  .book .page::before{left:12px}
+  .book .page{padding-left:26px!important}
+}
+
+.hero{top:8px!important}
+.hero h1{
+  font-size:clamp(34px,7.2vw,86px)!important;
+  letter-spacing:.02em!important;
+  line-height:1.35!important;
+}
+@media(max-width:820px){.hero{top:6px!important}.hero h1{font-size:clamp(30px,7.6vw,60px)!important}}
+.book{top:56%!important}
+
+/* 镂空书引号 */
+.hero h1 .q{
+  font-family:"Shippori Mincho","LXGW WenKai",serif!important;
+  font-weight:400!important;
+  color:transparent!important;
+  -webkit-text-stroke:1.6px #b98a9a!important;
+  font-size:.92em;
+  display:inline-block;
+  transform:translateY(-.02em);
+}
+
+/* 小标题避开书签 */
+.page .ph{padding-left:56px!important}
+@media(max-width:820px){.page .ph{padding-left:46px!important}}
+
+/* 合拢的书 + 打开动效 */
+.book .cover{
+  position:absolute;inset:0;z-index:9;display:grid;place-items:center;cursor:pointer;
+  border-radius:10px;transform-origin:left center;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.08'/></svg>"),
+    linear-gradient(160deg,#fbe3ea,#f6cfdc 60%,#f0c3d2);
+  border:1px solid #ecc3d1;
+  box-shadow:0 34px 60px -32px rgba(150,100,120,.6),inset 14px 0 22px -18px rgba(140,90,110,.45);
+  transition:transform 1s cubic-bezier(.42,0,.2,1),opacity .7s .35s,box-shadow .6s;
+  backface-visibility:hidden;
+}
+.book .cover::before{
+  content:"";position:absolute;left:20px;top:0;bottom:0;width:10px;
+  background:linear-gradient(90deg,rgba(190,120,145,.35),transparent);
+}
+.cv-inner{text-align:center;color:#8d5f6d}
+.cv-line{width:120px;height:1px;background:rgba(160,110,130,.45);margin:14px auto}
+.cv-t{font-family:"Zen Maru Gothic",sans-serif;font-size:clamp(20px,3vw,34px);letter-spacing:.16em}
+.cv-s{font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.32em;margin-top:6px;color:#b08494}
+.cv-h{font-family:"LXGW WenKai",serif;font-size:11px;letter-spacing:.26em;margin-top:16px;color:#c49aa8;
+  animation:hintPulse 2.4s ease-in-out infinite}
+@keyframes hintPulse{0%,100%{opacity:.5}50%{opacity:1}}
+.book .spread{opacity:0;transform:scale(.985);transition:opacity .5s .3s,transform .6s .3s}
+.book.open .cover{transform:rotateY(-168deg);opacity:0;pointer-events:none}
+.book.open .spread{opacity:1;transform:none}
+.book.closed .turn,.book.closed .dots{opacity:0;pointer-events:none}
+
+/* 合拢时是半本书 */
+.book.closed{width:min(450px,44vw)!important}
+.book.closed .cover{left:0;right:0}
+.book.open{width:min(900px,88vw)!important;transition:width .7s cubic-bezier(.42,0,.2,1)}
+@media(max-width:820px){
+  .book.closed{width:76vw!important}
+  .book.open{width:92vw!important}
+}
+
+.book.open{width:min(1020px,92vw)!important}
+.book.closed{width:min(510px,48vw)!important}
+.book{top:50%!important}
+@media(max-width:820px){
+  .book.open{width:94vw!important}
+  .book.closed{width:80vw!important}
+  .book{top:52%!important}
+}
+
+/* 去掉大标题，书居中放大 */
+.hero{display:none!important}
+.book{top:50%!important;height:min(68vh,660px)!important}
+.book.open{width:min(1080px,94vw)!important}
+.book.closed{width:min(540px,50vw)!important}
+@media(max-width:820px){
+  .book{top:50%!important;height:72vh!important}
+  .book.open{width:95vw!important}
+  .book.closed{width:84vw!important}
+}
+
+/* 日式和装本封面 */
+.book .cover{
+  background-color:#f7ece2!important;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><g fill='none' stroke='%23e2c6c2' stroke-width='1'><path d='M0 60h120M60 0v120M0 0l120 120M120 0L0 120'/><circle cx='60' cy='60' r='26'/></g></svg>"),
+    linear-gradient(160deg,#fbf2ea,#f3e3d8 60%,#eed9cf)!important;
+  background-size:120px 120px,100% 100%!important;
+  border:1px solid #e0c8bd!important;
+  border-left:6px solid #e7cfc0!important;
+  border-radius:4px 8px 8px 4px!important;
+  box-shadow:0 34px 60px -32px rgba(140,100,90,.5),inset 10px 0 20px -16px rgba(120,80,70,.4)!important;
+}
+.book .cover::before{display:none!important}
+/* 題簽 */
+.daisen{
+  position:absolute;left:50%;top:16%;transform:translateX(-50%);
+  width:74px;padding:16px 0 14px;text-align:center;
+  background:linear-gradient(180deg,#fffdf6,#fbf3e6);
+  border:1px solid #dcc3ae;
+  box-shadow:0 8px 18px -14px rgba(120,90,70,.6);
+  writing-mode:vertical-rl;display:flex;align-items:center;gap:2px;
+}
+.daisen .dt{
+  font-family:"Shippori Mincho","LXGW WenKai",serif;font-size:17px;letter-spacing:.18em;color:#4a3a34;
+  display:block;
+}
+.daisen .dt:nth-child(2){font-size:13px;color:#a97f6f}
+/* 和綴じ针脚 */
+.cover .stitch{
+  position:absolute;left:14px;width:9px;height:26px;border-radius:3px;
+  background:linear-gradient(180deg,#d9b9a8,#c8a08c);box-shadow:0 1px 2px rgba(120,90,70,.35);
+}
+.cover .s1{top:16%}
+.cover .s2{top:36%}
+.cover .s3{top:56%}
+.cover .s4{top:76%}
+/* 封面底部小字 */
+.cv-bottom{
+  position:absolute;left:0;right:0;bottom:22px;text-align:center;
+  font-family:"LXGW WenKai",serif;font-size:10.5px;letter-spacing:.3em;color:#a98c7e;
+}
+@media(max-width:820px){
+  .daisen{width:60px}.daisen .dt{font-size:15px}
+  .cover .stitch{left:10px;width:7px;height:22px}
+}
+
+/* 封面：日式收一点 */
+.book .cover{
+  background-color:#fdf3f5!important;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><g fill='none' stroke='%23f2d3dc' stroke-width='.9'><circle cx='70' cy='70' r='30'/><path d='M0 70h140M70 0v140'/></g></svg>"),
+    linear-gradient(160deg,#fffafb,#fdeef3 62%,#fbe3ec)!important;
+  background-size:140px 140px,100% 100%!important;
+  border:1px solid #f2ccd8!important;
+  border-left:1px solid #f2ccd8!important;
+  border-radius:8px 14px 14px 8px!important;
+  box-shadow:0 30px 56px -34px rgba(170,110,130,.55),inset 8px 0 18px -16px rgba(170,110,130,.35)!important;
+  opacity:.98;
+}
+.daisen{
+  background:linear-gradient(180deg,#fffdfb,#fff6f9)!important;
+  border:1px solid #f4cdd9!important;
+  box-shadow:0 8px 16px -14px rgba(170,110,130,.7)!important;
+}
+.daisen .dt{color:#8d5f6d!important}
+.daisen .dt:nth-child(2){color:#c79aa8!important}
+.cover .stitch{display:none!important}
+.cv-bottom{color:#c79aa8!important}
+
+/* CHEESEBALLZ 回到正中上方 */
+.hero{
+  display:block!important;position:fixed!important;left:50%!important;top:28px!important;
+  transform:translateX(-50%)!important;text-align:center!important;z-index:45!important;
+  width:min(94vw,900px)!important;
+}
+.hero .k{display:none!important}
+.hero h1{font-size:clamp(30px,6.2vw,64px)!important;letter-spacing:.05em!important;line-height:1.3!important}
+.hero h1 .q{-webkit-text-stroke:1.2px #c79aa8!important}
+.book{top:56%!important}
+@media(max-width:820px){
+  .hero{top:16px!important}
+  .hero h1{font-size:clamp(26px,7vw,44px)!important}
+  .book{top:57%!important}
+}
+
+.hero{display:none!important}
+.book{top:50%!important;height:min(70vh,680px)!important}
+@media(max-width:820px){.book{top:50%!important;height:74vh!important}}
+
+/* 封面正中标题 */
+.cv-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.cv-title{
+  font-family:"Zen Maru Gothic","LXGW WenKai",serif;font-weight:700;
+  font-size:clamp(26px,4.2vw,44px);letter-spacing:.04em;color:#a45f78;line-height:1.2;
+}
+.cv-title .q{
+  font-family:"Shippori Mincho",serif;font-weight:400;color:transparent;
+  -webkit-text-stroke:1.2px #cf9fb0;font-size:.9em;
+}
+.cv-sub{font-family:"LXGW WenKai",serif;font-size:13px;letter-spacing:.36em;color:#b98a9a}
+.cv-hint{font-family:"LXGW WenKai",serif;font-size:10.5px;letter-spacing:.3em;color:#cfa7b4;
+  margin-top:8px;animation:hintPulse 2.4s ease-in-out infinite}
+.cv-bottom,.daisen,.cover .stitch{display:none!important}
+
+.book{top:46%!important}
+@media(max-width:820px){.book{top:46%!important}}
+
+/* 封面去掉纹路 */
+.book .cover{
+  background-image:none!important;
+  background:linear-gradient(160deg,#fffafb,#fdeef3 62%,#fbe3ec)!important;
+  box-shadow:0 30px 56px -34px rgba(170,110,130,.55)!important;
+  border:1px solid #f2ccd8!important;
+}
+
+/* 扉页 */
+.page.titlepage{display:none}
+.page.titlepage.on{display:block}
+.titlepage .pcontent{height:calc(100% - 46px);display:flex;align-items:center;justify-content:center}
+.tp{writing-mode:vertical-rl;display:flex;gap:18px;align-items:flex-start;padding:10px 0}
+.tp-t{font-family:"Shippori Mincho","LXGW WenKai",serif;font-size:clamp(22px,4vw,38px);color:#5b3f2e;letter-spacing:.1em}
+.tp-t:nth-child(2n){transform:translateY(14px)}
+
+/* 书的包边与厚度 */
+.book .spread{
+  border:1px solid #ecccd8!important;
+  box-shadow:
+    0 2px 0 #fffdfb,
+    0 6px 0 #f9eaef,
+    0 10px 0 #f4dde6,
+    0 14px 0 #efd3de,
+    0 18px 0 #e9c8d5,
+    0 22px 0 #e3bccb,
+    0 46px 70px -34px rgba(150,100,120,.55),
+    inset 0 0 0 1px rgba(255,255,255,.9)!important;
+}
+.book.closed .cover{
+  border:2px solid #ecccd8!important;
+  border-radius:6px 12px 12px 6px!important;
+  box-shadow:
+    0 3px 0 #fffdfb,
+    0 8px 0 #f7e5ec,
+    0 13px 0 #f0d5e0,
+    0 18px 0 #e8c6d4,
+    0 40px 60px -30px rgba(150,100,120,.62),
+    inset -10px 0 18px -14px rgba(160,110,130,.45),
+    inset 0 0 0 1px rgba(255,255,255,.85)!important;
+}
+/* 书脊高光 */
+.book .cover::after{
+  content:"";position:absolute;left:10px;top:6px;bottom:6px;width:3px;
+  background:linear-gradient(90deg,rgba(255,255,255,.85),rgba(255,255,255,0));
+  border-radius:2px;
+}
+@media(max-width:820px){.book .cover::after{left:7px}}
+
+/* 书左边的折痕 */
+.book .spread::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:5;
+  background:
+    linear-gradient(90deg, rgba(160,110,125,.20) 0px, rgba(160,110,125,.06) 10px, rgba(255,255,255,0) 20px),
+    linear-gradient(90deg, transparent 20px, rgba(155,105,120,.30) 22px, rgba(255,255,255,.75) 23px, rgba(160,110,125,.12) 26px, transparent 34px),
+    linear-gradient(270deg, rgba(160,110,125,.16) 0px, rgba(160,110,125,.05) 10px, transparent 20px);
+}
+/* 合拢时封面也有折痕 */
+.book.closed .cover::before{
+  content:"";position:absolute;left:24px;top:0;bottom:0;width:16px;
+  background:linear-gradient(90deg, rgba(160,110,125,.20), rgba(255,255,255,.7) 55%, rgba(160,110,125,.10));
+  display:block!important;
+}
+
+/* 书扣 + 锁 */
+.clasp{
+  position:absolute;right:-13px;top:50%;transform:translateY(-50%);width:26px;height:56px;
+  background:linear-gradient(180deg,#f3d9c2,#e6bfa2);
+  border:1px solid #d3a98d;border-radius:5px;z-index:6;
+  box-shadow:0 6px 12px -8px rgba(150,110,90,.8);
+}
+.clasp::after{content:"";position:absolute;left:5px;right:5px;top:50%;height:1px;background:rgba(150,110,85,.45)}
+.lock{
+  position:absolute;right:-46px;top:calc(50% + 12px);width:52px;height:68px;z-index:7;
+  filter:drop-shadow(0 8px 12px rgba(150,110,80,.35));
+  animation:lockSway 5.5s ease-in-out infinite;transform-origin:top center;
+}
+@keyframes lockSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.book.open .clasp,.book.open .lock{opacity:0;transition:.4s;pointer-events:none}
+
+/* 封面布艺质感 */
+.book .cover{
+  background-color:#fbeaf0!important;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.16'/></svg>"),
+    repeating-linear-gradient(0deg, rgba(190,150,165,.10) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(190,150,165,.09) 0 1px, transparent 1px 3px),
+    radial-gradient(120% 90% at 30% 0%, rgba(255,255,255,.85), rgba(255,255,255,0) 58%),
+    linear-gradient(160deg,#fdf4f7,#fbe3ec 58%,#f7d7e3)!important;
+  background-size:160px 160px,3px 3px,3px 3px,100% 100%,100% 100%!important;
+  border:2px solid #efccd9!important;
+}
+/* 布面的柔光 */
+.book .cover::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(125deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.12) 22%, rgba(255,255,255,0) 46%),
+             linear-gradient(305deg, rgba(180,130,150,.16) 0%, rgba(180,130,150,0) 40%);
+  mix-blend-mode:soft-light;
+}
+
+/* 密码盘 */
+.lockmodal{position:fixed;inset:0;z-index:300;display:none;place-items:center;background:rgba(80,50,60,.35);backdrop-filter:blur(3px)}
+.lockmodal.on{display:grid}
+.lockbox{
+  width:min(300px,84vw);padding:22px 20px 18px;border-radius:18px;text-align:center;
+  background:linear-gradient(180deg,#fffafb,#fdeef3);
+  border:1px solid #f2ccd8;box-shadow:0 30px 60px -30px rgba(120,70,90,.55);
+}
+.lk-t{font-family:"LXGW WenKai",serif;font-size:14px;letter-spacing:.18em;color:#a45f78;margin-bottom:12px}
+.lk-dots{display:flex;justify-content:center;gap:10px;margin-bottom:16px}
+.lk-dots i{width:10px;height:10px;border-radius:50%;background:#f6d7e2;transition:.15s}
+.lk-dots i.on{background:#e07fa6;transform:scale(1.15)}
+.lk-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.lk-pad button{
+  height:44px;border-radius:12px;border:1px solid #f0c9d7;background:#fff;
+  font-family:"Zen Maru Gothic",sans-serif;font-size:16px;color:#8d5f6d;transition:.12s;
+}
+.lk-pad button:active{transform:scale(.94);background:#fdeef3}
+.lk-pad .lk-ok{background:#f8c3d6;color:#7d3f5c;border-color:#f0aec5}
+.lk-pad .lk-del{color:#b98a9a}
+.lk-msg{min-height:18px;margin-top:10px;font-size:11.5px;color:#c9638a;letter-spacing:.06em}
+.lockbox.shake{animation:lkShake .38s}
+@keyframes lkShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+
+/* 转盘密码锁 */
+.dial-wrap{position:relative;width:216px;height:216px;margin:6px auto 10px}
+.dial-pointer{
+  position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;z-index:4;
+  border-left:8px solid transparent;border-right:8px solid transparent;border-top:12px solid #d9738f;
+  filter:drop-shadow(0 2px 3px rgba(160,90,115,.45));
+}
+.dial{
+  position:absolute;inset:0;border-radius:50%;transition:transform .5s cubic-bezier(.3,.8,.3,1);
+  background:
+    radial-gradient(circle at 38% 30%,#fdf3f6,#f6d9e4 62%,#efc6d5);
+  box-shadow:
+    0 18px 30px -16px rgba(150,95,120,.6),
+    inset 0 0 0 2px #fff,
+    inset 0 0 0 10px #f8e3eb,
+    inset 0 0 22px rgba(160,100,125,.25);
+  border:1px solid #eec9d7;
+}
+.dial-face{
+  position:absolute;inset:26px;border-radius:50%;
+  background:radial-gradient(circle at 36% 28%,#fffdfd,#f7e6ec 60%,#f2d8e2);
+  box-shadow:inset 0 0 18px rgba(160,100,125,.18),0 2px 4px rgba(255,255,255,.9) inset;
+}
+.dial .num{
+  position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;
+  display:grid;place-items:center;border-radius:50%;cursor:pointer;
+  font-family:"Cormorant Garamond",serif;font-size:15px;color:#8d5f6d;
+  transition:background .15s;
+}
+.dial .num:hover{background:rgba(255,255,255,.85)}
+.dial-off .num{pointer-events:none}
+.dial-knob{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:66px;height:66px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  background:linear-gradient(180deg,#f7c3d5,#e79ab5);
+  color:#7d3f5c;font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.08em;
+  box-shadow:0 6px 12px -6px rgba(150,90,115,.8),inset 0 -3px 6px rgba(160,90,120,.25),inset 0 2px 3px rgba(255,255,255,.7);
+}
+.dial-knob:active{transform:translate(-50%,-50%) scale(.95)}
+.lk-reset{margin-top:6px;border:0;background:none;color:#b98a9a;font-size:11px;letter-spacing:.14em;text-decoration:underline}
+@media(max-width:820px){.dial-wrap{width:190px;height:190px}.dial-knob{width:58px;height:58px}}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="deco">
+  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  <div class="vt v1">さくら の ように ちいさく</div>
+  <div class="vt v2">ふたり の デスクトップ</div>
+</div>
+<div class="sunlight" aria-hidden="true"></div>
+<div class="sun" aria-hidden="true"><span class="core"></span><span class="rays"></span><span class="halo"></span></div>
+
+<div class="frame"></div>
+<div class="splash" aria-hidden="true"><i style="--x:60.6%;--d:3.7s;--dl:-0.8s;--s:14px"></i><i style="--x:81.0%;--d:3.8s;--dl:-3.0s;--s:14px"></i><i style="--x:86.7%;--d:2.4s;--dl:-2.1s;--s:18px"></i><i style="--x:37.8%;--d:2.4s;--dl:-3.0s;--s:18px"></i><i style="--x:40.4%;--d:2.6s;--dl:-0.5s;--s:28px"></i><i style="--x:17.0%;--d:3.8s;--dl:-3.4s;--s:28px"></i><i style="--x:13.9%;--d:2.2s;--dl:-0.5s;--s:18px"></i><i style="--x:74.7%;--d:4.1s;--dl:-3.3s;--s:18px"></i><i style="--x:29.2%;--d:4.1s;--dl:-1.8s;--s:18px"></i><i style="--x:19.1%;--d:4.1s;--dl:-3.2s;--s:28px"></i><i style="--x:30.1%;--d:2.9s;--dl:-3.3s;--s:18px"></i><i style="--x:26.8%;--d:2.9s;--dl:-0.7s;--s:14px"></i><i style="--x:58.0%;--d:3.6s;--dl:-3.7s;--s:22px"></i><i style="--x:78.9%;--d:3.2s;--dl:-2.7s;--s:28px"></i></div>
+<div class="creek" aria-hidden="true">
+  <div class="w w1"></div><div class="w w2"></div><div class="shine"></div>
+</div>
+
+<div class="rain" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="petals" aria-hidden="true"><i class="v3" style="--x:78.7%;--d:24.5s;--dl:-32.3s;--s:28px;--o:0.89"></i><i class="v6" style="--x:94.3%;--d:42.0s;--dl:-34.2s;--s:28px;--o:0.75"></i><i class="v6" style="--x:84.0%;--d:16.7s;--dl:-33.1s;--s:64px;--o:0.83"></i><i class="v3" style="--x:82.4%;--d:20.8s;--dl:-35.3s;--s:42px;--o:0.71"></i><i class="v6" style="--x:45.4%;--d:21.9s;--dl:-36.8s;--s:18px;--o:0.54"></i><i class="v8" style="--x:42.2%;--d:34.3s;--dl:-36.0s;--s:18px;--o:0.83"></i><i class="v1" style="--x:19.4%;--d:24.6s;--dl:-36.2s;--s:18px;--o:0.67"></i><i class="v10" style="--x:76.9%;--d:30.0s;--dl:-29.1s;--s:18px;--o:0.74"></i><i class="v11" style="--x:96.5%;--d:25.1s;--dl:-37.7s;--s:78px;--o:0.85"></i><i class="v4" style="--x:73.9%;--d:40.6s;--dl:-30.1s;--s:78px;--o:0.72"></i><i class="v5" style="--x:12.0%;--d:36.9s;--dl:-2.1s;--s:14px;--o:0.47"></i><i class="v9" style="--x:2.0%;--d:25.3s;--dl:-35.3s;--s:52px;--o:0.91"></i><i class="v1" style="--x:67.5%;--d:17.5s;--dl:-7.1s;--s:64px;--o:0.76"></i><i class="v8" style="--x:51.6%;--d:16.4s;--dl:-3.4s;--s:64px;--o:0.88"></i><i class="v9" style="--x:56.1%;--d:17.6s;--dl:-34.1s;--s:64px;--o:0.84"></i><i class="v5" style="--x:68.8%;--d:22.2s;--dl:-35.5s;--s:64px;--o:0.63"></i><i class="v1" style="--x:87.3%;--d:19.5s;--dl:-31.6s;--s:34px;--o:0.84"></i><i class="v11" style="--x:13.1%;--d:17.3s;--dl:-13.2s;--s:28px;--o:0.81"></i><i class="v9" style="--x:56.2%;--d:35.0s;--dl:-20.4s;--s:52px;--o:0.58"></i><i class="v9" style="--x:8.4%;--d:32.2s;--dl:-18.4s;--s:34px;--o:0.59"></i><i class="v1" style="--x:-0.2%;--d:28.6s;--dl:-39.2s;--s:14px;--o:0.52"></i><i class="v10" style="--x:86.7%;--d:29.3s;--dl:-8.8s;--s:18px;--o:0.53"></i><i class="v4" style="--x:36.8%;--d:28.0s;--dl:-18.7s;--s:64px;--o:0.83"></i><i class="v1" style="--x:86.6%;--d:32.9s;--dl:-28.7s;--s:34px;--o:0.87"></i><i class="v8" style="--x:50.9%;--d:24.2s;--dl:-9.0s;--s:28px;--o:0.91"></i><i class="v11" style="--x:99.0%;--d:28.4s;--dl:-24.2s;--s:78px;--o:0.7"></i><i class="v10" style="--x:23.7%;--d:41.2s;--dl:-6.3s;--s:78px;--o:0.76"></i><i class="v1" style="--x:25.7%;--d:18.7s;--dl:-25.6s;--s:22px;--o:0.82"></i><i class="v6" style="--x:90.0%;--d:31.3s;--dl:-15.8s;--s:78px;--o:0.72"></i><i class="v3" style="--x:84.5%;--d:41.0s;--dl:-14.4s;--s:18px;--o:0.84"></i><i class="v6" style="--x:14.3%;--d:41.2s;--dl:-12.9s;--s:14px;--o:0.79"></i><i class="v7" style="--x:36.1%;--d:38.9s;--dl:-36.8s;--s:34px;--o:0.66"></i><i class="v6" style="--x:83.7%;--d:17.2s;--dl:-20.2s;--s:22px;--o:0.82"></i><i class="v1" style="--x:80.8%;--d:27.2s;--dl:-38.7s;--s:18px;--o:0.82"></i></div>
+
+<div class="top">
+  <div class="right"></div>
+</div>
+
+<div class="hero">
+  <div class="k">SAKUYA と YUSHI</div>
+  <h1><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></h1>
+</div>
+<div class="cupid">
+  <svg viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M58 80c-16-6-28-18-30-32 14-2 26 4 36 16" fill="#fff" stroke="#ffc3d8" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M142 80c16-6 28-18 30-32-14-2-26 4-36 16" fill="#fff" stroke="#ffc3d8" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M100 140c-26-20-42-32-42-50a22 22 0 0 1 42-8 22 22 0 0 1 42 8c0 18-16 30-42 50z" fill="#ffd7e6" stroke="#ff9dbe" stroke-width="4"/>
+    <circle cx="88" cy="94" r="4.5" fill="#7a4a5c"/><circle cx="112" cy="94" r="4.5" fill="#7a4a5c"/>
+    <path d="M92 106c4 5 12 5 16 0" stroke="#7a4a5c" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="79" cy="103" r="6" fill="#ffb6cf" opacity=".85"/><circle cx="121" cy="103" r="6" fill="#ffb6cf" opacity=".85"/>
+    <ellipse cx="100" cy="58" rx="26" ry="8" stroke="#ffc861" stroke-width="4"/>
+  </svg>
+</div>
+<div class="aiai">
+  <svg viewBox="0 0 140 170">
+    <path d="M70 26c-26 0-46 16-48 38h96c-2-22-22-38-48-38z" fill="#ffd6e6" stroke="#e87ba6" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M22 64c8 8 16 8 24 0 8 8 16 8 24 0 8 8 16 8 24 0 8 8 16 8 24 0" fill="none" stroke="#e87ba6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M70 64v58c0 8 6 12 12 12" fill="none" stroke="#b06a86" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M70 12c-4-6-13-5-13 2 0 5 8 9 13 13 5-4 13-8 13-13 0-7-9-8-13-2z" fill="#ff9dbe" stroke="#d95f8c" stroke-width="2.4"/>
+    <text x="52" y="104" font-size="15" fill="#d95f8c" transform="rotate(-90 52 104)">咲哉</text>
+    <text x="96" y="104" font-size="15" fill="#5f93c9" transform="rotate(-90 96 104)">勇志</text>
+  </svg>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-book" viewBox="0 0 48 48"><path d="M24 13c-4-3-9-4-14-3v25c5-1 10 0 14 3 4-3 9-4 14-3V10c-5-1-10 0-14 3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 13v25" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-pig" viewBox="0 0 48 48"><path d="M13 17c-1-4 0-6 1-7 3 1 5 3 6 5M35 17c1-4 0-6-1-7-3 1-5 3-6 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12c-8 0-14 6-14 13s6 12 14 12 14-5 14-12-6-13-14-13z" fill="none" stroke="currentColor" stroke-width="2.4"/><ellipse cx="24" cy="29" rx="6" ry="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="22" r="1.7" fill="currentColor"/><circle cx="30" cy="22" r="1.7" fill="currentColor"/></symbol>
+  <symbol id="i-cat" viewBox="0 0 48 48"><path d="M13 19l-1-8 8 4M35 19l1-8-8 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 15c-7 0-12 5-12 12 0 6 5 10 12 10s12-4 12-10c0-7-5-12-12-12z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="19" cy="26" r="1.7" fill="currentColor"/><circle cx="29" cy="26" r="1.7" fill="currentColor"/></symbol>
+  <symbol id="i-teddy" viewBox="0 0 48 48"><circle cx="15" cy="17" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="33" cy="17" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="10" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="20" cy="23" r="1.6" fill="currentColor"/><circle cx="28" cy="23" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-note" viewBox="0 0 48 48"><path d="M20 32V14l14-4v17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><ellipse cx="16" cy="33" rx="5" ry="4" fill="none" stroke="currentColor" stroke-width="2.4"/><ellipse cx="30" cy="30" rx="5" ry="4" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M17 14l2.4-4h9.2L31 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="27" r="7.4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="27" r="2.6" fill="currentColor"/><circle cx="36" cy="19" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-letter" viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="21" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M10 18l14 11 14-11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="lockmodal" id="lockmodal" onclick="if(event.target===this)closeLock()">
+  <div class="lockbox">
+    <div class="lk-t">转动密码锁</div>
+    <div class="lk-dots" id="lkdots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="dial-wrap">
+      <span class="dial-pointer"></span>
+      <div class="dial" id="dial">
+        <span class="dial-face"></span>
+        <span class="dial-knob" onclick="commitDigit()">确定</span>
+      </div>
+    </div>
+    <div class="lk-msg" id="lkmsg">把数字转到上面的指针</div>
+    <button class="lk-reset" onclick="resetDial()">重新输入</button>
+  </div>
+</div>
+
+<div class="book closed" id="book">
+  <div class="cover" onclick="openLock()">
+    <span class="clasp"></span>
+    <svg class="lock" viewBox="0 0 44 58" aria-hidden="true">
+      <path d="M12 24V17a10 10 0 0 1 20 0v7" fill="none" stroke="#c9a06a" stroke-width="4" stroke-linecap="round"/>
+      <rect x="6" y="24" width="32" height="26" rx="6" fill="#e8c48c" stroke="#b98f57" stroke-width="2"/>
+      <circle cx="22" cy="35" r="4" fill="#8a6436"/>
+      <path d="M22 38v6" stroke="#8a6436" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div class="cv-center">
+      <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
+      <div class="cv-sub">さくや と ゆうし</div>
+      <div class="cv-hint">点一下 · 打开</div>
+    </div>
+  </div>
+  <div class="spread">
+  <section class="page titlepage" data-src="w-title">
+    <span class="ribbon"></span>
+    <header class="ph"><b>扉页</b><span class="pno">01 / 07</span></header>
+    <div class="pcontent">
+      <div class="tp"><span class="tp-t">爱</span><span class="tp-t">是</span><span class="tp-t">一</span><span class="tp-t">本</span><span class="tp-t">书</span></div>
+    </div>
+  </section>
+
+  <section class="page pk" data-src="w-lib">
+    <span class="ribbon"></span>
+    <header class="ph"><b>同人文库</b><span class="pno">01 / 06</span></header>
+    <div class="pcontent"><div class="gate-box" id="gate"><b style="font-size:13px">18+ 提示</b>
+<p>这里收录的作品大部分为成人向。请确认你已满 18 岁再继续。</p>
+<p class="gate-small">仅做目录整理，不搬运、不提供下载。</p>
+<button class="gate-btn" onclick="enterLib()">我已满 18 岁，进入</button></div>
+<div id="libmain" style="display:none">
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-cat="all">全部 71</button>
+    <button class="tab" data-cat="破塔">破塔 46</button>
+    <button class="tab" data-cat="亚洲网">亚洲网 25</button>
+    <button class="tab" data-cat="漫">同人漫 15</button>
+  </div>
+  <div class="fic-list" id="ficlist"><a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/cgqupl" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>我要亲亲了 · チューするね</b><p>成人向 穿浴衣oo</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/wdi2xr" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>养育者评估 · 양육자 평가</b><p>成人向 当oo频率从一年一次到一天一次</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/wdi2xr" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>踢完足球后 · 축구를 했꼬</b><p>成人向 椅愿杯后 穿着球衣oo</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/589i5v" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>近亲oo应当被禁止</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/fg53hw" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>该怎么办呢 · 어떻게 할까</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/ph4h3xwd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>无标题 · 제목없음</b><p>成人向 口o</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/p7zxpq9d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>为什么？ · 왜?</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/p0nj77sd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>约会 · 데이트</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/pdasv1bd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>奶酪 · 기니치즈</b><p>成人向 猫猫和豚豚</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/pz65d2nd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>唔嘤 · 꾸잉</b><p>成人向 穿玩偶服oo</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/pa5bgt3d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>双胞胎的玩耍申请 · 쌍둥이의 놀기신청</b><p>成人向 帮lu</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/pjl3o1yd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>웅</b><p>成人向 颜she</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/zh/pcb0mfmd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>할리갈리</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/zh/prn7nldd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>抱枕后续</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="漫" href="https://posty.pe/zh/pmrr8v5d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人漫</span><b>喉结纹身贴</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/ps5ok51c" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>给妈朋儿做家教 · 엄친쿵 과외하기</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p94w5i2c" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>醉汉必读十诫 · 취객 필독 십계명</b><p>成人向 很有趣很可爱的一篇</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p849fdfd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>帕维巧克力蛋糕 · 파베 초콜릿 케이크</b><p>成人向 “蛋糕”&“叉子” 特殊世界观</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/panhbc1c" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>被恶评者跟踪了 · 악플러한테 뒤를 따였습니다</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/l4ojo8" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>那个男人的缪斯 · 그 남자의 뮤즈</b><p>爱上了父亲的情人</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pnsqycdc" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>明明应该要去水上乐园的… · 워터파크에 가야하는데...</b><p>成人向 双性转gl</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pfy4w6ed" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>因为是兄弟 · 형제니까</b><p>成人向 骨科</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p2wklpuc" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>东京男孩丑闻 · 도쿄보이스캔들</b><p>我的初恋在结婚四年后离婚了</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pu9jawdd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>No Kiss Club 禁止接吻俱乐部</b><p>成人向 为什么oo的时候不让接吻</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pk8dy5dd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>租赁男友 · 렌탈 남친</b><p>萌文</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/zh/pgha31ed" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>你是宠物！ · 너는 펫!</b><p>根据日剧宠物情人为灵感的一篇</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/ptpjfijd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>기다리는 사람等待的人(夏恋)</b><p>纯爱文 初恋情结</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/po78wswc" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>只是一次普通的校服约会 · 그냥평범한교복데이트</b><p>成人向 穿着校服oo 有男装有女装</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pceh06td" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>逆转的未成年 · 역전의 미성년</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pg59w70d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>明年圣诞节还会下雪吗？ · 내년 크리스마스에도 눈이 올까요?</b><p>伪骨科</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pbff0mac" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>驯养小猫 · 고양이 길들이기</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pxxb2zfc" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>换乘恋爱 · 환승연애</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p66ia62d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>异地恋生存指南 · 장거리 연애에서 살아남는 법</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pdvf1f8d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>黄金水母 · 황금해파리</b><p>（排雷：yu前期有女友但无感情）</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pvqpqcad" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>青舍 · 청사</b><p>高中生sa & 大学生yu</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/puthllzd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>烤鸡肉串的酱汁要甜一点 · 야키토리 소스는 달게</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/ppgncpmd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>潜入外星人的性教育 · 잠입 외계인 성교육</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p9tbojpd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>极限的50天 · 극한의 50일</b><p>成人向 禁欲挑战</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/ph9ke76d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>求推荐标题 · 제목추천좀</b><p>前后辈</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/p8h2hcyd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>Dot TV</b><p>成人向</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pxg4x8gd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>无论好坏 · 미우나고우나</b><p>骨科 感情线混乱</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pzesfebd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>猫咪换牙期 · 고양이 이갈이</b><p>成人向 口o（排雷：未成年）</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/pk7fuexd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>请咬碎星星糖 · 별사탕은 깨물어 드세요</b><p>喜欢上了喜欢哥哥的人</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/zh/p1lgtjqd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>koi！</b><p>ABO</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/zh/p7s3xe4d" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>笨蛋 · 바보야</b><p>婚外情</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="破塔" data-cat="文" href="https://posty.pe/zh/pfpbw2kd" target="_blank" rel="noopener"><span class="fic-tag">破塔 · 同人文</span><b>温和 · 마일드</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1679367/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>半之半</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1730138/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>等雨云</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1717175/love-transit" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>LOVE TRANSIT</b><p>很喜欢这篇换乘，但原作者在破塔删文了，只剩下搬运能看</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1755153/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>双藤绕枝</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1747828/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>绝对恋爱法则</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1742205/2/sayu-rain-cats-and-dogs" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>沒有什麼比你更美麗</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1728464/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>圣坛之外</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1723555/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>宝宝炮友</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1714024/in-cold-lies-gold" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>In Cold Lies Gold · 左顧右盼</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1639127/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>未绽之樱</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1736582/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>不愿做欺犬那派败类</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1717343/sayu" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>指纹</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1723204/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>面包日记</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1730613/sayu-26" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>关于sayu的26个字母</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1702064/2/sayu-not-an-inch-apart" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>Not an inch apart 不离开一公分</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1723448/sayu" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>住進馬克杯的好日子</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1762799/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>慢 冬</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1765753/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>于是养到了绿茶男</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1769574/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>所以穿书成了玛丽苏女主</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1773434/1/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>一片叶子提心吊胆的夏天</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1774249/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>同栖</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1781466/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>溺水香蕉鱼</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1783978/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>勇敢的小孩</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1781137/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>心脏无二</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a>
+<a class="fic" data-src="亚洲网" data-cat="文" href="https://www.asianfanfics.com/story/view/1778971/n-a" target="_blank" rel="noopener"><span class="fic-tag">亚洲网 · 同人文</span><b>剩下的、你和我</b><p>—</p><span class="fic-meta">打开原文 ↗</span></a></div></div>
+  </section>
+  <section class="page pk" data-src="w-sakuya">
+    <span class="ribbon"></span>
+    <header class="ph"><b>咲哉</b><span class="pno">02 / 06</span></header>
+    <div class="pcontent"><div class="photos">
+<img src="assets/img/sak_selfie.jpg"><img src="assets/img/sak_roof.jpg"><img src="assets/img/sak_summer.jpg">
+<img src="assets/img/sak_spring.jpg"><img src="assets/img/sak_winter.jpg"><img src="assets/img/sak_tablet.jpg">
+</div><div class="meta"><span>粉色 · 小猪 · 豚鼠</span><span>SAKUPANG</span></div></div>
+  </section>
+  <section class="page bl" data-src="w-yushi">
+    <span class="ribbon"></span>
+    <header class="ph"><b>勇志</b><span class="pno">03 / 06</span></header>
+    <div class="pcontent"><div class="photos">
+<img src="assets/img/yus_cotton.jpg"><img src="assets/img/yus_old.jpg"><img src="assets/img/yus_card.jpg">
+</div><div class="meta"><span>蓝色 · 小猫 · 水獭</span><span>奶茶猫</span></div></div>
+  </section>
+  <section class="page v" data-src="w-camera">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机</b><span class="pno">04 / 06</span></header>
+    <div class="pcontent"><div class="cam-empty">相机还是空的<br><span>之后再来装东西</span></div></div>
+  </section>
+  <section class="page g" data-src="w-songs">
+    <span class="ribbon"></span>
+    <header class="ph"><b>歌曲</b><span class="pno">05 / 06</span></header>
+    <div class="pcontent"><ul class="mlist">
+<li><b>2023</b><span>Hands Up</span></li>
+<li><b>2024</b><span>WISH · Songbird</span></li>
+<li><b>2025</b><span>Steady · Color</span></li>
+</ul><div class="meta"><span>资料待校对</span><span>以官方为准</span></div></div>
+  </section>
+  <section class="page " data-src="w-memo">
+    <span class="ribbon"></span>
+    <header class="ph"><b>留言</b><span class="pno">06 / 06</span></header>
+    <div class="pcontent"><ul class="mlist" id="mlist">
+<li><b>匿名</b><span>粉色和蓝色放在一起很好看。</span></li>
+<li><b>小满</b><span>想看两个人一起上综艺。</span></li>
+</ul>
+<form class="memo" onsubmit="addMemo(event)"><input id="mi" maxlength="60" placeholder="写点什么…"><button type="submit">寄出 ♡</button></form>
+<button class="memo-rose" onclick="openLb('assets/img/rose_hand.png')"><img src="assets/img/rose_hand.png"><span>他把玫瑰递过来了 · 点开看</span></button></div>
+  </section>
+  </div>
+  <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
+  <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i></div>
+</div>
+
+<div class="lb" id="lb" onclick="closeLb()"><img id="lbimg" src=""><button class="x" onclick="closeLb()">✕</button></div>
+
+<script>
+var FICS = [{"src": "破塔", "cat": "漫", "ko": "チューするね", "zh": "我要亲亲了", "note": "成人向 穿浴衣oo", "id": 0, "url": "https://posty.pe/cgqupl"}, {"src": "破塔", "cat": "漫", "ko": "양육자 평가", "zh": "养育者评估", "note": "成人向 当oo频率从一年一次到一天一次", "id": 1, "url": "https://posty.pe/wdi2xr"}, {"src": "破塔", "cat": "漫", "ko": "축구를 했꼬", "zh": "踢完足球后", "note": "成人向 椅愿杯后 穿着球衣oo", "id": 2, "url": "https://posty.pe/wdi2xr"}, {"src": "破塔", "cat": "漫", "ko": "近亲oo应当被禁止", "zh": "", "note": "成人向", "id": 3, "url": "https://posty.pe/589i5v"}, {"src": "破塔", "cat": "漫", "ko": "어떻게 할까", "zh": "该怎么办呢", "note": "成人向", "id": 4, "url": "https://posty.pe/fg53hw"}, {"src": "破塔", "cat": "漫", "ko": "제목없음", "zh": "无标题", "note": "成人向 口o", "id": 5, "url": "https://posty.pe/ph4h3xwd"}, {"src": "破塔", "cat": "漫", "ko": "왜?", "zh": "为什么？", "note": "成人向", "id": 6, "url": "https://posty.pe/p7zxpq9d"}, {"src": "破塔", "cat": "漫", "ko": "데이트", "zh": "约会", "note": "成人向", "id": 7, "url": "https://posty.pe/p0nj77sd"}, {"src": "破塔", "cat": "漫", "ko": "기니치즈", "zh": "奶酪", "note": "成人向 猫猫和豚豚", "id": 8, "url": "https://posty.pe/pdasv1bd"}, {"src": "破塔", "cat": "漫", "ko": "꾸잉", "zh": "唔嘤", "note": "成人向 穿玩偶服oo", "id": 9, "url": "https://posty.pe/pz65d2nd"}, {"src": "破塔", "cat": "漫", "ko": "쌍둥이의 놀기신청", "zh": "双胞胎的玩耍申请", "note": "成人向 帮lu", "id": 10, "url": "https://posty.pe/pa5bgt3d"}, {"src": "破塔", "cat": "漫", "ko": "웅", "zh": "", "note": "成人向 颜she", "id": 11, "url": "https://posty.pe/pjl3o1yd"}, {"src": "破塔", "cat": "漫", "ko": "할리갈리", "zh": "", "note": "成人向", "id": 12, "url": "https://posty.pe/zh/pcb0mfmd"}, {"src": "破塔", "cat": "漫", "ko": "抱枕后续", "zh": "", "note": "成人向", "id": 13, "url": "https://posty.pe/zh/prn7nldd"}, {"src": "破塔", "cat": "漫", "ko": "喉结纹身贴", "zh": "", "note": "成人向", "id": 14, "url": "https://posty.pe/zh/pmrr8v5d"}, {"src": "破塔", "cat": "文", "ko": "엄친쿵 과외하기", "zh": "给妈朋儿做家教", "note": "成人向", "id": 15, "url": "https://posty.pe/ps5ok51c"}, {"src": "破塔", "cat": "文", "ko": "취객 필독 십계명", "zh": "醉汉必读十诫", "note": "成人向 很有趣很可爱的一篇", "id": 16, "url": "https://posty.pe/p94w5i2c"}, {"src": "破塔", "cat": "文", "ko": "파베 초콜릿 케이크", "zh": "帕维巧克力蛋糕", "note": "成人向 “蛋糕”&“叉子” 特殊世界观", "id": 17, "url": "https://posty.pe/p849fdfd"}, {"src": "破塔", "cat": "文", "ko": "악플러한테 뒤를 따였습니다", "zh": "被恶评者跟踪了", "note": "成人向", "id": 18, "url": "https://posty.pe/panhbc1c"}, {"src": "破塔", "cat": "文", "ko": "그 남자의 뮤즈", "zh": "那个男人的缪斯", "note": "爱上了父亲的情人", "id": 19, "url": "https://posty.pe/l4ojo8"}, {"src": "破塔", "cat": "文", "ko": "워터파크에 가야하는데...", "zh": "明明应该要去水上乐园的…", "note": "成人向 双性转gl", "id": 20, "url": "https://posty.pe/pnsqycdc"}, {"src": "破塔", "cat": "文", "ko": "형제니까", "zh": "因为是兄弟", "note": "成人向 骨科", "id": 21, "url": "https://posty.pe/pfy4w6ed"}, {"src": "破塔", "cat": "文", "ko": "도쿄보이스캔들", "zh": "东京男孩丑闻", "note": "我的初恋在结婚四年后离婚了", "id": 22, "url": "https://posty.pe/p2wklpuc"}, {"src": "破塔", "cat": "文", "ko": "No Kiss Club 禁止接吻俱乐部", "zh": "", "note": "成人向 为什么oo的时候不让接吻", "id": 23, "url": "https://posty.pe/pu9jawdd"}, {"src": "破塔", "cat": "文", "ko": "렌탈 남친", "zh": "租赁男友", "note": "萌文", "id": 24, "url": "https://posty.pe/pk8dy5dd"}, {"src": "破塔", "cat": "文", "ko": "너는 펫!", "zh": "你是宠物！", "note": "根据日剧宠物情人为灵感的一篇", "id": 25, "url": "https://posty.pe/zh/pgha31ed"}, {"src": "破塔", "cat": "文", "ko": "기다리는 사람等待的人(夏恋)", "zh": "", "note": "纯爱文 初恋情结", "id": 26, "url": "https://posty.pe/ptpjfijd"}, {"src": "破塔", "cat": "文", "ko": "그냥평범한교복데이트", "zh": "只是一次普通的校服约会", "note": "成人向 穿着校服oo 有男装有女装", "id": 27, "url": "https://posty.pe/po78wswc"}, {"src": "破塔", "cat": "文", "ko": "역전의 미성년", "zh": "逆转的未成年", "note": "", "id": 28, "url": "https://posty.pe/pceh06td"}, {"src": "破塔", "cat": "文", "ko": "내년 크리스마스에도 눈이 올까요?", "zh": "明年圣诞节还会下雪吗？", "note": "伪骨科", "id": 29, "url": "https://posty.pe/pg59w70d"}, {"src": "破塔", "cat": "文", "ko": "고양이 길들이기", "zh": "驯养小猫", "note": "成人向", "id": 30, "url": "https://posty.pe/pbff0mac"}, {"src": "破塔", "cat": "文", "ko": "환승연애", "zh": "换乘恋爱", "note": "", "id": 31, "url": "https://posty.pe/pxxb2zfc"}, {"src": "破塔", "cat": "文", "ko": "장거리 연애에서 살아남는 법", "zh": "异地恋生存指南", "note": "成人向", "id": 32, "url": "https://posty.pe/p66ia62d"}, {"src": "破塔", "cat": "文", "ko": "황금해파리", "zh": "黄金水母", "note": "（排雷：yu前期有女友但无感情）", "id": 33, "url": "https://posty.pe/pdvf1f8d"}, {"src": "破塔", "cat": "文", "ko": "청사", "zh": "青舍", "note": "高中生sa & 大学生yu", "id": 34, "url": "https://posty.pe/pvqpqcad"}, {"src": "破塔", "cat": "文", "ko": "야키토리 소스는 달게", "zh": "烤鸡肉串的酱汁要甜一点", "note": "成人向", "id": 35, "url": "https://posty.pe/puthllzd"}, {"src": "破塔", "cat": "文", "ko": "잠입 외계인 성교육", "zh": "潜入外星人的性教育", "note": "成人向", "id": 36, "url": "https://posty.pe/ppgncpmd"}, {"src": "破塔", "cat": "文", "ko": "극한의 50일", "zh": "极限的50天", "note": "成人向 禁欲挑战", "id": 37, "url": "https://posty.pe/p9tbojpd"}, {"src": "破塔", "cat": "文", "ko": "제목추천좀", "zh": "求推荐标题", "note": "前后辈", "id": 38, "url": "https://posty.pe/ph9ke76d"}, {"src": "破塔", "cat": "文", "ko": "Dot TV", "zh": "", "note": "成人向", "id": 39, "url": "https://posty.pe/p8h2hcyd"}, {"src": "破塔", "cat": "文", "ko": "미우나고우나", "zh": "无论好坏", "note": "骨科 感情线混乱", "id": 40, "url": "https://posty.pe/pxg4x8gd"}, {"src": "破塔", "cat": "文", "ko": "고양이 이갈이", "zh": "猫咪换牙期", "note": "成人向 口o（排雷：未成年）", "id": 41, "url": "https://posty.pe/pzesfebd"}, {"src": "破塔", "cat": "文", "ko": "별사탕은 깨물어 드세요", "zh": "请咬碎星星糖", "note": "喜欢上了喜欢哥哥的人", "id": 42, "url": "https://posty.pe/pk7fuexd"}, {"src": "破塔", "cat": "文", "ko": "koi！", "zh": "", "note": "ABO", "id": 43, "url": "https://posty.pe/zh/p1lgtjqd"}, {"src": "破塔", "cat": "文", "ko": "바보야", "zh": "笨蛋", "note": "婚外情", "id": 44, "url": "https://posty.pe/zh/p7s3xe4d"}, {"src": "破塔", "cat": "文", "ko": "마일드", "zh": "温和", "note": "", "id": 45, "url": "https://posty.pe/zh/pfpbw2kd"}, {"src": "亚洲网", "cat": "文", "ko": "半之半", "zh": "", "note": "", "id": 46, "url": "https://www.asianfanfics.com/story/view/1679367/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "等雨云", "zh": "", "note": "", "id": 47, "url": "https://www.asianfanfics.com/story/view/1730138/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "LOVE TRANSIT", "zh": "", "note": "很喜欢这篇换乘，但原作者在破塔删文了，只剩下搬运能看", "id": 48, "url": "https://www.asianfanfics.com/story/view/1717175/love-transit"}, {"src": "亚洲网", "cat": "文", "ko": "双藤绕枝", "zh": "", "note": "", "id": 49, "url": "https://www.asianfanfics.com/story/view/1755153/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "绝对恋爱法则", "zh": "", "note": "", "id": 50, "url": "https://www.asianfanfics.com/story/view/1747828/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "沒有什麼比你更美麗", "zh": "", "note": "", "id": 51, "url": "https://www.asianfanfics.com/story/view/1742205/2/sayu-rain-cats-and-dogs"}, {"src": "亚洲网", "cat": "文", "ko": "圣坛之外", "zh": "", "note": "", "id": 52, "url": "https://www.asianfanfics.com/story/view/1728464/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "宝宝炮友", "zh": "", "note": "", "id": 53, "url": "https://www.asianfanfics.com/story/view/1723555/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "左顧右盼", "zh": "In Cold Lies Gold", "note": "", "id": 54, "url": "https://www.asianfanfics.com/story/view/1714024/in-cold-lies-gold"}, {"src": "亚洲网", "cat": "文", "ko": "未绽之樱", "zh": "", "note": "", "id": 55, "url": "https://www.asianfanfics.com/story/view/1639127/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "不愿做欺犬那派败类", "zh": "", "note": "", "id": 56, "url": "https://www.asianfanfics.com/story/view/1736582/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "指纹", "zh": "", "note": "", "id": 57, "url": "https://www.asianfanfics.com/story/view/1717343/sayu"}, {"src": "亚洲网", "cat": "文", "ko": "面包日记", "zh": "", "note": "", "id": 58, "url": "https://www.asianfanfics.com/story/view/1723204/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "关于sayu的26个字母", "zh": "", "note": "", "id": 59, "url": "https://www.asianfanfics.com/story/view/1730613/sayu-26"}, {"src": "亚洲网", "cat": "文", "ko": "Not an inch apart 不离开一公分", "zh": "", "note": "", "id": 60, "url": "https://www.asianfanfics.com/story/view/1702064/2/sayu-not-an-inch-apart"}, {"src": "亚洲网", "cat": "文", "ko": "住進馬克杯的好日子", "zh": "", "note": "", "id": 61, "url": "https://www.asianfanfics.com/story/view/1723448/sayu"}, {"src": "亚洲网", "cat": "文", "ko": "慢 冬", "zh": "", "note": "", "id": 62, "url": "https://www.asianfanfics.com/story/view/1762799/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "于是养到了绿茶男", "zh": "", "note": "", "id": 63, "url": "https://www.asianfanfics.com/story/view/1765753/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "所以穿书成了玛丽苏女主", "zh": "", "note": "", "id": 64, "url": "https://www.asianfanfics.com/story/view/1769574/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "一片叶子提心吊胆的夏天", "zh": "", "note": "", "id": 65, "url": "https://www.asianfanfics.com/story/view/1773434/1/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "同栖", "zh": "", "note": "", "id": 66, "url": "https://www.asianfanfics.com/story/view/1774249/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "溺水香蕉鱼", "zh": "", "note": "", "id": 67, "url": "https://www.asianfanfics.com/story/view/1781466/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "勇敢的小孩", "zh": "", "note": "", "id": 68, "url": "https://www.asianfanfics.com/story/view/1783978/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "心脏无二", "zh": "", "note": "", "id": 69, "url": "https://www.asianfanfics.com/story/view/1781137/n-a"}, {"src": "亚洲网", "cat": "文", "ko": "剩下的、你和我", "zh": "", "note": "", "id": 70, "url": "https://www.asianfanfics.com/story/view/1778971/n-a"}];
+var z=80;
+function openW(id){
+  var w=document.getElementById(id); if(!w) return;
+  w.classList.add('on'); w.style.zIndex=++z;
+  var r=w.getBoundingClientRect();
+  if(!w.dataset.p){
+    w.dataset.p=1;
+    w.style.left=Math.max(10,Math.min(innerWidth-r.width-10,(innerWidth-r.width)/2))+'px';
+    w.style.top=Math.max(70,Math.min(innerHeight-r.height-20,(innerHeight-r.height)/2))+'px';
+  }
+}
+function closeW(id){var w=document.getElementById(id); if(w) w.classList.remove('on');}
+function closeAll(){document.querySelectorAll('.win').forEach(function(w){w.classList.remove('on');});}
+document.querySelectorAll('.win').forEach(function(w){
+  w.addEventListener('mousedown',function(){w.style.zIndex=++z;});
+  var bar=w.querySelector('.bar'); if(!bar) return;
+  var drag=false,sx=0,sy=0,ox=0,oy=0;
+  function d(e){if(e.target.className==='x')return;drag=true;var p=e.touches?e.touches[0]:e;sx=p.clientX;sy=p.clientY;var r=w.getBoundingClientRect();ox=r.left;oy=r.top;w.style.left=ox+'px';w.style.top=oy+'px';}
+  function m(e){if(!drag)return;var p=e.touches?e.touches[0]:e;w.style.left=Math.max(-20,Math.min(innerWidth-60,ox+p.clientX-sx))+'px';w.style.top=Math.max(30,Math.min(innerHeight-40,oy+p.clientY-sy))+'px';}
+  function u(){drag=false;}
+  bar.addEventListener('mousedown',d); bar.addEventListener('touchstart',d,{passive:true});
+  addEventListener('mousemove',m); addEventListener('touchmove',m,{passive:true});
+  addEventListener('mouseup',u); addEventListener('touchend',u);
+});
+document.querySelectorAll('[data-win]').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();window.__c=1;openW(a.getAttribute('data-win'));});
+});
+
+/* 文库 */
+var libCat='all';
+function enterLib(){document.getElementById('gate').style.display='none';document.getElementById('main').style.display='block';render();}
+function render(){
+  var box=document.getElementById('list');
+  var arr=libCat==='all'?FICS:FICS.filter(function(f){return f.src===libCat || f.cat===libCat;});
+  if(!arr.length){box.innerHTML='<div style="font-size:12px;color:#a7929c;padding:12px 0">这个分类还没收录，把标题发我。</div>';return;}
+  box.innerHTML=arr.map(function(f){
+    return '<button class="fic" onclick="readFic('+f.id+')"><span class="fic-tag">'+f.src+' · '+(f.cat==='漫'?'同人漫':'同人文')+'</span><b>'+f.ko+(f.zh?' · '+f.zh:'')+'</b><p>'+(f.note||'—')+'</p><span class="fic-meta">'+f.src+(f.url?' · <a class="fic-link" href="'+f.url+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">打开原文 ↗</a>':'')+'</span></button>';
+  }).join('');
+}
+document.querySelectorAll('#tabs .tab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#tabs .tab').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on'); libCat=b.getAttribute('data-cat'); render();
+  });
+});
+function readFic(id){
+  var f=FICS.filter(function(x){return x.id===id;})[0]; if(!f) return;
+  document.getElementById('rt').textContent=f.zh||f.ko;
+  document.getElementById('rn').innerHTML='<p class="rd-line"><b>原题：</b>'+f.ko+'</p>'+(f.zh?'<p class="rd-line"><b>中文：</b>'+f.zh+'</p>':'')+'<p class="rd-line"><b>备注：</b>'+(f.note||'—')+'</p><p class="rd-line" style="color:#b193a1">点下面的按钮可以直接打开原文。</p><a class="gate-btn" id="rlink" href="#" target="_blank" rel="noopener" style="display:block;text-align:center;text-decoration:none">打开原文 ↗</a>';
+  var a=document.getElementById('rlink');
+  if(f.url){a.href=f.url;a.style.display='block';}else{a.href='#';a.style.display='none';}
+  closeW('w-lib'); openW('w-reader');
+}
+
+function addMemo(e){
+  e.preventDefault();
+  var i=document.getElementById('mi'), v=i.value.trim(); if(!v) return;
+  var li=document.createElement('li'); li.innerHTML='<b>我</b><span>'+v.replace(/</g,'&lt;')+'</span>';
+  document.getElementById('mlist').prepend(li); i.value='';
+}
+function openLb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on');}
+function closeLb(){document.getElementById('lb').classList.remove('on');}
+
+/* 打开页面清掉残留 #，避免自动弹出 */
+addEventListener('DOMContentLoaded',function(){
+  if(!window.__c && location.hash){ try{history.replaceState(null,'',location.pathname);}catch(e){} }
+});
+
+function shoot(){
+  var v=document.querySelector('.cam-view');
+  if(!v) return;
+  var f=document.createElement('div');
+  f.style.cssText='position:absolute;inset:0;background:#fff;opacity:0;transition:opacity .12s;pointer-events:none;z-index:5';
+  v.appendChild(f);
+  requestAnimationFrame(function(){ f.style.opacity='.85'; });
+  setTimeout(function(){ f.style.opacity='0'; },110);
+  setTimeout(function(){ f.remove(); },300);
+}
+
+/* 书：翻页 */
+(function(){
+  var pages=Array.prototype.slice.call(document.querySelectorAll('.book .page'));
+  var dots=Array.prototype.slice.call(document.querySelectorAll('.book .dots i'));
+  var cur=0;
+  function show(i){
+    cur=(i+pages.length)%pages.length;
+    pages.forEach(function(p,k){p.classList.toggle('on',k===cur);});
+    dots.forEach(function(d,k){d.classList.toggle('on',k===cur);});
+  }
+  window.turn=function(d){ show(cur+d); };
+  dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft') show(cur-1);
+    if(e.key==='ArrowRight') show(cur+1);
+  });
+  show(0);
+})();
+
+/* 书：把窗口内容搬进书页 */
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.book .page'));
+  var dots=[].slice.call(document.querySelectorAll('.book .dots i'));
+  var cur=0;
+
+  pages.forEach(function(pg){
+    var src=pg.getAttribute('data-src');
+    var win=document.getElementById(src);
+    var body=win && win.querySelector('.body');
+    if(body){
+      while(body.firstChild){ pg.querySelector('.pcontent').appendChild(body.firstChild); }
+      win.remove();
+    }
+  });
+  document.querySelectorAll('.turn, .dots, [data-win]').forEach(function(){});
+  var nav=document.querySelectorAll('.book .turn, .book .dots i');
+  nav.forEach(function(n){ n.style.pointerEvents='auto'; });
+
+  function show(i){
+    var n=pages.length;
+    cur=(i%n+n)%n;
+    pages.forEach(function(p,k){
+      var on=(k===cur);
+      if(on && !p.classList.contains('on')){
+        p.classList.add('flip');
+        setTimeout(function(){p.classList.remove('flip');},560);
+      }
+      p.classList.toggle('on',on);
+    });
+    dots.forEach(function(d,k){ d.classList.toggle('on',k===cur); });
+  }
+  window.turn=function(d){ show(cur+d); };
+  dots.forEach(function(d){ d.addEventListener('click',function(){ show(+d.dataset.i); }); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft') show(cur-1);
+    if(e.key==='ArrowRight') show(cur+1);
+  });
+  show(0);
+})();
+
+/* 文库：门 + 分类筛选 */
+function enterLib(){
+  var g=document.getElementById('gate'), m=document.getElementById('libmain');
+  if(g) g.style.display='none';
+  if(m) m.style.display='block';
+}
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('#tabs .tab'));
+  var list=document.getElementById('ficlist');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.toggle('on',x===t);});
+      var c=t.dataset.cat;
+      [].slice.call(list.children).forEach(function(card){
+        var ok=(c==='all')||card.dataset.src===c||card.dataset.cat===c;
+        card.style.display=ok?'':'none';
+      });
+    });
+  });
+})();
+function addMemo(e){
+  e.preventDefault();
+  var i=document.getElementById('mi'), v=(i.value||'').trim(); if(!v) return;
+  var li=document.createElement('li');
+  li.innerHTML='<b>我</b><span>'+v.replace(/</g,'&lt;')+'</span>';
+  document.getElementById('mlist').prepend(li); i.value='';
+}
+function openLb(src){var b=document.getElementById('lbimg'); if(b){b.src=src;document.getElementById('lb').classList.add('on');}}
+function closeLb(){document.getElementById('lb').classList.remove('on');}
+
+/* 打开书本 */
+function openBook(){
+  var b=document.getElementById('book');
+  if(!b || b.classList.contains('open')) return;
+  b.classList.remove('closed');
+  b.classList.add('open');
+  setTimeout(function(){ b.classList.remove('opening'); }, 1100);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var b=document.getElementById('book');
+  if(b){ b.classList.add('closed'); }
+});
+
+/* 页码重排 */
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.book .page'));
+  pages.forEach(function(pg,i){
+    var n=pg.querySelector('.pno'); if(n) n.textContent=('0'+(i+1)).slice(-2)+' / '+('0'+pages.length).slice(-2);
+  });
+})();
+
+/* 密码盘 */
+(function(){
+  var CODE='451118', buf='';
+  var modal=document.getElementById('lockmodal');
+  var dots=[].slice.call(document.querySelectorAll('#lkdots i'));
+  var msg=document.getElementById('lkmsg');
+  var box=document.querySelector('.lockbox');
+  function paint(){ dots.forEach(function(d,i){ d.classList.toggle('on', i<buf.length); }); }
+  window.openLock=function(){ if(document.getElementById('book').classList.contains('open')) return; modal.classList.add('on'); buf=''; paint(); msg.textContent=''; };
+  window.closeLock=function(){ modal.classList.remove('on'); };
+  document.getElementById('lkpad').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    var k=b.dataset.k;
+    if(k==='del'){ buf=buf.slice(0,-1); }
+    else if(k==='ok'){
+      if(buf===CODE){ closeLock(); openBook(); }
+      else { msg.textContent='密码不对，再想想'; box.classList.add('shake'); setTimeout(function(){box.classList.remove('shake');},400); buf=''; }
+    } else if(buf.length<6){ buf+=k; }
+    paint();
+    if(buf.length===6 && buf!==CODE){ /* 自动校验 */ }
+    else if(buf.length===6){ msg.textContent=''; }
+  });
+  document.addEventListener('keydown',function(e){
+    if(!modal.classList.contains('on')) return;
+    if(/^[0-9]$/.test(e.key) && buf.length<6){ buf+=e.key; paint(); }
+    if(e.key==='Backspace'){ buf=buf.slice(0,-1); paint(); }
+    if(e.key==='Enter'){ if(buf===CODE){closeLock();openBook();} else {msg.textContent='密码不对，再想想';buf='';paint();} }
+    if(e.key==='Escape'){ closeLock(); }
+  });
+})();
