@@ -1609,6 +1609,45 @@ body::after{
   .am-bar{padding:4px 0}
   .am-arrow{width:32px;height:32px;font-size:18px}
 }
+
+/* 允许竖屏浏览 */
+body.portrait-ok .rotate-mask{display:none!important}
+.rm-ghost{background:transparent!important;border-color:#f0ccd9!important;color:#b98a9a!important;margin-left:8px}
+@media (orientation: portrait) and (max-height: 991px){
+  .rm-btn{margin-top:12px}
+}
+
+/* ===== 竖屏适配（用户选择继续时） ===== */
+@media (orientation: portrait){
+  body.portrait-ok .book{
+    width:92vw!important;height:auto!important;min-height:0!important;
+    top:46%!important;transform:translate(-50%,-50%)!important;
+  }
+  body.portrait-ok .book .spread,
+  body.portrait-ok .book .cover{height:66vh!important}
+  body.portrait-ok .book.closed{width:70vw!important}
+  body.portrait-ok .page{padding:22px 18px 40px!important}
+  body.portrait-ok .page .ph{padding-left:36px!important;margin:0 0 8px!important}
+  body.portrait-ok .page .ph b{font-size:13px!important}
+  body.portrait-ok .page .pno{right:76px!important;bottom:10px!important;font-size:10px}
+  body.portrait-ok .page .ribbon{left:10px;width:20px;height:38px}
+  body.portrait-ok .sleeves{grid-template-columns:1fr 1fr!important;gap:8px!important}
+  body.portrait-ok .sleeve{padding:4px!important}
+  body.portrait-ok .sleeve::before,body.portrait-ok .sleeve::after{display:none}
+  body.portrait-ok .book .turn{width:30px;height:30px;font-size:15px}
+  body.portrait-ok .book .prev{left:-6px}
+  body.portrait-ok .book .next{right:-6px}
+  body.portrait-ok .book .dots{bottom:-18px}
+  body.portrait-ok .fic{padding:9px 10px!important}
+  body.portrait-ok .fic b{font-size:12px!important}
+  body.portrait-ok .fic p{font-size:10.5px!important}
+  body.portrait-ok .closebook{bottom:8px;right:8px;font-size:10px;padding:4px 10px}
+  body.portrait-ok .tochome{bottom:8px;left:10px;font-size:10px;padding:4px 9px}
+  body.portrait-ok .cv-title{font-size:clamp(20px,6.4vw,34px)!important}
+  body.portrait-ok .tp-t{font-size:clamp(18px,5vw,28px)!important}
+  body.portrait-ok .tp-left svg{width:84px!important}
+  body.portrait-ok .sun{width:130px!important;height:130px!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1714,6 +1753,7 @@ body::after{
     <div class="rm-t">请横屏观看</div>
     <div class="rm-s">把手机转过来 · 这本书是横着读的</div>
     <button class="rm-btn" id="goland" onclick="forceLandscape()">自动横屏</button>
+    <button class="rm-btn rm-ghost" id="keepscreen" onclick="keepPortrait()">继续竖屏浏览</button>
   </div>
 </div>
 
@@ -2106,6 +2146,15 @@ body::after{
     if(e.key==='ArrowRight') albumStep(1);
     if(e.key==='Escape') closeAlbum();
   });
+
+  /* 竖屏浏览 */
+  window.keepPortrait=function(){
+    document.body.classList.add('portrait-ok');
+    try{ localStorage.setItem('portraitOK','1'); }catch(e){}
+  };
+  (function(){
+    try{ if(localStorage.getItem('portraitOK')==='1') document.body.classList.add('portrait-ok'); }catch(e){}
+  })();
 </script>
 </body>
 </html>
