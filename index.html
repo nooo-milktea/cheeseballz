@@ -1400,6 +1400,103 @@ body::after{
   content:"";position:absolute;right:0;top:0;bottom:0;width:16px;pointer-events:none;
   background:linear-gradient(270deg, rgba(140,110,85,.14), rgba(255,255,255,0) 70%);
 }
+
+/* 相册网格 */
+.alb-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  max-height:calc(100% - 34px);overflow:auto;padding:2px 2px 8px;
+}
+.alb-grid img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;cursor:pointer;
+  box-shadow:0 6px 14px -10px rgba(140,100,110,.7);transition:transform .18s;
+}
+.alb-grid img:hover{transform:translateY(-2px)}
+@media(max-width:820px){.alb-grid{grid-template-columns:repeat(4,1fr);gap:6px}}
+
+.rm-btn{
+  margin-top:18px;padding:10px 22px;border-radius:999px;border:1px solid #f0ccd9;background:#fff;
+  color:#a45f78;font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.16em;
+  box-shadow:0 10px 20px -14px rgba(180,110,140,.9);
+}
+
+.alb-open{
+  width:100%;margin-top:8px;padding:30px 18px;border-radius:14px;cursor:pointer;
+  border:1px dashed #f0ccd9;background:rgba(255,250,252,.75);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  font-family:"LXGW WenKai",serif;color:#a45f78;
+}
+.page.bl .alb-open{border-color:#cfe2f5;color:#6f93b5;background:rgba(248,252,255,.8)}
+.alb-open:hover{background:#fff}
+.ao-ic{font-size:22px}
+.ao-t{font-size:15px;letter-spacing:.18em}
+.ao-n{font-size:11px;color:#c08fa6;letter-spacing:.12em}
+.page.bl .ao-n{color:#8ba9c4}
+.albmodal{
+  position:fixed;inset:0;z-index:400;display:none;flex-direction:column;
+  background:rgba(60,40,48,.78);backdrop-filter:blur(6px);padding:18px;
+}
+.albmodal.on{display:flex}
+.am-close{
+  position:absolute;right:16px;top:14px;z-index:5;width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.15);color:#fff;font-size:15px;
+}
+.am-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;perspective:1600px;min-height:0}
+.am-stage img{
+  max-width:min(94vw,1100px);max-height:74vh;border-radius:4px;background:#fff;padding:8px 8px 24px;
+  box-shadow:0 30px 60px -24px rgba(0,0,0,.6);object-fit:contain;transform-origin:left center;
+}
+.am-stage img.flip{animation:albFlip .5s cubic-bezier(.35,.8,.3,1)}
+@keyframes albFlip{
+  0%{transform:rotateY(0) scale(1);opacity:1}
+  45%{transform:rotateY(-30deg) scale(.965);opacity:.55}
+  100%{transform:rotateY(0) scale(1);opacity:1}
+}
+.am-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.14);color:#fff;font-size:22px;z-index:3;
+}
+.am-arrow.prev{left:6px}
+.am-arrow.next{right:6px}
+.am-bar{display:flex;align-items:center;justify-content:center;gap:18px;padding:8px 0 4px;color:#fff}
+.am-tabs{display:flex;gap:8px}
+.am-tabs button{
+  border:1px solid rgba(255,255,255,.35);background:transparent;color:#f3dde5;border-radius:999px;
+  padding:6px 16px;font-family:"LXGW WenKai",serif;font-size:11.5px;letter-spacing:.16em;
+}
+.am-tabs button.on{background:#f7c3d5;color:#7d3f5c;border-color:#f7c3d5}
+.am-count{font-family:"Cormorant Garamond",serif;font-size:13px;letter-spacing:.14em;color:#f0dbe3}
+
+/* 透明相册：一行两张 */
+.sleeves{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;
+  max-height:calc(100% - 30px);overflow:auto;padding:4px 2px 14px;
+}
+.sleeve{
+  position:relative;margin:0;padding:7px;border-radius:8px;
+  background:linear-gradient(150deg, rgba(255,255,255,.92), rgba(255,255,255,.62));
+  border:1px solid rgba(255,255,255,.95);
+  box-shadow:0 10px 22px -16px rgba(120,80,95,.7), inset 0 0 0 1px rgba(240,200,215,.55);
+  backdrop-filter:blur(2px);
+}
+.sleeve::after{
+  content:"";position:absolute;inset:7px;border-radius:4px;pointer-events:none;
+  background:linear-gradient(115deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.12) 22%, rgba(255,255,255,0) 46%, rgba(255,255,255,.10) 78%, rgba(255,255,255,.35) 100%);
+  mix-blend-mode:screen;
+}
+.sleeve img{
+  display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px;
+  box-shadow:0 2px 6px rgba(120,80,95,.18);cursor:pointer;
+}
+/* 塑料套顶部开口的高光条 */
+.sleeve::before{
+  content:"";position:absolute;left:7px;right:7px;top:7px;height:10px;border-radius:3px 3px 0 0;
+  background:linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,0));
+  pointer-events:none;
+}
+@media(max-width:820px){
+  .sleeves{grid-template-columns:1fr 1fr;gap:10px 8px}
+  .sleeve{padding:5px}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1463,6 +1560,22 @@ body::after{
   <symbol id="i-letter" viewBox="0 0 48 48"><rect x="9" y="16" width="30" height="21" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M10 18l14 11 14-11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
 </defs></svg>
 
+<div class="albmodal" id="albmodal">
+  <button class="am-close" onclick="closeAlbum()">✕</button>
+  <div class="am-stage">
+    <button class="am-arrow prev" onclick="albumStep(-1)">‹</button>
+    <img id="amimg" src="" alt="">
+    <button class="am-arrow next" onclick="albumStep(1)">›</button>
+  </div>
+  <div class="am-bar">
+    <div class="am-tabs">
+      <button data-a="y" onclick="switchAlbum('y')">勇志</button>
+      <button data-a="s" onclick="switchAlbum('s')">咲哉</button>
+    </div>
+    <div class="am-count"><span id="amnow">1</span> / <span id="amtotal">1</span></div>
+  </div>
+</div>
+
 <div class="lockmodal" id="lockmodal" onclick="if(event.target===this)closeLock()">
   <div class="lockbox">
     <div class="lk-t">转动密码锁</div>
@@ -1488,6 +1601,7 @@ body::after{
     <svg viewBox="0 0 64 64" class="rm-icon"><rect x="18" y="8" width="28" height="48" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M44 40c10 4 12 12 6 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M50 56l-4-2 1-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
     <div class="rm-t">请横屏观看</div>
     <div class="rm-s">把手机转过来 · 这本书是横着读的</div>
+    <button class="rm-btn" id="goland" onclick="forceLandscape()">自动横屏</button>
   </div>
 </div>
 
@@ -1532,7 +1646,7 @@ body::after{
       <div class="toc-h">もくじ</div>
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
-      <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志拍的他 · 咲哉拍的他</span></a></li>
+      <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
       <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">歌曲</span><span class="toc-s">2023 — 2025</span></a></li>
       <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
@@ -1627,19 +1741,19 @@ body::after{
   </section>
   <section class="page pk" data-src="w-album-y">
     <span class="ribbon"></span>
-    <header class="ph"><b>相册 · 勇志拍的他</b><span class="pno"></span></header>
+    <header class="ph"><b>勇志的相册</b><span class="pno"></span></header>
     <div class="pcontent">
-      <div class="alb-note">YUSHI 拍摄</div>
-      <div class="alb-empty">还没有照片<br><span>之后再加</span></div>
+      <div class="alb-note">YUSHI 拍摄 · 51 张</div>
+      <div class="sleeves"><figure class="sleeve"><img src="assets/img/yus_a01.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a02.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a03.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a04.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a05.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a06.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a07.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a08.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a09.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a10.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a11.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a12.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a13.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a14.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a15.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a16.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a17.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a18.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a19.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a20.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a21.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a22.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a23.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a24.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a25.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a26.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a27.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a28.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a29.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a30.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a31.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a32.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a33.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a34.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a35.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a36.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a37.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a38.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a39.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a40.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a41.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a42.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a43.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a44.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a45.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a46.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a47.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a48.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a49.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a50.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/yus_a51.jpg" loading="lazy" onclick="openLb(this.src)"></figure></div>
     </div>
   </section>
 
   <section class="page bl" data-src="w-album-s">
     <span class="ribbon"></span>
-    <header class="ph"><b>相册 · 咲哉拍的他</b><span class="pno"></span></header>
+    <header class="ph"><b>咲哉的相册</b><span class="pno"></span></header>
     <div class="pcontent">
-      <div class="alb-note">SAKUYA 拍摄</div>
-      <div class="alb-empty">还没有照片<br><span>之后再加</span></div>
+      <div class="alb-note">SAKUYA 拍摄 · 31 张</div>
+      <div class="sleeves"><figure class="sleeve"><img src="assets/img/sak_a01.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a02.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a03.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a04.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a05.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a06.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a07.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a08.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a09.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a10.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a11.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a12.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a13.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a14.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a15.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a16.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a17.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a18.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a19.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a20.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a21.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a22.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a23.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a24.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a25.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a26.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a27.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a28.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a29.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a30.jpg" loading="lazy" onclick="openLb(this.src)"></figure><figure class="sleeve"><img src="assets/img/sak_a31.jpg" loading="lazy" onclick="openLb(this.src)"></figure></div>
     </div>
   </section>
 
@@ -1828,6 +1942,58 @@ body::after{
   window.openLb=function(src){ var b=document.getElementById('lbimg'); if(!b) return; b.src=src; document.getElementById('lb').classList.add('on'); };
   window.closeLb=function(){ document.getElementById('lb').classList.remove('on'); };
 })();
+
+  /* 手机横屏：全屏 + 方向锁定 */
+  window.forceLandscape=function(){
+    var el=document.documentElement;
+    var fs=el.requestFullscreen||el.webkitRequestFullscreen||el.mozRequestFullScreen||el.msRequestFullscreen;
+    var go=function(){
+      if(screen.orientation && screen.orientation.lock){ screen.orientation.lock('landscape').catch(function(){}); }
+      else if(screen.lockOrientation){ screen.lockOrientation('landscape'); }
+    };
+    if(fs){ var r=fs.call(el); if(r && r.then){ r.then(go).catch(go); } else { go(); } }
+    else { go(); }
+    var m=document.getElementById('goland'); if(m) m.textContent='已尝试横屏';
+  };
+  (function(){
+    if(!('ontouchstart' in window)) return;
+    document.addEventListener('click', function once(){
+      if(screen.orientation && screen.orientation.lock){ screen.orientation.lock('landscape').catch(function(){}); }
+      document.removeEventListener('click', once);
+    });
+  })();
+
+  /* 相册：全屏翻页 */
+  var ALB={y:['assets/img/yus_a01.jpg', 'assets/img/yus_a02.jpg', 'assets/img/yus_a03.jpg', 'assets/img/yus_a04.jpg', 'assets/img/yus_a05.jpg', 'assets/img/yus_a06.jpg', 'assets/img/yus_a07.jpg', 'assets/img/yus_a08.jpg', 'assets/img/yus_a09.jpg', 'assets/img/yus_a10.jpg', 'assets/img/yus_a11.jpg', 'assets/img/yus_a12.jpg', 'assets/img/yus_a13.jpg', 'assets/img/yus_a14.jpg', 'assets/img/yus_a15.jpg', 'assets/img/yus_a16.jpg', 'assets/img/yus_a17.jpg', 'assets/img/yus_a18.jpg', 'assets/img/yus_a19.jpg', 'assets/img/yus_a20.jpg', 'assets/img/yus_a21.jpg', 'assets/img/yus_a22.jpg', 'assets/img/yus_a23.jpg', 'assets/img/yus_a24.jpg', 'assets/img/yus_a25.jpg', 'assets/img/yus_a26.jpg', 'assets/img/yus_a27.jpg', 'assets/img/yus_a28.jpg', 'assets/img/yus_a29.jpg', 'assets/img/yus_a30.jpg', 'assets/img/yus_a31.jpg', 'assets/img/yus_a32.jpg', 'assets/img/yus_a33.jpg', 'assets/img/yus_a34.jpg', 'assets/img/yus_a35.jpg', 'assets/img/yus_a36.jpg', 'assets/img/yus_a37.jpg', 'assets/img/yus_a38.jpg', 'assets/img/yus_a39.jpg', 'assets/img/yus_a40.jpg', 'assets/img/yus_a41.jpg', 'assets/img/yus_a42.jpg', 'assets/img/yus_a43.jpg', 'assets/img/yus_a44.jpg', 'assets/img/yus_a45.jpg', 'assets/img/yus_a46.jpg', 'assets/img/yus_a47.jpg', 'assets/img/yus_a48.jpg', 'assets/img/yus_a49.jpg', 'assets/img/yus_a50.jpg', 'assets/img/yus_a51.jpg'],s:['assets/img/sak_a01.jpg', 'assets/img/sak_a02.jpg', 'assets/img/sak_a03.jpg', 'assets/img/sak_a04.jpg', 'assets/img/sak_a05.jpg', 'assets/img/sak_a06.jpg', 'assets/img/sak_a07.jpg', 'assets/img/sak_a08.jpg', 'assets/img/sak_a09.jpg', 'assets/img/sak_a10.jpg', 'assets/img/sak_a11.jpg', 'assets/img/sak_a12.jpg', 'assets/img/sak_a13.jpg', 'assets/img/sak_a14.jpg', 'assets/img/sak_a15.jpg', 'assets/img/sak_a16.jpg', 'assets/img/sak_a17.jpg', 'assets/img/sak_a18.jpg', 'assets/img/sak_a19.jpg', 'assets/img/sak_a20.jpg', 'assets/img/sak_a21.jpg', 'assets/img/sak_a22.jpg', 'assets/img/sak_a23.jpg', 'assets/img/sak_a24.jpg', 'assets/img/sak_a25.jpg', 'assets/img/sak_a26.jpg', 'assets/img/sak_a27.jpg', 'assets/img/sak_a28.jpg', 'assets/img/sak_a29.jpg', 'assets/img/sak_a30.jpg', 'assets/img/sak_a31.jpg']}, albKey='y', albI=0;
+  window.openAlbum=function(k){
+    albKey=k||'y'; albI=0;
+    document.getElementById('albmodal').classList.add('on');
+    document.querySelectorAll('.am-tabs button').forEach(function(b){ b.classList.toggle('on', b.dataset.a===albKey); });
+    renderAlbum(true);
+  };
+  window.closeAlbum=function(){ document.getElementById('albmodal').classList.remove('on'); };
+  window.switchAlbum=function(k){
+    albKey=k; albI=0;
+    document.querySelectorAll('.am-tabs button').forEach(function(b){ b.classList.toggle('on', b.dataset.a===albKey); });
+    renderAlbum(true);
+  };
+  window.albumStep=function(d){
+    var n=ALB[albKey].length; albI=(albI+d+n)%n; renderAlbum(false);
+  };
+  function renderAlbum(instant){
+    var arr=ALB[albKey], img=document.getElementById('amimg');
+    img.src=arr[albI];
+    document.getElementById('amnow').textContent=albI+1;
+    document.getElementById('amtotal').textContent=arr.length;
+    if(!instant){ img.classList.remove('flip'); void img.offsetWidth; img.classList.add('flip'); }
+  }
+  document.addEventListener('keydown',function(e){
+    var m=document.getElementById('albmodal');
+    if(!m || !m.classList.contains('on')) return;
+    if(e.key==='ArrowLeft') albumStep(-1);
+    if(e.key==='ArrowRight') albumStep(1);
+    if(e.key==='Escape') closeAlbum();
+  });
 </script>
 </body>
 </html>
