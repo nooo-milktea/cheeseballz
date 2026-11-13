@@ -1534,6 +1534,81 @@ body::after{
 @media (orientation: landscape) and (max-height: 991px){
   .rotate-mask{display:none!important}
 }
+
+/* ===== 手机横屏专用适配 ===== */
+@media (orientation: landscape) and (max-height: 520px){
+  html,body{overflow:hidden}
+  .sun{width:120px!important;height:120px!important;left:-48px;top:-48px}
+  .petals i{opacity:calc(var(--o) * .8)}
+
+  .book{
+    width:96vw!important;height:88vh!important;top:50%!important;
+  }
+  .book.closed{width:44vw!important}
+  .book .turn{width:30px;height:30px;font-size:15px;top:46%}
+  .book .prev{left:-4px}.book .next{right:-4px}
+  .book .dots{bottom:-14px;gap:5px}
+  .book .dots i{width:5px;height:5px}
+
+  .page{padding:14px 16px 34px!important}
+  .page::before{left:8px!important}
+  .page .ph{padding-left:34px!important;margin:0 0 6px!important;padding-bottom:4px!important}
+  .page .ph b{font-size:12.5px!important;letter-spacing:.16em}
+  .page .pno{font-size:10px;right:70px!important;bottom:8px!important}
+  .page .ribbon{left:8px;width:18px;height:34px}
+
+  .alb-note{font-size:9.5px;margin-bottom:6px}
+  .sleeves{grid-template-columns:repeat(4,1fr)!important;gap:6px!important}
+  .sleeve{padding:4px!important;border-radius:5px}
+  .sleeve::before,.sleeve::after{display:none}
+
+  .fic{padding:8px 10px!important}
+  .fic b{font-size:12px!important}
+  .fic p{font-size:10.5px!important}
+  .fic-tag,.fic-meta{font-size:9px!important}
+  .fic-list{gap:6px!important}
+  .tabs{gap:5px}
+  .tab{padding:4px 9px;font-size:10px}
+  .gate-box{padding:12px 14px}
+  .gate-box p{font-size:11px}
+  .gate-btn{padding:9px 14px;font-size:12px}
+
+  .toc-h{font-size:13px;margin:0 0 8px}
+  .toc-list a{padding:6px 4px}
+  .toc-t{font-size:13px}
+  .toc-s{font-size:9.5px}
+
+  .closebook{bottom:6px!important;right:6px!important;padding:4px 10px;font-size:10px}
+  .tochome{bottom:6px!important;left:8px!important;padding:3px 9px;font-size:9.5px}
+
+  /* 封面 */
+  .cv-title{font-size:clamp(18px,4.4vw,30px)!important}
+  .cv-sub{font-size:10px;letter-spacing:.28em}
+  .cv-hint{font-size:9px;margin-top:4px}
+  .clasp{right:-10px;width:20px;height:42px}
+  .lock{right:-34px;width:38px;height:50px}
+
+  /* 扉页 */
+  .tp-t{font-size:clamp(16px,4vw,26px)!important}
+  .titlepage .tp{gap:10px!important}
+  .tp-left svg{width:88px!important;transform:translateY(-6px)}
+
+  /* 密码盘 */
+  .lockbox{width:min(260px,42vw);padding:14px 14px 12px}
+  .dial-wrap{width:132px!important;height:132px!important}
+  .dial-knob{width:44px!important;height:44px!important;font-size:10px}
+  .dial .num{width:20px;height:20px;margin:-10px 0 0 -10px;font-size:12px}
+  .lk-read{font-size:15px}
+  .lk-msg{font-size:10px;margin-top:4px}
+  .lk-t{font-size:12px;margin-bottom:6px}
+  .lk-dots{margin-bottom:8px}
+  .lk-dots i{width:8px;height:8px}
+
+  /* 灯箱 / 相册弹层 */
+  .am-stage img{max-height:64vh}
+  .am-bar{padding:4px 0}
+  .am-arrow{width:32px;height:32px;font-size:18px}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
