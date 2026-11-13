@@ -1664,6 +1664,28 @@ body.portrait-ok .rotate-mask{display:none!important}
 @media (orientation: landscape) and (max-height: 520px){
   .sleeves{grid-template-columns:repeat(3,1fr)!important;gap:8px!important}
 }
+
+/* 文库：一屏五条 */
+.fic-list{gap:5px!important}
+.fic{
+  padding:7px 10px!important;gap:2px!important;
+  display:grid!important;grid-template-columns:auto 1fr;grid-template-areas:"tag meta" "title title" "note note";
+  align-items:center!important;
+}
+.fic .fic-tag{grid-area:tag;font-size:8.5px!important;padding:1px 6px;letter-spacing:.06em}
+.fic .fic-meta{grid-area:meta;justify-self:end;font-size:8.5px!important;letter-spacing:.04em}
+.fic b{grid-area:title;font-size:12px!important;line-height:1.45;letter-spacing:.02em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fic p{grid-area:note;font-size:10px!important;line-height:1.5;margin:0!important;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#b395a3}
+@media (orientation: landscape) and (max-height: 520px){
+  .fic{padding:5px 8px!important}
+  .fic b{font-size:11px!important}
+  .fic p{font-size:9px!important}
+  .fic-list{gap:4px!important}
+}
+
+#ficlist{max-height:calc(100% - 6px)}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
