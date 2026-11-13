@@ -1686,6 +1686,41 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 
 #ficlist{max-height:calc(100% - 6px)}
+
+/* 相机：小取景框 + 拍照 */
+.snap-wrap{
+  position:relative;width:100%;max-width:340px;margin:0 auto;aspect-ratio:4/3;
+  border-radius:10px;overflow:hidden;background:#1b1b1e;
+  box-shadow:0 10px 22px -16px rgba(120,80,95,.9), inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.snap-wrap video{width:100%;height:100%;object-fit:cover;display:block;transform:scaleX(-1);background:#1b1b1e}
+.snap-frame{position:absolute;inset:10px;pointer-events:none}
+.snap-frame i{position:absolute;width:16px;height:16px;border:2px solid rgba(255,255,255,.85);border-radius:2px}
+.snap-frame i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.snap-frame i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.snap-frame i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+.snap-frame i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.snap-hint{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:10.5px;color:#fff;
+  letter-spacing:.1em;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.snap-actions{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 8px}
+.snap-go,.snap-off{
+  border:1px solid #f0ccd9;border-radius:999px;background:#fff;color:#a45f78;
+  padding:6px 16px;font-family:"LXGW WenKai",serif;font-size:11.5px;letter-spacing:.1em;
+}
+.snap-shot{
+  width:44px;height:44px;border-radius:50%;border:3px solid #f8c6da;background:#fff;
+  color:#e07fa6;font-size:15px;line-height:1;
+  box-shadow:inset 0 0 0 3px #fff0f6, 0 6px 14px -10px rgba(200,120,150,.9);
+}
+.snap-shot:active{transform:scale(.94);background:#fff0f6}
+.snap-strip{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 6px;min-height:0}
+.snap-strip img{width:54px;height:54px;object-fit:cover;border-radius:6px;border:2px solid #fff;
+  box-shadow:0 4px 10px -8px rgba(120,80,95,.9)}
+@media (orientation: landscape) and (max-height: 520px){
+  .snap-wrap{max-width:240px}
+  .snap-shot{width:36px;height:36px}
+  .snap-strip img{width:44px;height:44px}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1952,7 +1987,18 @@ body.portrait-ok .rotate-mask{display:none!important}
     <span class="ribbon"></span>
     <header class="ph"><b>相机</b><span class="pno"></span></header>
     <div class="pcontent">
-      <div class="cam-empty">相机还是空的<br><span>之后再来装东西</span></div>
+      <div class="snap-wrap">
+        <video id="snapvideo" autoplay playsinline muted></video>
+        <canvas id="snapcanvas" style="display:none"></canvas>
+        <div class="snap-frame"><i></i><i></i><i></i><i></i></div>
+        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
+      </div>
+      <div class="snap-actions">
+        <button class="snap-go" onclick="startSnap()">开启</button>
+        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+        <button class="snap-off" onclick="stopSnap()">关闭</button>
+      </div>
+      <div class="snap-strip" id="snapstrip"></div>
     </div>
   </section>
 
@@ -1999,6 +2045,8 @@ body.portrait-ok .rotate-mask{display:none!important}
   });
 
   function show(i){
+    var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
+    if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
       var on=(k===cur);
@@ -2104,6 +2152,45 @@ body.portrait-ok .rotate-mask{display:none!important}
   };
 
 
+
+
+  /* 相机拍照 */
+  var snapStream=null;
+  window.startSnap=function(){
+    var v=document.getElementById('snapvideo'), hint=document.getElementById('snaphint');
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+      if(hint) hint.textContent='这个浏览器不支持相机';
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+      .then(function(st){ snapStream=st; v.srcObject=st; if(hint) hint.textContent=''; })
+      .catch(function(err){
+        if(hint) hint.textContent = (err && err.name==='NotAllowedError') ? '你拒绝了相机权限' : '打不开相机（需要 https）';
+      });
+  };
+  window.stopSnap=function(){
+    if(snapStream){ snapStream.getTracks().forEach(function(t){t.stop();}); snapStream=null; }
+    var v=document.getElementById('snapvideo'); if(v) v.srcObject=null;
+    var hint=document.getElementById('snaphint'); if(hint) hint.textContent='相机已关闭';
+  };
+  window.takeSnap=function(){
+    var v=document.getElementById('snapvideo'), c=document.getElementById('snapcanvas');
+    var strip=document.getElementById('snapstrip'), hint=document.getElementById('snaphint');
+    if(!snapStream || !v.videoWidth){ if(hint) hint.textContent='先开启相机'; return; }
+    c.width=v.videoWidth; c.height=v.videoHeight;
+    var ctx=c.getContext('2d');
+    ctx.translate(c.width,0); ctx.scale(-1,1);
+    ctx.drawImage(v,0,0,c.width,c.height);
+    var img=document.createElement('img');
+    img.src=c.toDataURL('image/jpeg',0.92);
+    img.title='点击保存';
+    img.onclick=function(){
+      var a=document.createElement('a');
+      a.href=this.src; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
+    };
+    strip.prepend(img);
+    if(hint) hint.textContent='已拍下 · 点缩略图可保存';
+  };
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
