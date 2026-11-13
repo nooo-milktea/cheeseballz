@@ -1648,6 +1648,22 @@ body.portrait-ok .rotate-mask{display:none!important}
   body.portrait-ok .tp-left svg{width:84px!important}
   body.portrait-ok .sun{width:130px!important;height:130px!important}
 }
+
+/* 相册：不加纹理，干净原图 */
+.sleeve{
+  padding:0!important;background:none!important;border:0!important;
+  box-shadow:none!important;backdrop-filter:none!important;border-radius:4px!important;
+}
+.sleeve::before,.sleeve::after{display:none!important;content:none!important}
+.sleeve img{
+  width:100%!important;height:auto!important;display:block!important;
+  border-radius:4px!important;
+  box-shadow:0 6px 16px -12px rgba(120,80,95,.75)!important;
+}
+.sleeves{gap:12px!important}
+@media (orientation: landscape) and (max-height: 520px){
+  .sleeves{grid-template-columns:repeat(3,1fr)!important;gap:8px!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
