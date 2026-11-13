@@ -1780,6 +1780,105 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 /* 相机页不再被中缝压住 */
 .page.cam-page::after{display:none!important}
+
+/* 留言：空状态小字 */
+.memo-empty{
+  font-family:"LXGW WenKai",serif;font-size:12px;letter-spacing:.14em;color:#c39aa8;
+  text-align:center;padding:26px 10px;line-height:2;
+  border-bottom:1px dashed rgba(240,200,215,.7);margin-bottom:10px;
+}
+.mlist:not(:empty){display:block!important}
+
+/* ===== 信纸留言 ===== */
+.letter-wrap{position:relative;width:100%;max-width:420px;margin:0 auto;min-height:230px}
+.paper{
+  position:relative;border-radius:6px;padding:16px 18px 34px;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 26px, rgba(150,190,220,.45) 26px 27px),
+    linear-gradient(160deg,#fffdf7,#fdf6ee);
+  box-shadow:0 12px 24px -18px rgba(140,95,110,.8), inset 0 0 0 1px #f3e7dc;
+  transition:transform .75s cubic-bezier(.5,0,.3,1), opacity .75s;
+}
+.paper::after{content:"";position:absolute;left:22px;top:0;bottom:0;width:1px;background:rgba(230,150,170,.5)}
+.paper-hole{position:absolute;left:8px;width:7px;height:7px;border-radius:50%;background:#efe3d6;box-shadow:inset 0 1px 2px rgba(150,120,100,.35)}
+.paper-hole.h1{top:26px}.paper-hole.h2{top:112px}.paper-hole.h3{top:198px}
+#memoText{
+  width:100%;height:150px;resize:none;border:0;background:transparent;outline:none;
+  font-family:"LXGW WenKai","Kaiti SC",serif;font-size:14px;line-height:27px;color:#4b3a3f;
+  padding-left:10px;letter-spacing:.04em;
+}
+#memoText::placeholder{color:#c9aab6}
+.paper-sign{position:absolute;right:16px;bottom:12px;font-family:"Shippori Mincho",serif;font-size:10px;
+  letter-spacing:.24em;color:#c9a4ae}
+/* 信封 */
+.envelope{
+  position:absolute;left:50%;top:50%;width:220px;height:140px;margin:-70px 0 0 -110px;
+  opacity:0;transform:scale(.6);pointer-events:none;transition:opacity .3s, transform .5s;
+}
+.envelope.show{opacity:1;transform:scale(1)}
+.env-back,.env-front,.env-flap{position:absolute;inset:0;border-radius:4px}
+.env-back{background:linear-gradient(160deg,#fde7ef,#f9d6e2);box-shadow:0 16px 30px -18px rgba(140,90,110,.9)}
+.env-front{background:linear-gradient(160deg,#fff6fa,#fbdfe9);clip-path:polygon(0 0,50% 46%,100% 0,100% 100%,0 100%)}
+.env-flap{
+  background:linear-gradient(160deg,#ffeef4,#fbd9e5);transform-origin:top center;
+  clip-path:polygon(0 0,100% 0,50% 58%);transition:transform .5s .1s;z-index:3;
+  box-shadow:0 2px 6px rgba(160,110,130,.18)
+}
+.envelope .env-flap{transform:rotateX(170deg)}
+.envelope.sealed .env-flap{transform:rotateX(0deg)}
+.envelope .env-flap{transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.env-stamp{
+  position:absolute;left:50%;top:52%;width:74px;height:74px;margin:-37px 0 0 -37px;z-index:4;
+  display:grid;place-items:center;opacity:0;transform:scale(1.6) rotate(-18deg);transition:.45s;
+}
+.env-stamp svg{width:100%;height:100%;opacity:.85}
+.env-stamp em{position:absolute;bottom:-2px;font-style:normal;font-family:"Shippori Mincho",serif;
+  font-size:8.5px;letter-spacing:.2em;color:#c9526f}
+.envelope.stamped .env-stamp{opacity:1;transform:scale(1) rotate(-12deg)}
+.sent-ok{
+  position:absolute;left:0;right:0;bottom:-34px;text-align:center;opacity:0;transition:.5s;
+  font-family:"Shippori Mincho",serif;font-size:13px;letter-spacing:.42em;color:#b06a86;
+}
+.sent-ok.show{opacity:1;bottom:-26px}
+.letter-bar{display:flex;justify-content:center;margin-top:10px}
+.send-btn{
+  border:0;border-radius:999px;padding:9px 24px;cursor:pointer;
+  background:linear-gradient(120deg,#ffb0cc,#ffcfe2);color:#7d3f5c;
+  font-family:"LXGW WenKai",serif;font-size:12.5px;letter-spacing:.16em;
+  box-shadow:0 12px 22px -16px rgba(200,120,150,.95);
+}
+.send-btn:active{transform:scale(.97)}
+.mlist{display:none}
+.mlist:not(:empty){display:block!important;margin-top:14px}
+@media (orientation: landscape) and (max-height: 520px){
+  .letter-wrap{max-width:340px;min-height:190px}
+  #memoText{height:96px;font-size:12.5px;line-height:24px}
+  .envelope{width:180px;height:116px;margin:-58px 0 0 -90px}
+}
+
+/* 留言页：不显示书缝 */
+.page[data-src="w-memo"]{z-index:8!important}
+.page[data-src="w-memo"] .pcontent,
+.page[data-src="w-memo"] .letter-wrap{position:relative;z-index:9}
+
+/* 书页内容不再被中缝横穿 */
+.book .spread::before{display:none!important}
+
+/* 恢复中缝，只在留言页遮住 */
+.book .spread::before{display:block!important}
+.page[data-src="w-memo"]{
+  z-index:9!important;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(150,190,220,.30) 27px 28px),
+    #fffdf6!important;
+}
+.page[data-src="w-memo"]::before{display:none!important}
+
+/* 信纸塞进信封 */
+.paper.into{
+  transform:translateY(40px) scale(.28) rotate(2deg)!important;
+  opacity:0!important;filter:blur(1px);
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -1932,8 +2031,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
       <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">一起合照吧</span></a></li>
-      <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">歌曲</span><span class="toc-s">2023 — 2025</span></a></li>
-      <li><a onclick="jumpTo(7)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
+      <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
     </div>
   </section>
@@ -2064,29 +2162,40 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
   </section>
 
-  <section class="page g" data-src="w-songs">
+  <section class="page" data-src="w-memo">
     <span class="ribbon"></span>
-    <header class="ph"><b>歌曲</b><span class="pno">05 / 06</span></header>
-    <div class="pcontent"><ul class="mlist">
-<li><b>2023</b><span>Hands Up</span></li>
-<li><b>2024</b><span>WISH · Songbird</span></li>
-<li><b>2025</b><span>Steady · Color</span></li>
-</ul><div class="meta"><span>资料待校对</span><span>以官方为准</span></div></div>
-  </section>
-  <section class="page " data-src="w-memo">
-    <span class="ribbon"></span>
-    <header class="ph"><b>留言</b><span class="pno">06 / 06</span></header>
-    <div class="pcontent"><ul class="mlist" id="mlist">
-<li><b>匿名</b><span>粉色和蓝色放在一起很好看。</span></li>
-<li><b>小满</b><span>想看两个人一起上综艺。</span></li>
-</ul>
-<form class="memo" onsubmit="addMemo(event)"><input id="mi" maxlength="60" placeholder="写点什么…"><button type="submit">寄出 ♡</button></form>
-<button class="memo-rose" onclick="openLb('assets/img/rose_hand.png')"><img src="assets/img/rose_hand.png"><span>他把玫瑰递过来了 · 点开看</span></button></div>
+    <header class="ph"><b>留言</b><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="letter-wrap" id="letterWrap">
+        <div class="paper" id="paper">
+          <span class="paper-hole h1"></span><span class="paper-hole h2"></span><span class="paper-hole h3"></span>
+          <textarea id="memoText" maxlength="200" placeholder="把想对他们说的话，悄悄写下来"></textarea>
+          <span class="paper-sign">— 2026 · 冬 —</span>
+        </div>
+        <div class="envelope" id="envBox" aria-hidden="true">
+          <span class="env-back"></span>
+          <span class="env-flap"></span>
+          <span class="env-front"></span>
+          <span class="env-stamp" id="envStamp">
+            <svg viewBox="0 0 64 64"><g fill="none" stroke="#c9526f" stroke-width="2.4" stroke-linecap="round">
+              <circle cx="32" cy="32" r="21" opacity=".55"/>
+              <path d="M32 20c4-4 9-3 10 2 5-2 8 3 5 7 4 3 2 8-3 8 0 5-6 7-9 4-4 4-10 1-9-4-5-1-6-6-2-8-2-5 2-9 8-9z" opacity=".9"/>
+            </g></svg>
+            <em>寄出</em>
+          </span>
+        </div>
+        <div class="sent-ok" id="sentOk">信 已 寄 出</div>
+      </div>
+      <div class="letter-bar">
+        <button class="send-btn" id="sendBtn" onclick="sendLetter()">寄出信件 ✉</button>
+      </div>
+      <ul class="mlist" id="mlist" style="display:none"></ul>
+    </div>
   </section>
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -2256,6 +2365,37 @@ body.portrait-ok .rotate-mask{display:none!important}
     if(hint) hint.textContent='已拍下 · 点缩略图可保存';
   };
 
+
+  /* 寄信动画 */
+  window.sendLetter=function(){
+    var t=document.getElementById('memoText'), paper=document.getElementById('paper');
+    var env=document.getElementById('envBox'), ok=document.getElementById('sentOk');
+    var btn=document.getElementById('sendBtn');
+    var txt=(t.value||'').trim();
+    if(!txt){ t.focus(); t.placeholder='先写点什么吧…'; return; }
+    btn.disabled=true;
+    // 1) 信封先出现（盖子开着）
+    env.classList.add('show');
+    // 2) 信纸被塞进信封
+    setTimeout(function(){ paper.classList.add('into'); }, 320);
+    // 3) 信封合上
+    setTimeout(function(){ env.classList.add('sealed'); }, 1050);
+    // 4) 合好之后盖邮戳
+    setTimeout(function(){ env.classList.add('stamped'); }, 1750);
+    setTimeout(function(){ ok.classList.add('show'); }, 2050);
+    // 5) 收尾
+    setTimeout(function(){
+      var li=document.createElement('li');
+      li.innerHTML='<b>匿名</b><span>'+txt.replace(/</g,'&lt;')+'</span>';
+      var ul=document.getElementById('mlist'); ul.appendChild(li); ul.style.display='block';
+      env.classList.remove('show','sealed','stamped');
+      ok.classList.remove('show');
+      paper.classList.remove('into');
+      paper.style.transform='none'; paper.style.opacity='1';
+      t.value=''; btn.disabled=false;
+    }, 3400);
+  };
+
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
   window.enterLib=function(){ if(gate) gate.style.display='none'; if(main) main.style.display='block'; };
@@ -2278,7 +2418,10 @@ body.portrait-ok .rotate-mask{display:none!important}
     var i=document.getElementById('mi'), v=(i.value||'').trim(); if(!v) return;
     var li=document.createElement('li');
     li.innerHTML='<b>我</b><span>'+v.replace(/</g,'&lt;')+'</span>';
-    document.getElementById('mlist').prepend(li); i.value='';
+    var hint=document.getElementById('memohint');
+    if(hint) hint.style.display='none';
+    var ul=document.getElementById('mlist'); if(ul) ul.style.display='block';
+    ul.prepend(li); i.value='';
   });
 
   /* 灯箱 */
