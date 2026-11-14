@@ -2302,6 +2302,14 @@ body.portrait-ok .rotate-mask{display:none!important}
   font-family:"LXGW WenKai",serif;font-size:12.5px;color:#8d5f6d;letter-spacing:.04em;
 }
 .spot-list button:hover{background:#fff5f9}
+
+/* 保存按钮与缩略图更显眼 */
+.cam-mini.savebtn{background:linear-gradient(120deg,#ffb0cc,#ffcfe2)!important;color:#7d3f5c!important;border-color:#f5b9d0!important;font-weight:600}
+.snap-strip img{width:56px!important;height:56px!important}
+@media (max-width:760px){
+  .cam-page .cam-bar{flex-wrap:wrap!important;row-gap:6px!important}
+  .snap-strip img{width:60px!important;height:60px!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2591,6 +2599,7 @@ body.portrait-ok .rotate-mask{display:none!important}
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
+        <button class="cam-mini savebtn" id="saveLast" onclick="saveLast()" style="display:none">保存这张</button>
       </div>
       <div class="snap-strip" id="snapstrip"></div>
     </div>
@@ -2830,6 +2839,14 @@ body.portrait-ok .rotate-mask{display:none!important}
     if(frameImg.complete){ cb(frameImg); }
     else { frameImg.onload=function(){ cb(frameImg); }; }
   }
+
+  /* 保存最近一张 */
+  var lastShot=null;
+  window.saveLast=function(){
+    if(!lastShot) return;
+    var a=document.createElement('a');
+    a.href=lastShot; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
+  };
   window.takeSnap=function(){
     var v=document.getElementById('snapvideo'), c=document.getElementById('snapcanvas');
     var strip=document.getElementById('snapstrip'), hint=document.getElementById('snaphint');
@@ -2850,15 +2867,20 @@ body.portrait-ok .rotate-mask{display:none!important}
       ctx.restore();
       // 叠加相框
       if(fr && fr.naturalWidth){ ctx.drawImage(fr,0,0,W,H); }
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      lastShot=dataUrl;
+      var sb=document.getElementById('saveLast');
+      if(sb){ sb.style.display='inline-block'; }
       var img=document.createElement('img');
-      img.src=c.toDataURL('image/jpeg',0.92);
+      img.src=dataUrl;
       img.title='点击保存';
       img.onclick=function(){
         var a=document.createElement('a');
         a.href=this.src; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
       };
       strip.prepend(img);
-      if(hint) hint.textContent='已拍下 · 点缩略图可保存';
+      if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
+      var st=document.getElementById('snapstrip'); if(st) st.scrollIntoView({block:'nearest'});
     });
   };
 
