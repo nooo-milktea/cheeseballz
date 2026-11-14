@@ -2419,6 +2419,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
   gap:14px!important;flex:0 0 auto!important;margin:0!important;padding:0!important;
 }
+
+/* 第二个相机：草莓边框，画面嵌在白色区域 */
+.cam2-page .cam2-stage{
+  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:1872/1485;
+  max-width:100%;margin:0 auto;flex:0 0 auto;
+  background:url("assets/img/frame_sy.jpg") center/100% 100% no-repeat;
+}
+.cam2-page .cam2-stage video{
+  position:absolute;left:8%;top:7.5%;width:70%;height:54%;
+  object-fit:cover;transform:scaleX(-1);border-radius:4px;background:#f3ecef;
+}
+.cam2-page .snap-hint{left:8%!important;right:22%!important;top:34%!important;bottom:auto!important;color:#b08b98;font-size:10.5px;text-shadow:0 1px 3px rgba(255,255,255,.9)}
+.cam2-page .shoot-tray{position:absolute;left:0;right:0;bottom:0;height:100px}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2583,9 +2596,9 @@ body.portrait-ok .rotate-mask{display:none!important}
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
-      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">一起合照吧</span></a></li>
+      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">两种相框</span></a></li>
       <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
-      <li><a onclick="jumpTo(7)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
+      <li><a onclick="jumpTo(8)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
     </div>
   </section>
@@ -2731,6 +2744,27 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
   </section>
 
+  <section class="page v cam-page cam2-page" data-src="w-camera2">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v85</span><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="cam2-stage" id="cam2stage">
+        <video id="snapvideo2" autoplay playsinline muted></video>
+        <canvas id="snapcanvas2" style="display:none"></canvas>
+        <div class="snap-hint" id="snaphint2">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="start2()">开启</button>
+        <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="stop2()">关闭</button>
+      </div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount2">0</span></div>
+        <div class="snap-strip" id="snapstrip2"><span class="strip-empty" id="stripempty2">拍一张就会出现</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="page" data-src="w-memo">
     <span class="ribbon"></span>
     <header class="ph"><b>留言</b><span class="pno"></span></header>
@@ -2764,7 +2798,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -2797,6 +2831,8 @@ body.portrait-ok .rotate-mask{display:none!important}
   function show(i){
     book.classList.toggle('on-cam', (pages[i] && pages[i].dataset.src==='w-camera'));
     var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
+    var camPage2=pages.findIndex(function(p){return p.dataset.src==='w-camera2';});
+    if(i!==camPage2 && typeof window.stop2==='function') window.stop2();
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
@@ -3159,6 +3195,53 @@ body.portrait-ok .rotate-mask{display:none!important}
     new MutationObserver(schedule).observe(el,{childList:true,characterData:true,subtree:true});
     schedule();
   })();
+
+
+  /* 第二个相机（草莓框） */
+  var stream2=null;
+  window.start2=function(){
+    var v=document.getElementById('snapvideo2'), hint=document.getElementById('snaphint2');
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='这个浏览器不支持相机'; return; }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+      .then(function(st){ stream2=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
+      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了相机权限':'打不开相机（需要 https）'; });
+  };
+  window.stop2=function(){
+    if(stream2){ stream2.getTracks().forEach(function(t){t.stop();}); stream2=null; }
+    var v=document.getElementById('snapvideo2'); if(v){ v.srcObject=null; v.parentNode.classList.remove('live'); }
+    var hint=document.getElementById('snaphint2'); if(hint) hint.textContent='相机已关闭';
+  };
+  var frame2=null;
+  window.take2=function(){
+    var v=document.getElementById('snapvideo2'), c=document.getElementById('snapcanvas2');
+    var strip=document.getElementById('snapstrip2'), hint=document.getElementById('snaphint2');
+    if(!stream2||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
+    function shoot(fr){
+      var W=1400,H=1111; c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H); else { ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H); }
+      // 白框区域（与 CSS 一致）
+      var x=W*0.08, y=H*0.075, w=W*0.70, h=H*0.54;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(w/vw,h/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(x,y,w,h); ctx.clip();
+      ctx.translate(x+w,y); ctx.scale(-1,1);
+      ctx.drawImage(v,(w-dw)/2,(h-dh)/2,dw,dh);
+      ctx.restore();
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      var se=document.getElementById('stripempty2'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount2'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
+      var img=document.createElement('img');
+      img.src=dataUrl; img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下';
+    }
+    if(frame2&&frame2.complete&&frame2.naturalWidth){ shoot(frame2); return; }
+    frame2=new Image();
+    frame2.onload=function(){ shoot(frame2); };
+    frame2.onerror=function(){ shoot(null); };
+    frame2.src='assets/img/frame_sy.jpg';
+  };
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
