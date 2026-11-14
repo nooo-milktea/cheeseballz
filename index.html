@@ -2353,6 +2353,9 @@ body.portrait-ok .rotate-mask{display:none!important}
   font-family:"LXGW WenKai",serif;font-size:13px;letter-spacing:.12em;text-decoration:none;
   box-shadow:0 10px 20px -12px rgba(0,0,0,.6);
 }
+
+.strip-empty{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c9aab6;letter-spacing:.12em;padding:6px}
+.cam-page .snap-strip{min-height:60px!important;display:flex!important;align-items:center!important;gap:8px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2642,7 +2645,7 @@ body.portrait-ok .rotate-mask{display:none!important}
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
       </div>
-      <div class="snap-strip" id="snapstrip"></div>
+      <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">还没有照片</span></div>
       <div class="snap-tip" id="snaptip" style="display:none">点缩略图保存照片</div>
     </div>
   </section>
@@ -2882,7 +2885,12 @@ body.portrait-ok .rotate-mask{display:none!important}
   window.takeSnap=function(){
     var v=document.getElementById('snapvideo'), c=document.getElementById('snapcanvas');
     var strip=document.getElementById('snapstrip'), hint=document.getElementById('snaphint');
-    if(!snapStream || !v.videoWidth){ if(hint) hint.textContent='先开启相机'; return; }
+    if(!snapStream || !v.videoWidth){
+      if(hint) hint.textContent='正在打开相机…';
+      startSnap();
+      setTimeout(function(){ if(snapStream && v.videoWidth) takeSnap(); else if(hint) hint.textContent='相机没打开，请点「开启」'; }, 900);
+      return;
+    }
     ensureFrame(function(fr){
       // 画布按相框比例
       var W=710, H=1076;
@@ -2907,6 +2915,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       img.src=dataUrl;
       img.title='点击查看并保存';
       img.onclick=function(){ openShot(this.src); };
+      var se=document.getElementById('stripempty'); if(se) se.style.display='none';
       strip.prepend(img);
       if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
       var bar=document.querySelector('.cam-page .cam-bar');
