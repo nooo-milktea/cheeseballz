@@ -2346,6 +2346,13 @@ body.portrait-ok .rotate-mask{display:none!important}
   border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
   border-radius:50%!important;box-shadow:0 6px 14px -8px rgba(200,110,140,.9)!important;
 }
+
+.lb-save{
+  position:absolute;left:50%;bottom:26px;transform:translateX(-50%);
+  padding:10px 26px;border-radius:999px;background:#f8c3d6;color:#7d3f5c;
+  font-family:"LXGW WenKai",serif;font-size:13px;letter-spacing:.12em;text-decoration:none;
+  box-shadow:0 10px 20px -12px rgba(0,0,0,.6);
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2695,7 +2702,11 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
 </div>
 
-<div class="lb" id="lb" onclick="closeLb()"><img id="lbimg" src=""><button class="x" onclick="closeLb()">✕</button></div>
+<div class="lb" id="lb" onclick="if(event.target===this)closeLb()">
+  <img id="lbimg" src="" alt="">
+  <a id="lbsave" class="lb-save" download="cheeseballz.jpg" href="#">保存这张</a>
+  <button class="x" onclick="closeLb()">✕</button>
+</div>
 
 <script>
 /* ================= 脚本 ================= */
@@ -2873,6 +2884,14 @@ body.portrait-ok .rotate-mask{display:none!important}
     var hint=document.getElementById('snaphint'); if(hint) hint.textContent='';
     var bc=document.getElementById('backCam'); if(bc) bc.style.display='none';
   };
+
+  window.openShot=function(src){
+    var b=document.getElementById('lbimg'); if(!b) return;
+    b.src=src;
+    var sv=document.getElementById('lbsave');
+    if(sv){ sv.href=src; sv.setAttribute('download','cheeseballz_'+Date.now()+'.jpg'); }
+    document.getElementById('lb').classList.add('on');
+  };
   window.saveLast=function(){
     if(!lastShot) return;
     var a=document.createElement('a');
@@ -2904,11 +2923,8 @@ body.portrait-ok .rotate-mask{display:none!important}
       var bc=document.getElementById('backCam'); if(bc){ bc.style.display='inline-block'; }
       var img=document.createElement('img');
       img.src=dataUrl;
-      img.title='点击保存';
-      img.onclick=function(){
-        var a=document.createElement('a');
-        a.href=this.src; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
-      };
+      img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
       strip.prepend(img);
       if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
       var bar=document.querySelector('.cam-page .cam-bar');
