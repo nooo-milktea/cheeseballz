@@ -2403,6 +2403,22 @@ body.portrait-ok .rotate-mask{display:none!important}
   border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;border-radius:50%!important;
 }
 .cam-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:104px!important}
+
+/* 相框与拍摄键都居中在同一竖轴 */
+.cam-page .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  height:calc(100% - 30px)!important;gap:8px!important;overflow:hidden!important;
+  padding:0 0 100px!important;position:relative!important;
+}
+.cam-page .cam-stage{
+  height:calc(100% - 74px)!important;width:auto!important;max-width:100%!important;
+  aspect-ratio:710/1076!important;flex:0 0 auto!important;margin:0 auto!important;
+}
+.cam-page .cam-bar{
+  position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;
+  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
+  gap:14px!important;flex:0 0 auto!important;margin:0!important;padding:0!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2680,7 +2696,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v82</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v83</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
