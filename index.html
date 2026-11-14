@@ -2337,6 +2337,8 @@ body.portrait-ok .rotate-mask{display:none!important}
 @media (max-width:760px){
   .cam-page .cam-stage{height:min(40vh, 360px)!important}
 }
+
+.snap-tip{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c08fa6;letter-spacing:.14em;text-align:center}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2624,10 +2626,10 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
-        <button class="cam-mini savebtn" id="saveLast" onclick="saveLast()" style="display:none">保存这张</button>
         <button class="cam-mini" id="backCam" onclick="backToCam()" style="display:none">回到相机</button>
       </div>
       <div class="snap-strip" id="snapstrip"></div>
+      <div class="snap-tip" id="snaptip" style="display:none">点缩略图保存照片</div>
     </div>
   </section>
 
@@ -2890,8 +2892,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       if(fr && fr.naturalWidth){ ctx.drawImage(fr,0,0,W,H); }
       var dataUrl=c.toDataURL('image/jpeg',0.92);
       lastShot=dataUrl;
-      var sb=document.getElementById('saveLast');
-      if(sb){ sb.style.display='inline-block'; }
+      var tip=document.getElementById('snaptip'); if(tip){ tip.style.display='block'; }
       var bc=document.getElementById('backCam'); if(bc){ bc.style.display='inline-block'; }
       var img=document.createElement('img');
       img.src=dataUrl;
