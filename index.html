@@ -2237,6 +2237,8 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 /* 打卡点视频 */
 #spotvideo{width:100%;display:none;border-radius:16px 16px 0 0;background:#000;max-height:60vh}
+
+.spot-addr{margin-top:8px;font-family:"LXGW WenKai",serif;font-size:11px;letter-spacing:.06em;color:#c08fa6}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2323,6 +2325,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     <video id="spotvideo" playsinline webkit-playsinline controls preload="metadata"></video>
     <div class="spot-body">
       <div class="spot-name" id="spotname"></div>
+      <div class="spot-addr" id="spotaddr"></div>
       <div class="spot-desc" id="spotdesc"></div>
     </div>
   </div>
@@ -2840,7 +2843,12 @@ body.portrait-ok .rotate-mask{display:none!important}
     jp: [
       { x:67, y:44, name:'横滨红砖仓库 · 幸福之钟', type:'video',
         video:'assets/video/yokohama_bell.mp4',
-        desc:'横滨红砖仓库之间的「幸福之钟」。据说和喜欢的人一起敲响它，就会一直幸福下去。' }
+        addr:'神奈川県横浜市中区新港1-1',
+        desc:'横滨红砖仓库之间的「幸福之钟」。据说和喜欢的人一起敲响它，就会一直幸福下去。' },
+      { x:70, y:37, name:'築地すし好 新宿東口店', type:'video',
+        video:'assets/video/sushiko_shinjuku.mp4',
+        addr:'東京都新宿区歌舞伎町1-6-1 シロービル1F',
+        desc:'新宿歌舞伎町的寿司店，招牌是築地直送。' }
     ]
   };
   function renderPins(){
@@ -2871,6 +2879,8 @@ body.portrait-ok .rotate-mask{display:none!important}
     }
     document.getElementById('spotname').textContent=s.name||'';
     document.getElementById('spotdesc').textContent=s.desc||'';
+    var ad=document.getElementById('spotaddr');
+    if(ad){ ad.textContent=s.addr||''; ad.style.display=s.addr?'block':'none'; }
     document.getElementById('spotmodal').classList.add('on');
   };
   window.closeSpot=function(){
