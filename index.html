@@ -2184,6 +2184,17 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 暂时关闭密码锁 */
 .lockmodal{display:none!important}
 .lock{display:none!important}
+
+/* 隐藏各页面内部滚动条，避免压住翻页箭头 */
+.page,.pcontent,.fic-list,#ficlist,.sleeves,.snap-strip,.mlist,.toc-list{
+  scrollbar-width:none!important;-ms-overflow-style:none!important;
+}
+.page::-webkit-scrollbar,.pcontent::-webkit-scrollbar,.fic-list::-webkit-scrollbar,
+#ficlist::-webkit-scrollbar,.sleeves::-webkit-scrollbar,.snap-strip::-webkit-scrollbar,
+.mlist::-webkit-scrollbar,.toc-list::-webkit-scrollbar{width:0!important;height:0!important;display:none!important}
+/* 给右侧箭头留出空间 */
+.book .turn.next{right:-18px!important}
+@media (max-width:760px){.book .turn.next{right:-6px!important}}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
