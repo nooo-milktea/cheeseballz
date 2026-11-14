@@ -2180,6 +2180,10 @@ body.portrait-ok .rotate-mask{display:none!important}
     #fffdf6!important;
 }
 .map-page::before{display:none!important}
+
+/* 暂时关闭密码锁 */
+.lockmodal{display:none!important}
+.lock{display:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2290,7 +2294,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 </div>
 
 <div class="book closed" id="book">
-  <div class="cover" onclick="openLock()">
+  <div class="cover" onclick="openBook()">
     <span class="clasp"></span>
     <svg class="lock" viewBox="0 0 44 58" aria-hidden="true">
       <path d="M12 24V17a10 10 0 0 1 20 0v7" fill="none" stroke="#c9a06a" stroke-width="4" stroke-linecap="round"/>
@@ -2301,7 +2305,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     <div class="cv-center">
       <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
       <div class="cv-sub">さくや と ゆうし</div>
-      <div class="cv-hint">点一下锁 · 打开</div>
+      <div class="cv-hint">点一下 · 打开</div>
     </div>
   </div>
   <div class="spread">
