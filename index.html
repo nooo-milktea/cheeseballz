@@ -2449,6 +2449,15 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .cam2-page .cam2-stage.live video{opacity:1}
 .cam2-page .snap-hint{left:0!important;right:0!important;top:46%!important;bottom:auto!important;z-index:3}
+
+/* 草莓框：只让画面出现在中间区域，两侧留纸色，避免黑边 */
+.cam2-page .cam2-stage{background:#fffdf6!important}
+.cam2-page .cam2-stage video{
+  inset:auto!important;
+  left:7%!important;top:10.6%!important;width:86%!important;height:45%!important;
+  border-radius:2px;
+}
+.cam2-page .cam2-stage::after{background-color:transparent}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2747,7 +2756,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page cam2-page" data-src="w-camera2">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v86</span><span class="pno"></span></header>
+    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v87</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam2-stage" id="cam2stage">
         <video id="snapvideo2" autoplay playsinline muted></video>
@@ -3236,9 +3245,12 @@ body.portrait-ok .rotate-mask{display:none!important}
     function shoot(fr){
       var W=1200,H=952; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
-      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
-      ctx.save(); ctx.translate(W,0); ctx.scale(-1,1);
-      ctx.drawImage(v,(W-dw)/2,(H-dh)/2,dw,dh);
+      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
+      var rx=W*0.07, ry=H*0.106, rw=W*0.86, rh=H*0.45;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
+      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
+      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
       ctx.restore();
       if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
       var dataUrl=c.toDataURL('image/jpeg',0.92);
