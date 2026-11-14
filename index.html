@@ -2132,6 +2132,26 @@ body.portrait-ok .rotate-mask{display:none!important}
 .snap-shot{width:44px!important;height:44px!important;font-size:15px!important}
 .snap-strip{flex:0 0 auto!important;max-width:92vw!important;max-height:46px!important;justify-content:center!important}
 .snap-strip img{width:40px!important;height:40px!important}
+
+/* 按钮固定在相框内部底部，绝对不会被裁掉 */
+.cam-stage .cam-bar{
+  position:absolute!important;left:0!important;right:0!important;bottom:8px!important;top:auto!important;
+  transform:none!important;display:flex!important;flex-direction:row!important;
+  align-items:center!important;justify-content:center!important;gap:12px!important;
+  z-index:6!important;padding:0 6px!important;margin:0!important;
+}
+.cam-stage .cam-mini{
+  background:rgba(255,255,255,.92)!important;border:1px solid #f0ccd9!important;
+  color:#a45f78!important;border-radius:999px!important;padding:5px 12px!important;
+  font-family:"LXGW WenKai",serif!important;font-size:10.5px!important;letter-spacing:.08em;
+  box-shadow:0 4px 10px -6px rgba(160,100,125,.8)!important;
+}
+.cam-stage .snap-shot{
+  width:38px!important;height:38px!important;font-size:13px!important;
+  background:rgba(255,255,255,.95)!important;border:2px solid #f7bdd2!important;color:#d76f96!important;
+  box-shadow:0 4px 12px -6px rgba(200,110,140,.9)!important;
+}
+.cam-stage .snap-hint{bottom:56px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2400,12 +2420,12 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
         <canvas id="snapcanvas" style="display:none"></canvas>
-        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
-      </div>
-      <div class="cam-bar">
+        <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
+      </div>
+        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
       </div>
       <div class="snap-strip" id="snapstrip"></div>
     </div>
