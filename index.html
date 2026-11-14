@@ -2458,6 +2458,13 @@ body.portrait-ok .rotate-mask{display:none!important}
   border-radius:2px;
 }
 .cam2-page .cam2-stage::after{background-color:transparent}
+
+/* 草莓框：画面填满白框，四周纸色 */
+.cam2-page .cam2-stage{background:#fffdf6!important}
+.cam2-page .cam2-stage video{
+  inset:auto!important;
+  left:5%!important;top:10%!important;width:90%!important;height:47%!important;border-radius:2px;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2756,7 +2763,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page cam2-page" data-src="w-camera2">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v87</span><span class="pno"></span></header>
+    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v88</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam2-stage" id="cam2stage">
         <video id="snapvideo2" autoplay playsinline muted></video>
@@ -3246,7 +3253,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       var W=1200,H=952; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.07, ry=H*0.106, rw=W*0.86, rh=H*0.45;
+      var rx=W*0.05, ry=H*0.10, rw=W*0.90, rh=H*0.47;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       ctx.translate(rx+rw,ry); ctx.scale(-1,1);
