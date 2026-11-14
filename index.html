@@ -2272,6 +2272,21 @@ body.portrait-ok .rotate-mask{display:none!important}
   .book .turn.next{right:-4px!important}
   .book .turn{width:32px!important;height:32px!important;font-size:16px!important}
 }
+
+/* 翻页键：放到书本内侧，保证任何页面都可见可点 */
+.book .turn{
+  z-index:40!important;pointer-events:auto!important;
+  background:rgba(255,255,255,.96)!important;border:1px solid #e8c8d6!important;
+  color:#a97f8f!important;box-shadow:0 6px 14px -8px rgba(140,90,110,.55)!important;
+}
+.book .turn.prev{left:8px!important}
+.book .turn.next{right:8px!important}
+.book.open .turn{opacity:1!important}
+@media (max-width:760px){
+  .book .turn.prev{left:2px!important}
+  .book .turn.next{right:2px!important}
+  .book .turn{width:30px!important;height:30px!important;font-size:15px!important;top:44%!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
