@@ -2315,6 +2315,28 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam-page .pcontent{overflow-y:auto!important;overflow-x:hidden!important;scrollbar-width:none}
 .cam-page .pcontent::-webkit-scrollbar{width:0;height:0}
 .cam-page .cam-stage{width:min(92vw, 400px, 30vh)!important}
+
+/* 相机页最终布局：相框按高度，按钮一行 */
+.cam-page .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;gap:8px!important;
+  height:calc(100% - 32px)!important;overflow:hidden!important;
+}
+.cam-page .cam-stage{
+  height:min(44vh, 420px)!important;width:auto!important;aspect-ratio:710/1076!important;
+  margin:0 auto!important;flex:0 0 auto!important;cursor:pointer;
+}
+.cam-page .cam-bar{
+  position:static!important;flex:0 0 auto!important;display:flex!important;flex-direction:row!important;
+  flex-wrap:wrap!important;gap:8px!important;justify-content:center!important;align-items:center!important;
+  width:100%!important;margin:0!important;padding:0!important;
+}
+.cam-page .cam-mini{padding:6px 14px!important;font-size:11px!important}
+.cam-page .snap-strip{flex:0 0 auto!important;max-height:60px!important}
+.cam-page .snap-strip img{width:54px!important;height:54px!important}
+@media (max-width:760px){
+  .cam-page .cam-stage{height:min(40vh, 360px)!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2601,7 +2623,6 @@ body.portrait-ok .rotate-mask{display:none!important}
       </div>
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
-        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
         <button class="cam-mini savebtn" id="saveLast" onclick="saveLast()" style="display:none">保存这张</button>
         <button class="cam-mini" id="backCam" onclick="backToCam()" style="display:none">回到相机</button>
@@ -3035,6 +3056,12 @@ body.portrait-ok .rotate-mask{display:none!important}
       var x=(e.clientX-r.left)/r.width;
       if(x>0.5) turn(1); else turn(-1);
     });
+  })();
+
+
+  (function(){
+    var st=document.querySelector('.cam-page .cam-stage');
+    if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
   })();
 
   /* 文库 */
