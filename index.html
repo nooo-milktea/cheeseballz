@@ -2570,7 +2570,8 @@ body.portrait-ok .rotate-mask{display:none!important}
   });
 
 
-  /* 翻页音效（WebAudio 合成，无需音频文件） */
+
+  /* 翻页音效：纸张摩擦 + 落页闷响（WebAudio 合成） */
   var actx=null;
   function audio(){
     if(!actx){
@@ -2581,28 +2582,48 @@ body.portrait-ok .rotate-mask{display:none!important}
     if(actx.state==='suspended') actx.resume().catch(function(){});
     return actx;
   }
+  function noiseBuf(ac,dur){
+    var sr=ac.sampleRate, n=Math.floor(sr*dur), b=ac.createBuffer(1,n,sr), d=b.getChannelData(0);
+    for(var i=0;i<n;i++) d[i]=Math.random()*2-1;
+    return b;
+  }
+  function rustle(ac,when,dur,freq,gain){
+    var src=ac.createBufferSource(); src.buffer=noiseBuf(ac,dur);
+    var bp=ac.createBiquadFilter(); bp.type='bandpass';
+    bp.frequency.setValueAtTime(freq, when);
+    bp.frequency.exponentialRampToValueAtTime(freq*1.9, when+dur);
+    bp.Q.value=0.9;
+    var hp=ac.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=700;
+    var g=ac.createGain();
+    g.gain.setValueAtTime(0.0001, when);
+    g.gain.exponentialRampToValueAtTime(gain, when+dur*0.18);
+    g.gain.exponentialRampToValueAtTime(0.0001, when+dur);
+    src.connect(bp); bp.connect(hp); hp.connect(g); g.connect(ac.destination);
+    src.start(when); src.stop(when+dur+0.02);
+  }
+  function thump(ac,when,gain){
+    var o=ac.createOscillator(); o.type='sine';
+    o.frequency.setValueAtTime(190, when);
+    o.frequency.exponentialRampToValueAtTime(90, when+0.12);
+    var g=ac.createGain();
+    g.gain.setValueAtTime(0.0001, when);
+    g.gain.exponentialRampToValueAtTime(gain, when+0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, when+0.16);
+    o.connect(g); g.connect(ac.destination);
+    o.start(when); o.stop(when+0.18);
+  }
   function playFlip(strong){
     var ac=audio(); if(!ac) return;
-    var dur=strong?0.34:0.24, sr=ac.sampleRate, n=Math.floor(sr*dur);
-    var buf=ac.createBuffer(1,n,sr), d=buf.getChannelData(0);
-    for(var i=0;i<n;i++){
-      var t=i/n;
-      var env=Math.pow(1-t,2.2)*(t<0.06?t/0.06:1);
-      d[i]=(Math.random()*2-1)*env;
-    }
-    var src=ac.createBufferSource(); src.buffer=buf;
-    var bp=ac.createBiquadFilter(); bp.type='bandpass';
-    bp.frequency.setValueAtTime(strong?900:1300, ac.currentTime);
-    bp.frequency.exponentialRampToValueAtTime(strong?2600:3200, ac.currentTime+dur);
-    bp.Q.value=1.1;
-    var hp=ac.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=420;
-    var g=ac.createGain();
-    g.gain.setValueAtTime(strong?0.30:0.20, ac.currentTime);
-    g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime+dur);
-    src.connect(bp); bp.connect(hp); hp.connect(g); g.connect(ac.destination);
-    src.start();
+    var t=ac.currentTime+0.01;
+    var v=strong?1.35:1;
+    var base=2400+Math.random()*900;
+    rustle(ac, t,        strong?0.20:0.15, base,        0.16*v);
+    rustle(ac, t+0.055,  0.13,             base*0.72,   0.11*v);
+    rustle(ac, t+0.11,   0.10,             base*1.25,   0.07*v);
+    thump(ac,  t+0.14,    0.10*v);
   }
   window.__playFlip=playFlip;
+
 
   function show(i){
     book.classList.toggle('on-cam', (pages[i] && pages[i].dataset.src==='w-camera'));
