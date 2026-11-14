@@ -2404,6 +2404,23 @@ body.portrait-ok .rotate-mask{display:none!important}
 @media (max-width:760px){
   .cam-page .cam-stage{width:min(94vw, 420px)!important}
 }
+
+/* 相机页：相框正好一页、居中 */
+.cam-page .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:center!important;height:calc(100% - 30px)!important;
+  overflow:hidden!important;padding:0!important;gap:8px!important;
+}
+.cam-page .cam-stage{
+  flex:0 0 auto!important;margin:0 auto!important;max-width:100%!important;max-height:100%!important;
+  aspect-ratio:710/1076!important;height:auto!important;width:auto!important;
+}
+.cam-page .cam-bar{flex:0 0 auto!important;margin:0!important}
+.shoot-tray{
+  position:static!important;flex:0 0 auto!important;width:100%!important;max-width:420px!important;
+  height:96px!important;margin:0!important;border-radius:10px!important;
+}
+.cam-page .pcontent::-webkit-scrollbar{width:0!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2681,7 +2698,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v70</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v71</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2780,7 +2797,9 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 
   function show(i){
-    book.classList.toggle('on-cam', (pages[i] && pages[i].dataset.src==='w-camera'));
+    var isCam=(pages[i] && pages[i].dataset.src==='w-camera');
+    book.classList.toggle('on-cam', isCam);
+    if(isCam){ setTimeout(fitCam, 30); }
     var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
@@ -3129,6 +3148,23 @@ body.portrait-ok .rotate-mask{display:none!important}
     var st=document.querySelector('.cam-page .cam-stage');
     if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
   })();
+
+
+  function fitCam(){
+    var pc=document.querySelector('.cam-page .pcontent');
+    var st=document.querySelector('.cam-page .cam-stage');
+    if(!pc||!st) return;
+    var availH=pc.clientHeight-8-46-104;   // 间距 + 按钮行 + 托盘
+    var availW=pc.clientWidth-8;
+    var r=710/1076;
+    var H=availH, W=H*r;
+    if(W>availW){ W=availW; H=W/r; }
+    if(H<120) H=120, W=H*r;
+    st.style.width=W+'px';
+    st.style.height=H+'px';
+  }
+  window.addEventListener('resize', fitCam);
+  document.addEventListener('visibilitychange', fitCam);
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
