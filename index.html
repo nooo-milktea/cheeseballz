@@ -2239,6 +2239,21 @@ body.portrait-ok .rotate-mask{display:none!important}
 #spotvideo{width:100%;display:none;border-radius:16px 16px 0 0;background:#000;max-height:60vh}
 
 .spot-addr{margin-top:8px;font-family:"LXGW WenKai",serif;font-size:11px;letter-spacing:.06em;color:#c08fa6}
+
+/* 地图放大，标记之间留出空间 */
+.map-page .pcontent{height:calc(100% - 40px)!important;gap:4px!important}
+.map-page .ph{margin:0 0 6px!important;padding-bottom:4px!important}
+.map-wrap{
+  width:min(100%,520px)!important;height:100%!important;flex:1 1 auto!important;min-height:0!important;
+  border-radius:10px!important;
+}
+.map-svg{width:min(94%,360px)!important}
+.map-pin{width:24px!important;height:24px!important;margin:-12px 0 0 -12px!important}
+.map-hint{font-size:10px!important}
+@media (max-width:760px){
+  .map-wrap{width:min(100%,440px)!important}
+  .map-svg{width:min(94%,300px)!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
