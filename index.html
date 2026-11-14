@@ -2952,6 +2952,22 @@ body.portrait-ok .rotate-mask{display:none!important}
   });
   renderPins();
 
+
+  /* 点击纸张左右半边翻页 */
+  (function(){
+    var spread=document.querySelector('.book .spread');
+    if(!spread) return;
+    spread.addEventListener('click', function(e){
+      if(!book.classList.contains('open')) return;
+      if(document.querySelector('.lockmodal.on, .spotmodal.on, .albmodal.on, .snapmodal.on, #lb.on')) return;
+      var el=e.target;
+      if(el.closest('button, a, input, textarea, .map-pin, .sleeve img, .snap-strip, .fic, .tab')) return;
+      var r=spread.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width;
+      if(x>0.5) turn(1); else turn(-1);
+    });
+  })();
+
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
   window.enterLib=function(){ if(gate) gate.style.display='none'; if(main) main.style.display='block'; };
