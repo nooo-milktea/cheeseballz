@@ -2356,6 +2356,14 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 .strip-empty{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c9aab6;letter-spacing:.12em;padding:6px}
 .cam-page .snap-strip{min-height:60px!important;display:flex!important;align-items:center!important;gap:8px!important}
+
+/* 灯箱大图：允许长按保存 */
+.lb img{
+  -webkit-touch-callout: default!important;
+  -webkit-user-select: auto!important;user-select:auto!important;
+  pointer-events:auto!important;
+}
+.lb img{-webkit-touch-callout:default}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2706,7 +2714,6 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 <div class="lb" id="lb" onclick="if(event.target===this)closeLb()">
   <img id="lbimg" src="" alt="">
-  <a id="lbsave" class="lb-save" download="cheeseballz.jpg" href="#">保存这张</a>
   <button class="x" onclick="closeLb()">✕</button>
 </div>
 
