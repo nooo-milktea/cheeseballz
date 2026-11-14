@@ -2407,6 +2407,12 @@ body.portrait-ok .rotate-mask{display:none!important}
   .cam-side .cam-mini{padding:5px 9px!important;font-size:10px!important}
   .cam-side .snap-shot{width:42px!important;height:42px!important;font-size:13px!important}
 }
+
+/* 左页相框：按左半页可用空间最大化 */
+.cam-page .cam-stage{
+  height:auto!important;width:auto!important;max-width:none!important;max-height:none!important;
+  aspect-ratio:710/1076!important;margin:0 auto!important;justify-self:center!important;align-self:center!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2684,7 +2690,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v77</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v78</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2970,6 +2976,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       img.title='点击查看并保存';
       img.onclick=function(){ openShot(this.src); };
       var se=document.getElementById('stripempty'); if(se) se.style.display='none';
+      fitCam();
       var tc=document.getElementById('trayCount'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
       strip.prepend(img);
       if(hint){
@@ -3138,6 +3145,25 @@ body.portrait-ok .rotate-mask{display:none!important}
     var st=document.querySelector('.cam-page .cam-stage');
     if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
   })();
+
+
+  function fitCam(){
+    var pc=document.querySelector('.cam-page .pcontent');
+    var st=document.querySelector('.cam-page .cam-stage');
+    if(!pc||!st) return;
+    var cs=getComputedStyle(pc);
+    var padL=parseFloat(cs.paddingLeft)||0, padR=parseFloat(cs.paddingRight)||0;
+    var gap=parseFloat(cs.columnGap)||10;
+    var availW=(pc.clientWidth-padL-padR-gap)/2 - 4;
+    var availH=pc.clientHeight - 4;
+    var r=710/1076;
+    var H=availH, W=H*r;
+    if(W>availW){ W=availW; H=W/r; }
+    if(H<140){ H=140; W=H*r; }
+    st.style.width=W+'px'; st.style.height=H+'px';
+  }
+  window.addEventListener('resize', fitCam);
+  window.addEventListener('orientationchange', function(){ setTimeout(fitCam,200); });
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
