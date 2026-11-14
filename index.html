@@ -2684,7 +2684,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v76</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v77</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2972,7 +2972,11 @@ body.portrait-ok .rotate-mask{display:none!important}
       var se=document.getElementById('stripempty'); if(se) se.style.display='none';
       var tc=document.getElementById('trayCount'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
       strip.prepend(img);
-      if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
+      if(hint){
+        hint.textContent='已拍下 · 3 秒后自动隐藏';
+        clearTimeout(window.__hintT);
+        window.__hintT=setTimeout(function(){ if(hint) hint.textContent=''; }, 3000);
+      }
       var bar=document.querySelector('.cam-page .cam-bar');
       if(bar) bar.scrollIntoView({block:'nearest', behavior:'smooth'});
     });
