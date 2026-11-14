@@ -2641,7 +2641,6 @@ body.portrait-ok .rotate-mask{display:none!important}
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
-        <button class="cam-mini" id="backCam" onclick="backToCam()" style="display:none">回到相机</button>
       </div>
       <div class="snap-strip" id="snapstrip"></div>
       <div class="snap-tip" id="snaptip" style="display:none">点缩略图保存照片</div>
@@ -2861,42 +2860,25 @@ body.portrait-ok .rotate-mask{display:none!important}
     var hint=document.getElementById('snaphint'); if(hint) hint.textContent='相机已关闭';
   };
   var frameImg=null;
+  function frameSrc(){
+    try{
+      var st=document.querySelector('.cam-stage');
+      var bg=getComputedStyle(st,'::after').backgroundImage||'';
+      var m=bg.match(/url\(["']?(.*?)["']?\)/);
+      if(m && m[1]) return m[1];
+    }catch(e){}
+    return 'assets/img/frame_camera2.png';
+  }
   function ensureFrame(cb){
-    if(frameImg && frameImg.complete){ cb(frameImg); return; }
+    if(frameImg && frameImg.complete && frameImg.naturalWidth){ cb(frameImg); return; }
     if(!frameImg){
       frameImg=new Image();
-      frameImg.src='assets/img/frame_camera2.png';
+      frameImg.onerror=function(){ cb(null); };
+      frameImg.src=frameSrc();
     }
     if(frameImg.complete){ cb(frameImg); }
     else { frameImg.onload=function(){ cb(frameImg); }; }
   }
-
-  /* 保存最近一张 */
-  var lastShot=null;
-
-  /* 拍完回到相机取景 */
-  window.backToCam=function(){
-    var pc=document.querySelector('.cam-page .pcontent');
-    if(pc) pc.scrollTop=0;
-    var stage=document.querySelector('.cam-page .cam-stage');
-    if(stage) stage.scrollIntoView({block:'nearest', behavior:'smooth'});
-    if(!snapStream) startSnap();
-    var hint=document.getElementById('snaphint'); if(hint) hint.textContent='';
-    var bc=document.getElementById('backCam'); if(bc) bc.style.display='none';
-  };
-
-  window.openShot=function(src){
-    var b=document.getElementById('lbimg'); if(!b) return;
-    b.src=src;
-    var sv=document.getElementById('lbsave');
-    if(sv){ sv.href=src; sv.setAttribute('download','cheeseballz_'+Date.now()+'.jpg'); }
-    document.getElementById('lb').classList.add('on');
-  };
-  window.saveLast=function(){
-    if(!lastShot) return;
-    var a=document.createElement('a');
-    a.href=lastShot; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
-  };
   window.takeSnap=function(){
     var v=document.getElementById('snapvideo'), c=document.getElementById('snapcanvas');
     var strip=document.getElementById('snapstrip'), hint=document.getElementById('snaphint');
