@@ -2413,6 +2413,18 @@ body.portrait-ok .rotate-mask{display:none!important}
   height:auto!important;width:auto!important;max-width:none!important;max-height:none!important;
   aspect-ratio:710/1076!important;margin:0 auto!important;justify-self:center!important;align-self:center!important;
 }
+
+/* 相机页：左栏更宽，相框按宽度撑满 */
+.cam-page .pcontent{
+  grid-template-columns:1.6fr 1fr!important;gap:8px!important;align-items:stretch!important;
+  height:calc(100% - 30px)!important;padding:0!important;overflow:hidden!important;
+}
+.cam-page .cam-stage{
+  width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;
+  aspect-ratio:auto!important;margin:0!important;justify-self:stretch!important;align-self:center!important;
+  background-size:100% 100%!important;
+}
+.cam-page .cam-stage video{inset:0!important;width:100%!important;height:100%!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2690,7 +2702,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v78</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v79</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2976,7 +2988,6 @@ body.portrait-ok .rotate-mask{display:none!important}
       img.title='点击查看并保存';
       img.onclick=function(){ openShot(this.src); };
       var se=document.getElementById('stripempty'); if(se) se.style.display='none';
-      fitCam();
       var tc=document.getElementById('trayCount'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
       strip.prepend(img);
       if(hint){
