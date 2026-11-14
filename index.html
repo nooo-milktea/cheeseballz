@@ -2339,6 +2339,13 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 
 .snap-tip{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c08fa6;letter-spacing:.14em;text-align:center}
+
+/* 快门键恢复 */
+.cam-page .cam-bar .snap-shot{
+  width:52px!important;height:52px!important;font-size:16px!important;
+  border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
+  border-radius:50%!important;box-shadow:0 6px 14px -8px rgba(200,110,140,.9)!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2625,6 +2632,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       </div>
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
+        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
         <button class="cam-mini" id="backCam" onclick="backToCam()" style="display:none">回到相机</button>
       </div>
