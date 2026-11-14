@@ -2205,6 +2205,35 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam-page .cam-stage{width:min(92vw, 400px, 31vh)!important}
 .cam-page > .pcontent > .cam-bar .cam-mini{padding:6px 16px!important;font-size:11.5px!important}
 .cam-page > .pcontent > .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important}
+
+/* 地图打卡点 */
+.map-pin{
+  position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border:0;padding:0;
+  border-radius:50% 50% 50% 0;transform:rotate(-45deg);cursor:pointer;pointer-events:auto;
+  background:linear-gradient(160deg,#ff9dc0,#e86a95);
+  box-shadow:0 4px 10px -4px rgba(180,90,120,.9),0 0 0 2px #fff;
+  animation:pinPop .35s ease both;
+}
+.page.bl .map-pin{background:linear-gradient(160deg,#9fc8ea,#5f93c9);box-shadow:0 4px 10px -4px rgba(80,120,160,.9),0 0 0 2px #fff}
+.map-pin::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;
+  border-radius:50%;background:#fff;transform:rotate(45deg)}
+.map-pin:hover{filter:brightness(1.06)}
+@keyframes pinPop{0%{transform:rotate(-45deg) scale(.2);opacity:0}100%{transform:rotate(-45deg) scale(1);opacity:1}}
+
+.spotmodal{position:fixed;inset:0;z-index:430;display:none;place-items:center;padding:20px;
+  background:rgba(70,50,60,.55);backdrop-filter:blur(4px)}
+.spotmodal.on{display:grid}
+.spot-card{
+  position:relative;width:min(86vw,380px);max-height:86vh;overflow:auto;border-radius:16px;
+  background:linear-gradient(180deg,#fffdfb,#fff6f9);border:1px solid #f3d3de;
+  box-shadow:0 30px 60px -30px rgba(120,70,90,.6);
+}
+.spot-card img{width:100%;display:block;border-radius:16px 16px 0 0;background:#f6eef1}
+.spot-body{padding:14px 16px 18px}
+.spot-name{font-family:"LXGW WenKai",serif;font-size:15px;letter-spacing:.14em;color:#a45f78}
+.spot-desc{margin-top:8px;font-family:"LXGW WenKai",serif;font-size:12.5px;line-height:1.9;color:#7c6a72;letter-spacing:.03em}
+.spot-x{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;border:0;
+  background:rgba(255,255,255,.85);color:#b06a86;font-size:14px;box-shadow:0 4px 10px -6px rgba(0,0,0,.4)}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2281,6 +2310,17 @@ body.portrait-ok .rotate-mask{display:none!important}
       <button data-a="s" onclick="switchAlbum('s')">咲哉</button>
     </div>
     <div class="am-count"><span id="amnow">1</span> / <span id="amtotal">1</span></div>
+  </div>
+</div>
+
+<div class="spotmodal" id="spotmodal" onclick="if(event.target===this)closeSpot()">
+  <div class="spot-card">
+    <button class="spot-x" onclick="closeSpot()">✕</button>
+    <img id="spotimg" src="" alt="">
+    <div class="spot-body">
+      <div class="spot-name" id="spotname"></div>
+      <div class="spot-desc" id="spotdesc"></div>
+    </div>
   </div>
 </div>
 
@@ -2788,6 +2828,42 @@ body.portrait-ok .rotate-mask{display:none!important}
       t.value=''; btn.disabled=false;
     }, 3400);
   };
+
+
+  /* ===== 地图打卡点数据（之后往里加） ===== */
+  var SPOTS = {
+    kr: [],
+    jp: []
+  };
+  function renderPins(){
+    ['kr','jp'].forEach(function(k){
+      var box=document.getElementById('pins-'+k);
+      if(!box) return;
+      box.innerHTML='';
+      SPOTS[k].forEach(function(s,i){
+        var b=document.createElement('button');
+        b.className='map-pin';
+        b.style.left=s.x+'%'; b.style.top=s.y+'%';
+        b.title=s.name;
+        b.onclick=function(e){ e.stopPropagation(); openSpot(k,i); };
+        box.appendChild(b);
+      });
+    });
+  }
+  window.openSpot=function(k,i){
+    var s=SPOTS[k][i]; if(!s) return;
+    document.getElementById('spotimg').src=s.img||'';
+    document.getElementById('spotimg').style.display=s.img?'block':'none';
+    document.getElementById('spotname').textContent=s.name||'';
+    document.getElementById('spotdesc').textContent=s.desc||'';
+    document.getElementById('spotmodal').classList.add('on');
+  };
+  window.closeSpot=function(){ document.getElementById('spotmodal').classList.remove('on'); };
+  document.addEventListener('keydown',function(e){
+    var m=document.getElementById('spotmodal');
+    if(m && m.classList.contains('on') && e.key==='Escape') closeSpot();
+  });
+  renderPins();
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
