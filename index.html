@@ -2364,6 +2364,22 @@ body.portrait-ok .rotate-mask{display:none!important}
   pointer-events:auto!important;
 }
 .lb img{-webkit-touch-callout:default}
+
+/* 照片托盘：固定在相机页底部，永远看得到 */
+.cam-page .pcontent{position:relative!important;overflow:hidden!important;height:calc(100% - 32px)!important;padding-bottom:132px!important}
+.shoot-tray{
+  position:absolute;left:0;right:0;bottom:0;height:120px;z-index:20;
+  background:linear-gradient(180deg,rgba(255,250,252,.75),rgba(255,246,250,.96) 40%);
+  border-top:1px dashed #f3cfdd;border-radius:0 0 8px 8px;
+  display:flex;flex-direction:column;padding:6px 10px 8px;
+}
+.tray-head{font-family:"LXGW WenKai",serif;font-size:10.5px;letter-spacing:.18em;color:#b07f92;margin-bottom:4px}
+.tray-head span{display:inline-block;min-width:16px;padding:0 5px;border-radius:8px;background:#f8c3d6;color:#fff;font-size:9px;text-align:center}
+.cam-page .snap-strip{flex:1;display:flex;align-items:center;gap:8px;overflow-x:auto;min-height:0}
+.cam-page .snap-strip img{width:64px!important;height:64px!important;border:2px solid #fff;box-shadow:0 4px 10px -6px rgba(150,90,115,.8)}
+.strip-empty{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c9aab6;letter-spacing:.1em}
+.cam-page .cam-stage{height:min(38vh, 340px)!important}
+@media (max-width:760px){ .cam-page .cam-stage{height:min(34vh, 300px)!important} .shoot-tray{height:112px} }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2653,8 +2669,10 @@ body.portrait-ok .rotate-mask{display:none!important}
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
       </div>
-      <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">还没有照片</span></div>
-      <div class="snap-tip" id="snaptip" style="display:none">点缩略图保存照片</div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount">0</span></div>
+        <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">拍一张就会出现</span></div>
+      </div>
     </div>
   </section>
 
@@ -2923,6 +2941,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       img.title='点击查看并保存';
       img.onclick=function(){ openShot(this.src); };
       var se=document.getElementById('stripempty'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
       strip.prepend(img);
       if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
       var bar=document.querySelector('.cam-page .cam-bar');
