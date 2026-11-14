@@ -2310,6 +2310,11 @@ body.portrait-ok .rotate-mask{display:none!important}
   .cam-page .cam-bar{flex-wrap:wrap!important;row-gap:6px!important}
   .snap-strip img{width:60px!important;height:60px!important}
 }
+
+/* 相机页可滚动，保证按钮总能看到 */
+.cam-page .pcontent{overflow-y:auto!important;overflow-x:hidden!important;scrollbar-width:none}
+.cam-page .pcontent::-webkit-scrollbar{width:0;height:0}
+.cam-page .cam-stage{width:min(92vw, 400px, 30vh)!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2876,7 +2881,8 @@ body.portrait-ok .rotate-mask{display:none!important}
       };
       strip.prepend(img);
       if(hint) hint.textContent='已拍下 · 点「保存这张」或缩略图下载';
-      var st=document.getElementById('snapstrip'); if(st) st.scrollIntoView({block:'nearest'});
+      var bar=document.querySelector('.cam-page .cam-bar');
+      if(bar) bar.scrollIntoView({block:'nearest', behavior:'smooth'});
     });
   };
 
