@@ -2171,6 +2171,15 @@ body.portrait-ok .rotate-mask{display:none!important}
 .map-pins{position:absolute;inset:0;pointer-events:none}
 .map-hint{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c39aa8;letter-spacing:.16em}
 @media (max-width:760px){.map-wrap{width:min(100%,300px)}}
+
+/* 地图页：遮住书缝 */
+.map-page{
+  z-index:9!important;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(150,190,220,.30) 27px 28px),
+    #fffdf6!important;
+}
+.map-page::before{display:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
