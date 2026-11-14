@@ -2813,23 +2813,46 @@ body.portrait-ok .rotate-mask{display:none!important}
     var v=document.getElementById('snapvideo'); if(v){ v.srcObject=null; v.parentNode.classList.remove('live'); }
     var hint=document.getElementById('snaphint'); if(hint) hint.textContent='相机已关闭';
   };
+  var frameImg=null;
+  function ensureFrame(cb){
+    if(frameImg && frameImg.complete){ cb(frameImg); return; }
+    if(!frameImg){
+      frameImg=new Image();
+      frameImg.src='assets/img/frame_camera2.png';
+    }
+    if(frameImg.complete){ cb(frameImg); }
+    else { frameImg.onload=function(){ cb(frameImg); }; }
+  }
   window.takeSnap=function(){
     var v=document.getElementById('snapvideo'), c=document.getElementById('snapcanvas');
     var strip=document.getElementById('snapstrip'), hint=document.getElementById('snaphint');
     if(!snapStream || !v.videoWidth){ if(hint) hint.textContent='先开启相机'; return; }
-    c.width=v.videoWidth; c.height=v.videoHeight;
-    var ctx=c.getContext('2d');
-    ctx.translate(c.width,0); ctx.scale(-1,1);
-    ctx.drawImage(v,0,0,c.width,c.height);
-    var img=document.createElement('img');
-    img.src=c.toDataURL('image/jpeg',0.92);
-    img.title='点击保存';
-    img.onclick=function(){
-      var a=document.createElement('a');
-      a.href=this.src; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
-    };
-    strip.prepend(img);
-    if(hint) hint.textContent='已拍下 · 点缩略图可保存';
+    ensureFrame(function(fr){
+      // 画布按相框比例
+      var W=710, H=1076;
+      c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      ctx.clearRect(0,0,W,H);
+      // 视频按 cover 裁切填满
+      var vw=v.videoWidth, vh=v.videoHeight;
+      var scale=Math.max(W/vw, H/vh);
+      var dw=vw*scale, dh=vh*scale;
+      ctx.save();
+      ctx.translate(W,0); ctx.scale(-1,1);
+      ctx.drawImage(v,(W-dw)/2,(H-dh)/2,dw,dh);
+      ctx.restore();
+      // 叠加相框
+      if(fr && fr.naturalWidth){ ctx.drawImage(fr,0,0,W,H); }
+      var img=document.createElement('img');
+      img.src=c.toDataURL('image/jpeg',0.92);
+      img.title='点击保存';
+      img.onclick=function(){
+        var a=document.createElement('a');
+        a.href=this.src; a.download='cheeseballz_'+Date.now()+'.jpg'; a.click();
+      };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下 · 点缩略图可保存';
+    });
   };
 
 
