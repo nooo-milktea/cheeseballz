@@ -2382,6 +2382,31 @@ body.portrait-ok .rotate-mask{display:none!important}
 @media (max-width:760px){ .cam-page .cam-stage{height:min(34vh, 300px)!important} .shoot-tray{height:112px} }
 
 .verstamp{font-family:"Cormorant Garamond",serif;font-size:10px;color:#d0a9b7;letter-spacing:.2em;margin-left:8px}
+
+/* 相机页：左页撑满相框，右页放按钮与照片，中缝回来 */
+.cam-page{z-index:3!important;background:transparent!important}
+.cam-page .pcontent{
+  display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;
+  height:calc(100% - 34px)!important;align-items:center!important;overflow:hidden!important;padding:0 4px!important;
+}
+.cam-page .cam-stage{
+  height:100%!important;width:auto!important;max-width:100%!important;max-height:100%!important;
+  aspect-ratio:710/1076!important;margin:0 auto!important;justify-self:center!important;
+}
+.cam-side{display:flex!important;flex-direction:column!important;align-items:center!important;gap:10px!important;height:100%!important;justify-content:center!important;min-width:0}
+.cam-side .cam-bar{position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;gap:8px!important;justify-content:center!important;width:100%!important;padding:0!important;margin:0!important}
+.cam-side .shoot-tray{position:static!important;width:100%!important;height:auto!important;min-height:0!important;max-height:100%!important;border-radius:10px!important;padding:6px 8px!important;overflow:hidden}
+.cam-side .snap-strip{display:flex!important;flex-wrap:wrap!important;gap:6px!important;justify-content:center!important;overflow:auto!important;max-height:220px!important}
+.cam-side .snap-strip img{width:58px!important;height:58px!important}
+.cam-side .cam-mini{padding:7px 12px!important;font-size:11px!important}
+.cam-side .snap-shot{width:52px!important;height:52px!important;font-size:16px!important}
+.book.on-cam .spread::before{display:block!important}
+@media (max-width:760px){
+  .cam-page .pcontent{gap:6px!important}
+  .cam-side .snap-strip img{width:46px!important;height:46px!important}
+  .cam-side .cam-mini{padding:5px 9px!important;font-size:10px!important}
+  .cam-side .snap-shot{width:42px!important;height:42px!important;font-size:13px!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2659,22 +2684,24 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v69</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v76</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
         <canvas id="snapcanvas" style="display:none"></canvas>
-                <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
+        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
       </div>
-      <div class="cam-bar">
-        <button class="cam-mini" onclick="startSnap()">开启</button>
-        <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="stopSnap()">关闭</button>
-      </div>
-      <div class="shoot-tray">
-        <div class="tray-head">我的照片 <span id="trayCount">0</span></div>
-        <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">拍一张就会出现</span></div>
-      </div>
+      <aside class="cam-side">
+        <div class="cam-bar">
+          <button class="cam-mini" onclick="startSnap()">开启</button>
+          <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+          <button class="cam-mini" onclick="stopSnap()">关闭</button>
+        </div>
+        <div class="shoot-tray">
+          <div class="tray-head">我的照片 <span id="trayCount">0</span></div>
+          <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">拍一张就会出现</span></div>
+        </div>
+      </aside>
     </div>
   </section>
 
