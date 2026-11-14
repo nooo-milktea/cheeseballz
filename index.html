@@ -2696,7 +2696,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v83</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v84</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -3143,6 +3143,21 @@ body.portrait-ok .rotate-mask{display:none!important}
   (function(){
     var st=document.querySelector('.cam-page .cam-stage');
     if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
+  })();
+
+
+  /* 取景框提示：出现后 3 秒自动消失 */
+  (function(){
+    var el=document.getElementById('snaphint');
+    if(!el) return;
+    var t=null;
+    function schedule(){
+      clearTimeout(t);
+      if(!el.textContent.trim()) return;
+      t=setTimeout(function(){ el.textContent=''; }, 3000);
+    }
+    new MutationObserver(schedule).observe(el,{childList:true,characterData:true,subtree:true});
+    schedule();
   })();
 
   /* 文库 */
