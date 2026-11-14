@@ -2234,6 +2234,9 @@ body.portrait-ok .rotate-mask{display:none!important}
 .spot-desc{margin-top:8px;font-family:"LXGW WenKai",serif;font-size:12.5px;line-height:1.9;color:#7c6a72;letter-spacing:.03em}
 .spot-x{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;border:0;
   background:rgba(255,255,255,.85);color:#b06a86;font-size:14px;box-shadow:0 4px 10px -6px rgba(0,0,0,.4)}
+
+/* 打卡点视频 */
+#spotvideo{width:100%;display:none;border-radius:16px 16px 0 0;background:#000;max-height:60vh}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2317,6 +2320,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   <div class="spot-card">
     <button class="spot-x" onclick="closeSpot()">✕</button>
     <img id="spotimg" src="" alt="">
+    <video id="spotvideo" playsinline webkit-playsinline controls preload="metadata"></video>
     <div class="spot-body">
       <div class="spot-name" id="spotname"></div>
       <div class="spot-desc" id="spotdesc"></div>
@@ -2833,7 +2837,11 @@ body.portrait-ok .rotate-mask{display:none!important}
   /* ===== 地图打卡点数据（之后往里加） ===== */
   var SPOTS = {
     kr: [],
-    jp: []
+    jp: [
+      { x:67, y:44, name:'横滨红砖仓库 · 幸福之钟', type:'video',
+        video:'assets/video/yokohama_bell.mp4',
+        desc:'横滨红砖仓库之间的「幸福之钟」。据说和喜欢的人一起敲响它，就会一直幸福下去。' }
+    ]
   };
   function renderPins(){
     ['kr','jp'].forEach(function(k){
@@ -2852,13 +2860,23 @@ body.portrait-ok .rotate-mask{display:none!important}
   }
   window.openSpot=function(k,i){
     var s=SPOTS[k][i]; if(!s) return;
-    document.getElementById('spotimg').src=s.img||'';
-    document.getElementById('spotimg').style.display=s.img?'block':'none';
+    var img=document.getElementById('spotimg'), vid=document.getElementById('spotvideo');
+    if(s.type==='video' && s.video){
+      img.style.display='none'; img.removeAttribute('src');
+      vid.style.display='block'; vid.src=s.video; vid.currentTime=0;
+      var pr=vid.play(); if(pr&&pr.catch) pr.catch(function(){});
+    }else{
+      vid.pause(); vid.removeAttribute('src'); vid.style.display='none';
+      img.src=s.img||''; img.style.display=s.img?'block':'none';
+    }
     document.getElementById('spotname').textContent=s.name||'';
     document.getElementById('spotdesc').textContent=s.desc||'';
     document.getElementById('spotmodal').classList.add('on');
   };
-  window.closeSpot=function(){ document.getElementById('spotmodal').classList.remove('on'); };
+  window.closeSpot=function(){
+    var m=document.getElementById('spotmodal'); if(m) m.classList.remove('on');
+    var v=document.getElementById('spotvideo'); if(v){ try{v.pause(); v.currentTime=0;}catch(e){} }
+  };
   document.addEventListener('keydown',function(e){
     var m=document.getElementById('spotmodal');
     if(m && m.classList.contains('on') && e.key==='Escape') closeSpot();
