@@ -2195,6 +2195,16 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 给右侧箭头留出空间 */
 .book .turn.next{right:-18px!important}
 @media (max-width:760px){.book .turn.next{right:-6px!important}}
+
+/* 拍摄按钮移到相框外、相框下方 */
+.cam-stage .cam-bar{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;
+  transform:none!important;display:flex!important;flex-direction:row!important;
+  align-items:center!important;justify-content:center!important;gap:14px!important;padding:0!important;margin:6px 0 0!important}
+.cam-page > .pcontent > .cam-bar{display:flex!important}
+.cam-page .pcontent{height:calc(100% - 34px)!important;overflow:hidden!important}
+.cam-page .cam-stage{width:min(92vw, 400px, 31vh)!important}
+.cam-page > .pcontent > .cam-bar .cam-mini{padding:6px 16px!important;font-size:11.5px!important}
+.cam-page > .pcontent > .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2464,12 +2474,12 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
         <canvas id="snapcanvas" style="display:none"></canvas>
-        <div class="cam-bar">
+                <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
-      </div>
-        <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
       </div>
       <div class="snap-strip" id="snapstrip"></div>
     </div>
