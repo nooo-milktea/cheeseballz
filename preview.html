@@ -3288,6 +3288,13 @@ body::before{
 .fsmodal-stage.k2{aspect-ratio:1200/952!important}
 .fsmodal-stage.k4{aspect-ratio:1773/2364!important}
 .fsmodal-stage img{object-fit:fill!important}
+
+/* 弹窗相框：固定高度 + aspect-ratio，宽度自动，不可能被拉伸 */
+.fsmodal-stage{flex:0 0 auto!important;align-self:center!important;width:auto!important;max-width:100%!important}
+.fsmodal-stage.k1{height:min(74vh, 680px)!important;aspect-ratio:710/1076!important}
+.fsmodal-stage.k2{height:min(60vh, 520px)!important;aspect-ratio:1200/952!important}
+.fsmodal-stage.k4{height:min(80vh, 740px)!important;aspect-ratio:1773/2364!important}
+.fsmodal-stage img{width:100%!important;height:100%!important;object-fit:fill!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4273,13 +4280,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       .catch(function(){});
     var stg=document.getElementById('fsstage');
     stg.style.aspectRatio = String(cfg.ratio);
-    var pn=stg.parentNode;
-    var boxW=pn.clientWidth-28, boxH=pn.clientHeight-96;
-    var w=boxW, hh=w/cfg.ratio;
-    if(hh>boxH){ hh=boxH; w=hh*cfg.ratio; }
-    stg.style.width=Math.round(w)+'px';
-    stg.style.height='auto';
-    stg.style.aspectRatio=String(cfg.ratio);
+
     stg.classList.remove('k1','k2','k4');
     stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':'k4'));
     stg.classList.toggle('back', fsFacing==='environment');
