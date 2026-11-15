@@ -2913,6 +2913,14 @@ body.portrait-ok .rotate-mask{display:none!important}
 .fscam-stage img{position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
 .fscam-bar{display:flex;gap:14px;padding:10px 0 18px}
 .fscam-btn{padding:10px 22px;border-radius:999px;border:2px solid #f7bdd2;background:rgba(255,255,255,.94);color:#a45f78;font-family:"LXGW WenKai",serif;font-size:14px}
+
+/* 相机页：书缝回来，并且压在相框下面 */
+.book.on-cam .spread::before{display:block!important;opacity:1!important}
+.cam-page{z-index:2!important}
+.cam-page .cam-stage,
+.cam-page .cam2-stage,
+.cam-page .cam4-stage{position:relative!important;z-index:6!important}
+.cam-page .cam-bar,.cam-page .shoot-tray{position:relative!important;z-index:6!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
