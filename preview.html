@@ -3360,6 +3360,21 @@ body::before{
   transform:translateX(-50%)!important;
   margin:0!important;max-width:100%!important;
 }
+
+/* 第三个相框：回到文档流，用 inline-block + text-align 居中，按钮在下方 */
+.cam4-page .pcontent{
+  position:relative!important;display:block!important;text-align:center!important;
+  height:calc(100% - 20px)!important;padding:0!important;overflow:hidden!important;
+}
+.cam4-page .cam4-stage{
+  position:static!important;left:auto!important;top:auto!important;transform:none!important;
+  display:inline-block!important;vertical-align:top!important;margin:0 auto!important;
+  max-width:100%!important;
+}
+.cam4-page .cam-bar{
+  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  justify-content:center!important;gap:8px!important;margin:8px 0 0!important;padding:0!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
