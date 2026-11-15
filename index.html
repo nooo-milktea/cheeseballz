@@ -2542,6 +2542,10 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .cv-vine.bottom{transform:scaleY(-1)!important}
 .cv-jp,.cv-title,.cv-hint{margin:0!important}
+
+/* 藤蔓保持原始比例，不再被压扁 */
+.cv-vine{width:min(280px,82%)!important;height:auto!important;display:block!important;margin:0 auto!important}
+.cv-vine.bottom{transform:scaleY(-1)!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2674,31 +2678,31 @@ body.portrait-ok .rotate-mask{display:none!important}
       <path d="M22 38v6" stroke="#8a6436" stroke-width="3" stroke-linecap="round"/>
     </svg>
     <div class="cv-center">
-      <svg class="cv-vine top" viewBox="0 0 320 46" preserveAspectRatio="none">
-    <path d="M4 30 C48 8 92 40 158 22 C214 7 262 38 316 16" fill="none" stroke="#c9dfa8" stroke-width="3.2" stroke-linecap="round"/>
-    <g fill="#d8ecc0" stroke="#b9d39a" stroke-width="0.8">
-      <ellipse cx="52" cy="16" rx="9" ry="4.6" transform="rotate(-24 52 16)"/>
-      <ellipse cx="196" cy="12" rx="9" ry="4.6" transform="rotate(18 196 12)"/>
-      <ellipse cx="268" cy="26" rx="8" ry="4.2" transform="rotate(-14 268 26)"/>
-    </g>
-    <ellipse cx='86.0' cy='13.8' rx='5.2' ry='3.4' transform='rotate(0 86.0 13.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='91.9' cy='18.1' rx='5.2' ry='3.4' transform='rotate(72 91.9 18.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='89.6' cy='25.0' rx='5.2' ry='3.4' transform='rotate(144 89.6 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='82.4' cy='25.0' rx='5.2' ry='3.4' transform='rotate(216 82.4 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='80.1' cy='18.1' rx='5.2' ry='3.4' transform='rotate(288 80.1 18.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='86' cy='20' r='2.2' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-    <ellipse cx='158.0' cy='12.6' rx='6.2' ry='4.1' transform='rotate(0 158.0 12.6)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='165.1' cy='17.7' rx='6.2' ry='4.1' transform='rotate(72 165.1 17.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='162.4' cy='26.0' rx='6.2' ry='4.1' transform='rotate(144 162.4 26.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='153.6' cy='26.0' rx='6.2' ry='4.1' transform='rotate(216 153.6 26.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='150.9' cy='17.7' rx='6.2' ry='4.1' transform='rotate(288 150.9 17.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='158' cy='20' r='2.6' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-    <ellipse cx='236.0' cy='11.1' rx='4.9' ry='3.2' transform='rotate(0 236.0 11.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='241.6' cy='15.2' rx='4.9' ry='3.2' transform='rotate(72 241.6 15.2)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='239.5' cy='21.8' rx='4.9' ry='3.2' transform='rotate(144 239.5 21.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='232.5' cy='21.8' rx='4.9' ry='3.2' transform='rotate(216 232.5 21.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='230.4' cy='15.2' rx='4.9' ry='3.2' transform='rotate(288 230.4 15.2)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='236' cy='17' r='2.1' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-  </svg>
+      <svg class="cv-vine top" viewBox="0 0 320 58" preserveAspectRatio="xMidYMid meet">
+      <path d="M6 38 C52 12 96 48 160 30 C216 14 264 46 314 24" fill="none" stroke="#c9dfa8" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#d8ecc0" stroke="#b9d39a" stroke-width="0.9">
+        <ellipse cx="56" cy="22" rx="9" ry="4.6" transform="rotate(-26 56 22)"/>
+        <ellipse cx="208" cy="18" rx="9" ry="4.6" transform="rotate(20 208 18)"/>
+        <ellipse cx="276" cy="34" rx="8" ry="4.2" transform="rotate(-16 276 34)"/>
+      </g>
+      <ellipse cx='92.0' cy='20.4' rx='5.5' ry='3.6' transform='rotate(0 92.0 20.4)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='98.3' cy='25.0' rx='5.5' ry='3.6' transform='rotate(72 98.3 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='95.9' cy='32.3' rx='5.5' ry='3.6' transform='rotate(144 95.9 32.3)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='88.1' cy='32.3' rx='5.5' ry='3.6' transform='rotate(216 88.1 32.3)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='85.7' cy='25.0' rx='5.5' ry='3.6' transform='rotate(288 85.7 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='92' cy='27' r='2.2' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+      <ellipse cx='166.0' cy='19.5' rx='6.2' ry='4.1' transform='rotate(0 166.0 19.5)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='173.1' cy='24.7' rx='6.2' ry='4.1' transform='rotate(72 173.1 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='170.4' cy='33.1' rx='6.2' ry='4.1' transform='rotate(144 170.4 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='161.6' cy='33.1' rx='6.2' ry='4.1' transform='rotate(216 161.6 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='158.9' cy='24.7' rx='6.2' ry='4.1' transform='rotate(288 158.9 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='166' cy='27' r='2.5' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+      <ellipse cx='240.0' cy='18.0' rx='5.0' ry='3.3' transform='rotate(0 240.0 18.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='245.7' cy='22.1' rx='5.0' ry='3.3' transform='rotate(72 245.7 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='243.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(144 243.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='236.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(216 236.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='234.3' cy='22.1' rx='5.0' ry='3.3' transform='rotate(288 234.3 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='240' cy='24' r='2.0' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+    </svg>
       <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
       <div class="cv-sub">さくや と ゆうし</div>
       <div class="cv-hint">点一下 · 打开</div>
-      <svg class="cv-vine bottom" viewBox="0 0 320 46" preserveAspectRatio="none">
-    <path d="M4 30 C48 8 92 40 158 22 C214 7 262 38 316 16" fill="none" stroke="#c9dfa8" stroke-width="3.2" stroke-linecap="round"/>
-    <g fill="#d8ecc0" stroke="#b9d39a" stroke-width="0.8">
-      <ellipse cx="52" cy="16" rx="9" ry="4.6" transform="rotate(-24 52 16)"/>
-      <ellipse cx="196" cy="12" rx="9" ry="4.6" transform="rotate(18 196 12)"/>
-      <ellipse cx="268" cy="26" rx="8" ry="4.2" transform="rotate(-14 268 26)"/>
-    </g>
-    <ellipse cx='86.0' cy='13.8' rx='5.2' ry='3.4' transform='rotate(0 86.0 13.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='91.9' cy='18.1' rx='5.2' ry='3.4' transform='rotate(72 91.9 18.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='89.6' cy='25.0' rx='5.2' ry='3.4' transform='rotate(144 89.6 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='82.4' cy='25.0' rx='5.2' ry='3.4' transform='rotate(216 82.4 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='80.1' cy='18.1' rx='5.2' ry='3.4' transform='rotate(288 80.1 18.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='86' cy='20' r='2.2' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-    <ellipse cx='158.0' cy='12.6' rx='6.2' ry='4.1' transform='rotate(0 158.0 12.6)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='165.1' cy='17.7' rx='6.2' ry='4.1' transform='rotate(72 165.1 17.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='162.4' cy='26.0' rx='6.2' ry='4.1' transform='rotate(144 162.4 26.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='153.6' cy='26.0' rx='6.2' ry='4.1' transform='rotate(216 153.6 26.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='150.9' cy='17.7' rx='6.2' ry='4.1' transform='rotate(288 150.9 17.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='158' cy='20' r='2.6' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-    <ellipse cx='236.0' cy='11.1' rx='4.9' ry='3.2' transform='rotate(0 236.0 11.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='241.6' cy='15.2' rx='4.9' ry='3.2' transform='rotate(72 241.6 15.2)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='239.5' cy='21.8' rx='4.9' ry='3.2' transform='rotate(144 239.5 21.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='232.5' cy='21.8' rx='4.9' ry='3.2' transform='rotate(216 232.5 21.8)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><ellipse cx='230.4' cy='15.2' rx='4.9' ry='3.2' transform='rotate(288 230.4 15.2)' fill='#f9c6da' stroke='#e58cb0' stroke-width='0.9'/><circle cx='236' cy='17' r='2.1' fill='#fff3f8' stroke='#e58cb0' stroke-width='0.8'/>
-  </svg>
+      <svg class="cv-vine bottom" viewBox="0 0 320 58" preserveAspectRatio="xMidYMid meet">
+      <path d="M6 38 C52 12 96 48 160 30 C216 14 264 46 314 24" fill="none" stroke="#c9dfa8" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#d8ecc0" stroke="#b9d39a" stroke-width="0.9">
+        <ellipse cx="56" cy="22" rx="9" ry="4.6" transform="rotate(-26 56 22)"/>
+        <ellipse cx="208" cy="18" rx="9" ry="4.6" transform="rotate(20 208 18)"/>
+        <ellipse cx="276" cy="34" rx="8" ry="4.2" transform="rotate(-16 276 34)"/>
+      </g>
+      <ellipse cx='92.0' cy='20.4' rx='5.5' ry='3.6' transform='rotate(0 92.0 20.4)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='98.3' cy='25.0' rx='5.5' ry='3.6' transform='rotate(72 98.3 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='95.9' cy='32.3' rx='5.5' ry='3.6' transform='rotate(144 95.9 32.3)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='88.1' cy='32.3' rx='5.5' ry='3.6' transform='rotate(216 88.1 32.3)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='85.7' cy='25.0' rx='5.5' ry='3.6' transform='rotate(288 85.7 25.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='92' cy='27' r='2.2' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+      <ellipse cx='166.0' cy='19.5' rx='6.2' ry='4.1' transform='rotate(0 166.0 19.5)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='173.1' cy='24.7' rx='6.2' ry='4.1' transform='rotate(72 173.1 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='170.4' cy='33.1' rx='6.2' ry='4.1' transform='rotate(144 170.4 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='161.6' cy='33.1' rx='6.2' ry='4.1' transform='rotate(216 161.6 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='158.9' cy='24.7' rx='6.2' ry='4.1' transform='rotate(288 158.9 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='166' cy='27' r='2.5' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+      <ellipse cx='240.0' cy='18.0' rx='5.0' ry='3.3' transform='rotate(0 240.0 18.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='245.7' cy='22.1' rx='5.0' ry='3.3' transform='rotate(72 245.7 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='243.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(144 243.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='236.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(216 236.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='234.3' cy='22.1' rx='5.0' ry='3.3' transform='rotate(288 234.3 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='240' cy='24' r='2.0' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
+    </svg>
     
     </div>
   </div>
