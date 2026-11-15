@@ -2920,6 +2920,17 @@ body.portrait-ok .rotate-mask{display:none!important}
 .page[data-src="w-camera"] .cam-stage,
 .page[data-src="w-camera"] .cam-bar,
 .page[data-src="w-camera"] .shoot-tray{position:relative!important;z-index:8!important}
+
+/* 修正：页面不建栈叠上下文，相框/按钮/照片托盘才能压在书缝之上 */
+.page[data-src="w-camera"]{z-index:auto!important}
+.page[data-src="w-camera"] .cam-stage,
+.page[data-src="w-camera"] .cam-bar{
+  position:relative!important;z-index:8!important;
+}
+.page[data-src="w-camera"] .shoot-tray{
+  position:absolute!important;left:0!important;right:0!important;bottom:0!important;
+  height:104px!important;z-index:8!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
