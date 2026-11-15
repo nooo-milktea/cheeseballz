@@ -2877,6 +2877,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
+
+/* 相框与摄影区不遮盖书页布纹 */
+.cam-page{background:transparent!important}
+.cam-page .cam-stage,
+.cam-page .cam2-stage,
+.cam-page .cam4-stage,
+.cam-page .cam3-stage{
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+}
+.cam-page .pcontent{background:transparent!important}
+.cam-page .shoot-tray{background:rgba(255,253,248,.55)!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
