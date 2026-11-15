@@ -2962,6 +2962,17 @@ body.portrait-ok .rotate-mask{display:none!important}
   z-index:5!important;display:flex!important;justify-content:center!important;gap:14px!important;
   padding:14px 0 26px!important;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.45))!important;
 }
+
+/* 全屏：完整放下相框（contain），居中 */
+.fscam{display:none;align-items:center!important;justify-content:center!important;padding:0!important;background:#0f0c0b!important}
+.fscam.on{display:flex!important}
+.fscam-stage{
+  position:relative!important;inset:auto!important;
+  display:block!important;overflow:hidden!important;
+  width:auto!important;height:auto!important;max-width:none!important;max-height:none!important;
+}
+.fscam-stage img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important}
+.fscam-stage video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3922,6 +3933,13 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     fr.src=cfg.frame;
     var stEl=document.querySelector('.fscam-stage');
     stEl.classList.toggle('back', v.parentNode.classList.contains('back'));
+    var RATIO={cam1:710/1076, cam2:1200/952, cam4:1773/2364};
+    var r=RATIO[key]||710/1076;
+    var vw=window.innerWidth, vh=window.innerHeight*0.86;
+    var w,h2;
+    if(vw/vh > r){ h2=vh; w=vh*r; } else { w=vw; h2=vw/r; }
+    stEl.style.width=Math.round(w)+'px';
+    stEl.style.height=Math.round(h2)+'px';
     document.getElementById('fscam').classList.add('on');
     fsKey=key;
   };
