@@ -2642,6 +2642,13 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .toc-head .toc-h{margin:0!important}
 .toc-list{position:relative;z-index:13}
+
+/* 同人文库页：内容压在书缝之上，不被折痕切到 */
+.page[data-src="w-lib"]{z-index:9!important}
+.page[data-src="w-lib"] .pcontent,
+.page[data-src="w-lib"] .fic-list,
+.page[data-src="w-lib"] .fic,
+.page[data-src="w-lib"] .gate-box{position:relative;z-index:12}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
