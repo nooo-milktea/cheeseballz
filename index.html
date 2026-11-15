@@ -2606,6 +2606,16 @@ body.portrait-ok .rotate-mask{display:none!important}
   left:50%!important;right:auto!important;
   transform:translateX(18px) rotate(3deg)!important;
 }
+
+/* 名字：放大 + 蜡笔笔触（和伞同一支笔） */
+.umb-name{
+  font-size:clamp(16px,2.6vw,21px)!important;
+  letter-spacing:.1em!important;
+  filter:url(#crayonInk);
+  text-shadow:0 0 1px currentColor;
+}
+.umb-name.left{transform:translateX(-52px) rotate(-3deg)!important}
+.umb-name.right{transform:translateX(26px) rotate(3deg)!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
