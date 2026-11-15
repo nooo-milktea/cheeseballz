@@ -3375,6 +3375,17 @@ body::before{
   position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
   justify-content:center!important;gap:8px!important;margin:8px 0 0!important;padding:0!important;
 }
+
+/* 第三个相框：宽度驱动、按原比例，不被容器高度压缩 */
+.cam4-page .pcontent{height:auto!important;min-height:0!important;overflow:visible!important}
+.cam4-page .cam4-stage{
+  height:auto!important;max-height:none!important;
+  width:min(88vw, calc(min(56vh, 520px) * 0.75))!important;
+  aspect-ratio:1773/2364!important;
+}
+@media (max-width:760px){
+  .cam4-page .cam4-stage{width:min(90vw, calc(min(52vh, 460px) * 0.75))!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
