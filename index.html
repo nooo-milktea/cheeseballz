@@ -244,7 +244,7 @@ button{font:inherit;cursor:pointer}
 }
 @keyframes rain1{0%{background-position-y:-64px}100%{background-position-y:0}}
 @keyframes rain2{0%{background-position-y:-102px}100%{background-position-y:0}}
-@keyframes rain3{0%{background-position-y:-168px}100%{background-position-y:0}}
+@keyframes rain3{0%{background-position-y:-168px}100%{background-position-y:0}}100%{background-position-y:0}}100%{background-position:0 0}}100%{background-position:0 0}}
 @media (prefers-reduced-motion:reduce){.rain{display:none}}
 
 /* 底部小溪（宽缓波浪） */
@@ -2378,252 +2378,13 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam-page .snap-strip{flex:1;display:flex;align-items:center;gap:8px;overflow-x:auto;min-height:0}
 .cam-page .snap-strip img{width:64px!important;height:64px!important;border:2px solid #fff;box-shadow:0 4px 10px -6px rgba(150,90,115,.8)}
 .strip-empty{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c9aab6;letter-spacing:.1em}
-.cam-page .cam-stage{height:min(44vh, 390px)!important}
-@media (max-width:760px){ .cam-page .cam-stage{height:min(40vh, 350px)!important} .shoot-tray{height:112px} }
+.cam-page .cam-stage{height:min(38vh, 340px)!important}
+@media (max-width:760px){ .cam-page .cam-stage{height:min(34vh, 300px)!important} .shoot-tray{height:112px} }
 
 .verstamp{font-family:"Cormorant Garamond",serif;font-size:10px;color:#d0a9b7;letter-spacing:.2em;margin-left:8px}
-
-/* 相机页：相框 + 按钮行 + 照片托盘，三者都在页内 */
-.cam-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 30px)!important;
-  overflow:hidden!important;padding:0 0 112px!important;
-}
-.cam-page .cam-bar{
-  position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;
-  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
-  gap:12px!important;width:100%!important;margin:0!important;padding:0!important;z-index:12;flex:0 0 auto!important;
-}
-.cam-page .cam-bar .cam-mini{
-  padding:7px 18px!important;font-size:11.5px!important;background:#fff!important;border:1px solid #f0ccd9!important;
-  border-radius:999px!important;color:#a45f78!important;letter-spacing:.12em;
-}
-.cam-page .cam-bar .snap-shot{
-  display:inline-block!important;width:52px!important;height:52px!important;font-size:17px!important;
-  border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;border-radius:50%!important;
-}
-.cam-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:104px!important}
-
-/* 相框与拍摄键都居中在同一竖轴 */
-.cam-page .pcontent{
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
-  height:calc(100% - 30px)!important;gap:8px!important;overflow:hidden!important;
-  padding:0 0 100px!important;position:relative!important;
-}
-.cam-page .cam-stage{
-  height:calc(100% - 74px)!important;width:auto!important;max-width:100%!important;
-  aspect-ratio:710/1076!important;flex:0 0 auto!important;margin:0 auto!important;
-}
-.cam-page .cam-bar{
-  position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;
-  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
-  gap:14px!important;flex:0 0 auto!important;margin:0!important;padding:0!important;
-}
-
-/* 第二个相机：草莓边框，画面嵌在白色区域 */
-.cam2-page .cam2-stage{
-  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:1872/1485;
-  max-width:100%;margin:0 auto;flex:0 0 auto;
-  background:url("assets/img/frame_sy.jpg") center/100% 100% no-repeat;
-}
-.cam2-page .cam2-stage video{
-  position:absolute;left:8%;top:7.5%;width:70%;height:54%;
-  object-fit:cover;transform:scaleX(-1);border-radius:4px;background:#f3ecef;
-}
-.cam2-page .snap-hint{left:8%!important;right:22%!important;top:34%!important;bottom:auto!important;color:#b08b98;font-size:10.5px;text-shadow:0 1px 3px rgba(255,255,255,.9)}
-.cam2-page .shoot-tray{position:absolute;left:0;right:0;bottom:0;height:100px}
-
-/* 草莓框相机：画面在下，相框叠加 */
-.cam2-page .cam2-stage{
-  background:none!important;position:relative!important;overflow:hidden!important;
-  height:calc(100% - 74px)!important;width:auto!important;aspect-ratio:1200/952!important;
-  max-width:100%!important;margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam2-page .cam2-stage::after{
-  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:url("assets/img/frame_sy.png") center/100% 100% no-repeat;
-}
-.cam2-page .cam2-stage video{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1;
-  object-fit:cover!important;transform:scaleX(-1);opacity:0;transition:opacity .25s;background:transparent!important;
-}
-.cam2-page .cam2-stage.live video{opacity:1}
-.cam2-page .snap-hint{left:0!important;right:0!important;top:46%!important;bottom:auto!important;z-index:3}
-
-/* 草莓框：只让画面出现在中间区域，两侧留纸色，避免黑边 */
-.cam2-page .cam2-stage{background:#fffdf6!important}
-.cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:7%!important;top:10.6%!important;width:86%!important;height:45%!important;
-  border-radius:2px;
-}
-.cam2-page .cam2-stage::after{background-color:transparent}
-
-/* 草莓框：画面填满白框，四周纸色 */
-.cam2-page .cam2-stage{background:#fffdf6!important}
-.cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:5%!important;top:10%!important;width:90%!important;height:47%!important;border-radius:2px;
-}
-
-/* 草莓框：摄影区向下延伸到草莓条上沿 */
-.cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:8%!important;top:8%!important;width:84%!important;height:78%!important;border-radius:2px;
-}
-
-/* 第三个相机：拓麻歌子，屏幕即摄影区 */
-.cam3-page .cam3-stage{
-  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:862/1027;
-  max-width:100%;margin:0 auto;flex:0 0 auto;background:#fffdf6;overflow:hidden;
-}
-.cam3-page .cam3-stage video{
-  position:absolute;left:23.9%;top:37.1%;width:45.6%;height:37.2%;z-index:1;
-  object-fit:cover;transform:scaleX(-1);background:#f3ecef;
-}
-.cam3-page .cam3-frame{
-  position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill;
-}
-.cam3-page .snap-hint{left:20%!important;right:20%!important;top:80%!important;bottom:auto!important;z-index:3;font-size:9.5px}
-
-/* 第三相机：用整张原图（三台拓麻歌子），摄影区在中间那台的屏幕 */
-.cam3-page .cam3-stage{aspect-ratio:2601/1028!important;background:#fffdf6!important}
-.cam3-page .cam3-stage video{
-  left:41.02%!important;top:36.87%!important;width:14.76%!important;height:37.74%!important;
-}
-.cam3-page .cam3-frame{object-fit:fill}
-.cam3-page .snap-hint{left:30%!important;right:30%!important;top:80%!important;font-size:9px!important}
-
-/* 第三相机：整幅横图按宽度铺开，确保可见 */
-.cam3-page .cam3-stage{
-  height:auto!important;width:100%!important;aspect-ratio:2601/1028!important;
-  max-width:100%!important;margin:auto!important;flex:0 0 auto!important;
-}
-.cam3-page .cam-bar,.cam3-page .shoot-tray{flex:0 0 auto!important}
-
-/* 封面：手写花体标题 + 樱花藤蔓 */
-.cv-title{
-  font-family:"Pacifico","Lobster Two","Zen Maru Gothic",cursive!important;
-  font-weight:400!important;letter-spacing:.01em!important;
-  color:#f4a7c4!important;
-  -webkit-text-stroke:1.2px #fff!important;
-  text-shadow:0 3px 0 rgba(255,255,255,.9),0 6px 14px rgba(230,150,180,.35)!important;
-}
-.cv-title .q{-webkit-text-stroke:1.2px #f4a7c4!important;color:transparent!important}
-.sakura-vine{position:absolute;left:8%;right:8%;height:auto;opacity:.95;pointer-events:none}
-.sakura-vine.top{top:14px}
-.sakura-vine.bottom{bottom:16px;transform:scaleY(-1)}
-
-/* 封面两行：CHEESEBALLZ / Sakuya & Yushi */
-.cv-title{
-  font-family:"Pacifico","Lobster Two",cursive!important;
-  font-size:clamp(26px,7.4vw,46px)!important;line-height:1.25!important;
-  color:#f4a7c4!important;-webkit-text-stroke:1.4px #fff!important;
-  text-shadow:0 3px 0 rgba(255,255,255,.95),0 8px 16px rgba(230,150,180,.35)!important;
-}
-.cv-sub{
-  font-family:"Pacifico","Lobster Two",cursive!important;
-  font-size:clamp(18px,5vw,32px)!important;letter-spacing:.02em!important;
-  color:#f7b8cf!important;-webkit-text-stroke:1px #fff!important;
-  text-shadow:0 2px 0 rgba(255,255,255,.9)!important;margin-top:6px!important;
-}
-
-/* 封面标题：细笔画、带卷曲的手写体（参考图那种） */
-.cv-title{
-  font-family:"Sacramento","Allura","Grand Hotel",cursive!important;
-  font-weight:400!important;letter-spacing:.01em!important;
-  font-size:clamp(40px,12vw,78px)!important;line-height:1.1!important;
-  color:#f3a9c6!important;-webkit-text-stroke:1.1px #fff!important;
-  text-shadow:0 2px 0 rgba(255,255,255,.9),0 8px 18px rgba(230,150,180,.3)!important;
-}
-.cv-sub{
-  font-family:"Sacramento","Allura","Grand Hotel",cursive!important;
-  font-size:clamp(26px,7.6vw,50px)!important;line-height:1.2!important;
-  color:#f7b9d0!important;-webkit-text-stroke:.9px #fff!important;
-  text-shadow:0 2px 0 rgba(255,255,255,.85)!important;margin-top:2px!important;
-}
-
-/* 封面标题：缩小到框内、加深加粗 */
-.book .cover{overflow:hidden!important}
-.cv-center{width:100%!important;padding:0 10%!important;box-sizing:border-box!important}
-.cv-title{
-  font-size:clamp(26px,7.2vw,50px)!important;line-height:1.18!important;
-  color:#e0749f!important;
-  -webkit-text-stroke:1.6px #ffffff!important;
-  text-shadow:0 2px 0 #fff,0 6px 14px rgba(200,110,145,.45)!important;
-  white-space:nowrap!important;
-}
-.cv-sub{
-  font-size:clamp(18px,5.2vw,36px)!important;line-height:1.2!important;
-  color:#e98cb4!important;
-  -webkit-text-stroke:1.3px #ffffff!important;
-  text-shadow:0 2px 0 #fff!important;
-}
-
-/* 书皮：童话故事书风格 */
-.book .cover{
-  background-color:#fff7f1!important;
-  background-image:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><path d='M6 74 C6 40 26 14 62 6' fill='none' stroke='%23cfa26f' stroke-width='2'/><path d='M20 52c-8-4-10-12-6-16 4-3 10 0 11 6 1 5-1 8-5 10z' fill='%23f9cbdc' stroke='%23d98ba8' stroke-width='1.2'/><circle cx='58' cy='12' r='3.4' fill='%23f3d39a' stroke='%23cfa26f' stroke-width='1'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' transform='rotate(90 40 40)'><path d='M6 74 C6 40 26 14 62 6' fill='none' stroke='%23cfa26f' stroke-width='2'/><path d='M20 52c-8-4-10-12-6-16 4-3 10 0 11 6 1 5-1 8-5 10z' fill='%23f9cbdc' stroke='%23d98ba8' stroke-width='1.2'/><circle cx='58' cy='12' r='3.4' fill='%23f3d39a' stroke='%23cfa26f' stroke-width='1'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' transform='rotate(180 40 40)'><path d='M6 74 C6 40 26 14 62 6' fill='none' stroke='%23cfa26f' stroke-width='2'/><path d='M20 52c-8-4-10-12-6-16 4-3 10 0 11 6 1 5-1 8-5 10z' fill='%23f9cbdc' stroke='%23d98ba8' stroke-width='1.2'/><circle cx='58' cy='12' r='3.4' fill='%23f3d39a' stroke='%23cfa26f' stroke-width='1'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' transform='rotate(270 40 40)'><path d='M6 74 C6 40 26 14 62 6' fill='none' stroke='%23cfa26f' stroke-width='2'/><path d='M20 52c-8-4-10-12-6-16 4-3 10 0 11 6 1 5-1 8-5 10z' fill='%23f9cbdc' stroke='%23d98ba8' stroke-width='1.2'/><circle cx='58' cy='12' r='3.4' fill='%23f3d39a' stroke='%23cfa26f' stroke-width='1'/></svg>"),
-    linear-gradient(160deg,#fff9f3,#fdeef3 62%,#fbe2ec)!important;
-  background-position:8px 8px, calc(100% - 8px) 8px, 8px calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), 0 0!important;
-  background-size:70px 70px,70px 70px,70px 70px,70px 70px,100% 100%!important;
-  background-repeat:no-repeat!important;
-  border:3px solid #e9bdcb!important;
-  border-radius:10px!important;
-  box-shadow:
-    inset 0 0 0 2px #fffdf9,
-    inset 0 0 0 4px #f4d9c4,
-    inset 0 0 26px rgba(210,160,140,.25),
-    0 26px 46px -30px rgba(150,100,110,.6)!important;
-}
-.book .cover::before{
-  content:"";position:absolute;inset:16px;border:1px dashed rgba(206,162,111,.55);
-  border-radius:6px;pointer-events:none;
-}
-.book .cover::after{
-  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(120% 90% at 30% 8%,rgba(255,255,255,.7),transparent 55%);
-}
-
-/* 封面标题：粉色实心、字号收小、无白描边 */
-.cv-title{
-  color:#d9628f!important;
-  -webkit-text-stroke:0!important;
-  text-shadow:0 2px 6px rgba(200,110,145,.25)!important;
-  font-size:clamp(20px,5.4vw,38px)!important;line-height:1.16!important;
-}
-.cv-sub{
-  color:#e283a9!important;
-  -webkit-text-stroke:0!important;
-  text-shadow:0 1px 4px rgba(200,110,145,.2)!important;
-  font-size:clamp(15px,4vw,26px)!important;line-height:1.18!important;
-}
-
-/* 封面标题加粗（同色描边增粗，不改变颜色） */
-.cv-title{
-  -webkit-text-stroke:1.3px #d9628f!important;
-  text-shadow:0 1px 0 #d9628f,0 2px 6px rgba(200,110,145,.28)!important;
-}
-.cv-sub{
-  -webkit-text-stroke:1px #e283a9!important;
-  text-shadow:0 1px 0 #e283a9!important;
-}
-
-/* 封面：日文在上、英文标题在下 */
-.cv-center{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important}
-.cv-jp{
-  font-family:"Zen Maru Gothic","LXGW WenKai",sans-serif!important;
-  font-size:clamp(13px,3.6vw,20px)!important;letter-spacing:.22em!important;
-  color:#c98ba4!important;margin-bottom:2px!important;
-}
-.cv-title{margin:0!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sacramento&family=Allura&family=Grand+Hotel&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -2752,37 +2513,10 @@ body.portrait-ok .rotate-mask{display:none!important}
       <circle cx="22" cy="35" r="4" fill="#8a6436"/>
       <path d="M22 38v6" stroke="#8a6436" stroke-width="3" stroke-linecap="round"/>
     </svg>
-    <svg class="sakura-vine top" viewBox="0 0 400 60" preserveAspectRatio="none">
-        <path d="M10 42 C60 10 120 52 190 30 C250 12 320 48 390 26" fill="none" stroke="#cfe0b8" stroke-width="3" stroke-linecap="round"/>
-        <g fill="#f9c8d9" stroke="#e98cb0" stroke-width="1.4">
-          <path d="M96 34c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
-          <path d="M196 26c-5-10-1-17 5-18 5-1 9 4 7 9-2 6-7 8-12 9z"/>
-          <path d="M304 32c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
-        </g>
-        <g fill="#d9ecc4">
-          <ellipse cx="70" cy="22" rx="10" ry="5" transform="rotate(-18 70 22)"/>
-          <ellipse cx="250" cy="24" rx="10" ry="5" transform="rotate(12 250 24)"/>
-        </g>
-      </svg>
     <div class="cv-center">
-      <div class="cv-jp">さくや と ゆうし</div>
-      <div class="cv-title">CHEESEBALLZ</div>
-      <div class="cv-hint">点一下 · 打开</div>
-    </div>
+      <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
       <div class="cv-sub">さくや と ゆうし</div>
-      
-      <svg class="sakura-vine bottom" viewBox="0 0 400 60" preserveAspectRatio="none">
-        <path d="M10 42 C60 10 120 52 190 30 C250 12 320 48 390 26" fill="none" stroke="#cfe0b8" stroke-width="3" stroke-linecap="round"/>
-        <g fill="#f9c8d9" stroke="#e98cb0" stroke-width="1.4">
-          <path d="M96 34c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
-          <path d="M196 26c-5-10-1-17 5-18 5-1 9 4 7 9-2 6-7 8-12 9z"/>
-          <path d="M304 32c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
-        </g>
-        <g fill="#d9ecc4">
-          <ellipse cx="70" cy="22" rx="10" ry="5" transform="rotate(-18 70 22)"/>
-          <ellipse cx="250" cy="24" rx="10" ry="5" transform="rotate(12 250 24)"/>
-        </g>
-      </svg>
+      <div class="cv-hint">点一下 · 打开</div>
     </div>
   </div>
   <div class="spread">
@@ -2802,8 +2536,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       </div>
       
       <div class="tp"><span class="tp-t">爱</span><span class="tp-t">是</span><span class="tp-t">一</span><span class="tp-t">本</span><span class="tp-t">书</span></div>
-    
-      </div>
+    </div>
   </section>
 
   <section class="page tocpage" data-src="w-toc">
@@ -2813,9 +2546,9 @@ body.portrait-ok .rotate-mask{display:none!important}
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
-      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">两种相框</span></a></li>
-      <li><a onclick="jumpTo(7)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
-      <li><a onclick="jumpTo(8)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
+      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">一起合照吧</span></a></li>
+      <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
+      <li><a onclick="jumpTo(7)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
     </div>
   </section>
@@ -2926,7 +2659,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v84</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v69</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2941,49 +2674,6 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="shoot-tray">
         <div class="tray-head">我的照片 <span id="trayCount">0</span></div>
         <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">拍一张就会出现</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page v cam-page cam2-page" data-src="w-camera2">
-    <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v89</span><span class="pno"></span></header>
-    <div class="pcontent">
-      <div class="cam2-stage" id="cam2stage">
-        <video id="snapvideo2" autoplay playsinline muted></video>
-        <canvas id="snapcanvas2" style="display:none"></canvas>
-        <div class="snap-hint" id="snaphint2">点「开启」用你的相机</div>
-      </div>
-      <div class="cam-bar">
-        <button class="cam-mini" onclick="start2()">开启</button>
-        <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="stop2()">关闭</button>
-      </div>
-      <div class="shoot-tray">
-        <div class="tray-head">我的照片 <span id="trayCount2">0</span></div>
-        <div class="snap-strip" id="snapstrip2"><span class="strip-empty" id="stripempty2">拍一张就会出现</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page v cam-page cam3-page" data-src="w-camera3">
-    <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v92</span><span class="pno"></span></header>
-    <div class="pcontent">
-      <div class="cam3-stage">
-        <video id="snapvideo3" autoplay playsinline muted></video>
-        <canvas id="snapcanvas3" style="display:none"></canvas>
-        <img class="cam3-frame" src="assets/img/frame_tama_all.png" alt="">
-        <div class="snap-hint" id="snaphint3">点「开启」用你的相机</div>
-      </div>
-      <div class="cam-bar">
-        <button class="cam-mini" onclick="start3()">开启</button>
-        <button class="snap-shot" onclick="take3()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="stop3()">关闭</button>
-      </div>
-      <div class="shoot-tray">
-        <div class="tray-head">我的照片 <span id="trayCount3">0</span></div>
-        <div class="snap-strip" id="snapstrip3"><span class="strip-empty" id="stripempty3">拍一张就会出现</span></div>
       </div>
     </div>
   </section>
@@ -3037,7 +2727,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i><i data-i="9"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -3070,10 +2760,6 @@ body.portrait-ok .rotate-mask{display:none!important}
   function show(i){
     book.classList.toggle('on-cam', (pages[i] && pages[i].dataset.src==='w-camera'));
     var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
-    var camPage2=pages.findIndex(function(p){return p.dataset.src==='w-camera2';});
-    if(i!==camPage2 && typeof window.stop2==='function') window.stop2();
-    var camPage3=pages.findIndex(function(p){return p.dataset.src==='w-camera3';});
-    if(i!==camPage3 && typeof window.stop3==='function') window.stop3();
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
@@ -3421,112 +3107,6 @@ body.portrait-ok .rotate-mask{display:none!important}
     var st=document.querySelector('.cam-page .cam-stage');
     if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
   })();
-
-
-  /* 取景框提示：出现后 3 秒自动消失 */
-  (function(){
-    var el=document.getElementById('snaphint');
-    if(!el) return;
-    var t=null;
-    function schedule(){
-      clearTimeout(t);
-      if(!el.textContent.trim()) return;
-      t=setTimeout(function(){ el.textContent=''; }, 3000);
-    }
-    new MutationObserver(schedule).observe(el,{childList:true,characterData:true,subtree:true});
-    schedule();
-  })();
-
-
-  /* 第二个相机（草莓框） */
-  var stream2=null;
-  window.start2=function(){
-    var v=document.getElementById('snapvideo2'), hint=document.getElementById('snaphint2');
-    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='这个浏览器不支持相机'; return; }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
-      .then(function(st){ stream2=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
-      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了相机权限':'打不开相机（需要 https）'; });
-  };
-  window.stop2=function(){
-    if(stream2){ stream2.getTracks().forEach(function(t){t.stop();}); stream2=null; }
-    var v=document.getElementById('snapvideo2'); if(v){ v.srcObject=null; v.parentNode.classList.remove('live'); }
-    var hint=document.getElementById('snaphint2'); if(hint) hint.textContent='相机已关闭';
-  };
-  var frame2=null;
-  window.take2=function(){
-    var v=document.getElementById('snapvideo2'), c=document.getElementById('snapcanvas2');
-    var strip=document.getElementById('snapstrip2'), hint=document.getElementById('snaphint2');
-    if(!stream2||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
-    function shoot(fr){
-      var W=1200,H=952; c.width=W; c.height=H;
-      var ctx=c.getContext('2d');
-      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.08, ry=H*0.08, rw=W*0.84, rh=H*0.78;
-      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
-      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
-      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
-      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
-      ctx.restore();
-      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
-      var dataUrl=c.toDataURL('image/jpeg',0.92);
-      var se=document.getElementById('stripempty2'); if(se) se.style.display='none';
-      var tc=document.getElementById('trayCount2'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
-      var img=document.createElement('img');
-      img.src=dataUrl; img.title='点击查看并保存';
-      img.onclick=function(){ openShot(this.src); };
-      strip.prepend(img);
-      if(hint) hint.textContent='已拍下';
-    }
-    if(frame2&&frame2.complete&&frame2.naturalWidth){ shoot(frame2); return; }
-    frame2=new Image();
-    frame2.onload=function(){ shoot(frame2); };
-    frame2.onerror=function(){ shoot(null); };
-    frame2.src='assets/img/frame_sy.png';
-  };
-
-
-  /* 第三个相机：拓麻歌子 */
-  var stream3=null;
-  window.start3=function(){
-    var v=document.getElementById('snapvideo3'), hint=document.getElementById('snaphint3');
-    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='不支持相机'; return; }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
-      .then(function(st){ stream3=st; v.srcObject=st; if(hint) hint.textContent=''; })
-      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了权限':'打不开相机（需要 https）'; });
-  };
-  window.stop3=function(){
-    if(stream3){ stream3.getTracks().forEach(function(t){t.stop();}); stream3=null; }
-    var v=document.getElementById('snapvideo3'); if(v) v.srcObject=null;
-    var hint=document.getElementById('snaphint3'); if(hint) hint.textContent='相机已关闭';
-  };
-  var frame3=null;
-  window.take3=function(){
-    var v=document.getElementById('snapvideo3'), c=document.getElementById('snapcanvas3');
-    var strip=document.getElementById('snapstrip3'), hint=document.getElementById('snaphint3');
-    if(!stream3||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
-    function shoot(fr){
-      var W=2601,H=1028; c.width=W; c.height=H;
-      var ctx=c.getContext('2d');
-      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.4102, ry=H*0.3687, rw=W*0.1476, rh=H*0.3774;
-      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
-      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
-      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
-      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
-      ctx.restore();
-      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
-      var dataUrl=c.toDataURL('image/jpeg',0.92);
-      var se=document.getElementById('stripempty3'); if(se) se.style.display='none';
-      var tc=document.getElementById('trayCount3'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
-      var img=document.createElement('img'); img.src=dataUrl; img.title='点击查看并保存';
-      img.onclick=function(){ openShot(this.src); };
-      strip.prepend(img);
-      if(hint) hint.textContent='已拍下';
-    }
-    if(frame3&&frame3.complete&&frame3.naturalWidth){ shoot(frame3); return; }
-    frame3=new Image(); frame3.onload=function(){ shoot(frame3); }; frame3.onerror=function(){ shoot(null); };
-    frame3.src='assets/img/frame_tama_all.png';
-  };
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
