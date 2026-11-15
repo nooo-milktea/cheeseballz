@@ -3068,7 +3068,7 @@ section.cam-page.fs-mode .cam4-stage{
 
 /* 弹窗摄影区：只在相框窗口内，不溢出 */
 .fsmodal-stage.k1 video{
-  inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
 }
 .fsmodal-stage.k2 video{
   inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
@@ -3087,7 +3087,7 @@ section.cam-page.fs-mode .cam4-stage{
 
 /* 三个相框：摄影区严格等于镂空窗口（实测像素） */
 .page[data-src="w-camera"] .cam-stage video{
-  inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
 }
 .cam2-page .cam2-stage video{
   inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
@@ -3097,7 +3097,7 @@ section.cam-page.fs-mode .cam4-stage{
 }
 /* 弹窗里的三个相框 */
 .fsmodal-stage.k1 video{
-  inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
 }
 .fsmodal-stage.k2 video{
   inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
@@ -3116,7 +3116,9 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal-stage video{position:absolute!important}
 /* 用镂空遮罩：画面只在真实窗口形状内出现（不可能溢出） */
 .page[data-src="w-camera"] .cam-stage video,
-.fsmodal-stage.k1 video{}
+.fsmodal-stage.k1 video{
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
+}
 .cam2-page .cam2-stage video,
 .fsmodal-stage.k2 video{}
 .cam4-page .cam4-stage video,
@@ -3138,10 +3140,14 @@ section.cam-page.fs-mode .cam4-stage{
 .page[data-src="w-camera"] .cam-stage,
 .cam2-page .cam2-stage,
 .cam4-page .cam4-stage{position:relative!important;overflow:hidden!important}
-.page[data-src="w-camera"] .cam-stage video{inset:auto!important;left:13.8%!important;top:9.3%!important;width:71.5%!important;height:65.4%!important}
+.page[data-src="w-camera"] .cam-stage video{
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
+}
 .cam2-page .cam2-stage video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
 .cam4-page .cam4-stage video{inset:auto!important;left:34.9%!important;top:36.4%!important;width:34.3%!important;height:17.2%!important}
-.fsmodal-stage.k1 video{inset:auto!important;left:13.8%!important;top:9.3%!important;width:71.5%!important;height:65.4%!important}
+.fsmodal-stage.k1 video{
+  inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
+}
 .fsmodal-stage.k2 video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
 .fsmodal-stage.k4 video{inset:auto!important;left:34.9%!important;top:36.4%!important;width:34.3%!important;height:17.2%!important}
 .fsmodal-stage video{-webkit-mask-image:none!important;mask-image:none!important}
@@ -3779,7 +3785,7 @@ section.cam-page.fs-mode .cam4-stage{
       var ctx=c.getContext('2d');
       ctx.clearRect(0,0,W,H);
       // 视频按 cover 裁切填满
-      var rx=W*0.145, ry=H*0.0929, rw=W*0.7085, rh=H*0.6543;
+      var rx=W*0.152, ry=H*0.093, rw=W*0.701, rh=H*0.654;
       var vw=v.videoWidth, vh=v.videoHeight;
       var scale=Math.max(rw/vw, rh/vh);
       var dw=vw*scale, dh=vh*scale;
@@ -4115,7 +4121,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   /* 全屏弹窗拍摄 */
   var fsKey=null, fsStream=null, fsFacing='user';
   var FS_CFG={
-    cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.145,.0929,.7085,.6543]},
+    cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.152,.093,.701,.654]},
     cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.0692,.122,.8617,.647]},
     cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.335,.348,.412,.202]}
   };
