@@ -2529,6 +2529,19 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .cv-vine.bottom{transform:scaleY(-1)}
 .cv-center{gap:2px!important}
+
+/* 封面：藤蔓紧随文字（上方一条、下方一条），不再跑到页顶 */
+.book .cover{place-items:center!important}
+.cv-center{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  gap:4px!important;padding:18px 10px!important;max-height:100%!important;box-sizing:border-box!important;
+}
+.cv-vine{
+  display:block!important;width:min(260px,80%)!important;height:34px!important;flex:0 0 auto!important;
+  margin:0 auto!important;position:static!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;
+}
+.cv-vine.bottom{transform:scaleY(-1)!important}
+.cv-jp,.cv-title,.cv-hint{margin:0!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
