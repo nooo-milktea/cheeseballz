@@ -4344,7 +4344,8 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var st=sec.querySelector('.cam-stage');
     if(pc){ pc.style.setProperty('display','flex','important'); pc.style.setProperty('flex-direction','column','important');
             pc.style.setProperty('align-items','center','important'); }
-    if(st){ st.style.setProperty('margin-left','auto','important'); st.style.setProperty('margin-right','auto','important');
+    if(st){ st.style.setProperty('position','relative','important');
+            st.style.setProperty('margin-left','auto','important'); st.style.setProperty('margin-right','auto','important');
             st.style.setProperty('align-self','center','important'); st.style.setProperty('left','auto','important');
             st.style.setProperty('right','auto','important'); st.style.setProperty('transform','none','important'); }
   }
