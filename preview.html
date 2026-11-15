@@ -3151,6 +3151,13 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal-stage.k2 video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
 .fsmodal-stage.k4 video{inset:auto!important;left:34.9%!important;top:36.4%!important;width:34.3%!important;height:17.2%!important}
 .fsmodal-stage video{-webkit-mask-image:none!important;mask-image:none!important}
+
+/* 弹窗：舞台比例 = 相框原比例，图片铺满，画面按窗口裁切 */
+.fsmodal-stage.k1{aspect-ratio:710/1076!important}
+.fsmodal-stage.k2{aspect-ratio:1200/952!important}
+.fsmodal-stage.k4{aspect-ratio:1773/2364!important}
+.fsmodal-stage img{object-fit:fill!important}
+.fsmodal-stage video{object-fit:cover!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
