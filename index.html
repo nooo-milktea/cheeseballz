@@ -2649,6 +2649,11 @@ body.portrait-ok .rotate-mask{display:none!important}
 .page[data-src="w-lib"] .fic-list,
 .page[data-src="w-lib"] .fic,
 .page[data-src="w-lib"] .gate-box{position:relative;z-index:12}
+
+/* 书签丝带要压在目录标题之上，不被遮挡 */
+.tocpage .ribbon{z-index:22!important;display:block!important}
+.tocpage{overflow:visible!important}
+.toc-head{width:auto!important;max-width:86%!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
