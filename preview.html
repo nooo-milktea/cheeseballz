@@ -3343,6 +3343,26 @@ body::before{
   .cam2-page .cam2-stage::after{background-size:100% 100%!important}
   .cam4-page .cam4-frame{object-fit:fill!important}
 }
+
+/* 手机端：相框按屏幕高度预留按钮与托盘，保证按钮可见 */
+@media (max-width:760px){
+  .cam4-page .pcontent{height:auto!important;overflow:visible!important;padding:0 0 6px!important}
+  .cam4-page .cam4-stage{
+    height:auto!important;
+    width:min(88vw, calc((100vh - 230px) * 0.75))!important;
+    max-width:none!important;
+  }
+  .cam2-page .pcontent{height:auto!important;overflow:visible!important}
+  .cam2-page .cam2-stage{
+    height:auto!important;
+    width:min(92vw, calc((100vh - 230px) * 1.2595))!important;
+    max-width:none!important;
+  }
+  .cam2-page .cam-bar,.cam4-page .cam-bar{
+    position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+    justify-content:center!important;gap:8px!important;width:100%!important;margin:6px 0 0!important;
+  }
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
