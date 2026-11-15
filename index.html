@@ -3295,6 +3295,62 @@ body::before{
 .fsmodal-stage.k2{height:min(60vh, 520px)!important;aspect-ratio:1200/952!important}
 .fsmodal-stage.k4{height:min(80vh, 740px)!important;aspect-ratio:1773/2364!important}
 .fsmodal-stage img{width:100%!important;height:100%!important;object-fit:fill!important}
+
+/* 手机：相机页按钮不再溢出到屏幕右侧 */
+.cam-page .pcontent{
+  position:relative!important;display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:flex-start!important;
+  gap:8px!important;height:calc(100% - 30px)!important;
+  padding:0 0 96px!important;overflow:hidden!important;
+}
+.cam-page .cam-bar{
+  position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+  display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  align-items:center!important;justify-content:center!important;
+  gap:8px!important;width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
+}
+.cam-page .cam-bar .cam-mini{padding:6px 12px!important;font-size:11px!important}
+.cam-page .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important;border-width:2px!important}
+.cam-page .shoot-tray{
+  position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:90px!important;z-index:7!important;
+}
+@media (max-width:480px){
+  .cam-page .cam-stage{height:min(34vh,290px)!important}
+  .cam-page .cam-bar .cam-mini{padding:5px 10px!important;font-size:10.5px!important}
+  .cam-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
+}
+
+/* 书缝压在相框下层（相框、按钮、托盘在上） */
+.page[data-src="w-camera"],
+.page[data-src="w-camera2"],
+.page[data-src="w-camera4"]{z-index:auto!important}
+.cam-page .cam-stage,
+.cam-page .cam2-stage,
+.cam-page .cam4-stage{position:relative!important;z-index:8!important}
+
+/* 弹窗相框：宽度驱动 + aspect-ratio，手机上也不会被压扁 */
+.fsmodal-stage{
+  flex:0 0 auto!important;align-self:center!important;margin:0 auto!important;
+  height:auto!important;max-height:none!important;max-width:100%!important;
+}
+.fsmodal-stage.k1{
+  width:min(92%, calc((100vh - 210px) * 0.6599))!important;aspect-ratio:710/1076!important;
+}
+.fsmodal-stage.k2{
+  width:min(94%, calc((100vh - 210px) * 1.2595))!important;aspect-ratio:1200/952!important;
+}
+.fsmodal-stage.k4{
+  width:min(92%, calc((100vh - 200px) * 0.75))!important;aspect-ratio:1773/2364!important;
+}
+
+/* 第三个相框强制居中 */
+.cam4-page .pcontent{
+  display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:flex-start!important;
+}
+.cam4-page .cam4-stage{
+  margin:0 auto!important;align-self:center!important;left:auto!important;right:auto!important;transform:none!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
