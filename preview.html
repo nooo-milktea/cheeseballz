@@ -3136,6 +3136,10 @@ section.cam-page.fs-mode .cam4-stage{
 /* 弹窗里：相框铺满舞台（与舞台同比例），画面只在镂空内 */
 .fsmodal-stage img{object-fit:fill!important}
 .fsmodal-stage video{object-fit:cover!important}
+
+/* 相框保持原尺寸，画面去适应窗口 */
+.fsmodal-stage img{object-fit:contain!important}
+.fsmodal-stage{aspect-ratio:auto}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4124,7 +4128,9 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var boxW=pn.clientWidth-28, boxH=pn.clientHeight-96;
     var w=boxW, hh=w/cfg.ratio;
     if(hh>boxH){ hh=boxH; w=hh*cfg.ratio; }
-    stg.style.width=Math.round(w)+'px'; stg.style.height=Math.round(hh)+'px';
+    stg.style.width=Math.round(w)+'px';
+    stg.style.height='auto';
+    stg.style.aspectRatio=String(cfg.ratio);
     stg.classList.remove('k1','k2','k4');
     stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':'k4'));
     stg.classList.toggle('back', fsFacing==='environment');
