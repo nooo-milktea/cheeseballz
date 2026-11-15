@@ -21,13 +21,7 @@ body{
     linear-gradient(180deg,#fbfdff 0%,#fdf7fb 55%,#f3faff 100%);
   display:flex;flex-direction:column;align-items:center;padding:64px 16px 24px;gap:12px;
 }
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23bcd8f2' stroke-width='1' opacity='.35'><path d='M32 2v60M2 32h60M14 14l36 36M50 14L14 50'/><circle cx='32' cy='32' r='14'/></g></svg>");
-  background-size:120px 120px;
-  -webkit-mask-image:radial-gradient(circle at 50% 40%,transparent 30%,#000 85%);
-  mask-image:radial-gradient(circle at 50% 40%,transparent 30%,#000 85%);
-}
+body::before{}
 img{display:block;max-width:100%}
 button{font:inherit;cursor:pointer}
 
@@ -248,12 +242,7 @@ button{font:inherit;cursor:pointer}
 @media (prefers-reduced-motion:reduce){.rain{display:none}}
 
 /* 底部小溪（宽缓波浪） */
-.creek{
-  position:fixed;left:0;right:0;bottom:0;height:106px;z-index:4;pointer-events:none;overflow:hidden;
-  background:linear-gradient(180deg,rgba(214,238,255,0) 0%,rgba(183,225,255,.7) 30%,rgba(146,205,247,.95) 100%);
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%);
-  mask-image:linear-gradient(180deg,transparent 0,#000 26%);
-}
+.creek{}
 .creek .w{
   position:absolute;left:0;right:0;top:12px;height:46px;
   background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 60' preserveAspectRatio='none'><path d='M0 22 C40 12 74 12 112 22 C150 32 186 32 224 22 C262 12 298 12 336 22 C366 30 394 30 420 24 L420 60 L0 60 Z' fill='%23bfe3ff'/></svg>") repeat-x;
@@ -337,18 +326,7 @@ button{font:inherit;cursor:pointer}
   position:absolute;inset:-40%;border-radius:50%;
   background:radial-gradient(circle,rgba(255,244,205,.55) 0%,rgba(255,240,200,.25) 40%,transparent 70%);
 }
-.sun .rays{
-  position:absolute;inset:0;border-radius:50%;
-  background:conic-gradient(
-    rgba(255,236,178,.55) 0 2deg, transparent 2deg 18deg,
-    rgba(255,236,178,.4) 18deg 20deg, transparent 20deg 36deg,
-    rgba(255,236,178,.5) 36deg 38deg, transparent 38deg 54deg,
-    rgba(255,236,178,.35) 54deg 56deg, transparent 56deg 72deg);
-  -webkit-mask-image:radial-gradient(circle,transparent 30%,#000 42%,#000 60%,transparent 80%);
-  mask-image:radial-gradient(circle,transparent 30%,#000 42%,#000 60%,transparent 80%);
-  animation:sunSpin 60s linear infinite;
-  opacity:.85;
-}
+.sun .rays{}
 @keyframes sunSpin{to{transform:rotate(360deg)}}
 @keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @media(max-width:700px){.sun{width:104px;height:104px}.sun .core{width:44px;height:44px;margin:-22px 0 0 -22px}}
@@ -367,17 +345,7 @@ button{font:inherit;cursor:pointer}
   position:absolute;inset:-55%;border-radius:50%;
   background:radial-gradient(circle,rgba(255,244,205,.6) 0%,rgba(255,240,200,.28) 42%,transparent 72%);
 }
-.sun .rays{
-  position:absolute;inset:-12%;border-radius:50%;
-  background:conic-gradient(
-    rgba(255,236,178,.55) 0 2deg, transparent 2deg 18deg,
-    rgba(255,236,178,.4) 18deg 20deg, transparent 20deg 36deg,
-    rgba(255,236,178,.5) 36deg 38deg, transparent 38deg 54deg,
-    rgba(255,236,178,.35) 54deg 56deg, transparent 56deg 72deg);
-  -webkit-mask-image:radial-gradient(circle,transparent 26%,#000 40%,#000 62%,transparent 82%);
-  mask-image:radial-gradient(circle,transparent 26%,#000 40%,#000 62%,transparent 82%);
-  animation:sunSpin 70s linear infinite;opacity:.8;
-}
+.sun .rays{}
 @keyframes sunSpin{to{transform:rotate(360deg)}}
 @keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 @media(max-width:700px){.sun{left:-64px;top:-64px;width:140px;height:140px}.sun .core{width:74px;height:74px;margin:-37px 0 0 -37px}}
@@ -522,13 +490,7 @@ body, .win, .win .bar, .win .body, button, input, .app .lb, .fic, .fic b, .tab,
   background:radial-gradient(circle at 50% 50%, rgba(255,248,224,.30) 0%, rgba(255,248,230,.14) 34%, rgba(255,255,245,.04) 58%, transparent 76%);
   filter:blur(46px);
 }
-.sun .rays{
-  opacity:.42!important;
-  filter:blur(3px);
-  -webkit-mask-image:radial-gradient(circle,transparent 24%,#000 44%,rgba(0,0,0,.55) 64%,transparent 84%)!important;
-  mask-image:radial-gradient(circle,transparent 24%,#000 44%,rgba(0,0,0,.55) 64%,transparent 84%)!important;
-  animation:sunSpin 110s linear infinite!important;
-}
+.sun .rays{}
 @keyframes sunHalo{0%,100%{opacity:.9;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
 @media(max-width:700px){.sun{width:180px!important;height:180px!important}}
 
@@ -1741,17 +1703,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   box-shadow:0 12px 26px -20px rgba(150,90,115,.9), inset 0 0 0 1px #fff;
 }
 /* 樱花包边 */
-.cam-stage::before{
-  content:"";position:absolute;inset:4px;border-radius:13px;pointer-events:none;
-  background-image:
-    radial-gradient(circle at 6px 6px, #ffc6dc 3px, transparent 3.6px),
-    radial-gradient(circle at 18px 18px, #ffd9e7 2.6px, transparent 3.2px);
-  background-size:24px 24px;
-  opacity:.75;
-  -webkit-mask-image:linear-gradient(#000,#000);
-  mask-image:linear-gradient(#000,#000);
-  border:2px dotted #ffc6dc;
-}
+.cam-stage::before{}
 .sakura-edge{position:absolute;inset:0;pointer-events:none}
 .sakura-edge i{
   position:absolute;width:26px;height:26px;
@@ -3164,23 +3116,11 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal-stage video{position:absolute!important}
 /* 用镂空遮罩：画面只在真实窗口形状内出现（不可能溢出） */
 .page[data-src="w-camera"] .cam-stage video,
-.fsmodal-stage.k1 video{
-  -webkit-mask-image:url(assets/img/hole_cam1.png)!important;mask-image:url(assets/img/hole_cam1.png)!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
-}
+.fsmodal-stage.k1 video{}
 .cam2-page .cam2-stage video,
-.fsmodal-stage.k2 video{
-  -webkit-mask-image:url(assets/img/hole_cam2.png)!important;mask-image:url(assets/img/hole_cam2.png)!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
-}
+.fsmodal-stage.k2 video{}
 .cam4-page .cam4-stage video,
-.fsmodal-stage.k4 video{
-  -webkit-mask-image:url(assets/img/hole_cam4.png)!important;mask-image:url(assets/img/hole_cam4.png)!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
-}
+.fsmodal-stage.k4 video{}
 
 /* 关键：视频铺满整个相框，靠掩膜只显示镂空形状 */
 .page[data-src="w-camera"] .cam-stage video,
@@ -3193,6 +3133,18 @@ section.cam-page.fs-mode .cam4-stage{
   inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
   object-fit:cover!important;border-radius:0!important;
 }
+
+/* 恢复：不用掩膜，视频回到镂空矩形内，超出部分被相框容器裁掉 */
+.page[data-src="w-camera"] .cam-stage,
+.cam2-page .cam2-stage,
+.cam4-page .cam4-stage{position:relative!important;overflow:hidden!important}
+.page[data-src="w-camera"] .cam-stage video{inset:auto!important;left:13.8%!important;top:9.3%!important;width:71.5%!important;height:65.4%!important}
+.cam2-page .cam2-stage video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
+.cam4-page .cam4-stage video{inset:auto!important;left:34.9%!important;top:36.4%!important;width:34.3%!important;height:17.2%!important}
+.fsmodal-stage.k1 video{inset:auto!important;left:13.8%!important;top:9.3%!important;width:71.5%!important;height:65.4%!important}
+.fsmodal-stage.k2 video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
+.fsmodal-stage.k4 video{inset:auto!important;left:34.9%!important;top:36.4%!important;width:34.3%!important;height:17.2%!important}
+.fsmodal-stage video{-webkit-mask-image:none!important;mask-image:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
