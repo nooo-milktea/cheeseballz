@@ -2865,7 +2865,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 /* 第四相机：摄影区按窗口实际范围再放大 */
 .cam4-page .cam4-stage video{
-  left:33.8%!important;top:35.2%!important;width:40.4%!important;height:19%!important;
+  left:33.8%!important;top:35.2%!important;width:40.4%!important;height:20.2%!important;
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
@@ -3776,7 +3776,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       var W=1600,H=2134; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.338, ry=H*0.352, rw=W*0.404, rh=H*0.19;
+      var rx=W*0.338, ry=H*0.352, rw=W*0.404, rh=H*0.202;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       if(facing4==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
