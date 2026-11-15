@@ -4335,6 +4335,23 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     img.src=cfg.frame;
   };
 
+
+  /* 只修正第一个相机页的居中（不改尺寸） */
+  function centerCam1(){
+    var sec=document.querySelector('section[data-src="w-camera"]');
+    if(!sec) return;
+    var pc=sec.querySelector('.pcontent');
+    var st=sec.querySelector('.cam-stage');
+    if(pc){ pc.style.setProperty('display','flex','important'); pc.style.setProperty('flex-direction','column','important');
+            pc.style.setProperty('align-items','center','important'); }
+    if(st){ st.style.setProperty('margin-left','auto','important'); st.style.setProperty('margin-right','auto','important');
+            st.style.setProperty('align-self','center','important'); st.style.setProperty('left','auto','important');
+            st.style.setProperty('right','auto','important'); st.style.setProperty('transform','none','important'); }
+  }
+  document.addEventListener('DOMContentLoaded', centerCam1);
+  window.addEventListener('load', centerCam1);
+  window.addEventListener('resize', centerCam1);
+
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
   window.enterLib=function(){ if(gate) gate.style.display='none'; if(main) main.style.display='block'; };
