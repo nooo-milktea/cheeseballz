@@ -2493,6 +2493,13 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .cam3-page .cam3-frame{object-fit:fill}
 .cam3-page .snap-hint{left:30%!important;right:30%!important;top:80%!important;font-size:9px!important}
+
+/* 第三相机：整幅横图按宽度铺开，确保可见 */
+.cam3-page .cam3-stage{
+  height:auto!important;width:100%!important;aspect-ratio:2601/1028!important;
+  max-width:100%!important;margin:auto!important;flex:0 0 auto!important;
+}
+.cam3-page .cam-bar,.cam3-page .shoot-tray{flex:0 0 auto!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2812,7 +2819,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page cam3-page" data-src="w-camera3">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v91</span><span class="pno"></span></header>
+    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v92</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam3-stage">
         <video id="snapvideo3" autoplay playsinline muted></video>
