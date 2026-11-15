@@ -3311,6 +3311,18 @@ body::before{
 .page[data-src="w-camera"] .pcontent{
   display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
 }
+
+/* 用 ID 选择器（优先级高于所有类选择器）强制第一个相机页的尺寸与居中 */
+#cam1pc{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;height:auto!important;overflow:visible!important;
+}
+#cam1stage{
+  width:min(92vw, calc(min(52vh, 480px) * 0.6599))!important;
+  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
+  position:static!important;margin:0 auto!important;display:block!important;
+  left:auto!important;right:auto!important;transform:none!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3614,8 +3626,8 @@ body::before{
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
     <header class="ph"><b>相机 · 拍立得</b><span class="verstamp">v84</span><span class="pno"></span></header>
-    <div class="pcontent">
-      <div class="cam-stage">
+    <div class="pcontent" id="cam1pc">
+      <div class="cam-stage" id="cam1stage">
         <video id="snapvideo" autoplay playsinline muted></video>
         <canvas id="snapcanvas" style="display:none"></canvas>
                 <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
