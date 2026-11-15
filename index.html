@@ -2485,6 +2485,14 @@ body.portrait-ok .rotate-mask{display:none!important}
   position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill;
 }
 .cam3-page .snap-hint{left:20%!important;right:20%!important;top:80%!important;bottom:auto!important;z-index:3;font-size:9.5px}
+
+/* 第三相机：用整张原图（三台拓麻歌子），摄影区在中间那台的屏幕 */
+.cam3-page .cam3-stage{aspect-ratio:2601/1028!important;background:#fffdf6!important}
+.cam3-page .cam3-stage video{
+  left:41.02%!important;top:36.87%!important;width:14.76%!important;height:37.74%!important;
+}
+.cam3-page .cam3-frame{object-fit:fill}
+.cam3-page .snap-hint{left:30%!important;right:30%!important;top:80%!important;font-size:9px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2804,12 +2812,12 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page cam3-page" data-src="w-camera3">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v90</span><span class="pno"></span></header>
+    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v91</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam3-stage">
         <video id="snapvideo3" autoplay playsinline muted></video>
         <canvas id="snapcanvas3" style="display:none"></canvas>
-        <img class="cam3-frame" src="assets/img/frame_tama.png" alt="">
+        <img class="cam3-frame" src="assets/img/frame_tama_all.png" alt="">
         <div class="snap-hint" id="snaphint3">点「开启」用你的相机</div>
       </div>
       <div class="cam-bar">
@@ -3341,10 +3349,10 @@ body.portrait-ok .rotate-mask{display:none!important}
     var strip=document.getElementById('snapstrip3'), hint=document.getElementById('snaphint3');
     if(!stream3||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
     function shoot(fr){
-      var W=862,H=1027; c.width=W; c.height=H;
+      var W=2601,H=1028; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.239, ry=H*0.371, rw=W*0.456, rh=H*0.372;
+      var rx=W*0.4102, ry=H*0.3687, rw=W*0.1476, rh=H*0.3774;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       ctx.translate(rx+rw,ry); ctx.scale(-1,1);
@@ -3361,7 +3369,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     }
     if(frame3&&frame3.complete&&frame3.naturalWidth){ shoot(frame3); return; }
     frame3=new Image(); frame3.onload=function(){ shoot(frame3); }; frame3.onerror=function(){ shoot(null); };
-    frame3.src='assets/img/frame_tama.png';
+    frame3.src='assets/img/frame_tama_all.png';
   };
 
   /* 文库 */
