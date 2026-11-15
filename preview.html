@@ -3153,6 +3153,34 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal-stage.k4 video{
   inset:auto!important;left:33.5%!important;top:34.8%!important;width:41.2%!important;height:20.2%!important;
 }
+
+/* 定位容器必须是相框本身，否则百分比会算到页面上导致溢出 */
+.page[data-src="w-camera"] .cam-stage,
+.cam2-page .cam2-stage,
+.cam4-page .cam4-stage{position:relative!important;overflow:hidden!important}
+.page[data-src="w-camera"] .cam-stage video,
+.cam2-page .cam2-stage video,
+.cam4-page .cam4-stage video,
+.fsmodal-stage video{position:absolute!important}
+/* 用镂空遮罩：画面只在真实窗口形状内出现（不可能溢出） */
+.page[data-src="w-camera"] .cam-stage video,
+.fsmodal-stage.k1 video{
+  -webkit-mask-image:url(assets/img/hole_cam1.png)!important;mask-image:url(assets/img/hole_cam1.png)!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+}
+.cam2-page .cam2-stage video,
+.fsmodal-stage.k2 video{
+  -webkit-mask-image:url(assets/img/hole_cam2.png)!important;mask-image:url(assets/img/hole_cam2.png)!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+}
+.cam4-page .cam4-stage video,
+.fsmodal-stage.k4 video{
+  -webkit-mask-image:url(assets/img/hole_cam4.png)!important;mask-image:url(assets/img/hole_cam4.png)!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
