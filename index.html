@@ -2767,6 +2767,12 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 用原图贴上去，不做任何处理 */
 .tp{display:flex!important;align-items:center!important;justify-content:center!important}
 .tp-img{height:min(58vh,300px)!important;width:auto!important;display:block!important}
+
+/* 封面标题：用手写的原图，棕色，不改字形 */
+.cv-title-img{
+  display:block!important;width:min(76%,300px)!important;height:auto!important;
+  margin:0 auto!important;pointer-events:none;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2919,7 +2925,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <ellipse cx='166.0' cy='19.5' rx='6.2' ry='4.1' transform='rotate(0 166.0 19.5)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='173.1' cy='24.7' rx='6.2' ry='4.1' transform='rotate(72 173.1 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='170.4' cy='33.1' rx='6.2' ry='4.1' transform='rotate(144 170.4 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='161.6' cy='33.1' rx='6.2' ry='4.1' transform='rotate(216 161.6 33.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='158.9' cy='24.7' rx='6.2' ry='4.1' transform='rotate(288 158.9 24.7)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='166' cy='27' r='2.5' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
       <ellipse cx='240.0' cy='18.0' rx='5.0' ry='3.3' transform='rotate(0 240.0 18.0)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='245.7' cy='22.1' rx='5.0' ry='3.3' transform='rotate(72 245.7 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='243.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(144 243.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='236.5' cy='28.9' rx='5.0' ry='3.3' transform='rotate(216 236.5 28.9)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><ellipse cx='234.3' cy='22.1' rx='5.0' ry='3.3' transform='rotate(288 234.3 22.1)' fill='#f9c6da' stroke='#e58cb0' stroke-width='1'/><circle cx='240' cy='24' r='2.0' fill='#fff6fa' stroke='#e58cb0' stroke-width='0.8'/>
     </svg>
-      <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
+      <img class="cv-title-img" src="assets/img/cover_title.png" alt="cheeseballz">
       <div class="cv-sub">さくや と ゆうし</div>
       <div class="cv-hint">点一下 · 打开</div>
       <svg class="cv-vine bottom" viewBox="0 0 320 58" preserveAspectRatio="xMidYMid meet">
