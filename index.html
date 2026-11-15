@@ -4433,6 +4433,25 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     img.src=cfg.frame;
   };
 
+
+  /* 第三个相框：用 JS 写入带 important 的内联样式，彻底压住所有 CSS 规则 */
+  function fixCam4(){
+    var st=document.querySelector('section[data-src="w-camera4"] .cam4-stage');
+    if(!st) return;
+    var vh=window.innerHeight;
+    var ratio=1773/2364;
+    var maxH=Math.min(vh*0.56, 520);
+    var w=Math.min(window.innerWidth*0.88, maxH*ratio);
+    st.style.setProperty('height','auto','important');
+    st.style.setProperty('max-height','none','important');
+    st.style.setProperty('width',Math.round(w)+'px','important');
+    st.style.setProperty('aspect-ratio','1773/2364','important');
+    st.style.setProperty('display','inline-block','important');
+    st.style.setProperty('margin','0 auto','important');
+  }
+  window.addEventListener('resize', fixCam4);
+  document.addEventListener('visibilitychange', fixCam4);
+
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
   window.enterLib=function(){ if(gate) gate.style.display='none'; if(main) main.style.display='block'; };
