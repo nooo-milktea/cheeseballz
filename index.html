@@ -2890,6 +2890,16 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .cam-page .pcontent{background:transparent!important}
 .cam-page .shoot-tray{background:rgba(255,253,248,.55)!important}
+
+/* 第三个相框：取消遮罩（加载失败会整个不显示），改用超大区域在相框下方 */
+.cam4-page .cam4-stage video{
+  inset:auto!important;
+  left:30%!important;top:32%!important;width:49%!important;height:26%!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  opacity:1!important;z-index:1!important;
+  object-fit:cover!important;
+}
+.cam4-page .cam4-stage.live video{opacity:1!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
