@@ -3386,6 +3386,19 @@ body::before{
 @media (max-width:760px){
   .cam4-page .cam4-stage{width:min(90vw, calc(min(52vh, 460px) * 0.75))!important}
 }
+
+/* 第三个相框：用更高优先级彻底取消旧的固定高度，保证原比例 */
+.page[data-src="w-camera4"] .cam4-stage{
+  height:auto!important;max-height:none!important;
+  width:min(88vw, calc(min(56vh, 520px) * 0.75))!important;
+  aspect-ratio:1773/2364!important;
+  display:inline-block!important;margin:0 auto!important;
+}
+@media (max-width:760px){
+  .page[data-src="w-camera4"] .cam4-stage{
+    width:min(90vw, calc(min(52vh, 460px) * 0.75))!important;height:auto!important;
+  }
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
