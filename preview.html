@@ -3127,6 +3127,11 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .fsmodal-bar{display:flex;gap:10px;justify-content:center;flex:0 0 auto}
 .fsmodal.flash .fsmodal-inner{box-shadow:0 0 0 3px rgba(255,255,255,.9),0 24px 60px -30px rgba(90,120,140,.55)}
+
+/* 弹窗摄影区：只在相框窗口内，不溢出 */
+.fsmodal-stage.k1 video{inset:0!important;width:100%!important;height:100%!important}
+.fsmodal-stage.k2 video{left:8%!important;top:8%!important;width:84%!important;height:78%!important;inset:auto!important}
+.fsmodal-stage.k4 video{left:31.2%!important;top:33.4%!important;width:44.2%!important;height:23.4%!important;inset:auto!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4096,9 +4101,9 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   /* 全屏弹窗拍摄 */
   var fsKey=null, fsStream=null, fsFacing='user';
   var FS_CFG={
-    cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, mode:'full'},
-    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, mode:'rect', rect:[.08,.08,.84,.78]},
-    cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, mode:'full'}
+    cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[0,0,1,1]},
+    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.08,.08,.84,.78]},
+    cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.312,.334,.442,.234]}
   };
   window.openFsM=function(key){
     var cfg=FS_CFG[key]; if(!cfg) return;
@@ -4116,6 +4121,8 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var w=boxW, hh=w/cfg.ratio;
     if(hh>boxH){ hh=boxH; w=hh*cfg.ratio; }
     stg.style.width=Math.round(w)+'px'; stg.style.height=Math.round(hh)+'px';
+    stg.classList.remove('k1','k2','k4');
+    stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':'k4'));
     stg.classList.toggle('back', fsFacing==='environment');
     document.getElementById('fsmodal').classList.add('on');
   };
@@ -4137,7 +4144,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var ctx=c.getContext('2d');
     ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
     var rw=W, rh=H, rx=0, ry=0;
-    if(cfg.mode==='rect'){ rx=W*cfg.rect[0]; ry=H*cfg.rect[1]; rw=W*cfg.rect[2]; rh=H*cfg.rect[3]; }
+    rx=W*cfg.rect[0]; ry=H*cfg.rect[1]; rw=W*cfg.rect[2]; rh=H*cfg.rect[3];
     var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
     ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
     if(fsFacing==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
