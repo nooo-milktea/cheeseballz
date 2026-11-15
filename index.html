@@ -2500,6 +2500,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   max-width:100%!important;margin:auto!important;flex:0 0 auto!important;
 }
 .cam3-page .cam-bar,.cam3-page .shoot-tray{flex:0 0 auto!important}
+
+/* 封面：手写花体标题 + 樱花藤蔓 */
+.cv-title{
+  font-family:"Pacifico","Lobster Two","Zen Maru Gothic",cursive!important;
+  font-weight:400!important;letter-spacing:.01em!important;
+  color:#f4a7c4!important;
+  -webkit-text-stroke:1.2px #fff!important;
+  text-shadow:0 3px 0 rgba(255,255,255,.9),0 6px 14px rgba(230,150,180,.35)!important;
+}
+.cv-title .q{-webkit-text-stroke:1.2px #f4a7c4!important;color:transparent!important}
+.sakura-vine{position:absolute;left:8%;right:8%;height:auto;opacity:.95;pointer-events:none}
+.sakura-vine.top{top:14px}
+.sakura-vine.bottom{bottom:16px;transform:scaleY(-1)}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2631,10 +2644,34 @@ body.portrait-ok .rotate-mask{display:none!important}
       <circle cx="22" cy="35" r="4" fill="#8a6436"/>
       <path d="M22 38v6" stroke="#8a6436" stroke-width="3" stroke-linecap="round"/>
     </svg>
+    <svg class="sakura-vine top" viewBox="0 0 400 60" preserveAspectRatio="none">
+        <path d="M10 42 C60 10 120 52 190 30 C250 12 320 48 390 26" fill="none" stroke="#cfe0b8" stroke-width="3" stroke-linecap="round"/>
+        <g fill="#f9c8d9" stroke="#e98cb0" stroke-width="1.4">
+          <path d="M96 34c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
+          <path d="M196 26c-5-10-1-17 5-18 5-1 9 4 7 9-2 6-7 8-12 9z"/>
+          <path d="M304 32c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
+        </g>
+        <g fill="#d9ecc4">
+          <ellipse cx="70" cy="22" rx="10" ry="5" transform="rotate(-18 70 22)"/>
+          <ellipse cx="250" cy="24" rx="10" ry="5" transform="rotate(12 250 24)"/>
+        </g>
+      </svg>
     <div class="cv-center">
       <div class="cv-title"><span class="q">「</span>CHEESEBALLZ<span class="q">」</span></div>
       <div class="cv-sub">さくや と ゆうし</div>
       <div class="cv-hint">点一下 · 打开</div>
+      <svg class="sakura-vine bottom" viewBox="0 0 400 60" preserveAspectRatio="none">
+        <path d="M10 42 C60 10 120 52 190 30 C250 12 320 48 390 26" fill="none" stroke="#cfe0b8" stroke-width="3" stroke-linecap="round"/>
+        <g fill="#f9c8d9" stroke="#e98cb0" stroke-width="1.4">
+          <path d="M96 34c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
+          <path d="M196 26c-5-10-1-17 5-18 5-1 9 4 7 9-2 6-7 8-12 9z"/>
+          <path d="M304 32c-6-9-3-16 3-18 5-2 9 3 8 8-1 6-6 9-11 10z"/>
+        </g>
+        <g fill="#d9ecc4">
+          <ellipse cx="70" cy="22" rx="10" ry="5" transform="rotate(-18 70 22)"/>
+          <ellipse cx="250" cy="24" rx="10" ry="5" transform="rotate(12 250 24)"/>
+        </g>
+      </svg>
     </div>
   </div>
   <div class="spread">
