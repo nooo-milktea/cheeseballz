@@ -2612,6 +2612,15 @@ body.portrait-ok .rotate-mask{display:none!important}
   -webkit-text-stroke:1px #e283a9!important;
   text-shadow:0 1px 0 #e283a9!important;
 }
+
+/* 封面：日文在上、英文标题在下 */
+.cv-center{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important}
+.cv-jp{
+  font-family:"Zen Maru Gothic","LXGW WenKai",sans-serif!important;
+  font-size:clamp(13px,3.6vw,20px)!important;letter-spacing:.22em!important;
+  color:#c98ba4!important;margin-bottom:2px!important;
+}
+.cv-title{margin:0!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sacramento&family=Allura&family=Grand+Hotel&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2756,8 +2765,8 @@ body.portrait-ok .rotate-mask{display:none!important}
         </g>
       </svg>
     <div class="cv-center">
+      <div class="cv-jp">さくや と ゆうし</div>
       <div class="cv-title">CHEESEBALLZ</div>
-      <div class="cv-sub">Sakuya &amp; Yushi</div>
       <div class="cv-hint">点一下 · 打开</div>
     </div>
       <div class="cv-sub">さくや と ゆうし</div>
