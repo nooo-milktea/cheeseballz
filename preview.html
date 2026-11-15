@@ -3301,6 +3301,16 @@ body::before{
   display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
 }
 .page[data-src="w-camera"] .cam-stage{margin:0 auto!important;align-self:center!important}
+
+/* 第一个相机页：回到 19:06 的原尺寸（宽度驱动，原比例） */
+.page[data-src="w-camera"] .cam-stage{
+  width:min(92vw, calc(min(52vh, 480px) * 0.6599))!important;
+  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
+  position:relative!important;margin:0 auto!important;
+}
+.page[data-src="w-camera"] .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4362,15 +4372,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       st.style.setProperty('right','auto','important');
       st.style.setProperty('transform','none','important');
       st.style.setProperty('flex','0 0 auto','important');
-      /* 按页面剩余空间算出最大尺寸，比例不变 */
-      var barH = bar ? bar.offsetHeight : 56;
-      var trayH = tray ? tray.offsetHeight : 86;
-      var availH = Math.max(180, pc.clientHeight - barH - trayH - 28);
-      var w2 = Math.round(availH * (710/1076));
-      var maxW = Math.round(pc.clientWidth - 16);
-      if(w2 > maxW){ w2 = maxW; availH = Math.round(w2 / (710/1076)); }
-      st.style.setProperty('width', w2+'px','important');
-      st.style.setProperty('height', availH+'px','important');
 
     }
     if(bar){
