@@ -2834,6 +2834,19 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 后置镜头不镜像 */
 .cam-page.back .cam-stage video,
 .cam2-page.back .cam2-stage video{transform:none!important}
+
+/* 第四个相机：白框，中间空白处为摄影区 */
+.cam4-page .cam4-stage{
+  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:1773/2364;
+  max-width:100%;margin:0 auto;flex:0 0 auto;background:#fffdf6;overflow:hidden;
+}
+.cam4-page .cam4-stage video{
+  position:absolute;left:41%;top:37.5%;width:33%;height:15.5%;z-index:1;
+  object-fit:cover;transform:scaleX(-1);background:#f3ecef;
+}
+.cam4-page.back .cam4-stage video{transform:none}
+.cam4-page .cam4-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill}
+.cam4-page .snap-hint{left:30%!important;right:30%!important;top:56%!important;bottom:auto!important;z-index:3;font-size:9px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3178,6 +3191,29 @@ body.portrait-ok .rotate-mask{display:none!important}
     </div>
   </section>
 
+  <section class="page v cam-page cam4-page" data-src="w-camera4">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机 · 白框</b><span class="verstamp">v159</span><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="cam4-stage">
+        <video id="snapvideo4" autoplay playsinline muted></video>
+        <canvas id="snapcanvas4" style="display:none"></canvas>
+        <img class="cam4-frame" src="assets/img/frame_white3.webp" alt="">
+        <div class="snap-hint" id="snaphint4">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="start4()">开启</button>
+        <button class="snap-shot" onclick="take4()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="flip4()">翻转</button>
+        <button class="cam-mini" onclick="stop4()">关闭</button>
+      </div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount4">0</span></div>
+        <div class="snap-strip" id="snapstrip4"><span class="strip-empty" id="stripempty4">拍一张就会出现</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="page bl map-page" data-src="w-map-jp">
     <span class="ribbon"></span>
     <header class="ph"><b>日本</b><span class="pno"></span></header>
@@ -3227,7 +3263,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i><i data-i="9"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -3262,6 +3298,8 @@ body.portrait-ok .rotate-mask{display:none!important}
     var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
     var camPage2=pages.findIndex(function(p){return p.dataset.src==='w-camera2';});
     if(i!==camPage2 && typeof window.stop2==='function') window.stop2();
+    var camPage4=pages.findIndex(function(p){return p.dataset.src==='w-camera4';});
+    if(i!==camPage4 && typeof window.stop4==='function') window.stop4();
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
@@ -3687,6 +3725,55 @@ body.portrait-ok .rotate-mask{display:none!important}
     if(sec) sec.classList.toggle('back', facing2==='environment');
     if(typeof stop2==='function') stop2();
     setTimeout(start2, 120);
+  };
+
+
+  /* 第四个相机 */
+  var stream4=null, facing4='user', frame4=null;
+  window.start4=function(){
+    var v=document.getElementById('snapvideo4'), hint=document.getElementById('snaphint4');
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='不支持相机'; return; }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing4},width:{ideal:1920},height:{ideal:1080}},audio:false})
+      .then(function(st){ stream4=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
+      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了权限':'打不开相机'; });
+  };
+  window.stop4=function(){
+    if(stream4){ stream4.getTracks().forEach(function(t){t.stop();}); stream4=null; }
+    var v=document.getElementById('snapvideo4'); if(v) v.srcObject=null;
+    var hint=document.getElementById('snaphint4'); if(hint) hint.textContent='相机已关闭';
+  };
+  window.flip4=function(){
+    facing4 = (facing4==='user')?'environment':'user';
+    var sec=document.querySelector('.cam4-page');
+    if(sec) sec.classList.toggle('back', facing4==='environment');
+    stop4(); setTimeout(start4,120);
+  };
+  window.take4=function(){
+    var v=document.getElementById('snapvideo4'), c=document.getElementById('snapcanvas4');
+    var strip=document.getElementById('snapstrip4'), hint=document.getElementById('snaphint4');
+    if(!stream4||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
+    function shoot(fr){
+      var W=1600,H=2134; c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
+      var rx=W*0.41, ry=H*0.375, rw=W*0.33, rh=H*0.155;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
+      if(facing4==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
+      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
+      ctx.restore();
+      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      var se=document.getElementById('stripempty4'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount4'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
+      var img=document.createElement('img'); img.src=dataUrl; img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下';
+    }
+    if(frame4&&frame4.complete&&frame4.naturalWidth){ shoot(frame4); return; }
+    frame4=new Image(); frame4.onload=function(){ shoot(frame4); }; frame4.onerror=function(){ shoot(null); };
+    frame4.src='assets/img/frame_white3.webp';
   };
 
   /* 文库 */
