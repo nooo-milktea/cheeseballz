@@ -2900,6 +2900,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   object-fit:cover!important;
 }
 .cam4-page .cam4-stage.live video{opacity:1!important}
+
+/* 全屏拍摄 */
+.fscam{
+  position:fixed;inset:0;z-index:120;display:none;background:#15100f;
+  align-items:center;justify-content:center;flex-direction:column;gap:14px;padding:10px;
+}
+.fscam.on{display:flex}
+.fscam-stage{position:relative;flex:1;width:100%;max-width:min(96vw,900px);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.fscam-stage video{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;transform:scaleX(-1)}
+.fscam-stage.back video{transform:none}
+.fscam-stage img{position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.fscam-bar{display:flex;gap:14px;padding:10px 0 18px}
+.fscam-btn{padding:10px 22px;border-radius:999px;border:2px solid #f7bdd2;background:rgba(255,255,255,.94);color:#a45f78;font-family:"LXGW WenKai",serif;font-size:14px}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3321,6 +3334,17 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
 </div>
 
+<div class="fscam" id="fscam" aria-hidden="true">
+  <div class="fscam-stage" id="fscamstage">
+    <video id="fscamvideo" autoplay playsinline muted></video>
+    <img id="fscamframe" alt="">
+  </div>
+  <div class="fscam-bar">
+    <button class="fscam-btn" onclick="fsShot()">拍照</button>
+    <button class="fscam-btn" onclick="fsFlip()">翻转</button>
+    <button class="fscam-btn" onclick="closeFs()">关闭</button>
+  </div>
+</div>
 <div class="lb" id="lb" onclick="if(event.target===this)closeLb()">
   <img id="lbimg" src="" alt="">
   <button class="x" onclick="closeLb()">✕</button>
@@ -3827,6 +3851,44 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     frame4=new Image(); frame4.onload=function(){ shoot(frame4); }; frame4.onerror=function(){ shoot(null); };
     frame4.src='assets/img/frame_white3.webp';
   };
+
+
+  /* 点击相框 → 全屏拍摄 */
+  var fsKey=null;
+  var FS={
+    cam1:{video:'snapvideo',  frame:'assets/img/frame_camera2.png', shot:function(){takeSnap();}, flip:function(){flip1();}},
+    cam2:{video:'snapvideo2', frame:'assets/img/frame_sy.png',      shot:function(){take2();},   flip:function(){flip2();}},
+    cam4:{video:'snapvideo4', frame:'assets/img/frame_white3.webp', shot:function(){take4();},   flip:function(){flip4();}}
+  };
+  window.openFs=function(key){
+    var cfg=FS[key]; if(!cfg) return;
+    var v=document.getElementById(cfg.video);
+    if(!v || !v.srcObject){ var hint=v&&v.parentNode.querySelector('.snap-hint'); if(hint) hint.textContent='先点「开启」'; return; }
+    var top=document.getElementById('fscamvideo'), fr=document.getElementById('fscamframe');
+    top.srcObject=v.srcObject;
+    top.play().catch(function(){});
+    fr.src=cfg.frame;
+    document.querySelector('.fscam-stage').classList.toggle('back', v.parentNode.classList.contains('back'));
+    document.getElementById('fscam').classList.add('on');
+    fsKey=key;
+  };
+  window.closeFs=function(){
+    var el=document.getElementById('fscam');
+    el.classList.remove('on');
+    var top=document.getElementById('fscamvideo'); top.srcObject=null;
+    fsKey=null;
+  };
+  window.fsShot=function(){ if(fsKey && FS[fsKey]) FS[fsKey].shot(); };
+  window.fsFlip=function(){ if(fsKey && FS[fsKey]) FS[fsKey].flip(); };
+
+  document.addEventListener('click', function(e){
+    var st=e.target.closest && e.target.closest('.cam-stage, .cam2-stage, .cam4-stage');
+    if(!st) return;
+    if(e.target.closest('button')) return;
+    if(st.classList.contains('cam4-stage')) openFs('cam4');
+    else if(st.classList.contains('cam2-stage')) openFs('cam2');
+    else openFs('cam1');
+  });
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
