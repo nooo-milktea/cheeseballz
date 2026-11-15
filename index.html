@@ -2378,10 +2378,128 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam-page .snap-strip{flex:1;display:flex;align-items:center;gap:8px;overflow-x:auto;min-height:0}
 .cam-page .snap-strip img{width:64px!important;height:64px!important;border:2px solid #fff;box-shadow:0 4px 10px -6px rgba(150,90,115,.8)}
 .strip-empty{font-family:"LXGW WenKai",serif;font-size:10.5px;color:#c9aab6;letter-spacing:.1em}
-.cam-page .cam-stage{height:min(38vh, 340px)!important}
-@media (max-width:760px){ .cam-page .cam-stage{height:min(34vh, 300px)!important} .shoot-tray{height:112px} }
+.cam-page .cam-stage{height:min(44vh, 390px)!important}
+@media (max-width:760px){ .cam-page .cam-stage{height:min(40vh, 350px)!important} .shoot-tray{height:112px} }
 
 .verstamp{font-family:"Cormorant Garamond",serif;font-size:10px;color:#d0a9b7;letter-spacing:.2em;margin-left:8px}
+
+/* 相机页：相框 + 按钮行 + 照片托盘，三者都在页内 */
+.cam-page .pcontent{
+  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 30px)!important;
+  overflow:hidden!important;padding:0 0 112px!important;
+}
+.cam-page .cam-bar{
+  position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;
+  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
+  gap:12px!important;width:100%!important;margin:0!important;padding:0!important;z-index:12;flex:0 0 auto!important;
+}
+.cam-page .cam-bar .cam-mini{
+  padding:7px 18px!important;font-size:11.5px!important;background:#fff!important;border:1px solid #f0ccd9!important;
+  border-radius:999px!important;color:#a45f78!important;letter-spacing:.12em;
+}
+.cam-page .cam-bar .snap-shot{
+  display:inline-block!important;width:52px!important;height:52px!important;font-size:17px!important;
+  border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;border-radius:50%!important;
+}
+.cam-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:104px!important}
+
+/* 相框与拍摄键都居中在同一竖轴 */
+.cam-page .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  height:calc(100% - 30px)!important;gap:8px!important;overflow:hidden!important;
+  padding:0 0 100px!important;position:relative!important;
+}
+.cam-page .cam-stage{
+  height:calc(100% - 74px)!important;width:auto!important;max-width:100%!important;
+  aspect-ratio:710/1076!important;flex:0 0 auto!important;margin:0 auto!important;
+}
+.cam-page .cam-bar{
+  position:static!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;
+  display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;
+  gap:14px!important;flex:0 0 auto!important;margin:0!important;padding:0!important;
+}
+
+/* 第二个相机：草莓边框，画面嵌在白色区域 */
+.cam2-page .cam2-stage{
+  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:1872/1485;
+  max-width:100%;margin:0 auto;flex:0 0 auto;
+  background:url("assets/img/frame_sy.jpg") center/100% 100% no-repeat;
+}
+.cam2-page .cam2-stage video{
+  position:absolute;left:8%;top:7.5%;width:70%;height:54%;
+  object-fit:cover;transform:scaleX(-1);border-radius:4px;background:#f3ecef;
+}
+.cam2-page .snap-hint{left:8%!important;right:22%!important;top:34%!important;bottom:auto!important;color:#b08b98;font-size:10.5px;text-shadow:0 1px 3px rgba(255,255,255,.9)}
+.cam2-page .shoot-tray{position:absolute;left:0;right:0;bottom:0;height:100px}
+
+/* 草莓框相机：画面在下，相框叠加 */
+.cam2-page .cam2-stage{
+  background:none!important;position:relative!important;overflow:hidden!important;
+  height:calc(100% - 74px)!important;width:auto!important;aspect-ratio:1200/952!important;
+  max-width:100%!important;margin:0 auto!important;flex:0 0 auto!important;
+}
+.cam2-page .cam2-stage::after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:url("assets/img/frame_sy.png") center/100% 100% no-repeat;
+}
+.cam2-page .cam2-stage video{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1;
+  object-fit:cover!important;transform:scaleX(-1);opacity:0;transition:opacity .25s;background:transparent!important;
+}
+.cam2-page .cam2-stage.live video{opacity:1}
+.cam2-page .snap-hint{left:0!important;right:0!important;top:46%!important;bottom:auto!important;z-index:3}
+
+/* 草莓框：只让画面出现在中间区域，两侧留纸色，避免黑边 */
+.cam2-page .cam2-stage{background:#fffdf6!important}
+.cam2-page .cam2-stage video{
+  inset:auto!important;
+  left:7%!important;top:10.6%!important;width:86%!important;height:45%!important;
+  border-radius:2px;
+}
+.cam2-page .cam2-stage::after{background-color:transparent}
+
+/* 草莓框：画面填满白框，四周纸色 */
+.cam2-page .cam2-stage{background:#fffdf6!important}
+.cam2-page .cam2-stage video{
+  inset:auto!important;
+  left:5%!important;top:10%!important;width:90%!important;height:47%!important;border-radius:2px;
+}
+
+/* 草莓框：摄影区向下延伸到草莓条上沿 */
+.cam2-page .cam2-stage video{
+  inset:auto!important;
+  left:8%!important;top:8%!important;width:84%!important;height:78%!important;border-radius:2px;
+}
+
+/* 第三个相机：拓麻歌子，屏幕即摄影区 */
+.cam3-page .cam3-stage{
+  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:862/1027;
+  max-width:100%;margin:0 auto;flex:0 0 auto;background:#fffdf6;overflow:hidden;
+}
+.cam3-page .cam3-stage video{
+  position:absolute;left:23.9%;top:37.1%;width:45.6%;height:37.2%;z-index:1;
+  object-fit:cover;transform:scaleX(-1);background:#f3ecef;
+}
+.cam3-page .cam3-frame{
+  position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill;
+}
+.cam3-page .snap-hint{left:20%!important;right:20%!important;top:80%!important;bottom:auto!important;z-index:3;font-size:9.5px}
+
+/* 第三相机：用整张原图（三台拓麻歌子），摄影区在中间那台的屏幕 */
+.cam3-page .cam3-stage{aspect-ratio:2601/1028!important;background:#fffdf6!important}
+.cam3-page .cam3-stage video{
+  left:41.02%!important;top:36.87%!important;width:14.76%!important;height:37.74%!important;
+}
+.cam3-page .cam3-frame{object-fit:fill}
+.cam3-page .snap-hint{left:30%!important;right:30%!important;top:80%!important;font-size:9px!important}
+
+/* 第三相机：整幅横图按宽度铺开，确保可见 */
+.cam3-page .cam3-stage{
+  height:auto!important;width:100%!important;aspect-ratio:2601/1028!important;
+  max-width:100%!important;margin:auto!important;flex:0 0 auto!important;
+}
+.cam3-page .cam-bar,.cam3-page .shoot-tray{flex:0 0 auto!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2546,9 +2664,9 @@ body.portrait-ok .rotate-mask{display:none!important}
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
-      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">一起合照吧</span></a></li>
-      <li><a onclick="jumpTo(6)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
-      <li><a onclick="jumpTo(7)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
+      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">两种相框</span></a></li>
+      <li><a onclick="jumpTo(7)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
+      <li><a onclick="jumpTo(8)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
     </div>
   </section>
@@ -2659,7 +2777,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
-    <header class="ph"><b>相机</b><span class="verstamp">v69</span><span class="pno"></span></header>
+    <header class="ph"><b>相机</b><span class="verstamp">v84</span><span class="pno"></span></header>
     <div class="pcontent">
       <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
@@ -2674,6 +2792,49 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="shoot-tray">
         <div class="tray-head">我的照片 <span id="trayCount">0</span></div>
         <div class="snap-strip" id="snapstrip"><span class="strip-empty" id="stripempty">拍一张就会出现</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page v cam-page cam2-page" data-src="w-camera2">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机 · 草莓框</b><span class="verstamp">v89</span><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="cam2-stage" id="cam2stage">
+        <video id="snapvideo2" autoplay playsinline muted></video>
+        <canvas id="snapcanvas2" style="display:none"></canvas>
+        <div class="snap-hint" id="snaphint2">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="start2()">开启</button>
+        <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="stop2()">关闭</button>
+      </div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount2">0</span></div>
+        <div class="snap-strip" id="snapstrip2"><span class="strip-empty" id="stripempty2">拍一张就会出现</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page v cam-page cam3-page" data-src="w-camera3">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机 · 拓麻歌子</b><span class="verstamp">v92</span><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="cam3-stage">
+        <video id="snapvideo3" autoplay playsinline muted></video>
+        <canvas id="snapcanvas3" style="display:none"></canvas>
+        <img class="cam3-frame" src="assets/img/frame_tama_all.png" alt="">
+        <div class="snap-hint" id="snaphint3">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="start3()">开启</button>
+        <button class="snap-shot" onclick="take3()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="stop3()">关闭</button>
+      </div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount3">0</span></div>
+        <div class="snap-strip" id="snapstrip3"><span class="strip-empty" id="stripempty3">拍一张就会出现</span></div>
       </div>
     </div>
   </section>
@@ -2727,7 +2888,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i><i data-i="9"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -2760,6 +2921,10 @@ body.portrait-ok .rotate-mask{display:none!important}
   function show(i){
     book.classList.toggle('on-cam', (pages[i] && pages[i].dataset.src==='w-camera'));
     var camPage=pages.findIndex(function(p){return p.dataset.src==='w-camera';});
+    var camPage2=pages.findIndex(function(p){return p.dataset.src==='w-camera2';});
+    if(i!==camPage2 && typeof window.stop2==='function') window.stop2();
+    var camPage3=pages.findIndex(function(p){return p.dataset.src==='w-camera3';});
+    if(i!==camPage3 && typeof window.stop3==='function') window.stop3();
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
@@ -3107,6 +3272,112 @@ body.portrait-ok .rotate-mask{display:none!important}
     var st=document.querySelector('.cam-page .cam-stage');
     if(st) st.addEventListener('click', function(){ if(snapStream) takeSnap(); else startSnap(); });
   })();
+
+
+  /* 取景框提示：出现后 3 秒自动消失 */
+  (function(){
+    var el=document.getElementById('snaphint');
+    if(!el) return;
+    var t=null;
+    function schedule(){
+      clearTimeout(t);
+      if(!el.textContent.trim()) return;
+      t=setTimeout(function(){ el.textContent=''; }, 3000);
+    }
+    new MutationObserver(schedule).observe(el,{childList:true,characterData:true,subtree:true});
+    schedule();
+  })();
+
+
+  /* 第二个相机（草莓框） */
+  var stream2=null;
+  window.start2=function(){
+    var v=document.getElementById('snapvideo2'), hint=document.getElementById('snaphint2');
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='这个浏览器不支持相机'; return; }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+      .then(function(st){ stream2=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
+      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了相机权限':'打不开相机（需要 https）'; });
+  };
+  window.stop2=function(){
+    if(stream2){ stream2.getTracks().forEach(function(t){t.stop();}); stream2=null; }
+    var v=document.getElementById('snapvideo2'); if(v){ v.srcObject=null; v.parentNode.classList.remove('live'); }
+    var hint=document.getElementById('snaphint2'); if(hint) hint.textContent='相机已关闭';
+  };
+  var frame2=null;
+  window.take2=function(){
+    var v=document.getElementById('snapvideo2'), c=document.getElementById('snapcanvas2');
+    var strip=document.getElementById('snapstrip2'), hint=document.getElementById('snaphint2');
+    if(!stream2||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
+    function shoot(fr){
+      var W=1200,H=952; c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
+      var rx=W*0.08, ry=H*0.08, rw=W*0.84, rh=H*0.78;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
+      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
+      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
+      ctx.restore();
+      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      var se=document.getElementById('stripempty2'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount2'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
+      var img=document.createElement('img');
+      img.src=dataUrl; img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下';
+    }
+    if(frame2&&frame2.complete&&frame2.naturalWidth){ shoot(frame2); return; }
+    frame2=new Image();
+    frame2.onload=function(){ shoot(frame2); };
+    frame2.onerror=function(){ shoot(null); };
+    frame2.src='assets/img/frame_sy.png';
+  };
+
+
+  /* 第三个相机：拓麻歌子 */
+  var stream3=null;
+  window.start3=function(){
+    var v=document.getElementById('snapvideo3'), hint=document.getElementById('snaphint3');
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='不支持相机'; return; }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+      .then(function(st){ stream3=st; v.srcObject=st; if(hint) hint.textContent=''; })
+      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了权限':'打不开相机（需要 https）'; });
+  };
+  window.stop3=function(){
+    if(stream3){ stream3.getTracks().forEach(function(t){t.stop();}); stream3=null; }
+    var v=document.getElementById('snapvideo3'); if(v) v.srcObject=null;
+    var hint=document.getElementById('snaphint3'); if(hint) hint.textContent='相机已关闭';
+  };
+  var frame3=null;
+  window.take3=function(){
+    var v=document.getElementById('snapvideo3'), c=document.getElementById('snapcanvas3');
+    var strip=document.getElementById('snapstrip3'), hint=document.getElementById('snaphint3');
+    if(!stream3||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
+    function shoot(fr){
+      var W=2601,H=1028; c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
+      var rx=W*0.4102, ry=H*0.3687, rw=W*0.1476, rh=H*0.3774;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
+      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
+      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
+      ctx.restore();
+      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      var se=document.getElementById('stripempty3'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount3'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
+      var img=document.createElement('img'); img.src=dataUrl; img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下';
+    }
+    if(frame3&&frame3.complete&&frame3.naturalWidth){ shoot(frame3); return; }
+    frame3=new Image(); frame3.onload=function(){ shoot(frame3); }; frame3.onerror=function(){ shoot(null); };
+    frame3.src='assets/img/frame_tama_all.png';
+  };
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
