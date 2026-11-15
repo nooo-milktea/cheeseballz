@@ -3329,6 +3329,20 @@ body::before{
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
   height:88px!important;margin:0!important;
 }
+
+/* 手机端：第二、第三个相框改成宽度驱动，避免被 max-width 压变形导致摄影区错位 */
+@media (max-width:760px){
+  .cam2-page .cam2-stage{
+    height:auto!important;width:min(92vw, calc(min(46vh, 380px) * 1.2595))!important;
+    aspect-ratio:1200/952!important;max-width:none!important;
+  }
+  .cam4-page .cam4-stage{
+    height:auto!important;width:min(92vw, calc(min(58vh, 480px) * 0.75))!important;
+    aspect-ratio:1773/2364!important;max-width:none!important;
+  }
+  .cam2-page .cam2-stage::after{background-size:100% 100%!important}
+  .cam4-page .cam4-frame{object-fit:fill!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
