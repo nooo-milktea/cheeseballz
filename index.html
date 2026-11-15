@@ -2853,6 +2853,15 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam4-page .cam4-stage{height:calc(100% - 58px)!important}
 .cam4-page .cam4-stage video{left:34.91%!important;top:36.42%!important;width:34.35%!important;height:17.17%!important}
 .cam4-page .shoot-tray{height:84px!important}
+
+/* 第四相机：去掉卡片外框，相框直接贴在书页上，不被书缝穿过 */
+.cam4-page{z-index:9!important}
+.cam4-page .pcontent{height:calc(100% - 22px)!important;padding:0 0 76px!important;gap:2px!important}
+.cam4-page .cam4-stage{
+  height:calc(100% - 50px)!important;background:transparent!important;
+  box-shadow:none!important;border:0!important;border-radius:0!important;
+}
+.cam4-page .shoot-tray{height:74px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
