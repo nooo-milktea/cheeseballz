@@ -3319,6 +3319,14 @@ body::before{
   .cam-page .cam-bar .cam-mini{padding:5px 10px!important;font-size:10.5px!important}
   .cam-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
 }
+
+/* 书缝压在相框下层（相框、按钮、托盘在上） */
+.page[data-src="w-camera"],
+.page[data-src="w-camera2"],
+.page[data-src="w-camera4"]{z-index:auto!important}
+.cam-page .cam-stage,
+.cam-page .cam2-stage,
+.cam-page .cam4-stage{position:relative!important;z-index:8!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
