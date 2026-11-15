@@ -4372,6 +4372,12 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       st.style.setProperty('right','auto','important');
       st.style.setProperty('transform','none','important');
       st.style.setProperty('flex','0 0 auto','important');
+      /* 19:06 的原尺寸公式：宽 = min(92vw, min(52vh,480px)*0.6599)，高按同一比例 */
+      var R=710/1076;
+      var w0=Math.min(window.innerWidth*0.92, Math.min(window.innerHeight*0.52,480)*R);
+      var h0=w0/R;
+      st.style.setProperty('width', Math.round(w0)+'px','important');
+      st.style.setProperty('height', Math.round(h0)+'px','important');
 
     }
     if(bar){
