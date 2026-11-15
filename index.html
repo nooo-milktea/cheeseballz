@@ -3380,7 +3380,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       if(hint) hint.textContent='这个浏览器不支持相机';
       return;
     }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing1}},audio:false})
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing1},width:{ideal:1920},height:{ideal:1080}},audio:false})
       .then(function(st){ snapStream=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
       .catch(function(err){
         if(hint) hint.textContent = (err && err.name==='NotAllowedError') ? '你拒绝了相机权限' : '打不开相机（需要 https）';
@@ -3422,7 +3422,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     }
     ensureFrame(function(fr){
       // 画布按相框比例
-      var W=710, H=1076;
+      var W=1420, H=2152;
       c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.clearRect(0,0,W,H);
@@ -3631,7 +3631,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   window.start2=function(){
     var v=document.getElementById('snapvideo2'), hint=document.getElementById('snaphint2');
     if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='这个浏览器不支持相机'; return; }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing2}},audio:false})
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing2},width:{ideal:1920},height:{ideal:1080}},audio:false})
       .then(function(st){ stream2=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
       .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了相机权限':'打不开相机（需要 https）'; });
   };
@@ -3646,7 +3646,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     var strip=document.getElementById('snapstrip2'), hint=document.getElementById('snaphint2');
     if(!stream2||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
     function shoot(fr){
-      var W=1200,H=952; c.width=W; c.height=H;
+      var W=1600,H=1270; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
       var rx=W*0.08, ry=H*0.08, rw=W*0.84, rh=H*0.78;
