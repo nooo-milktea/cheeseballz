@@ -2427,8 +2427,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   background:url("assets/img/frame_sy.jpg") center/100% 100% no-repeat;
 }
 .cam2-page .cam2-stage video{
-  position:absolute;left:8%;top:7.5%;width:70%;height:54%;
-  object-fit:cover;transform:scaleX(-1);border-radius:4px;background:#f3ecef;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 .cam2-page .snap-hint{left:8%!important;right:22%!important;top:34%!important;bottom:auto!important;color:#b08b98;font-size:10.5px;text-shadow:0 1px 3px rgba(255,255,255,.9)}
 .cam2-page .shoot-tray{position:absolute;left:0;right:0;bottom:0;height:100px}
@@ -2444,8 +2443,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   background:url("assets/img/frame_sy.png") center/100% 100% no-repeat;
 }
 .cam2-page .cam2-stage video{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1;
-  object-fit:cover!important;transform:scaleX(-1);opacity:0;transition:opacity .25s;background:transparent!important;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 .cam2-page .cam2-stage.live video{opacity:1}
 .cam2-page .snap-hint{left:0!important;right:0!important;top:46%!important;bottom:auto!important;z-index:3}
@@ -2453,23 +2451,19 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 草莓框：只让画面出现在中间区域，两侧留纸色，避免黑边 */
 .cam2-page .cam2-stage{background:#fffdf6!important}
 .cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:7%!important;top:10.6%!important;width:86%!important;height:45%!important;
-  border-radius:2px;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 .cam2-page .cam2-stage::after{background-color:transparent}
 
 /* 草莓框：画面填满白框，四周纸色 */
 .cam2-page .cam2-stage{background:#fffdf6!important}
 .cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:5%!important;top:10%!important;width:90%!important;height:47%!important;border-radius:2px;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 
 /* 草莓框：摄影区向下延伸到草莓条上沿 */
 .cam2-page .cam2-stage video{
-  inset:auto!important;
-  left:8%!important;top:8%!important;width:84%!important;height:78%!important;border-radius:2px;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 
 /* 第三个相机：拓麻歌子，屏幕即摄影区 */
@@ -2841,8 +2835,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   max-width:100%;margin:0 auto;flex:0 0 auto;background:#fffdf6;overflow:hidden;
 }
 .cam4-page .cam4-stage video{
-  position:absolute;left:41%;top:37.5%;width:33%;height:15.5%;z-index:1;
-  object-fit:cover;transform:scaleX(-1);background:#f3ecef;
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
 }
 .cam4-page.back .cam4-stage video{transform:none}
 .cam4-page .cam4-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill}
@@ -2851,7 +2844,9 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 第四相机：相框更大，摄影区填满第二个相框的空白 */
 .cam4-page .pcontent{height:calc(100% - 26px)!important;padding-bottom:86px!important;gap:4px!important}
 .cam4-page .cam4-stage{height:calc(100% - 58px)!important}
-.cam4-page .cam4-stage video{left:34.91%!important;top:36.42%!important;width:34.35%!important;height:17.17%!important}
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
+}
 .cam4-page .shoot-tray{height:84px!important}
 
 /* 第四相机：去掉卡片外框，相框直接贴在书页上，不被书缝穿过 */
@@ -2865,17 +2860,12 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 /* 第四相机：摄影区按窗口实际范围再放大 */
 .cam4-page .cam4-stage video{
-  left:33.8%!important;top:35.2%!important;width:40.4%!important;height:20.2%!important;
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
 }
 
 /* 第四相机：摄影区在相框下面，只在镂空处透出来 */
 .cam4-page .cam4-stage video{
-  inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
-  z-index:1!important;
-  -webkit-mask-image:url(assets/img/frame_white3_mask.png)!important;
-  mask-image:url(assets/img/frame_white3_mask.png)!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
 }
 
 /* 相框与摄影区不遮盖书页布纹 */
@@ -2893,11 +2883,7 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 /* 第三个相框：取消遮罩（加载失败会整个不显示），改用超大区域在相框下方 */
 .cam4-page .cam4-stage video{
-  inset:auto!important;
-  left:31.2%!important;top:33.4%!important;width:44.2%!important;height:23.4%!important;
-  -webkit-mask-image:none!important;mask-image:none!important;
-  opacity:1!important;z-index:1!important;
-  object-fit:cover!important;
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
 }
 .cam4-page .cam4-stage.live video{opacity:1!important}
 
@@ -3129,9 +3115,15 @@ section.cam-page.fs-mode .cam4-stage{
 .fsmodal.flash .fsmodal-inner{box-shadow:0 0 0 3px rgba(255,255,255,.9),0 24px 60px -30px rgba(90,120,140,.55)}
 
 /* 弹窗摄影区：只在相框窗口内，不溢出 */
-.fsmodal-stage.k1 video{inset:0!important;width:100%!important;height:100%!important}
-.fsmodal-stage.k2 video{left:8%!important;top:8%!important;width:84%!important;height:78%!important;inset:auto!important}
-.fsmodal-stage.k4 video{left:31.2%!important;top:33.4%!important;width:44.2%!important;height:23.4%!important;inset:auto!important}
+.fsmodal-stage.k1 video{
+  inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
+}
+.fsmodal-stage.k2 video{
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
+}
+.fsmodal-stage.k4 video{
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
+}
 
 /* 弹窗里：相框铺满舞台（与舞台同比例），画面只在镂空内 */
 .fsmodal-stage img{object-fit:fill!important}
@@ -3146,15 +3138,21 @@ section.cam-page.fs-mode .cam4-stage{
   inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
 }
 .cam2-page .cam2-stage video{
-  inset:auto!important;left:6.92%!important;top:11.4%!important;width:86.17%!important;height:65.5%!important;
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
 .cam4-page .cam4-stage video{
   inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
 }
 /* 弹窗里的三个相框 */
-.fsmodal-stage.k1 video{inset:auto!important;left:13.8%!important;top:9.29%!important;width:71.55%!important;height:65.43%!important}
-.fsmodal-stage.k2 video{inset:auto!important;left:6.92%!important;top:10.71%!important;width:86.17%!important;height:66.18%!important}
-.fsmodal-stage.k4 video{inset:auto!important;left:34.91%!important;top:36.42%!important;width:34.35%!important;height:17.17%!important}
+.fsmodal-stage.k1 video{
+  inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
+}
+.fsmodal-stage.k2 video{
+  inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
+}
+.fsmodal-stage.k4 video{
+  inset:auto!important;left:34.7%!important;top:36.2%!important;width:34.75%!important;height:17.6%!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4012,7 +4010,7 @@ section.cam-page.fs-mode .cam4-stage{
       var W=1600,H=1270; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.0692, ry=H*0.114, rw=W*0.8617, rh=H*0.655;
+      var rx=W*0.0692, ry=H*0.122, rw=W*0.8617, rh=H*0.647;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       if(facing2==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
@@ -4126,7 +4124,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   var fsKey=null, fsStream=null, fsFacing='user';
   var FS_CFG={
     cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.145,.0929,.7085,.6543]},
-    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.0692,.114,.8617,.655]},
+    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.0692,.122,.8617,.647]},
     cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.347,.362,.3475,.176]}
   };
   window.openFsM=function(key){
