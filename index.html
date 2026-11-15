@@ -2566,6 +2566,16 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cv-deco .cv-star.s2{right:16%;top:30%;width:12px;height:12px}
 .cv-deco .cv-star.s3{left:24%;bottom:18%;width:11px;height:11px}
 .cv-center{position:relative;z-index:2}
+
+/* 扉页相合伞：用原图 */
+.tp-left{position:relative;display:flex;align-items:center;justify-content:center}
+.umb-img{width:62%;max-width:150px;height:auto;display:block}
+.umb-name{
+  position:absolute;bottom:14%;font-family:"Zen Maru Gothic","LXGW WenKai",sans-serif;
+  font-size:clamp(10px,1.5vw,13px);color:#4fc3dd;letter-spacing:.08em;white-space:nowrap;
+}
+.umb-name.left{left:-2%;transform:rotate(-8deg)}
+.umb-name.right{right:-2%;transform:rotate(7deg)}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2740,34 +2750,9 @@ body.portrait-ok .rotate-mask{display:none!important}
     <span class="ribbon"></span>
     <div class="pcontent">
       <div class="tp-left">
-        <svg viewBox="0 0 200 260">
-          <defs>
-            <filter id="crayon" x="-20%" y="-20%" width="140%" height="140%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-          </defs>
-          <g fill="none" stroke="#3ec9e8" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
-            <!-- 左心 -->
-            <path d="M100 118 C76 96 52 84 50 62 C48 44 64 36 76 44 C86 51 92 62 100 70"/>
-            <!-- 右心 -->
-            <path d="M100 118 C112 86 130 62 146 52 C158 44 170 54 166 68 C161 88 128 104 100 118 Z"/>
-            <!-- 中间小心 -->
-            <path d="M100 108 C92 96 84 92 84 82 C84 74 92 70 98 76 C104 70 112 74 112 82 C112 92 106 100 100 108 Z"/>
-            <!-- 三角伞面 -->
-            <path d="M100 118 L52 176"/>
-            <path d="M100 118 L148 176"/>
-            <path d="M50 176 L150 176"/>
-            <!-- 伞杆 -->
-            <path d="M100 112 L100 236"/>
-          </g>
-          <!-- 伞下两侧的名字 -->
-          <g font-family="'Zen Maru Gothic','LXGW WenKai',sans-serif" font-size="17" fill="#3ec9e8" letter-spacing="1.5" filter="url(#crayon)">
-            <text x="34" y="214" transform="rotate(-8 34 214)">さくや</text>
-            <text x="118" y="222" transform="rotate(7 118 222)">ゆうし</text>
-          </g>
-
-        </svg>
+        <img class="umb-img" src="assets/img/umbrella_drawn.png" alt="相合伞">
+        <span class="umb-name left">さくや</span>
+        <span class="umb-name right">ゆうし</span>
       </div>
       
       <div class="tp"><span class="tp-t">爱</span><span class="tp-t">是</span><span class="tp-t">一</span><span class="tp-t">本</span><span class="tp-t">书</span></div>
