@@ -3311,6 +3311,24 @@ body::before{
   display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
   justify-content:center!important;align-items:center!important;gap:8px!important;width:100%!important;
 }
+
+/* 第一个相机页：方案 B（相框居中、略小，不遮挡缩略图托盘） */
+.page[data-src="w-camera"] .pcontent{position:relative!important;display:block!important;padding:0!important}
+.page[data-src="w-camera"] .cam-stage{
+  position:absolute!important;left:50%!important;top:0!important;right:auto!important;
+  transform:translateX(-50%)!important;
+  width:min(var(--fw), calc(42vh * 0.6599))!important;
+  height:auto!important;margin:0!important;
+}
+.page[data-src="w-camera"] .cam-bar{
+  position:absolute!important;left:0!important;right:0!important;bottom:96px!important;top:auto!important;
+  transform:none!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  justify-content:center!important;gap:8px!important;width:100%!important;margin:0!important;padding:0!important;
+}
+.page[data-src="w-camera"] .shoot-tray{
+  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
+  height:88px!important;margin:0!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
