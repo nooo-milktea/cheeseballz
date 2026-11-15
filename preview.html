@@ -3232,6 +3232,25 @@ body::before{
   .cam2-page .cam2-stage{width:min(94vw, calc(40vh * 1.2595))!important}
   .cam4-page .cam4-stage{width:min(92vw, calc(50vh * 0.75))!important}
 }
+
+/* 尽量大且保持原比例（宽度推导，高度自动） */
+.cam-page .cam-stage{
+  width:min(92vw, calc(min(52vh, 480px) * 0.6599))!important;
+  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
+}
+.cam2-page .cam2-stage{
+  width:min(94vw, calc(min(52vh, 480px) * 1.2595))!important;
+  height:auto!important;aspect-ratio:1200/952!important;max-width:none!important;
+}
+.cam4-page .cam4-stage{
+  width:min(92vw, calc(min(64vh, 620px) * 0.75))!important;
+  height:auto!important;aspect-ratio:1773/2364!important;max-width:none!important;
+}
+@media (max-width:760px){
+  .cam-page .cam-stage{width:min(92vw, calc(min(46vh, 400px) * 0.6599))!important}
+  .cam2-page .cam2-stage{width:min(94vw, calc(min(46vh, 400px) * 1.2595))!important}
+  .cam4-page .cam4-stage{width:min(92vw, calc(min(58vh, 480px) * 0.75))!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
