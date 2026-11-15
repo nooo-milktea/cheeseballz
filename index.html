@@ -3295,6 +3295,22 @@ body::before{
 .fsmodal-stage.k2{height:min(60vh, 520px)!important;aspect-ratio:1200/952!important}
 .fsmodal-stage.k4{height:min(80vh, 740px)!important;aspect-ratio:1773/2364!important}
 .fsmodal-stage img{width:100%!important;height:100%!important;object-fit:fill!important}
+
+/* 第一个相机页：相框居中、按钮移到相框下方（尺寸不变） */
+.page[data-src="w-camera"] .pcontent{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
+}
+.page[data-src="w-camera"] .cam-stage{
+  position:relative!important;left:auto!important;right:auto!important;top:auto!important;
+  margin:0 auto!important;align-self:center!important;transform:none!important;
+  width:var(--fw)!important;height:auto!important;
+}
+.page[data-src="w-camera"] .cam-bar{
+  position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+  transform:none!important;margin:8px 0 0!important;padding:0!important;
+  display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  justify-content:center!important;align-items:center!important;gap:8px!important;width:100%!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
