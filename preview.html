@@ -3146,7 +3146,7 @@ section.cam-page.fs-mode .cam4-stage{
   inset:auto!important;left:14.5%!important;top:9.29%!important;width:70.85%!important;height:65.43%!important;
 }
 .cam2-page .cam2-stage video{
-  inset:auto!important;left:6.92%!important;top:10.71%!important;width:86.17%!important;height:66.18%!important;
+  inset:auto!important;left:6.92%!important;top:11.4%!important;width:86.17%!important;height:65.5%!important;
 }
 .cam4-page .cam4-stage video{
   inset:auto!important;left:34.91%!important;top:36.42%!important;width:34.35%!important;height:17.17%!important;
@@ -4012,7 +4012,7 @@ section.cam-page.fs-mode .cam4-stage{
       var W=1600,H=1270; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.0692, ry=H*0.1071, rw=W*0.8617, rh=H*0.6618;
+      var rx=W*0.0692, ry=H*0.114, rw=W*0.8617, rh=H*0.655;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       if(facing2==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
@@ -4126,7 +4126,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   var fsKey=null, fsStream=null, fsFacing='user';
   var FS_CFG={
     cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.145,.0929,.7085,.6543]},
-    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.0692,.1071,.8617,.6618]},
+    cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.0692,.114,.8617,.655]},
     cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.3491,.3642,.3435,.1717]}
   };
   window.openFsM=function(key){
