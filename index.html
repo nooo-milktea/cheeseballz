@@ -2830,6 +2830,10 @@ body.portrait-ok .rotate-mask{display:none!important}
 @media(max-width:700px){
   .sun{left:-96px!important;top:-96px!important;width:220px!important;height:220px!important}
 }
+
+/* 后置镜头不镜像 */
+.cam-page.back .cam-stage video,
+.cam2-page.back .cam2-stage video{transform:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3142,6 +3146,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="flip1()">翻转</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
       </div>
       <div class="shoot-tray">
@@ -3163,6 +3168,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="start2()">开启</button>
         <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="flip2()">翻转</button>
         <button class="cam-mini" onclick="stop2()">关闭</button>
       </div>
       <div class="shoot-tray">
@@ -3367,14 +3373,14 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 
   /* 相机拍照 */
-  var snapStream=null;
+  var snapStream=null, facing1='user';
   window.startSnap=function(){
     var v=document.getElementById('snapvideo'), hint=document.getElementById('snaphint');
     if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
       if(hint) hint.textContent='这个浏览器不支持相机';
       return;
     }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing1}},audio:false})
       .then(function(st){ snapStream=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
       .catch(function(err){
         if(hint) hint.textContent = (err && err.name==='NotAllowedError') ? '你拒绝了相机权限' : '打不开相机（需要 https）';
@@ -3425,7 +3431,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       var scale=Math.max(W/vw, H/vh);
       var dw=vw*scale, dh=vh*scale;
       ctx.save();
-      ctx.translate(W,0); ctx.scale(-1,1);
+      if(facing1==='user'){ ctx.translate(W,0); ctx.scale(-1,1); }
       ctx.drawImage(v,(W-dw)/2,(H-dh)/2,dw,dh);
       ctx.restore();
       // 叠加相框
@@ -3621,11 +3627,11 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 
   /* 第二个相机（草莓框） */
-  var stream2=null;
+  var stream2=null, facing2='user';
   window.start2=function(){
     var v=document.getElementById('snapvideo2'), hint=document.getElementById('snaphint2');
     if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='这个浏览器不支持相机'; return; }
-    navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false})
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing2}},audio:false})
       .then(function(st){ stream2=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
       .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了相机权限':'打不开相机（需要 https）'; });
   };
@@ -3646,7 +3652,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       var rx=W*0.08, ry=H*0.08, rw=W*0.84, rh=H*0.78;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
-      ctx.translate(rx+rw,ry); ctx.scale(-1,1);
+      if(facing2==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
       ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
       ctx.restore();
       if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
@@ -3666,6 +3672,22 @@ body.portrait-ok .rotate-mask{display:none!important}
     frame2.src='assets/img/frame_sy.png';
   };
 
+
+
+  window.flip1=function(){
+    facing1 = (facing1==='user') ? 'environment' : 'user';
+    var sec=document.querySelector('.cam-page:not(.cam2-page)');
+    if(sec) sec.classList.toggle('back', facing1==='environment');
+    if(typeof stopSnap==='function') stopSnap();
+    setTimeout(startSnap, 120);
+  };
+  window.flip2=function(){
+    facing2 = (facing2==='user') ? 'environment' : 'user';
+    var sec=document.querySelector('.cam2-page');
+    if(sec) sec.classList.toggle('back', facing2==='environment');
+    if(typeof stop2==='function') stop2();
+    setTimeout(start2, 120);
+  };
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
