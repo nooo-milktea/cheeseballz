@@ -3278,6 +3278,16 @@ body::before{
 @media (max-width:760px){
   .cam-page .cam-stage{height:min(40vh,360px)!important}
 }
+
+/* 弹窗里的相框：不被 flex 拉伸，严格按原比例 */
+.fsmodal-stage{
+  flex:0 0 auto!important;align-self:center!important;
+  height:auto!important;max-height:100%!important;
+}
+.fsmodal-stage.k1{aspect-ratio:710/1076!important}
+.fsmodal-stage.k2{aspect-ratio:1200/952!important}
+.fsmodal-stage.k4{aspect-ratio:1773/2364!important}
+.fsmodal-stage img{object-fit:fill!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
