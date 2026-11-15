@@ -4362,6 +4362,15 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       st.style.setProperty('right','auto','important');
       st.style.setProperty('transform','none','important');
       st.style.setProperty('flex','0 0 auto','important');
+      /* 按页面剩余空间算出最大尺寸，比例不变 */
+      var barH = bar ? bar.offsetHeight : 56;
+      var trayH = tray ? tray.offsetHeight : 86;
+      var availH = Math.max(180, pc.clientHeight - barH - trayH - 28);
+      var w2 = Math.round(availH * (710/1076));
+      var maxW = Math.round(pc.clientWidth - 16);
+      if(w2 > maxW){ w2 = maxW; availH = Math.round(w2 / (710/1076)); }
+      st.style.setProperty('width', w2+'px','important');
+      st.style.setProperty('height', availH+'px','important');
 
     }
     if(bar){
