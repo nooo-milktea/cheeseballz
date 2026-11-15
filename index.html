@@ -3494,16 +3494,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
   window.enterLib=function(){ if(gate) gate.style.display='none'; if(main) main.style.display='block'; };
-  var tabs=[].slice.call(document.querySelectorAll('#tabs .tab')), list=document.getElementById('ficlist');
-  tabs.forEach(function(t){
-    t.addEventListener('click',function(){
-      tabs.forEach(function(x){ x.classList.toggle('on',x===t); });
-      var c=t.dataset.cat;
-      [].slice.call(list.children).forEach(function(card){
-        var ok=(c==='all')||card.dataset.src===c||card.dataset.cat===c;
-        card.style.display=ok?'':'none';
-      });
+  var tabs=[].slice.call(document.querySelectorAll('#tabs .tab'));
+  function applyCat(c){
+    var cards=[].slice.call(document.querySelectorAll('#ficlist .fic'));
+    cards.forEach(function(card){
+      var ok=(c==='all')||card.getAttribute('data-cat')===c||card.getAttribute('data-src')===c;
+      card.style.display=ok?'':'none';
     });
+  }
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest ? e.target.closest('#tabs .tab') : null;
+    if(!btn) return;
+    tabs.forEach(function(x){ x.classList.toggle('on',x===btn); });
+    applyCat(btn.getAttribute('data-cat'));
   });
 
   /* 留言 */
