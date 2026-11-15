@@ -3017,6 +3017,21 @@ section.cam-page.fs-mode .cam-bar{
 .pcontent:fullscreen .cam-stage,
 .pcontent:fullscreen .cam2-stage,
 .pcontent:fullscreen .cam4-stage{max-height:88vh!important;height:88vh!important;width:auto!important;max-width:96vw!important}
+
+/* 全屏时相框真正居中（不被底部按钮撑偏） */
+.pcontent:fullscreen,
+.pcontent:-webkit-full-screen{
+  padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;
+}
+.pcontent:fullscreen .cam-stage,
+.pcontent:fullscreen .cam2-stage,
+.pcontent:fullscreen .cam4-stage,
+.pcontent:-webkit-full-screen .cam-stage,
+.pcontent:-webkit-full-screen .cam2-stage,
+.pcontent:-webkit-full-screen .cam4-stage{
+  margin:0 auto!important;align-self:center!important;
+  max-height:100vh!important;height:100vh!important;max-width:100vw!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
