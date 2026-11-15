@@ -3351,6 +3351,15 @@ body::before{
 .cam4-page .cam4-stage{
   margin:0 auto!important;align-self:center!important;left:auto!important;right:auto!important;transform:none!important;
 }
+
+/* 第三个相框：绝对定位 + 平移强制居中（不依赖 flex） */
+.cam4-page .pcontent{position:relative!important}
+.cam4-page .cam4-stage{
+  position:absolute!important;
+  left:50%!important;right:auto!important;top:0!important;bottom:auto!important;
+  transform:translateX(-50%)!important;
+  margin:0!important;max-width:100%!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
