@@ -2627,6 +2627,21 @@ body.portrait-ok .rotate-mask{display:none!important}
     0 0.6px currentColor,
     0 -0.6px currentColor!important;
 }
+
+/* 目录页：中文标题在上，标题不被书缝遮挡 */
+.tocpage{z-index:9!important}
+.toc-head{
+  position:relative;z-index:14;display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:4px 18px;border-radius:14px;
+  background:radial-gradient(120% 150% at 50% 50%, #fffdf8 62%, rgba(255,253,248,0) 100%);
+}
+.toc-cn{
+  font-family:"Zen Maru Gothic","LXGW WenKai",serif;
+  font-size:clamp(18px,3.2vw,26px);letter-spacing:.5em;text-indent:.5em;
+  color:#b07f92;
+}
+.toc-head .toc-h{margin:0!important}
+.toc-list{position:relative;z-index:13}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2813,7 +2828,7 @@ body.portrait-ok .rotate-mask{display:none!important}
   <section class="page tocpage" data-src="w-toc">
     <span class="ribbon"></span>
     <div class="pcontent">
-      <div class="toc-h">もくじ</div>
+      <div class="toc-head"><div class="toc-cn">目录</div><div class="toc-h">もくじ</div></div>
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
