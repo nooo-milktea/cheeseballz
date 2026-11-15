@@ -3000,6 +3000,23 @@ section.cam-page.fs-mode .cam-bar{
   padding:8px 0!important;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.5))!important;
   border:0!important;
 }
+
+/* 真全屏时：相框居中放大，按钮浮在底部 */
+.pcontent:fullscreen,
+.pcontent:-webkit-full-screen{
+  background:#0f0c0b!important;display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:0 0 84px!important;height:100vh!important;
+}
+.pcontent:fullscreen .cam-bar,
+.pcontent:-webkit-full-screen .cam-bar{
+  position:fixed!important;left:0!important;right:0!important;bottom:10px!important;justify-content:center!important;
+  padding:8px 0!important;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))!important;
+}
+.pcontent:fullscreen .shoot-tray,
+.pcontent:-webkit-full-screen .shoot-tray{display:none!important}
+.pcontent:fullscreen .cam-stage,
+.pcontent:fullscreen .cam2-stage,
+.pcontent:fullscreen .cam4-stage{max-height:88vh!important;height:88vh!important;width:auto!important;max-width:96vw!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4004,6 +4021,22 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     document.body.style.overflow = on ? 'hidden' : '';
     var btns=sec.querySelectorAll('.cam-bar .cam-mini');
     btns.forEach(function(b){ if(b.textContent.indexOf('全屏')>=0 || b.textContent.indexOf('退出')>=0) b.textContent = on ? '退出' : '全屏'; });
+  };
+
+
+  /* 原生全屏：把该页的内容区（相框+按钮）全屏 */
+  window.fsNative=function(btn){
+    var sec=btn.closest('section.cam-page');
+    if(!sec) return;
+    var pc=sec.querySelector('.pcontent');
+    if(!pc) return;
+    if(document.fullscreenElement){
+      (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+      return;
+    }
+    var req=pc.requestFullscreen||pc.webkitRequestFullscreen;
+    if(req){ req.call(pc).then(function(){ setTimeout(function(){ if(window.fitCam) fitCam(); },150); }).catch(function(){}); }
+    else { sec.classList.toggle('fs-mode'); }
   };
 
   /* 文库 */
