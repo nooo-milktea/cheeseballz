@@ -2743,6 +2743,19 @@ body.portrait-ok .rotate-mask{display:none!important}
 
 /* 左侧名字改用樱花粉 */
 .umb-name.left{color:#f2a8c0!important;text-shadow:0 0 .5px #f2a8c0,.4px 0 #f2a8c0,-.4px 0 #f2a8c0!important}
+
+/* 「爱是一本书」：整段竖排 + 可爱粗体 */
+.tp{display:flex!important;align-items:center!important;justify-content:center!important;height:auto!important}
+.titlepage .tp .tp-t{
+  writing-mode:vertical-rl!important;text-orientation:upright!important;
+  font-family:"Mochiy Pop One","Hachi Maru Pop","Zen Maru Gothic",sans-serif!important;
+  font-weight:400!important;
+  font-size:clamp(20px,4.6vw,32px)!important;
+  letter-spacing:.12em!important;line-height:1!important;
+  color:#f2a8c0!important;-webkit-text-fill-color:#f2a8c0!important;
+  text-shadow:0 1px 0 #fff,0 0 1px rgba(242,168,192,.7)!important;
+  white-space:nowrap!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -2922,7 +2935,7 @@ body.portrait-ok .rotate-mask{display:none!important}
         <span class="umb-name right">ゆうし</span>
       </div>
       
-      <div class="tp"><span class="tp-t">爱</span><span class="tp-t">是</span><span class="tp-t">一</span><span class="tp-t">本</span><span class="tp-t">书</span></div>
+      <div class="tp"><span class="tp-t">爱是一本书</span></div>
       <div class="tp-jp">愛は一冊の本</div>
     </div>
   </section>
