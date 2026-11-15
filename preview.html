@@ -2944,6 +2944,24 @@ body.portrait-ok .rotate-mask{display:none!important}
   max-width:none!important;max-height:none!important;object-fit:cover!important;
 }
 .fscam-stage img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important}
+
+.fscam{padding:0!important;gap:0!important}
+.fscam-stage{
+  position:absolute!important;inset:0!important;
+  width:100vw!important;height:100vh!important;
+  max-width:none!important;max-height:none!important;
+  aspect-ratio:auto!important;display:block!important;overflow:hidden!important;
+}
+.fscam-stage img{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center!important;
+}
+.fscam-stage video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+.fscam-bar{
+  position:absolute!important;left:0!important;right:0!important;bottom:0!important;
+  z-index:5!important;display:flex!important;justify-content:center!important;gap:14px!important;
+  padding:14px 0 26px!important;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.45))!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3904,7 +3922,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     fr.src=cfg.frame;
     var stEl=document.querySelector('.fscam-stage');
     stEl.classList.toggle('back', v.parentNode.classList.contains('back'));
-    stEl.style.aspectRatio = ({cam1:'710/1076', cam2:'1200/952', cam4:'1773/2364'})[key] || '710/1076';
     document.getElementById('fscam').classList.add('on');
     fsKey=key;
   };
