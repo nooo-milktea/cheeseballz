@@ -2730,6 +2730,16 @@ body.portrait-ok .rotate-mask{display:none!important}
   text-shadow:0 1px 0 #fff,0 0 .5px #f2a8c0!important;
   -webkit-text-stroke:0!important;
 }
+
+/* 竖排字不要错落偏移，保持一条直线 */
+.titlepage .tp .tp-t,
+.titlepage .tp .tp-t:nth-child(2n){
+  transform:none!important;
+  writing-mode:vertical-rl!important;text-orientation:upright!important;
+  display:block!important;line-height:1.35!important;
+  margin:0!important;padding:0!important;
+}
+.titlepage .tp{display:flex!important;flex-direction:column!important;align-items:center!important;gap:2px!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
