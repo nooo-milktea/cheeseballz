@@ -3295,41 +3295,6 @@ body::before{
 .fsmodal-stage.k2{height:min(60vh, 520px)!important;aspect-ratio:1200/952!important}
 .fsmodal-stage.k4{height:min(80vh, 740px)!important;aspect-ratio:1773/2364!important}
 .fsmodal-stage img{width:100%!important;height:100%!important;object-fit:fill!important}
-
-/* 只把第一个相机页的相框放回中间（不动尺寸） */
-.page[data-src="w-camera"] .pcontent{
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
-}
-.page[data-src="w-camera"] .cam-stage{margin:0 auto!important;align-self:center!important}
-
-/* 第一个相机页：回到 19:06 的原尺寸（宽度驱动，原比例） */
-.page[data-src="w-camera"] .cam-stage{
-  width:min(92vw, calc(min(52vh, 480px) * 0.6599))!important;
-  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
-  position:relative!important;margin:0 auto!important;
-}
-.page[data-src="w-camera"] .pcontent{
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
-}
-
-/* 用 ID 选择器（优先级高于所有类选择器）强制第一个相机页的尺寸与居中 */
-#cam1pc{
-  display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;height:auto!important;overflow:visible!important;
-}
-#cam1stage{
-  width:min(92vw, calc(min(52vh, 480px) * 0.6599))!important;
-  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
-  position:static!important;margin:0 auto!important;display:block!important;
-  left:auto!important;right:auto!important;transform:none!important;
-}
-
-/* 第一个相机页：和后两页一样的定尺方式（不撑满） */
-#cam1stage{
-  width:min(92vw, calc(min(64vh, 620px) * 0.6599))!important;
-  height:auto!important;aspect-ratio:710/1076!important;max-width:none!important;
-  position:static!important;margin:0 auto!important;display:block!important;
-}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3633,8 +3598,8 @@ body::before{
   <section class="page v cam-page" data-src="w-camera">
     <span class="ribbon"></span>
     <header class="ph"><b>相机 · 拍立得</b><span class="verstamp">v84</span><span class="pno"></span></header>
-    <div class="pcontent" id="cam1pc">
-      <div class="cam-stage" id="cam1stage">
+    <div class="pcontent">
+      <div class="cam-stage">
         <video id="snapvideo" autoplay playsinline muted></video>
         <canvas id="snapcanvas" style="display:none"></canvas>
                 <div class="snap-hint" id="snaphint">点「开启」用你的相机</div>
@@ -4363,66 +4328,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     };
     img.src=cfg.frame;
   };
-
-
-
-  /* 第一相机页：强制竖排居中布局（内联 important，压过所有 CSS） */
-  function layoutCam1(){
-    var sec=document.querySelector('section[data-src="w-camera"]');
-    if(!sec) return;
-    var pc=sec.querySelector('.pcontent'), st=sec.querySelector('.cam-stage'),
-        bar=sec.querySelector('.cam-bar'), tray=sec.querySelector('.shoot-tray');
-    if(pc){
-      pc.style.setProperty('display','flex','important');
-      pc.style.setProperty('flex-direction','column','important');
-      pc.style.setProperty('align-items','center','important');
-      pc.style.setProperty('justify-content','flex-start','important');
-      pc.style.setProperty('position','relative','important');
-      pc.style.setProperty('overflow','visible','important');
-      pc.style.setProperty('padding','0 0 8px','important');
-      pc.style.setProperty('height','auto','important');
-      pc.style.setProperty('gap','8px','important');
-    }
-    if(st){
-      st.style.setProperty('position','static','important');
-      st.style.setProperty('display','block','important');
-      st.style.setProperty('margin','0 auto','important');
-      st.style.setProperty('left','auto','important');
-      st.style.setProperty('right','auto','important');
-      st.style.setProperty('transform','none','important');
-      st.style.setProperty('flex','0 0 auto','important');
-      /* 19:06 的原尺寸公式：宽 = min(92vw, min(52vh,480px)*0.6599)，高按同一比例 */
-
-
-    }
-    if(bar){
-      bar.style.setProperty('position','static','important');
-      bar.style.setProperty('display','flex','important');
-      bar.style.setProperty('flex-direction','row','important');
-      bar.style.setProperty('flex-wrap','wrap','important');
-      bar.style.setProperty('justify-content','center','important');
-      bar.style.setProperty('align-items','center','important');
-      bar.style.setProperty('gap','8px','important');
-      bar.style.setProperty('width','100%','important');
-      bar.style.setProperty('margin','0','important');
-      bar.style.setProperty('padding','0','important');
-      bar.style.setProperty('left','auto','important');
-      bar.style.setProperty('right','auto','important');
-      bar.style.setProperty('top','auto','important');
-    }
-    if(tray){
-      tray.style.setProperty('position','static','important');
-      tray.style.setProperty('width','100%','important');
-      tray.style.setProperty('height','86px','important');
-      tray.style.setProperty('left','auto','important');
-      tray.style.setProperty('right','auto','important');
-      tray.style.setProperty('bottom','auto','important');
-      tray.style.setProperty('margin','0','important');
-    }
-  }
-  document.addEventListener('DOMContentLoaded', layoutCam1);
-  window.addEventListener('load', layoutCam1);
-  window.addEventListener('resize', layoutCam1);
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
