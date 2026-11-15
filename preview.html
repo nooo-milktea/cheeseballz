@@ -2931,6 +2931,19 @@ body.portrait-ok .rotate-mask{display:none!important}
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;
   height:104px!important;z-index:8!important;
 }
+
+/* 全屏拍摄：相框与摄影区同比例放大 */
+.fscam{background:#0f0c0b!important}
+.fscam-stage{
+  flex:1 1 auto!important;width:auto!important;height:100%!important;
+  max-width:96vw!important;max-height:100%!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+}
+.fscam-stage video{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  max-width:none!important;max-height:none!important;object-fit:cover!important;
+}
+.fscam-stage img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3243,6 +3256,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="openFs('cam1')">全屏</button>
         <button class="cam-mini" onclick="flip1()">翻转</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
       </div>
@@ -3265,6 +3279,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="start2()">开启</button>
         <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="openFs('cam2')">全屏</button>
         <button class="cam-mini" onclick="flip2()">翻转</button>
         <button class="cam-mini" onclick="stop2()">关闭</button>
       </div>
@@ -3288,6 +3303,7 @@ body.portrait-ok .rotate-mask{display:none!important}
       <div class="cam-bar">
         <button class="cam-mini" onclick="start4()">开启</button>
         <button class="snap-shot" onclick="take4()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="openFs('cam4')">全屏</button>
         <button class="cam-mini" onclick="flip4()">翻转</button>
         <button class="cam-mini" onclick="stop4()">关闭</button>
       </div>
@@ -3886,7 +3902,9 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     top.srcObject=v.srcObject;
     top.play().catch(function(){});
     fr.src=cfg.frame;
-    document.querySelector('.fscam-stage').classList.toggle('back', v.parentNode.classList.contains('back'));
+    var stEl=document.querySelector('.fscam-stage');
+    stEl.classList.toggle('back', v.parentNode.classList.contains('back'));
+    stEl.style.aspectRatio = ({cam1:'710/1076', cam2:'1200/952', cam4:'1773/2364'})[key] || '710/1076';
     document.getElementById('fscam').classList.add('on');
     fsKey=key;
   };
