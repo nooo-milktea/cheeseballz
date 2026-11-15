@@ -2654,6 +2654,9 @@ body.portrait-ok .rotate-mask{display:none!important}
 .tocpage .ribbon{z-index:22!important;display:block!important}
 .tocpage{overflow:visible!important}
 .toc-head{width:auto!important;max-width:86%!important}
+
+/* 分类筛选：隐藏卡片（需 !important 才盖得住 .fic 的 display:grid!important） */
+#ficlist .fic.hide{display:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3499,7 +3502,7 @@ body.portrait-ok .rotate-mask{display:none!important}
     var cards=[].slice.call(document.querySelectorAll('#ficlist .fic'));
     cards.forEach(function(card){
       var ok=(c==='all')||card.getAttribute('data-cat')===c||card.getAttribute('data-src')===c;
-      card.style.display=ok?'':'none';
+      card.classList.toggle('hide', !ok);
     });
   }
   document.addEventListener('click',function(e){
