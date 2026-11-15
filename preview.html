@@ -3075,6 +3075,39 @@ section.cam-page.fs-mode .cam4-stage{
   position:relative!important;margin:auto!important;
   top:auto!important;left:auto!important;transform:none!important;
 }
+
+/* 全屏：奶蓝透明底 + 相框居中 + 按钮在下方不遮挡 */
+section.cam-page.fs-mode{
+  position:fixed!important;inset:0!important;z-index:9000!important;
+  background:rgba(199,230,247,.92)!important;
+  -webkit-backdrop-filter:blur(10px)!important;backdrop-filter:blur(10px)!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  width:100vw!important;height:100vh!important;margin:0!important;border:0!important;
+}
+section.cam-page.fs-mode .ph{display:none!important}
+section.cam-page.fs-mode .pcontent{
+  position:static!important;flex:1 1 auto!important;min-height:0!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  gap:10px!important;width:100%!important;height:auto!important;padding:12px 8px 10px!important;overflow:hidden!important;
+}
+section.cam-page.fs-mode .shoot-tray{display:none!important}
+section.cam-page.fs-mode .cam-bar{
+  position:static!important;flex:0 0 auto!important;display:flex!important;flex-wrap:wrap!important;
+  justify-content:center!important;gap:10px!important;padding:6px 0 14px!important;background:none!important;
+}
+/* 相框：按各页比例尽量大，保证完整且居中 */
+section.cam-page.fs-mode .cam-stage{
+  aspect-ratio:710/1076!important;height:auto!important;width:min(92vw, calc((100vh - 170px) * 0.66))!important;
+  max-height:calc(100vh - 170px)!important;flex:0 0 auto!important;margin:0 auto!important;
+}
+section.cam-page.fs-mode .cam2-stage{
+  aspect-ratio:1200/952!important;height:auto!important;width:min(94vw, calc((100vh - 170px) * 1.26))!important;
+  max-height:calc(100vh - 170px)!important;flex:0 0 auto!important;margin:0 auto!important;
+}
+section.cam-page.fs-mode .cam4-stage{
+  aspect-ratio:1773/2364!important;height:auto!important;width:min(92vw, calc((100vh - 170px) * 0.75))!important;
+  max-height:calc(100vh - 170px)!important;flex:0 0 auto!important;margin:0 auto!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3499,17 +3532,6 @@ section.cam-page.fs-mode .cam4-stage{
   </div>
 </div>
 
-<div class="fscam" id="fscam" aria-hidden="true">
-  <div class="fscam-stage" id="fscamstage">
-    <video id="fscamvideo" autoplay playsinline muted></video>
-    <img id="fscamframe" alt="">
-  </div>
-  <div class="fscam-bar">
-    <button class="fscam-btn" onclick="fsShot()">拍照</button>
-    <button class="fscam-btn" onclick="fsFlip()">翻转</button>
-    <button class="fscam-btn" onclick="closeFs()">关闭</button>
-  </div>
-</div>
 <div class="lb" id="lb" onclick="if(event.target===this)closeLb()">
   <img id="lbimg" src="" alt="">
   <button class="x" onclick="closeLb()">✕</button>
@@ -4015,86 +4037,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     if(frame4&&frame4.complete&&frame4.naturalWidth){ shoot(frame4); return; }
     frame4=new Image(); frame4.onload=function(){ shoot(frame4); }; frame4.onerror=function(){ shoot(null); };
     frame4.src='assets/img/frame_white3.webp';
-  };
-
-
-  /* 点击相框 → 全屏拍摄 */
-  var fsKey=null;
-  var FS={
-    cam1:{video:'snapvideo',  frame:'assets/img/frame_camera2.png', shot:function(){takeSnap();}, flip:function(){flip1();}},
-    cam2:{video:'snapvideo2', frame:'assets/img/frame_sy.png',      shot:function(){take2();},   flip:function(){flip2();}},
-    cam4:{video:'snapvideo4', frame:'assets/img/frame_white3.webp', shot:function(){take4();},   flip:function(){flip4();}}
-  };
-  window.openFs=function(key){
-    var cfg=FS[key]; if(!cfg) return;
-    var v=document.getElementById(cfg.video);
-    if(!v || !v.srcObject){ var hint=v&&v.parentNode.querySelector('.snap-hint'); if(hint) hint.textContent='先点「开启」'; return; }
-    var stEl=document.querySelector('.fscam-stage');
-    var fr=document.getElementById('fscamframe');
-    fr.src=cfg.frame;
-    // 直接把页面里的 video 搬过来（避免双 video 拿同一个流时黑屏）
-    v.__home = v.parentNode;
-    v.__style = v.getAttribute('style')||'';
-    stEl.appendChild(v);
-    v.className='fsvideo';
-    v.setAttribute('style','position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transform:'+(v.parentNode.classList.contains('back')?'none':'scaleX(-1)'));
-    var RATIO={cam1:710/1076, cam2:1200/952, cam4:1773/2364};
-    var r=RATIO[key]||710/1076;
-    var vw=window.innerWidth, vh=window.innerHeight*0.86;
-    var w,h2;
-    if(vw/vh > r){ h2=vh; w=vh*r; } else { w=vw; h2=vw/r; }
-    stEl.style.width=Math.round(w)+'px';
-    stEl.style.height=Math.round(h2)+'px';
-    document.getElementById('fscam').classList.add('on');
-    v.play && v.play().catch(function(){});
-    fsKey=key;
-  };
-  window.closeFs=function(){
-    var el=document.getElementById('fscam');
-    el.classList.remove('on');
-    var v=document.querySelector('.fscam-stage video');
-    if(v && v.__home){ v.setAttribute('style', v.__style||''); v.removeAttribute('class'); v.__home.appendChild(v); }
-    fsKey=null;
-  };
-  window.fsShot=function(){ if(fsKey && FS[fsKey]) FS[fsKey].shot(); };
-  window.fsFlip=function(){ if(fsKey && FS[fsKey]) FS[fsKey].flip(); };
-
-  document.addEventListener('click', function(e){
-    var st=e.target.closest && e.target.closest('.cam-stage, .cam2-stage, .cam4-stage');
-    if(!st) return;
-    if(e.target.closest('button')) return;
-    if(st.classList.contains('cam4-stage')) openFs('cam4');
-    else if(st.classList.contains('cam2-stage')) openFs('cam2');
-    else openFs('cam1');
-  });
-
-
-  /* 全屏：直接把本页相框撑满屏幕（不搬动 video，避免黑屏） */
-  var FS_PAGE={cam1:'w-camera', cam2:'w-camera2', cam4:'w-camera4'};
-  window.fsToggle=function(key){
-    var src=FS_PAGE[key]; if(!src) return;
-    var sec=document.querySelector('section[data-src="'+src+'"]');
-    if(!sec) return;
-    var on=sec.classList.toggle('fs-mode');
-    document.body.style.overflow = on ? 'hidden' : '';
-    var btns=sec.querySelectorAll('.cam-bar .cam-mini');
-    btns.forEach(function(b){ if(b.textContent.indexOf('全屏')>=0 || b.textContent.indexOf('退出')>=0) b.textContent = on ? '退出' : '全屏'; });
-  };
-
-
-  /* 原生全屏：把该页的内容区（相框+按钮）全屏 */
-  window.fsNative=function(btn){
-    var sec=btn.closest('section.cam-page');
-    if(!sec) return;
-    var pc=sec.querySelector('.pcontent');
-    if(!pc) return;
-    if(document.fullscreenElement){
-      (document.exitFullscreen||document.webkitExitFullscreen).call(document);
-      return;
-    }
-    var req=pc.requestFullscreen||pc.webkitRequestFullscreen;
-    if(req){ req.call(pc).then(function(){ setTimeout(function(){ if(window.fitCam) fitCam(); },150); }).catch(function(){}); }
-    else { sec.classList.toggle('fs-mode'); }
   };
 
 
