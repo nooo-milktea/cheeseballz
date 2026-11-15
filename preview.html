@@ -3327,6 +3327,21 @@ body::before{
 .cam-page .cam-stage,
 .cam-page .cam2-stage,
 .cam-page .cam4-stage{position:relative!important;z-index:8!important}
+
+/* 弹窗相框：宽度驱动 + aspect-ratio，手机上也不会被压扁 */
+.fsmodal-stage{
+  flex:0 0 auto!important;align-self:center!important;margin:0 auto!important;
+  height:auto!important;max-height:none!important;max-width:100%!important;
+}
+.fsmodal-stage.k1{
+  width:min(92%, calc((100vh - 210px) * 0.6599))!important;aspect-ratio:710/1076!important;
+}
+.fsmodal-stage.k2{
+  width:min(94%, calc((100vh - 210px) * 1.2595))!important;aspect-ratio:1200/952!important;
+}
+.fsmodal-stage.k4{
+  width:min(92%, calc((100vh - 200px) * 0.75))!important;aspect-ratio:1773/2364!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
