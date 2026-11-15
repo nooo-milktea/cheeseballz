@@ -2973,6 +2973,8 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .fscam-stage img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important}
 .fscam-stage video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+
+.fscam-stage .fsvideo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;z-index:1!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3927,12 +3929,15 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var cfg=FS[key]; if(!cfg) return;
     var v=document.getElementById(cfg.video);
     if(!v || !v.srcObject){ var hint=v&&v.parentNode.querySelector('.snap-hint'); if(hint) hint.textContent='先点「开启」'; return; }
-    var top=document.getElementById('fscamvideo'), fr=document.getElementById('fscamframe');
-    top.srcObject=v.srcObject;
-    top.play().catch(function(){});
-    fr.src=cfg.frame;
     var stEl=document.querySelector('.fscam-stage');
-    stEl.classList.toggle('back', v.parentNode.classList.contains('back'));
+    var fr=document.getElementById('fscamframe');
+    fr.src=cfg.frame;
+    // 直接把页面里的 video 搬过来（避免双 video 拿同一个流时黑屏）
+    v.__home = v.parentNode;
+    v.__style = v.getAttribute('style')||'';
+    stEl.appendChild(v);
+    v.className='fsvideo';
+    v.setAttribute('style','position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transform:'+(v.parentNode.classList.contains('back')?'none':'scaleX(-1)'));
     var RATIO={cam1:710/1076, cam2:1200/952, cam4:1773/2364};
     var r=RATIO[key]||710/1076;
     var vw=window.innerWidth, vh=window.innerHeight*0.86;
@@ -3941,12 +3946,14 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     stEl.style.width=Math.round(w)+'px';
     stEl.style.height=Math.round(h2)+'px';
     document.getElementById('fscam').classList.add('on');
+    v.play && v.play().catch(function(){});
     fsKey=key;
   };
   window.closeFs=function(){
     var el=document.getElementById('fscam');
     el.classList.remove('on');
-    var top=document.getElementById('fscamvideo'); top.srcObject=null;
+    var v=document.querySelector('.fscam-stage video');
+    if(v && v.__home){ v.setAttribute('style', v.__style||''); v.removeAttribute('class'); v.__home.appendChild(v); }
     fsKey=null;
   };
   window.fsShot=function(){ if(fsKey && FS[fsKey]) FS[fsKey].shot(); };
