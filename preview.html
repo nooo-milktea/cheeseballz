@@ -3181,6 +3181,18 @@ section.cam-page.fs-mode .cam4-stage{
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
+
+/* 关键：视频铺满整个相框，靠掩膜只显示镂空形状 */
+.page[data-src="w-camera"] .cam-stage video,
+.cam2-page .cam2-stage video,
+.cam4-page .cam4-stage video{
+  inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;border-radius:0!important;
+}
+.fsmodal-stage video{
+  inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;border-radius:0!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
