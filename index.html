@@ -2616,6 +2616,17 @@ body.portrait-ok .rotate-mask{display:none!important}
 }
 .umb-name.left{transform:translateX(-52px) rotate(-3deg)!important}
 .umb-name.right{transform:translateX(26px) rotate(3deg)!important}
+
+/* 名字：去掉抖动滤镜（手机模糊），改用同色描边做粗糙笔触 */
+.umb-name{
+  filter:none!important;
+  text-shadow:
+    0 0 0.4px currentColor,
+    0.6px 0 currentColor,
+   -0.6px 0 currentColor,
+    0 0.6px currentColor,
+    0 -0.6px currentColor!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
