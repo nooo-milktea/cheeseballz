@@ -3032,6 +3032,31 @@ section.cam-page.fs-mode .cam-bar{
   margin:0 auto!important;align-self:center!important;
   max-height:100vh!important;height:100vh!important;max-width:100vw!important;
 }
+
+/* 页内全屏：铺满浏览器，相框居中 */
+section.cam-page.fs-mode{
+  position:fixed!important;inset:0!important;z-index:9000!important;
+  width:100vw!important;height:100vh!important;margin:0!important;
+  background:#0f0c0b!important;display:flex!important;align-items:center!important;justify-content:center!important;
+  border:0!important;border-radius:0!important;
+}
+section.cam-page.fs-mode .ph{display:none!important}
+section.cam-page.fs-mode .pcontent{
+  width:100%!important;height:100%!important;padding:0!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+}
+section.cam-page.fs-mode .cam-stage,
+section.cam-page.fs-mode .cam2-stage,
+section.cam-page.fs-mode .cam4-stage{
+  height:96vh!important;max-height:96vh!important;width:auto!important;max-width:96vw!important;margin:0 auto!important;
+}
+section.cam-page.fs-mode .shoot-tray{display:none!important}
+section.cam-page.fs-mode .cam-bar{
+  position:fixed!important;left:0!important;right:0!important;bottom:8px!important;
+  display:flex!important;justify-content:center!important;gap:10px!important;
+  padding:8px 0!important;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))!important;
+  z-index:9100!important;border:0!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3344,7 +3369,7 @@ section.cam-page.fs-mode .cam-bar{
       <div class="cam-bar">
         <button class="cam-mini" onclick="startSnap()">开启</button>
         <button class="snap-shot" onclick="takeSnap()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="fsNative(this)">全屏</button>
+        <button class="cam-mini" onclick="fsToggle(this)">全屏</button>
         <button class="cam-mini" onclick="flip1()">翻转</button>
         <button class="cam-mini" onclick="stopSnap()">关闭</button>
       </div>
@@ -3367,7 +3392,7 @@ section.cam-page.fs-mode .cam-bar{
       <div class="cam-bar">
         <button class="cam-mini" onclick="start2()">开启</button>
         <button class="snap-shot" onclick="take2()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="fsNative(this)">全屏</button>
+        <button class="cam-mini" onclick="fsToggle(this)">全屏</button>
         <button class="cam-mini" onclick="flip2()">翻转</button>
         <button class="cam-mini" onclick="stop2()">关闭</button>
       </div>
@@ -3391,7 +3416,7 @@ section.cam-page.fs-mode .cam-bar{
       <div class="cam-bar">
         <button class="cam-mini" onclick="start4()">开启</button>
         <button class="snap-shot" onclick="take4()" title="拍照">◉</button>
-        <button class="cam-mini" onclick="fsNative(this)">全屏</button>
+        <button class="cam-mini" onclick="fsToggle(this)">全屏</button>
         <button class="cam-mini" onclick="flip4()">翻转</button>
         <button class="cam-mini" onclick="stop4()">关闭</button>
       </div>
@@ -4053,6 +4078,27 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     if(req){ req.call(pc).then(function(){ setTimeout(function(){ if(window.fitCam) fitCam(); },150); }).catch(function(){}); }
     else { sec.classList.toggle('fs-mode'); }
   };
+
+
+  /* 页内全屏：只铺满浏览器，不进入系统全屏 */
+  window.fsToggle=function(btn){
+    var sec=btn.closest('section.cam-page'); if(!sec) return;
+    var on=sec.classList.toggle('fs-mode');
+    btn.textContent = on ? '退出' : '全屏';
+    document.documentElement.style.overflow = on ? 'hidden' : '';
+    document.body.style.overflow = on ? 'hidden' : '';
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){
+      var sec=document.querySelector('section.cam-page.fs-mode');
+      if(sec){
+        sec.classList.remove('fs-mode');
+        var b=sec.querySelector('.cam-bar button');
+        sec.querySelectorAll('.cam-bar button').forEach(function(x){ if(x.textContent.trim()==='退出') x.textContent='全屏'; });
+        document.documentElement.style.overflow=''; document.body.style.overflow='';
+      }
+    }
+  });
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
