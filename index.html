@@ -2777,6 +2777,26 @@ body.portrait-ok .rotate-mask{display:none!important}
 /* 手绘太阳 */
 .sun .sun-drawn{width:100%!important;height:100%!important;display:block}
 .sun .core,.sun .rays,.sun .halo{display:none!important}
+
+/* 回到原来的太阳；光晕更大，偏黄昏暖调 */
+.sun .sun-drawn{display:none!important}
+.sun .core,.sun .rays,.sun .halo{display:block!important}
+.sun{width:320px!important;height:320px!important}
+.sun .core{
+  background:radial-gradient(circle at 50% 50%, #FFE7BE 0%, #FFD79A 45%, #FFC075 72%, rgba(255,190,120,0) 100%)!important;
+  box-shadow:0 0 90px 40px rgba(255,196,128,.55),0 0 160px 90px rgba(255,186,120,.35)!important;
+}
+.sun .halo{
+  background:radial-gradient(circle, rgba(255,214,160,.55) 0%, rgba(255,198,140,.28) 42%, rgba(255,190,130,0) 72%)!important;
+  transform:scale(2.6)!important;
+}
+.sun .rays{
+  opacity:.45!important;
+  filter:blur(.6px);
+  background:repeating-conic-gradient(from 0deg, rgba(255,206,150,.5) 0deg 6deg, transparent 6deg 24deg)!important;
+  transform:scale(2.2)!important;
+}
+@media(max-width:700px){.sun{width:220px!important;height:220px!important}}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
