@@ -2782,29 +2782,43 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam2-page.back .cam2-stage video{transform:none!important}
 
 /* 第四个相机：白框，中间空白处为摄影区 */
-
-
+.cam4-page .cam4-stage{
+  position:relative;height:calc(100% - 74px);width:auto;aspect-ratio:1773/2364;
+  max-width:100%;margin:0 auto;flex:0 0 auto;background:#fffdf6;overflow:hidden;
+}
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 .cam4-page.back .cam4-stage video{transform:none}
 .cam4-page .cam4-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;object-fit:fill}
 .cam4-page .snap-hint{left:30%!important;right:30%!important;top:56%!important;bottom:auto!important;z-index:3;font-size:9px!important}
 
 /* 第四相机：相框更大，摄影区填满第二个相框的空白 */
-
-
-
+.cam4-page .pcontent{height:calc(100% - 26px)!important;padding-bottom:86px!important;gap:4px!important}
+.cam4-page .cam4-stage{height:calc(100% - 58px)!important}
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 .cam4-page .shoot-tray{height:84px!important}
 
 /* 第四相机：去掉卡片外框，相框直接贴在书页上，不被书缝穿过 */
 .cam4-page{z-index:9!important}
-
-
+.cam4-page .pcontent{height:calc(100% - 22px)!important;padding:0 0 76px!important;gap:2px!important}
+.cam4-page .cam4-stage{
+  height:calc(100% - 50px)!important;background:transparent!important;
+  box-shadow:none!important;border:0!important;border-radius:0!important;
+}
 .cam4-page .shoot-tray{height:74px!important}
 
 /* 第四相机：摄影区按窗口实际范围再放大 */
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 
 /* 第四相机：摄影区在相框下面，只在镂空处透出来 */
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 
 /* 相框与摄影区不遮盖书页布纹 */
 .cam-page{background:transparent!important}
@@ -2820,8 +2834,10 @@ body.portrait-ok .rotate-mask{display:none!important}
 .cam-page .shoot-tray{background:rgba(255,253,248,.55)!important}
 
 /* 第三个相框：取消遮罩（加载失败会整个不显示），改用超大区域在相框下方 */
-
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
+.cam4-page .cam4-stage.live video{opacity:1!important}
 
 /* 全屏拍摄 */
 .fscam{
@@ -3076,7 +3092,9 @@ section.cam-page.fs-mode .cam4-stage{
 .cam2-page .cam2-stage video{
   inset:auto!important;left:6.92%!important;top:12.2%!important;width:86.17%!important;height:64.7%!important;
 }
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 /* 弹窗里的三个相框 */
 .fsmodal-stage.k1 video{
   inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
@@ -3091,10 +3109,11 @@ section.cam-page.fs-mode .cam4-stage{
 /* 定位容器必须是相框本身，否则百分比会算到页面上导致溢出 */
 .page[data-src="w-camera"] .cam-stage,
 .cam2-page .cam2-stage,
-
+.cam4-page .cam4-stage{position:relative!important;overflow:hidden!important}
 .page[data-src="w-camera"] .cam-stage video,
 .cam2-page .cam2-stage video,
-
+.cam4-page .cam4-stage video,
+.fsmodal-stage video{position:absolute!important}
 /* 用镂空遮罩：画面只在真实窗口形状内出现（不可能溢出） */
 .page[data-src="w-camera"] .cam-stage video,
 .fsmodal-stage.k1 video{
@@ -3102,12 +3121,17 @@ section.cam-page.fs-mode .cam4-stage{
 }
 .cam2-page .cam2-stage video,
 .fsmodal-stage.k2 video{}
-
+.cam4-page .cam4-stage video,
+.fsmodal-stage.k4 video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 
 /* 关键：视频铺满整个相框，靠掩膜只显示镂空形状 */
 .page[data-src="w-camera"] .cam-stage video,
 .cam2-page .cam2-stage video,
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 .fsmodal-stage video{
   inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
   object-fit:cover!important;border-radius:0!important;
@@ -3116,12 +3140,14 @@ section.cam-page.fs-mode .cam4-stage{
 /* 恢复：不用掩膜，视频回到镂空矩形内，超出部分被相框容器裁掉 */
 .page[data-src="w-camera"] .cam-stage,
 .cam2-page .cam2-stage,
-
+.cam4-page .cam4-stage{position:relative!important;overflow:hidden!important}
 .page[data-src="w-camera"] .cam-stage video{
   inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
 }
 .cam2-page .cam2-stage video{inset:auto!important;left:6.9%!important;top:10.7%!important;width:86.2%!important;height:66.2%!important}
-
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
+}
 .fsmodal-stage.k1 video{
   inset:auto!important;left:15.2%!important;top:9.3%!important;width:70.1%!important;height:65.4%!important;
 }
@@ -3179,11 +3205,11 @@ body::before{
 /* 恢复相框原尺寸（不再被页面撑满） */
 .cam-page .cam-stage{height:min(44vh,420px)!important;width:auto!important;max-width:100%!important}
 .cam2-page .cam2-stage{height:min(44vh,420px)!important;width:auto!important;max-width:100%!important}
-
+.cam4-page .cam4-stage{height:min(56vh,520px)!important;width:auto!important;max-width:100%!important}
 @media (max-width:760px){
   .cam-page .cam-stage{height:min(40vh,360px)!important}
   .cam2-page .cam2-stage{height:min(40vh,360px)!important}
-
+  .cam4-page .cam4-stage{height:min(50vh,440px)!important}
 }
 /* 弹窗里也不要被拉伸 */
 .fsmodal-stage.k1,.fsmodal-stage.k2,.fsmodal-stage.k4{max-height:100%!important}
@@ -3197,11 +3223,14 @@ body::before{
   width:min(92vw, calc(44vh * 1.2595))!important;height:auto!important;
   aspect-ratio:1200/952!important;max-width:none!important;
 }
-
+.cam4-page .cam4-stage{
+  width:min(92vw, calc(56vh * 0.75))!important;height:auto!important;
+  aspect-ratio:1773/2364!important;max-width:none!important;
+}
 @media (max-width:760px){
   .cam-page .cam-stage{width:min(92vw, calc(40vh * 0.6599))!important}
   .cam2-page .cam2-stage{width:min(94vw, calc(40vh * 1.2595))!important}
-
+  .cam4-page .cam4-stage{width:min(92vw, calc(50vh * 0.75))!important}
 }
 
 /* 尽量大且保持原比例（宽度推导，高度自动） */
@@ -3213,11 +3242,14 @@ body::before{
   width:min(94vw, calc(min(52vh, 480px) * 1.2595))!important;
   height:auto!important;aspect-ratio:1200/952!important;max-width:none!important;
 }
-
+.cam4-page .cam4-stage{
+  width:min(92vw, calc(min(64vh, 620px) * 0.75))!important;
+  height:auto!important;aspect-ratio:1773/2364!important;max-width:none!important;
+}
 @media (max-width:760px){
   .cam-page .cam-stage{width:min(92vw, calc(min(46vh, 400px) * 0.6599))!important}
   .cam2-page .cam2-stage{width:min(94vw, calc(min(46vh, 400px) * 1.2595))!important}
-
+  .cam4-page .cam4-stage{width:min(92vw, calc(min(58vh, 480px) * 0.75))!important}
 }
 
 /* 三个相框都居中（不偏左） */
@@ -3226,7 +3258,9 @@ body::before{
 }
 .cam-page .cam-stage,
 .cam2-page .cam2-stage,
-
+.cam4-page .cam4-stage{
+  margin:0 auto!important;align-self:center!important;flex:0 0 auto!important;
+}
 
 /* 书页上的三个相框回到原样（不再动） */
 .cam-page .cam-stage{
@@ -3237,7 +3271,10 @@ body::before{
   height:calc(100% - 74px)!important;width:auto!important;max-width:100%!important;
   aspect-ratio:1200/952!important;margin:0 auto!important;
 }
-
+.cam4-page .cam4-stage{
+  height:calc(100% - 50px)!important;width:auto!important;max-width:100%!important;
+  aspect-ratio:1773/2364!important;margin:0 auto!important;
+}
 @media (max-width:760px){
   .cam-page .cam-stage{height:min(40vh,360px)!important}
 }
@@ -3258,123 +3295,6 @@ body::before{
 .fsmodal-stage.k2{height:min(60vh, 520px)!important;aspect-ratio:1200/952!important}
 .fsmodal-stage.k4{height:min(80vh, 740px)!important;aspect-ratio:1773/2364!important}
 .fsmodal-stage img{width:100%!important;height:100%!important;object-fit:fill!important}
-
-/* 手机：相机页按钮不再溢出到屏幕右侧 */
-.cam-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;
-  align-items:center!important;justify-content:flex-start!important;
-  gap:8px!important;height:calc(100% - 30px)!important;
-  padding:0 0 96px!important;overflow:hidden!important;
-}
-.cam-page .cam-bar{
-  position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
-  display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;
-  gap:8px!important;width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam-page .cam-bar .cam-mini{padding:6px 12px!important;font-size:11px!important}
-.cam-page .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important;border-width:2px!important}
-.cam-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:90px!important;z-index:7!important;
-}
-@media (max-width:480px){
-  .cam-page .cam-stage{height:min(34vh,290px)!important}
-  .cam-page .cam-bar .cam-mini{padding:5px 10px!important;font-size:10.5px!important}
-  .cam-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
-}
-
-/* 书缝压在相框下层（相框、按钮、托盘在上） */
-.page[data-src="w-camera"],
-.page[data-src="w-camera2"],
-.page[data-src="w-camera4"]{z-index:auto!important}
-.cam-page .cam-stage,
-.cam-page .cam2-stage,
-.cam-page .cam4-stage{position:relative!important;z-index:8!important}
-
-/* 弹窗相框：宽度驱动 + aspect-ratio，手机上也不会被压扁 */
-.fsmodal-stage{
-  flex:0 0 auto!important;align-self:center!important;margin:0 auto!important;
-  height:auto!important;max-height:none!important;max-width:100%!important;
-}
-.fsmodal-stage.k1{
-  width:min(92%, calc((100vh - 210px) * 0.6599))!important;aspect-ratio:710/1076!important;
-}
-.fsmodal-stage.k2{
-  width:min(94%, calc((100vh - 210px) * 1.2595))!important;aspect-ratio:1200/952!important;
-}
-.fsmodal-stage.k4{
-  width:min(92%, calc((100vh - 200px) * 0.75))!important;aspect-ratio:1773/2364!important;
-}
-
-/* 第三个相框强制居中 */
-
-
-
-/* 第三个相框：绝对定位 + 平移强制居中（不依赖 flex） */
-
-
-
-/* 第三个相框：回到文档流，用 inline-block + text-align 居中，按钮在下方 */
-
-
-.cam4-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;gap:8px!important;margin:8px 0 0!important;padding:0!important;
-}
-
-/* 第三个相框：宽度驱动、按原比例，不被容器高度压缩 */
-
-
-@media (max-width:760px){
-
-}
-
-/* 第三个相框：用更高优先级彻底取消旧的固定高度，保证原比例 */
-
-@media (max-width:760px){
-
-}
-
-/* 第三个相框：19:06 那版（宽度驱动 + 原比例，不改布局） */
-.cam4-page .cam4-stage{
-  height:auto!important;max-height:none!important;
-  width:min(92vw, calc(min(64vh, 620px) * 0.75))!important;
-  aspect-ratio:1773/2364!important;max-width:none!important;
-  margin:0 auto!important;
-}
-
-/* 第三个相机页：重建基础样式（宽度驱动、原比例） */
-.cam4-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
-  padding:0 0 78px!important;overflow:hidden!important;
-}
-.cam4-page .cam4-stage{
-  position:relative!important;display:block!important;flex:0 0 auto!important;
-  height:auto!important;max-height:none!important;
-  width:min(92vw, calc(min(64vh, 620px) * 0.75))!important;
-  aspect-ratio:1773/2364!important;max-width:none!important;margin:0 auto!important;
-  overflow:hidden!important;background:transparent!important;
-}
-.cam4-page .cam4-frame{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
-  object-fit:fill!important;z-index:2!important;pointer-events:none!important;
-}
-.cam4-page .cam4-stage video{
-  position:absolute!important;inset:auto!important;
-  left:34.7%!important;top:35.7%!important;width:34.8%!important;height:18.6%!important;
-  object-fit:cover!important;z-index:1!important;transform:scaleX(-1);
-}
-.cam4-page.back .cam4-stage video{transform:none!important}
-.cam4-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;gap:8px!important;width:100%!important;margin:0!important;padding:0!important;
-}
-.cam4-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:74px!important}
-.cam4-page .snap-hint{left:30%!important;right:30%!important;top:56%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
-@media (max-width:760px){
-  .cam4-page .cam4-stage{width:min(92vw, calc(min(58vh, 520px) * 0.75))!important}
-}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
