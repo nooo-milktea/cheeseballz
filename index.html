@@ -3501,6 +3501,18 @@ body::before{
 @media (max-width:760px){
   .cam5-page .cam5-stage{height:calc(100% - 120px)!important;max-width:100%!important}
 }
+
+/* 玫瑰框：宽度驱动 + 锁定原比例（1101:836），永不被压扁 */
+.cam5-page .cam5-stage{
+  height:auto!important;max-height:none!important;
+  width:min(94vw, calc(56vh * 1.317))!important;
+  aspect-ratio:1101/836!important;max-width:none!important;
+  margin:0 auto!important;flex:0 0 auto!important;
+}
+.cam5-page .cam5-frame{object-fit:fill!important}
+@media (max-width:760px){
+  .cam5-page .cam5-stage{width:min(92vw, calc(46vh * 1.317))!important;height:auto!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
