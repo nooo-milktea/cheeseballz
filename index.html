@@ -3510,6 +3510,14 @@ body::before{
   opacity:1!important;visibility:visible!important;
   -webkit-mask-image:none!important;mask-image:none!important;
 }
+
+/* 书页上也使用镜像（前摄头），切到后摄头时取消 */
+.cam2-page .cam2-stage video,
+.cam4-page .cam4-stage video,
+.cam5-page .cam5-stage video{transform:scaleX(-1)!important}
+.cam2-page.back .cam2-stage video,
+.cam4-page.back .cam4-stage video,
+.cam5-page.back .cam5-stage video{transform:none!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
