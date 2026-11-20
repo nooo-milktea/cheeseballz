@@ -3572,6 +3572,13 @@ body::before{
   font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
   border-radius:50%!important;line-height:1!important;
 }
+
+/* 玫瑰框弹窗：保持 1101:836 原比例 */
+.fsmodal-stage.k5{aspect-ratio:1101/836!important}
+.fsmodal-stage.k5 video{
+  inset:auto!important;left:7.5%!important;top:7.5%!important;width:85%!important;height:85%!important;
+  object-fit:cover!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4586,7 +4593,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     stg.style.aspectRatio = String(cfg.ratio);
 
     stg.classList.remove('k1','k2','k4');
-    stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':'k4'));
+    stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':(key==='cam5'?'k5':'k4')));
     stg.classList.toggle('back', fsFacing==='environment');
     document.getElementById('fsmodal').classList.add('on');
   };
