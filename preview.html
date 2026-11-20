@@ -3452,6 +3452,16 @@ body::before{
   -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
 }
+
+/* 相机二/三/四页：开启后强制显示画面（不依赖旧的 .live 不透明度规则） */
+.cam2-page .cam2-stage.live video,
+.cam4-page .cam4-stage.live video,
+.cam5-page .cam5-stage.live video{
+  opacity:1!important;visibility:visible!important;display:block!important;z-index:1!important;
+}
+.cam2-page .cam2-stage video,
+.cam4-page .cam4-stage video,
+.cam5-page .cam5-stage video{opacity:0;transition:opacity .18s}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
