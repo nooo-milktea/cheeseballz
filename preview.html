@@ -3388,67 +3388,69 @@ body::before{
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
 
-/* 第四台相机：玫瑰框 */
+/* ===== 玫瑰框（第4台相机） ===== */
 .cam5-page .pcontent{
   position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
-  padding:0 0 78px!important;overflow:hidden!important;
+  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 30px)!important;
+  padding:0!important;overflow:hidden!important;
 }
 .cam5-page .cam5-stage{
-  position:relative!important;display:block!important;flex:0 0 auto!important;
-  height:auto!important;max-height:none!important;
-  width:min(92vw, calc(min(64vh, 620px) * 1.317))!important;
-  aspect-ratio:1101/836!important;max-width:none!important;margin:0 auto!important;
-  overflow:hidden!important;background:transparent!important;
+  position:relative!important;overflow:hidden!important;
+  height:calc(100% - 154px)!important;max-height:calc(100% - 154px)!important;
+  width:auto!important;aspect-ratio:1101/836!important;
+  max-width:100%!important;margin:0 auto!important;flex:0 0 auto!important;
 }
 .cam5-page .cam5-frame{
   position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
   object-fit:fill!important;z-index:2!important;pointer-events:none!important;
 }
 .cam5-page .cam5-stage video{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  position:absolute!important;inset:auto!important;
+  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
   object-fit:cover!important;z-index:1!important;transform:scaleX(-1);
-  -webkit-mask-image:url(assets/img/hole_cam5.png)!important;
-  mask-image:url(assets/img/hole_cam5.png)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
 .cam5-page.back .cam5-stage video{transform:none!important}
 .cam5-page .cam-bar{
   position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;gap:8px!important;width:100%!important;margin:0!important;padding:0!important;
-}
-.cam5-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:74px!important}
-.cam5-page .snap-hint{left:26%!important;right:26%!important;top:30%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc((100vh - 230px) * 1.317))!important}
-}
-
-/* 玫瑰框：参照草莓框布局，相框更小居中，按钮在下方 */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:10px!important;height:calc(100% - 22px)!important;
-  padding:0 0 78px!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  height:auto!important;max-height:none!important;
-  width:min(90vw, calc(min(58vh, 520px) * 1.317))!important;
-  aspect-ratio:1101/836!important;max-width:none!important;
-  margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
   align-items:center!important;justify-content:center!important;gap:8px!important;
   width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
 }
-.cam5-page .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important;border-width:2px!important}
+.cam5-page .cam-bar .snap-shot{
+  display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
+  font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
+  border-radius:50%!important;line-height:1!important;
+}
 .cam5-page .shoot-tray{
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:74px!important;z-index:7!important;
+  height:96px!important;z-index:7!important;
 }
+.cam5-page .snap-hint{left:26%!important;right:26%!important;top:24%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
 @media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc((100vh - 250px) * 1.317))!important}
-  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
+  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important;min-width:44px!important}
+}
+/* 玫瑰框全屏 */
+.fsmodal-stage.k5{
+  height:min(62vh, 540px)!important;width:auto!important;max-width:94vw!important;
+  aspect-ratio:1101/836!important;flex:0 0 auto!important;align-self:center!important;
+}
+.fsmodal-stage.k5 img{object-fit:fill!important}
+.fsmodal-stage.k5 video{
+  position:absolute!important;inset:auto!important;
+  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
+  object-fit:cover!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
@@ -4449,7 +4451,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.152,.093,.701,.654]},
     cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.064,.116,.872,.658]},
     cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.335,.348,.412,.202]},
-    cam5:{frame:'assets/img/frame_rose.webp', ratio:1101/836, rect:[.20,.22,.54,.62]}
+    cam5:{frame:'assets/img/frame_rose.webp', ratio:1101/836, rect:[.105,.105,.79,.79]}
   };
   window.openFsM=function(key){
     var cfg=FS_CFG[key]; if(!cfg) return;
@@ -4464,7 +4466,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     stg.style.aspectRatio = String(cfg.ratio);
 
     stg.classList.remove('k1','k2','k4');
-    stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':'k4'));
+    stg.classList.add(key==='cam1'?'k1':(key==='cam2'?'k2':(key==='cam5'?'k5':'k4')));
     stg.classList.toggle('back', fsFacing==='environment');
     document.getElementById('fsmodal').classList.add('on');
   };
@@ -4513,7 +4515,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   };
 
 
-  /* 第四台相机：玫瑰框 */
+  /* 玫瑰框相机 */
   var stream5=null, facing5='user', frame5=null;
   window.start5=function(){
     var v=document.getElementById('snapvideo5'), hint=document.getElementById('snaphint5');
@@ -4541,7 +4543,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       var W=1640,H=1245; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.20, ry=H*0.22, rw=W*0.54, rh=H*0.62;
+      var rx=W*0.105, ry=H*0.105, rw=W*0.79, rh=H*0.79;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       if(facing5==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
