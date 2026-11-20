@@ -3619,6 +3619,30 @@ body::before{
   justify-content:center!important;align-items:center!important;gap:8px!important;
   width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
 }
+
+/* 玫瑰框摄影区：再缩小一圈，四边做虚化过渡 */
+.cam5-page .cam5-stage video{
+  inset:auto!important;
+  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
+  object-fit:cover!important;z-index:1!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+}
+.fsmodal-stage.k5 video{
+  inset:auto!important;left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
+  object-fit:cover!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4618,7 +4642,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.152,.093,.701,.654]},
     cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.064,.116,.872,.658]},
     cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.335,.348,.412,.202]},
-    cam5:{frame:'assets/img/frame_rose.webp', ratio:1101/836, rect:[.075,.075,.85,.85]}
+    cam5:{frame:'assets/img/frame_rose.webp', ratio:1101/836, rect:[.105,.105,.79,.79]}
   };
   window.openFsM=function(key){
     var cfg=FS_CFG[key]; if(!cfg) return;
@@ -4710,7 +4734,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       var W=1640,H=1245; c.width=W; c.height=H;
       var ctx=c.getContext('2d');
       ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
-      var rx=W*0.075, ry=H*0.075, rw=W*0.85, rh=H*0.85;
+      var rx=W*0.105, ry=H*0.105, rw=W*0.79, rh=H*0.79;
       var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
       ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
       if(facing5==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
