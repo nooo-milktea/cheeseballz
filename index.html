@@ -3540,6 +3540,23 @@ body::before{
   .cam5-page .cam5-stage{width:min(92vw, calc((70vh - 170px) * 1.317))!important}
   .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important;min-width:44px!important}
 }
+
+/* 去掉遮罩，恢复为矩形定位（保证相机可见） */
+.cam2-page .cam2-stage video{
+  inset:auto!important;left:6.4%!important;top:11.6%!important;width:87.2%!important;height:65.8%!important;
+  object-fit:cover!important;z-index:1!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
+.cam4-page .cam4-stage video{
+  inset:auto!important;left:33.5%!important;top:35.0%!important;width:37.2%!important;height:20.0%!important;
+  object-fit:cover!important;z-index:1!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
+.cam5-page .cam5-stage video{
+  inset:auto!important;left:7.5%!important;top:7.5%!important;width:85%!important;height:85%!important;
+  object-fit:cover!important;z-index:1!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
