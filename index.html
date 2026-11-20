@@ -3513,6 +3513,33 @@ body::before{
 @media (max-width:760px){
   .cam5-page .cam5-stage{width:min(92vw, calc(46vh * 1.317))!important;height:auto!important}
 }
+
+/* 玫瑰框：按“页面可用高度”定宽，保证按钮不被挤掉；比例锁定 1101:836 */
+.cam5-page .pcontent{
+  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
+  padding:0 0 72px!important;overflow:hidden!important;
+}
+.cam5-page .cam5-stage{
+  width:min(94vw, calc((70vh - 150px) * 1.317))!important;
+  height:auto!important;max-height:none!important;
+  aspect-ratio:1101/836!important;max-width:none!important;
+  margin:0 auto!important;flex:0 0 auto!important;
+}
+.cam5-page .cam-bar{
+  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  align-items:center!important;justify-content:center!important;gap:8px!important;
+  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
+}
+.cam5-page .cam-bar .snap-shot{
+  display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
+  font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
+  border-radius:50%!important;line-height:1!important;
+}
+@media (max-width:760px){
+  .cam5-page .cam5-stage{width:min(92vw, calc((70vh - 170px) * 1.317))!important}
+  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important;min-width:44px!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
