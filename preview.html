@@ -3462,6 +3462,22 @@ body::before{
 .cam2-page .cam2-stage video,
 .cam4-page .cam4-stage video,
 .cam5-page .cam5-stage video{opacity:0;transition:opacity .18s}
+
+/* 修复：照片托盘遮住了按钮（导致点不开） */
+.cam2-page .shoot-tray,
+.cam4-page .shoot-tray,
+.cam5-page .shoot-tray{pointer-events:none!important}
+.cam2-page .shoot-tray > *,
+.cam4-page .shoot-tray > *,
+.cam5-page .shoot-tray > *{pointer-events:auto!important}
+.cam2-page .cam-bar,
+.cam4-page .cam-bar,
+.cam5-page .cam-bar{
+  position:relative!important;z-index:40!important;pointer-events:auto!important;
+}
+.cam2-page .cam-bar button,
+.cam4-page .cam-bar button,
+.cam5-page .cam-bar button{pointer-events:auto!important;position:relative!important;z-index:41!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
