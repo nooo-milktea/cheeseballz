@@ -3388,146 +3388,37 @@ body::before{
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
 
-/* 第四台相机：玫瑰框 */
+/* ===== 玫瑰框（第4台相机） ===== */
 .cam5-page .pcontent{
   position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
-  padding:0 0 78px!important;overflow:hidden!important;
+  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 30px)!important;
+  padding:0!important;overflow:hidden!important;
 }
 .cam5-page .cam5-stage{
-  position:relative!important;display:block!important;flex:0 0 auto!important;
-  height:auto!important;max-height:none!important;
-  width:min(92vw, calc(min(64vh, 620px) * 1.317))!important;
-  aspect-ratio:1101/836!important;max-width:none!important;margin:0 auto!important;
-  overflow:hidden!important;background:transparent!important;
+  position:relative!important;overflow:hidden!important;
+  height:calc(100% - 154px)!important;max-height:calc(100% - 154px)!important;
+  width:auto!important;aspect-ratio:1101/836!important;
+  max-width:100%!important;margin:0 auto!important;flex:0 0 auto!important;
 }
 .cam5-page .cam5-frame{
   position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
   object-fit:fill!important;z-index:2!important;pointer-events:none!important;
 }
 .cam5-page .cam5-stage video{
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  position:absolute!important;inset:auto!important;
+  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
   object-fit:cover!important;z-index:1!important;transform:scaleX(-1);
-  -webkit-mask-image:url(assets/img/hole_cam5.png)!important;
-  mask-image:url(assets/img/hole_cam5.png)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
 .cam5-page.back .cam5-stage video{transform:none!important}
 .cam5-page .cam-bar{
   position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;gap:8px!important;width:100%!important;margin:0!important;padding:0!important;
-}
-.cam5-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:74px!important}
-.cam5-page .snap-hint{left:26%!important;right:26%!important;top:30%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc((100vh - 230px) * 1.317))!important}
-}
-
-/* 玫瑰框：参照草莓框布局，相框更小居中，按钮在下方 */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:10px!important;height:calc(100% - 22px)!important;
-  padding:0 0 78px!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  height:auto!important;max-height:none!important;
-  width:min(90vw, calc(min(58vh, 520px) * 1.317))!important;
-  aspect-ratio:1101/836!important;max-width:none!important;
-  margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam5-page .cam-bar .snap-shot{width:46px!important;height:46px!important;font-size:15px!important;border-width:2px!important}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:74px!important;z-index:7!important;
-}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc((100vh - 250px) * 1.317))!important}
-  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
-}
-
-/* 玫瑰框：相框居中、按高度控制大小，保证快门与按钮始终可见 */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;
-  align-items:center!important;justify-content:flex-start!important;
-  gap:10px!important;height:calc(100% - 22px)!important;
-  padding:0 0 74px!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  height:min(40vh, 300px)!important;max-height:40vh!important;
-  width:auto!important;aspect-ratio:1101/836!important;
-  max-width:none!important;margin:0 auto!important;flex:0 0 auto!important;align-self:center!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam5-page .cam-bar .snap-shot{
-  display:inline-block!important;width:46px!important;height:46px!important;font-size:15px!important;
-  border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;border-radius:50%!important;
-  line-height:1!important;flex:0 0 auto!important;
-}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:72px!important;z-index:7!important;
-}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{height:min(32vh, 240px)!important;max-height:32vh!important}
-  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
-}
-
-/* 玫瑰框：放大到接近草莓框的观感，收紧与缩略区之间的空隙 */
-.cam5-page .pcontent{
-  gap:6px!important;padding:0 0 72px!important;height:calc(100% - 22px)!important;
-  display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;position:relative!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  height:calc(100% - 132px)!important;max-height:none!important;
-  width:auto!important;max-width:100%!important;
-  aspect-ratio:1101/836!important;margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{height:calc(100% - 120px)!important;max-width:100%!important}
-}
-
-/* 玫瑰框：宽度驱动 + 锁定原比例（1101:836），永不被压扁 */
-.cam5-page .cam5-stage{
-  height:auto!important;max-height:none!important;
-  width:min(94vw, calc(56vh * 1.317))!important;
-  aspect-ratio:1101/836!important;max-width:none!important;
-  margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam5-frame{object-fit:fill!important}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc(46vh * 1.317))!important;height:auto!important}
-}
-
-/* 玫瑰框：按“页面可用高度”定宽，保证按钮不被挤掉；比例锁定 1101:836 */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
-  padding:0 0 72px!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  width:min(94vw, calc((70vh - 150px) * 1.317))!important;
-  height:auto!important;max-height:none!important;
-  aspect-ratio:1101/836!important;max-width:none!important;
-  margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
   align-items:center!important;justify-content:center!important;gap:8px!important;
   width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
 }
@@ -3535,183 +3426,31 @@ body::before{
   display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
   font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
   border-radius:50%!important;line-height:1!important;
-}
-@media (max-width:760px){
-  .cam5-page .cam5-stage{width:min(92vw, calc((70vh - 170px) * 1.317))!important}
-  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important;min-width:44px!important}
-}
-
-/* 去掉遮罩，恢复为矩形定位（保证相机可见） */
-.cam2-page .cam2-stage video{
-  inset:auto!important;left:6.4%!important;top:11.6%!important;width:87.2%!important;height:65.8%!important;
-  object-fit:cover!important;z-index:1!important;
-  -webkit-mask-image:none!important;mask-image:none!important;
-}
-.cam4-page .cam4-stage video{
-  inset:auto!important;left:33.5%!important;top:35.0%!important;width:37.2%!important;height:20.0%!important;
-  object-fit:cover!important;z-index:1!important;
-  -webkit-mask-image:none!important;mask-image:none!important;
-}
-.cam5-page .cam5-stage video{
-  inset:auto!important;left:7.5%!important;top:7.5%!important;width:85%!important;height:85%!important;
-  object-fit:cover!important;z-index:1!important;
-  -webkit-mask-image:none!important;mask-image:none!important;
-}
-
-/* 二/三/四相机页：相框尺寸由 JS 精确计算，按钮始终可见 */
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;height:72px!important;z-index:7!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:9!important;
-}
-.cam5-page .cam-bar .snap-shot{
-  display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
-  font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
-  border-radius:50%!important;line-height:1!important;
-}
-
-/* 玫瑰框弹窗：保持 1101:836 原比例 */
-.fsmodal-stage.k5{aspect-ratio:1101/836!important}
-.fsmodal-stage.k5 video{
-  inset:auto!important;left:7.5%!important;top:7.5%!important;width:85%!important;height:85%!important;
-  object-fit:cover!important;
-}
-
-/* 玫瑰框：完全照草莓框那页（高度撑满页面、宽度按比例、按钮在下方） */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;
-  height:calc(100% - 34px)!important;overflow:hidden!important;padding:0!important;
-}
-.cam5-page .cam5-stage{
-  position:relative!important;overflow:hidden!important;
-  height:calc(100% - 74px)!important;width:auto!important;
-  aspect-ratio:1101/836!important;max-width:100%!important;
-  margin:0 auto!important;flex:0 0 auto!important;max-height:none!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:100px!important;z-index:7!important;
-}
-
-/* 玫瑰框：略小一点，并给按钮与缩略区留出互不遮挡的空间 */
-.cam5-page .pcontent{
-  height:calc(100% - 30px)!important;padding:0 0 96px!important;gap:6px!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  height:calc(100% - 150px)!important;max-height:calc(100% - 150px)!important;
-  width:auto!important;aspect-ratio:1101/836!important;max-width:100%!important;margin:0 auto!important;
-}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:90px!important;z-index:7!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;align-items:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-
-/* 玫瑰框摄影区：再缩小一圈，四边做虚化过渡 */
-.cam5-page .cam5-stage video{
-  inset:auto!important;
-  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
-  object-fit:cover!important;z-index:1!important;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
-                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
-  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
-             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
-  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
-}
-.fsmodal-stage.k5 video{
-  inset:auto!important;left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
-  object-fit:cover!important;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
-                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
-  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
-             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
-  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
-  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
-}
-
-/* 玫瑰框：严格照草莓框那一页的布局（高度撑满页面、宽度按比例） */
-.cam5-page .pcontent{
-  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
-  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 34px)!important;
-  padding:0!important;overflow:hidden!important;
-}
-.cam5-page .cam5-stage{
-  position:relative!important;overflow:hidden!important;
-  height:calc(100% - 74px)!important;max-height:none!important;
-  width:auto!important;aspect-ratio:1101/836!important;
-  max-width:100%!important;margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  align-items:center!important;justify-content:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:100px!important;z-index:7!important;
-}
-
-/* 玫瑰框：按钮与缩略区彻底分开，快门不压图 */
-.cam5-page .pcontent{
-  height:calc(100% - 34px)!important;padding:0 0 104px!important;gap:8px!important;overflow:hidden!important;
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
-}
-.cam5-page .cam5-stage{
-  height:calc(100% - 158px)!important;max-height:calc(100% - 158px)!important;
-  width:auto!important;aspect-ratio:1101/836!important;max-width:100%!important;margin:0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;align-items:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
 }
 .cam5-page .shoot-tray{
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
   height:96px!important;z-index:7!important;
 }
-
-/* 玫瑰框弹窗：补上高度，否则宽高都为 auto 会变成 0（看起来像打不开） */
+.cam5-page .snap-hint{left:26%!important;right:26%!important;top:24%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
+@media (max-width:760px){
+  .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important;min-width:44px!important}
+}
+/* 玫瑰框全屏 */
 .fsmodal-stage.k5{
-  height:min(62vh, 540px)!important;
-  width:auto!important;max-width:94vw!important;
+  height:min(62vh, 540px)!important;width:auto!important;max-width:94vw!important;
   aspect-ratio:1101/836!important;flex:0 0 auto!important;align-self:center!important;
 }
 .fsmodal-stage.k5 img{object-fit:fill!important}
-.fsmodal-stage.k5 video{object-fit:cover!important}
-
-/* 玫瑰框：不要重复扣减内边距，相框占满“按钮行之上”的空间 */
-.cam5-page .pcontent{
-  height:calc(100% - 30px)!important;padding:0!important;gap:8px!important;overflow:hidden!important;
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
-}
-.cam5-page .cam5-stage{
-  height:calc(100% - 154px)!important;max-height:calc(100% - 154px)!important;
-  width:auto!important;aspect-ratio:1101/836!important;max-width:100%!important;
-  margin:0 auto!important;flex:0 0 auto!important;
-}
-.cam5-page .cam-bar{
-  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
-  justify-content:center!important;align-items:center!important;gap:8px!important;
-  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
-}
-.cam5-page .shoot-tray{
-  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
-  height:96px!important;z-index:7!important;
+.fsmodal-stage.k5 video{
+  position:absolute!important;inset:auto!important;
+  left:10.5%!important;top:10.5%!important;width:79%!important;height:79%!important;
+  object-fit:cover!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+                     linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%),
+             linear-gradient(0deg,transparent 0,#000 9%,#000 91%,transparent 100%)!important;
+  -webkit-mask-composite:source-in!important;mask-composite:intersect!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
@@ -4776,7 +4515,7 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   };
 
 
-  /* 第四台相机：玫瑰框 */
+  /* 玫瑰框相机 */
   var stream5=null, facing5='user', frame5=null;
   window.start5=function(){
     var v=document.getElementById('snapvideo5'), hint=document.getElementById('snaphint5');
@@ -4823,31 +4562,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     frame5=new Image(); frame5.onload=function(){ shoot(frame5); }; frame5.onerror=function(){ shoot(null); };
     frame5.src='assets/img/frame_rose.webp';
   };
-
-
-  /* 精确计算 2/3/4 相机页的相框尺寸（按可用高度，比例锁定） */
-  var CAM_FIT={};
-  function fitCamPage(src){
-    var cfg=CAM_FIT[src]; if(!cfg) return;
-    var sec=document.querySelector('section[data-src="'+src+'"]'); if(!sec) return;
-    var pc=sec.querySelector('.pcontent'), st=sec.querySelector(cfg.sel), bar=sec.querySelector('.cam-bar');
-    if(!pc||!st) return;
-    if(src==='w-camera5'){ pc.style.setProperty('padding','0','important'); }
-    var reserve=(bar?bar.offsetHeight:56)+74+14;
-    var availH=Math.max(140, pc.clientHeight-reserve);
-    var availW=Math.max(140, pc.clientWidth-16);
-    var w=availH*cfg.ratio, hh=availH;
-    if(w>availW){ w=availW; hh=w/cfg.ratio; }
-    st.style.setProperty('width',Math.round(w)+'px','important');
-    st.style.setProperty('height',Math.round(hh)+'px','important');
-    st.style.setProperty('max-height','none','important');
-    st.style.setProperty('margin','0 auto','important');
-  }
-  function fitAllCams(){
-    Object.keys(CAM_FIT).forEach(function(k){ fitCamPage(k); });
-  }
-  window.addEventListener('load', fitAllCams);
-  window.addEventListener('resize', fitAllCams);
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
