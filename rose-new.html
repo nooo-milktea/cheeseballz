@@ -3557,6 +3557,27 @@ body::before{
   object-fit:cover!important;z-index:1!important;
   -webkit-mask-image:none!important;mask-image:none!important;
 }
+
+/* 二/三/四相机页：相框尺寸由 JS 精确计算，按钮始终可见 */
+.cam2-page .shoot-tray,
+.cam4-page .shoot-tray,
+.cam5-page .shoot-tray{
+  position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;height:72px!important;z-index:7!important;
+}
+.cam2-page .cam-bar,
+.cam4-page .cam-bar,
+.cam5-page .cam-bar{
+  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  align-items:center!important;justify-content:center!important;gap:8px!important;
+  width:100%!important;margin:0!important;padding:0!important;z-index:9!important;
+}
+.cam2-page .cam-bar .snap-shot,
+.cam4-page .cam-bar .snap-shot,
+.cam5-page .cam-bar .snap-shot{
+  display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
+  font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
+  border-radius:50%!important;line-height:1!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -4667,6 +4688,34 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     frame5=new Image(); frame5.onload=function(){ shoot(frame5); }; frame5.onerror=function(){ shoot(null); };
     frame5.src='assets/img/frame_rose.webp';
   };
+
+
+  /* 精确计算 2/3/4 相机页的相框尺寸（按可用高度，比例锁定） */
+  var CAM_FIT={
+    'w-camera2':{sel:'.cam2-stage', ratio:1200/952},
+    'w-camera4':{sel:'.cam4-stage', ratio:1773/2364},
+    'w-camera5':{sel:'.cam5-stage', ratio:1101/836}
+  };
+  function fitCamPage(src){
+    var cfg=CAM_FIT[src]; if(!cfg) return;
+    var sec=document.querySelector('section[data-src="'+src+'"]'); if(!sec) return;
+    var pc=sec.querySelector('.pcontent'), st=sec.querySelector(cfg.sel), bar=sec.querySelector('.cam-bar');
+    if(!pc||!st) return;
+    var reserve=(bar?bar.offsetHeight:56)+78+26;
+    var availH=Math.max(140, pc.clientHeight-reserve);
+    var availW=Math.max(140, pc.clientWidth-16);
+    var w=availH*cfg.ratio, hh=availH;
+    if(w>availW){ w=availW; hh=w/cfg.ratio; }
+    st.style.setProperty('width',Math.round(w)+'px','important');
+    st.style.setProperty('height',Math.round(hh)+'px','important');
+    st.style.setProperty('max-height','none','important');
+    st.style.setProperty('margin','0 auto','important');
+  }
+  function fitAllCams(){
+    Object.keys(CAM_FIT).forEach(function(k){ fitCamPage(k); });
+  }
+  window.addEventListener('load', fitAllCams);
+  window.addEventListener('resize', fitAllCams);
 
   /* 文库 */
   var gate=document.getElementById('gate'), main=document.getElementById('libmain');
