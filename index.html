@@ -3481,6 +3481,26 @@ body::before{
   .cam5-page .cam5-stage{height:min(32vh, 240px)!important;max-height:32vh!important}
   .cam5-page .cam-bar .snap-shot{width:44px!important;height:44px!important}
 }
+
+/* 玫瑰框：放大到接近草莓框的观感，收紧与缩略区之间的空隙 */
+.cam5-page .pcontent{
+  gap:6px!important;padding:0 0 72px!important;height:calc(100% - 22px)!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;position:relative!important;overflow:hidden!important;
+}
+.cam5-page .cam5-stage{
+  height:calc(100% - 132px)!important;max-height:none!important;
+  width:auto!important;max-width:100%!important;
+  aspect-ratio:1101/836!important;margin:0 auto!important;flex:0 0 auto!important;
+}
+.cam5-page .cam-bar{
+  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  align-items:center!important;justify-content:center!important;gap:8px!important;
+  width:100%!important;margin:0!important;padding:0!important;z-index:8!important;
+}
+@media (max-width:760px){
+  .cam5-page .cam5-stage{height:calc(100% - 120px)!important;max-width:100%!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
