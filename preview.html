@@ -3491,6 +3491,16 @@ body::before{
 }
 .cam2-page .cam2-stage::after,
 .cam4-page .cam4-frame{z-index:2!important;pointer-events:none!important}
+
+/* 第三个相框（白框）：取景与全屏弹窗完全一致 */
+.cam4-page .cam4-stage video{
+  position:absolute!important;
+  inset:auto!important;
+  left:33.5%!important;top:34.8%!important;width:41.2%!important;height:20.2%!important;
+  object-fit:cover!important;z-index:1!important;
+  opacity:1!important;visibility:visible!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
