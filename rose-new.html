@@ -3684,6 +3684,15 @@ body::before{
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;
   height:96px!important;z-index:7!important;
 }
+
+/* 玫瑰框弹窗：补上高度，否则宽高都为 auto 会变成 0（看起来像打不开） */
+.fsmodal-stage.k5{
+  height:min(62vh, 540px)!important;
+  width:auto!important;max-width:94vw!important;
+  aspect-ratio:1101/836!important;flex:0 0 auto!important;align-self:center!important;
+}
+.fsmodal-stage.k5 img{object-fit:fill!important}
+.fsmodal-stage.k5 video{object-fit:cover!important}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
