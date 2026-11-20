@@ -3559,20 +3559,14 @@ body::before{
 }
 
 /* 二/三/四相机页：相框尺寸由 JS 精确计算，按钮始终可见 */
-.cam2-page .shoot-tray,
-.cam4-page .shoot-tray,
 .cam5-page .shoot-tray{
   position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;height:72px!important;z-index:7!important;
 }
-.cam2-page .cam-bar,
-.cam4-page .cam-bar,
 .cam5-page .cam-bar{
   position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
   align-items:center!important;justify-content:center!important;gap:8px!important;
   width:100%!important;margin:0!important;padding:0!important;z-index:9!important;
 }
-.cam2-page .cam-bar .snap-shot,
-.cam4-page .cam-bar .snap-shot,
 .cam5-page .cam-bar .snap-shot{
   display:inline-block!important;width:46px!important;height:46px!important;min-width:46px!important;
   font-size:15px!important;border:3px solid #f7bdd2!important;background:#fff!important;color:#e0709a!important;
@@ -4692,8 +4686,6 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
 
   /* 精确计算 2/3/4 相机页的相框尺寸（按可用高度，比例锁定） */
   var CAM_FIT={
-    'w-camera2':{sel:'.cam2-stage', ratio:1200/952},
-    'w-camera4':{sel:'.cam4-stage', ratio:1773/2364},
     'w-camera5':{sel:'.cam5-stage', ratio:1101/836}
   };
   function fitCamPage(src){
