@@ -4700,7 +4700,8 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     var sec=document.querySelector('section[data-src="'+src+'"]'); if(!sec) return;
     var pc=sec.querySelector('.pcontent'), st=sec.querySelector(cfg.sel), bar=sec.querySelector('.cam-bar');
     if(!pc||!st) return;
-    var reserve=(bar?bar.offsetHeight:56)+78+26;
+    if(src==='w-camera5'){ pc.style.setProperty('padding','0','important'); }
+    var reserve=(bar?bar.offsetHeight:56)+74+14;
     var availH=Math.max(140, pc.clientHeight-reserve);
     var availW=Math.max(140, pc.clientWidth-16);
     var w=availH*cfg.ratio, hh=availH;
