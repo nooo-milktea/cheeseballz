@@ -3387,6 +3387,42 @@ body::before{
   -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
   -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
 }
+
+/* 第四台相机：玫瑰框 */
+.cam5-page .pcontent{
+  position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:flex-start!important;gap:8px!important;height:calc(100% - 22px)!important;
+  padding:0 0 78px!important;overflow:hidden!important;
+}
+.cam5-page .cam5-stage{
+  position:relative!important;display:block!important;flex:0 0 auto!important;
+  height:auto!important;max-height:none!important;
+  width:min(92vw, calc(min(64vh, 620px) * 1.317))!important;
+  aspect-ratio:1101/836!important;max-width:none!important;margin:0 auto!important;
+  overflow:hidden!important;background:transparent!important;
+}
+.cam5-page .cam5-frame{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:fill!important;z-index:2!important;pointer-events:none!important;
+}
+.cam5-page .cam5-stage video{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;z-index:1!important;transform:scaleX(-1);
+  -webkit-mask-image:url(assets/img/hole_cam5.png)!important;
+  mask-image:url(assets/img/hole_cam5.png)!important;
+  -webkit-mask-size:100% 100%!important;mask-size:100% 100%!important;
+  -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important;
+}
+.cam5-page.back .cam5-stage video{transform:none!important}
+.cam5-page .cam-bar{
+  position:static!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;
+  justify-content:center!important;gap:8px!important;width:100%!important;margin:0!important;padding:0!important;
+}
+.cam5-page .shoot-tray{position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:74px!important}
+.cam5-page .snap-hint{left:26%!important;right:26%!important;top:30%!important;bottom:auto!important;z-index:3!important;font-size:9px!important}
+@media (max-width:760px){
+  .cam5-page .cam5-stage{width:min(92vw, calc((100vh - 230px) * 1.317))!important}
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Pacifico&family=Great+Vibes&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
@@ -3577,9 +3613,9 @@ body::before{
       <ul class="toc-list">
       <li><a onclick="jumpTo(2)"><span class="toc-n">01</span><span class="toc-t">同人文库</span><span class="toc-s">破塔 · 亚洲网 共 71 篇</span></a></li>
       <li><a onclick="jumpTo(3)"><span class="toc-n">02</span><span class="toc-t">相册</span><span class="toc-s">勇志的相册 · 咲哉的相册</span></a></li>
-      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">拍立得 · 草莓 · 白框</span></a></li>
-      <li><a onclick="jumpTo(8)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
-      <li><a onclick="jumpTo(9)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
+      <li><a onclick="jumpTo(5)"><span class="toc-n">03</span><span class="toc-t">相机</span><span class="toc-s">拍立得 · 草莓 · 白框 · 玫瑰</span></a></li>
+      <li><a onclick="jumpTo(9)"><span class="toc-n">04</span><span class="toc-t">地图</span><span class="toc-s">同款打卡地</span></a></li>
+      <li><a onclick="jumpTo(10)"><span class="toc-n">05</span><span class="toc-t">留言</span><span class="toc-s">给他们的信</span></a></li>
       </ul>
     </div>
   </section>
@@ -3757,6 +3793,30 @@ body::before{
     </div>
   </section>
 
+  <section class="page v cam-page cam5-page" data-src="w-camera5">
+    <span class="ribbon"></span>
+    <header class="ph"><b>相机 · 玫瑰框</b><span class="verstamp">v300</span><span class="pno"></span></header>
+    <div class="pcontent">
+      <div class="cam5-stage">
+        <video id="snapvideo5" autoplay playsinline muted></video>
+        <canvas id="snapcanvas5" style="display:none"></canvas>
+        <img class="cam5-frame" src="assets/img/frame_rose.webp" alt="">
+        <div class="snap-hint" id="snaphint5">点「开启」用你的相机</div>
+      </div>
+      <div class="cam-bar">
+        <button class="cam-mini" onclick="start5()">开启</button>
+        <button class="snap-shot" onclick="take5()" title="拍照">◉</button>
+        <button class="cam-mini" onclick="openFsM('cam5')">全屏</button>
+        <button class="cam-mini" onclick="flip5()">翻转</button>
+        <button class="cam-mini" onclick="stop5()">关闭</button>
+      </div>
+      <div class="shoot-tray">
+        <div class="tray-head">我的照片 <span id="trayCount5">0</span></div>
+        <div class="snap-strip" id="snapstrip5"><span class="strip-empty" id="stripempty5">拍一张就会出现</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="page bl map-page" data-src="w-map-jp">
     <span class="ribbon"></span>
     <header class="ph"><b>日本</b><span class="pno"></span></header>
@@ -3806,7 +3866,7 @@ body::before{
   </div>
   <button class="turn prev" onclick="turn(-1)" aria-label="上一页">‹</button>
   <button class="turn next" onclick="turn(1)" aria-label="下一页">›</button>
-  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i><i data-i="9"></i></div>
+  <div class="dots" id="dots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i><i data-i="6"></i><i data-i="7"></i><i data-i="8"></i><i data-i="9"></i><i data-i="10"></i></div>
   <button class="closebook" id="closeBook" onclick="closeBook()" title="合上书">合上</button>
   </div>
 </div>
@@ -3856,6 +3916,8 @@ body::before{
     if(i!==camPage2 && typeof window.stop2==='function') window.stop2();
     var camPage4=pages.findIndex(function(p){return p.dataset.src==='w-camera4';});
     if(i!==camPage4 && typeof window.stop4==='function') window.stop4();
+    var camPage5=pages.findIndex(function(p){return p.dataset.src==='w-camera5';});
+    if(i!==camPage5 && typeof window.stop5==='function') window.stop5();
     if(i!==camPage && typeof window.stopSnap==='function') window.stopSnap();
     var n=pages.length; cur=(i%n+n)%n;
     pages.forEach(function(p,k){
@@ -4359,7 +4421,8 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
   var FS_CFG={
     cam1:{frame:'assets/img/frame_camera2.png', ratio:710/1076, rect:[.152,.093,.701,.654]},
     cam2:{frame:'assets/img/frame_sy.png',      ratio:1200/952, rect:[.064,.116,.872,.658]},
-    cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.335,.348,.412,.202]}
+    cam4:{frame:'assets/img/frame_white3.webp', ratio:1773/2364, rect:[.335,.348,.412,.202]},
+    cam5:{frame:'assets/img/frame_rose.webp', ratio:1101/836, rect:[.20,.22,.54,.62]}
   };
   window.openFsM=function(key){
     var cfg=FS_CFG[key]; if(!cfg) return;
@@ -4405,7 +4468,8 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
     img.onload=function(){
       ctx.drawImage(img,0,0,W,H);
       var dataUrl=c.toDataURL('image/jpeg',0.92);
-      var map={cam1:{strip:'snapstrip',count:'trayCount',empty:'stripempty'},
+      var map={cam5:{strip:'snapstrip5',count:'trayCount5',empty:'stripempty5'},
+               cam1:{strip:'snapstrip',count:'trayCount',empty:'stripempty'},
                cam2:{strip:'snapstrip2',count:'trayCount2',empty:'stripempty2'},
                cam4:{strip:'snapstrip4',count:'trayCount4',empty:'stripempty4'}};
       var m=map[fsKey];
@@ -4419,6 +4483,55 @@ var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s;
       setTimeout(function(){ mo.classList.remove('flash'); },260);
     };
     img.src=cfg.frame;
+  };
+
+
+  /* 第四台相机：玫瑰框 */
+  var stream5=null, facing5='user', frame5=null;
+  window.start5=function(){
+    var v=document.getElementById('snapvideo5'), hint=document.getElementById('snaphint5');
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ if(hint) hint.textContent='不支持相机'; return; }
+    navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:facing5},width:{ideal:1920},height:{ideal:1080}},audio:false})
+      .then(function(st){ stream5=st; v.srcObject=st; v.parentNode.classList.add('live'); if(hint) hint.textContent=''; })
+      .catch(function(err){ if(hint) hint.textContent=(err&&err.name==='NotAllowedError')?'你拒绝了权限':'打不开相机（需要 https）'; });
+  };
+  window.stop5=function(){
+    if(stream5){ stream5.getTracks().forEach(function(t){t.stop();}); stream5=null; }
+    var v=document.getElementById('snapvideo5'); if(v) v.srcObject=null;
+    var hint=document.getElementById('snaphint5'); if(hint) hint.textContent='相机已关闭';
+  };
+  window.flip5=function(){
+    facing5 = (facing5==='user')?'environment':'user';
+    var sec=document.querySelector('.cam5-page');
+    if(sec) sec.classList.toggle('back', facing5==='environment');
+    stop5(); setTimeout(start5,120);
+  };
+  window.take5=function(){
+    var v=document.getElementById('snapvideo5'), c=document.getElementById('snapcanvas5');
+    var strip=document.getElementById('snapstrip5'), hint=document.getElementById('snaphint5');
+    if(!stream5||!v.videoWidth){ if(hint) hint.textContent='先点「开启」'; return; }
+    function shoot(fr){
+      var W=1640,H=1245; c.width=W; c.height=H;
+      var ctx=c.getContext('2d');
+      ctx.fillStyle='#fffdf6'; ctx.fillRect(0,0,W,H);
+      var rx=W*0.20, ry=H*0.22, rw=W*0.54, rh=H*0.62;
+      var vw=v.videoWidth, vh=v.videoHeight, s=Math.max(rw/vw,rh/vh), dw=vw*s, dh=vh*s;
+      ctx.save(); ctx.beginPath(); ctx.rect(rx,ry,rw,rh); ctx.clip();
+      if(facing5==='user'){ ctx.translate(rx+rw,ry); ctx.scale(-1,1); }
+      ctx.drawImage(v,(rw-dw)/2,(rh-dh)/2,dw,dh);
+      ctx.restore();
+      if(fr&&fr.naturalWidth) ctx.drawImage(fr,0,0,W,H);
+      var dataUrl=c.toDataURL('image/jpeg',0.92);
+      var se=document.getElementById('stripempty5'); if(se) se.style.display='none';
+      var tc=document.getElementById('trayCount5'); if(tc) tc.textContent=String((+tc.textContent||0)+1);
+      var img=document.createElement('img'); img.src=dataUrl; img.title='点击查看并保存';
+      img.onclick=function(){ openShot(this.src); };
+      strip.prepend(img);
+      if(hint) hint.textContent='已拍下';
+    }
+    if(frame5&&frame5.complete&&frame5.naturalWidth){ shoot(frame5); return; }
+    frame5=new Image(); frame5.onload=function(){ shoot(frame5); }; frame5.onerror=function(){ shoot(null); };
+    frame5.src='assets/img/frame_rose.webp';
   };
 
   /* 文库 */
